@@ -1,2 +1,4 @@
-# anfaenger_praktikum
-Anfängerpraktikum TU-Dortmund Physik Wi2020/21
+# Anfängerpraktikum Physik
+Anfängerpraktikum an der TU-Dortmund Physik Wi2020/21
+
+## Protokolle und Abgaben
