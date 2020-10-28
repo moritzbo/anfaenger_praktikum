@@ -1,0 +1,45 @@
+\section{Aufgabe 2}
+
+\subsection{Fragestellung}
+Nach mehrmaliger Messung der Schallgeschwindigkeit $u$ zieht ein Student den
+Schluß, dass die Standardabweichung $\sigma_u$ der Meßwerte $\sigma_u = 10 \si{\meter\per\second}$ ist. Wir nehmen
+an, die Abweichungen seien zufällig. Dann kann der Student jede beliebige
+Präzision erreichen, indem er genug Messungen durchführt und deren Mittelwert
+berechnet. Wie viele Messungen sind nötig, damit die entgültige Unsicherheit
+$\pm 3 \si{\meter\per\second}$ beträgt? Wie viele für eine Unsicherheit von nur $0{,}5 \si{\meter\per\second}$?
+
+\subsection{Antwort}
+
+Gegeben ist also die Standardabweichung $\sigma_u$ und jeweils ein Fehler auf dem Mittelwert $\bar{x}$.
+Gesucht wird die Anzahl der Messungen die benötigt werden um den Fehler $\increment\bar{x}$ auf ein bestimmtes Intervall zu reduzieren.
+
+\begin{flushleft}
+Dies lässt sich über die Formel zur Standardabweichung des Mittelwerts \eqref{eqn:seoftm} berechnen.
+
+Wenn man $\increment\bar{x} = 3 \si{\meter\per\second}$ setzt erhällt man
+\end{flushleft}
+\begin{equation}
+3\si[per-mode=symbol]{\meter\per\second} = \frac{\SI{10}{\meter\per\second}}{\sqrt{N}}
+%Ist es notwendig das als Eq anzugeben???
+\end{equation}
+
+\begin{flushleft}
+Dies lässt sich nach $\sqrt{N}$ umstellen und quadrieren. Es folgt
+\end{flushleft}
+\begin{equation}
+N = \left( \frac{10}{3} \right)^2 = \frac{100}{9} = 11{,}\bar{1}
+\end{equation}
+
+\begin{flushleft}
+Da nur ganzzahlige Werte sinnvoll sind braucht man mindestens $N = 12$ Messungen, um 
+den Mittelwert $\bar{x}$ der Schallgeschwindigkeit auf $\pm 3 \si{\meter\per\second}$ genau zu bestimmen.
+
+Für $\increment\bar{x} = 0{,}5$ folgt analog
+\end{flushleft}
+\begin{equation}
+N = \left( \frac{10}{0{,}5} \right)^2 = 400
+\end{equation}
+
+\begin{flushleft}
+Man benötigt also genau $N = 400$ Messungen um den Fehler auf $\pm 0{,}5 \si{\meter\per\second}$ zu reduzieren. 
+\end{flushleft}

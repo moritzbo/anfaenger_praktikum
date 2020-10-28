@@ -1,0 +1,97 @@
+\section{Aufgabe 3}
+
+\subsection{Aufgabenstellung}
+Berechnen Sie das Volumen eines Hohlzylinders, mit $R_\text{innen} = \SI{10(1)}{\centi\meter}$, \\
+$R_\text{außen} = \SI{15(1)}{\centi\meter}$ und $\symup{h} = \SI{20(1)}{\centi\meter}$.
+\subsection{Antwort}
+Um das Volumen zu berechnen muss man ein Volumenintegral bilden, dazu es ist in diesem Fall hilfreich
+Zylinderkoordinaten zu verwenden. Das Volumen des Hohlzylinders mit Mittelpunkt $\vec{0}$ hat die Parameterdarstellung
+\begin{equation}
+\vec{\phi} : (R_\text{innen}, R_\text{außen}) \times (0, 2\pi) \times (0,\symup{h}) \to \mathbb{R}^3
+\end{equation}
+\begin{equation}
+\vec{\phi}(r,\psi,\symup{h}) = \begin{pmatrix}
+                                r \cos(\psi) \\
+                                r \sin(\psi) \\
+                                \symup{h}
+                                \end{pmatrix}
+\end{equation}
+
+\begin{flushleft}
+Zusammen mit der Jacobideterminante
+\end{flushleft}
+\begin{equation}
+\symup{det} \frac{\partial(r \cos(\psi), r \sin(\psi), \symup{h})}{\partial(r, \psi, \symup{h})} = 
+\symup{det}         \begin{pmatrix}
+                    \cos(\psi) & -r \sin(\psi) & 0 \\
+                    \sin(\psi) & r \cos(\psi)  & 0 \\
+                    0          & 0             & 1 \\
+                    \end{pmatrix} = r
+\end{equation}
+
+\begin{flushleft}
+lässt sich das Volumenintegral von Kartesischen Koordinaten in Zylinderkoordinaten umschreiben
+\end{flushleft}
+\begin{equation}
+\iiint_V 1 \dif{V} = \int_0^{h}\int_0^{2\pi}\int_{R_\text{innen}}^{R_\text{außen}} r \dif{r}\dif{\psi}\dif{\symup{h}} 
+\end{equation}
+
+\begin{flushleft}
+Wenn man das integriert erhält man
+\end{flushleft}
+\begin{equation}
+V(R_\text{innen}, R_\text{außen}, \symup{h}) = \pi \symup{h} ({R_\text{außen}}^2 - {R_\text{innen}}^2)
+\label{eqn:Volumenfunktion}
+\end{equation}
+
+\begin{flushleft}
+Die Radien $R_\text{innen}$, $R_\text{außen}$und die Höhe $\symup{h}$ sind fehlerbelastet aber dennoch voneinander unabhängig. Somit
+lässt sich das Volumen durch die Gaußsche Fehlerfortpflanzung berechnen, welche in allgemeiner Form folgendermaßen aussieht
+\end{flushleft}
+\begin{equation}
+\increment f = \sqrt{\left(\frac{\partial f}{\partial x}\right)^2 (\increment x)^2 + \left(\frac{\partial f}{\partial y}\right)^2 (\increment y)^2 + ....
+ + \left(\frac{\partial f}{\partial z}\right)^2 (\increment z)^2}
+\label{eqn:gaussfehlerallg}
+\end{equation}
+
+\begin{flushleft}
+Dabei ist $f(x,y,..,z)$ eine beliebige Funktion mit unabhängigen Messgrößen $x,y,..,z$ und Messunsicherheiten $\increment x, \increment y, ..,\increment z$.
+Auf unsere Volumenfunktion $V(R_\text{innen}, R_\text{außen}, \symup{h})$ angewendet 
+\end{flushleft}
+\begin{equation}
+\increment V = \sqrt{\left(\frac{\partial V}{\partial R_\text{innen}}\right)^2 (\increment R_\text{innen})^2 +
+                     \left(\frac{\partial V}{\partial R_\text{außen}}\right)^2 (\increment R_\text{außen})^2 +
+                     \left(\frac{\partial V}{\partial \symup{h}}\right)^2 (\increment \symup{h})^2}
+\end{equation}
+
+\begin{flushleft}
+Zunächst muss man die Ableitungen nach $R_\text{innen}$, $R_\text{außen}$und $\symup{h}$ berechnen
+\end{flushleft}
+\begin{spreadlines}{0.7\baselineskip}
+\begin{align}
+\frac{\partial V}{\partial R_\text{innen}} &= -2\pi \symup{h} R_\text{innen} \\
+\frac{\partial V}{\partial R_\text{außen}} &= 2\pi \symup{h} R_\text{außen} \\
+\frac{\partial V}{\partial \symup{h}}{~~~} &= \pi ({R_\text{außen}}^2 - {R_\text{innen}}^2) 
+\end{align}
+\end{spreadlines}
+\newpage
+\begin{flushleft}
+Setzt man nun die gegebenen Werte ein, erhält man
+\end{flushleft}
+\begin{equation}
+\increment V = \sqrt{(-400\pi \cdot \si{\centi\meter}^3)^2 +
+                     (600\pi \cdot \si{\centi\meter}^3)^2 +
+                     (125\pi \cdot \si{\centi\meter}^3)^2} = \SI{2300}{\centi\meter}^3
+\end{equation}
+\begin{flushleft}
+Zusammen mit dem Ergebniss für $V(R_\text{innen}, R_\text{außen}, \symup{h})$
+\end{flushleft}
+\begin{equation}
+V(10, 15, 20) = \pi \cdot 20 \si{\centi\meter} ((\SI{15}{\centi\meter})^2 - (\SI{10}{\centi\meter})^2) = 2500\pi = \SI{7853{,}98}{\centi\meter}^3
+\end{equation}
+\begin{flushleft}
+erhält man das Ergebnis des Volumens $V$ mit dem entsprechendem Fehlerintervall
+\end{flushleft}
+\begin{equation}
+V = \SI{8.(25)e3}{\centi\meter\tothe{3}}
+\end{equation}

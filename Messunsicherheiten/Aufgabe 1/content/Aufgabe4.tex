@@ -1,0 +1,84 @@
+\section{Aufgabe 4}
+
+\subsection{Aufgabenstellung}
+Ein Projektil mit der Masse $m = \SI{5.(1)}{\gram}$ fliegt mit der Geschwindigkeit \\
+$v = \SI{200(10)}{\meter\per\second}$. Welche Strecke hat es nach der Zeit $t = \SI{6}{\second}$ zurückgelegt? Wie groß
+ist seine kinetische Energie?
+
+\subsection{Antwort}
+In der klassischen Mechanik gilt per Definition
+\begin{equation}
+v = \frac{\increment s}{\increment t}
+\end{equation}
+Hierbei ist $\increment s$ die Strecke die zurückgelegt wurde und $\increment t$ die Zeit die währenddessen
+vergangen ist. Gesucht ist jetzt die Strecke $\increment s$ bei bekannter, aber fehlerbehafteter Geschwindigkeit.
+Zuerst stellt man die Gleichung nach $\increment s$ um.
+\begin{equation}
+s = v \cdot t
+\end{equation}
+Die Messunsicherheit auf die Strecke lässt sich wieder durch die Fehlerfortpflanzung berechnen. Diesmal aber
+nur in einer Dimension. Die allgemeine Formel lautet
+\begin{equation}
+\increment f = \biggl| \frac{\dif{f}}{\dif{x}} \biggr| \increment x
+\end{equation}
+$f$ ist dabei eine beliebige Funktion mit einer fehlerbehafteten Größe $x$. In unserem Fall lässt sich
+das schreiben als
+\begin{equation}
+\increment s = \biggl| \frac{\dif{s}}{\dif{v}} \biggr| \increment v = t \cdot \increment v 
+\end{equation}
+Wenn man nun die Werte $t = \SI{6}{\second}$ und $\increment v = \SI{10}{\meter\per\second}$ einsetzt, erhält man das Fehlerintervall für die Strecke
+\begin{equation}
+\increment s = \SI{60}{\meter}
+\end{equation}
+Zusammen mit der Berechnung ohne $\increment v$, also mit $v = \SI{200}{\meter\per\second}$ und $t = \SI{6}{\second}$. Also
+\begin{equation}
+s = v \cdot t = 200 \si[per-mode=symbol]{\meter\per\second} \cdot \SI{6}{\second} = \SI{1200}{\meter}
+\end{equation}
+erhält man das Ergebnis
+\begin{equation}
+\increment s = \SI{1.20(6)e3}{\meter}
+%oder doch als km schreiben??
+\end{equation}
+Die Formel zur Berechnung der kinetischen Energie lautet
+\begin{equation}
+E_\text{kin} = \frac{1}{2} m v^2
+\end{equation}
+Diesmal sind wieder zwei Werte fehlerbehaftet, deshalb benötigt man zuerst die Ableitungen nach $m$ und $v$, um diese in
+die Formel der Gaußschen Fehlerfortpflanzung \eqref{eqn:gaussfehlerallg} einzusetzen
+
+\begin{minipage}[t]{0.4\textwidth}
+\begin{equation}
+\frac{\dif{E_\text{kin}}}{\dif{v}} = m v
+\end{equation}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\begin{equation}
+\frac{\dif{E_\text{kin}}}{\dif{m}} = \frac{1}{2} v^2
+\end{equation}
+\end{minipage}
+
+\begin{flushleft}
+Die Formel für die Gaußsche Fehlerfortpflanzung in zwei Dimension lautet hierbei
+\end{flushleft}
+\begin{spreadlines}{0.8\baselineskip}
+\begin{align}
+\increment E_\text{kin} &= \sqrt{ \left( \frac{\dif{E_\text{kin}}}{\dif{v}} \right)^2 (\increment v)^2 + \left( \frac{\dif{E_\text{kin}}}{\dif{m}} \right)^2 (\increment m)^2} \\
+                        &= \sqrt{ (m v)^2 (\increment v)^2 + (\frac{1}{2} v^2)^2 (\increment m)^2}\\
+                        &= \sqrt{ (\SI{0{,}005}{\kilo\gram} \cdot 200 \si[per-mode=symbol]{\meter\per\second})^2 (10\si[per-mode=symbol]{\meter\per\second})^2 + (\frac{1}{2} (200 \si[per-mode=symbol]{\meter\per\second})^2)^2 (\SI{0.0001}{\kilo\gram})^2}\\
+                        &= \SI{10.2}{\joule}
+\end{align}
+\end{spreadlines}
+
+\begin{flushleft}
+Zusammen mit dem Ergebnis ohne Fehler auf $m$ und $v$
+\end{flushleft}
+\begin{equation}
+E_\text{kin} = \frac{1}{2} \cdot \SI{0.005}{\kilo\gram} \cdot \left( \SI{200}{\meter\per\second} \right)^2 = \SI{100}{\joule}
+\end{equation}
+
+\begin{flushleft}
+erhält man die Kinetische Energie des Projektils
+\end{flushleft}
+\begin{equation}
+E_\text{kin} = \SI{100(10)}{\joule}
+\end{equation}

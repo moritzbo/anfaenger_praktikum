@@ -1,0 +1,58 @@
+\section{Aufgabe 1}
+
+\subsection{Mittelwert}
+Der Mittelwert beschreibt den Durchschnitt einer Anzahl an Zahlen/Werten, die z.B durch 
+eine Messung entnommen wurden. Bei gleichbleibender Verteilung gibt der Mittelwert also den Wert 
+mit der größten Häufigkeit an. Dieser Wert ist allerdings lediglich ein Schätzwert und wird umso
+genauer, je mehr Messwerte man einbezieht.
+%evt nicht gut formuliert
+
+\begin{flushleft}
+Der Mittelwert $\bar{x}$ bzw. das arithmetische Mittel wird wie folgt berechnet
+\end{flushleft}
+
+\begin{equation}
+\bar{x} = \frac{1}{N} \sum_{k=1}^N x_k
+\label{eqn:mean}
+\end{equation}
+
+\begin{flushleft}
+Dabei gibt $N$ die Gesamtanzahl und $x_k$ jeweils die einzelnen Messwerte an.
+\end{flushleft}
+
+\subsection{Standardabweichung}
+Die Standardabweichung $\sigma$ gibt an wie weit die einzelnen Werte im Durchschnitt
+vom Mittelwert $\bar{x}$ entfernt sind. Sie ist über die Varianz definiert welche die mittlere 
+quadratische Abweichung vom Mittelwert angibt. 
+
+\begin{flushleft}
+Die Varianz lässt sich wie folgt berechnen
+\end{flushleft}
+\begin{equation}
+\symup{Var} = \frac{1}{N-1} \sum_{k=1}^N (x_k - \bar{x})^2
+\label{eqn:varianz}
+\end{equation}
+
+\begin{flushleft}
+Die Dimension der Varianz \eqref{eqn:varianz} stimmt allerdings nicht mit der des Mittelwerts \eqref{eqn:mean} überein,
+deshalb wird die Standardabweichung eingeführt. 
+%nicht sicher mit den eqrefs ob notwendig
+\end{flushleft}
+
+\begin{equation}
+\sigma = \sqrt{\symup{Var}} = \sqrt{\frac{1}{N-1} \sum_{k=1}^N (x_k - \bar{x})^2}
+\label{eqn:sigma}
+\end{equation}
+\subsection{Streuung und Fehler des Mittelwerts}
+\begin{flushleft}
+Bei der Streuung der einzelnen Messwerte handelt es sich um eine Verteilung um den zuvor bestimmten Mittelwert \eqref{eqn:mean}. 
+Diese Verteilung wird durch die Standardabweichung \eqref{eqn:sigma} beschrieben und ist nicht gleichbedeutent zu dem Fehler des Mittelwerts.
+Bei der Berechnung des Mittelwerts an einer abzählbaren Menge an Werten kommt es zu einer Abweichung vom tatsächlichen Wert.
+Um den Bereich in dem sich der Mittelwert befindet möglichst genau zu berechnen, bestimmt man den Fehler des Mittelwerts. Dieser wird
+auch Standardabweichung des Mittelwerts $\increment\bar{x}$ genannt und wird wie folgt berechnet
+\end{flushleft}
+
+\begin{equation}
+\increment\bar{x} = \frac{\sigma}{\sqrt{N}} = \sqrt{\frac{1}{N(N-1)} \sum_{k=1}^N (x_k - \bar{x})^2}
+\label{eqn:seoftm} %seoftm = standard error of the mean
+\end{equation}
