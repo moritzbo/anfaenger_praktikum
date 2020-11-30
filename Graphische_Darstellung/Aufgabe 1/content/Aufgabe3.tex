@@ -1,0 +1,82 @@
+\section{Aufgabe 3}
+\subsection{Aufgabenstellung}
+In dieser Aufgabe soll aus der Anzahl an gezählten Gamma-Quanten $N$ und deren Fehlerbehaftung ein $d$-$N$ Diagramm erstellt werden.
+Dabei soll eine lin-lin und eine lin-log Darstellung verwendet und anschließend der Absorptionskoeffizient $\mu$ bestimmt werden.
+\subsection{Lösung}
+Das Absorptionsgesetz lautet
+
+\begin{equation}
+N = N_{0} \cdot e^{- \mu d}
+\label{eqn:absorptionsges}
+\end{equation}
+\begin{flushleft}
+Hierbei ist $d$ die Dicke der verwendeten Bleiplatte, $\mu$ der Absorptionskoeffizient und $N_{0}$ der Achsenabschnitt, bzw maximale Zählwert.
+Der Fehler einer Zählmessung kann mit der Poisson-Statistik beschrieben werden. Es gilt
+\end{flushleft}
+
+\begin{equation}
+\increment N = \sqrt{N}
+\label{eqn:Poissonvert}
+\end{equation}
+
+\begin{flushleft}
+Hiermit erhält man die folgenden Fehler
+\end{flushleft}
+\begin{table}
+\centering
+\label{tab:messwerte3}
+\begin{tabular}{c c c}
+    Bleidicke $d [\symup{cm}]$ & Anzahl der Gamma-Quanten $N [1{/}60\symup{s}]$ & Fehler $\increment N [1{/}60\symup{s}]$\\
+    \midrule
+    0.1 & 7565 & 86.98\\ 
+    0.2 & 6907 & 83.11\\
+    0.3 & 6214 & 78.83\\
+    0.4 & 5531 & 74.37\\
+    0.5 & 4942 & 70.30\\
+    1.0 & 2652 & 51.50\\
+    1.2 & 2166 & 46.54\\
+    1.5 & 1466 & 38.29\\
+    2.0 & 970  & 31.14\\
+    3.0 & 333  & 18.25\\
+    4.0 & 127  & 11.27\\
+    5.0 & 48   & 6.93 \\
+    \bottomrule
+\end{tabular}
+\end{table}
+\begin{flushleft}
+Nun lassen sich die Werte in ein $d$-$N$ Diagramm einzeichnen und ein Fehlerbalken mit den $\increment N$-Werten plotten. 
+In Diagramm \ref{fig:plot4} sind die beiden Achsen linear dargestellt, also erhält man den zu erwartenen exponentiellen Verlauf.
+In Diagramm \ref{fig:plot5} ist nun die Ordinate logarithmiert und man erhält einen linearen Verlauf.
+Um nun den Absorptionskoeffizienten $\mu$ herauszufinden kann man mit einem curvefit die gegebenen Werte an das Absorptionsgesetz \eqref{eqn:absorptionsges} anpassen.
+Man erhält für den Absorptionskoeffizienten $\mu$ und $N_{0}$ folgendes
+\end{flushleft}
+\begin{align}
+\mu &= 1.139 \pm 0.019 \\
+N_{0} &= 8625.263 \pm 72.810
+\end{align}
+\begin{flushleft}
+Das Absorptionsgesetz mit eingesetzten Werten kann man nun plotten und man erhält das Diagramm \ref{fig:plot6}.
+\end{flushleft}
+\newpage
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot4.pdf}
+  \caption{Zählwerte und Fehlerbalken der Gamma-Quanten bei unterschiedlicher Dicke $d$ in linearer Darstellung}
+  \label{fig:plot4}
+\end{figure}
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot5.pdf}
+  \caption{Zählwerte und Fehlerbalken der Gamma-Quanten bei unterschiedlicher Dicke $d$ in linear-logarithmischer Darstellung} 
+  \label{fig:plot5}
+\end{figure}
+\clearpage
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot6.pdf}
+  \caption{Exponentieller Fit an die gegebenen Messwerte zur Bestimmung des Absorptionskoeffizienten} 
+  \label{fig:plot6}
+\end{figure}
+\begin{flushleft}
+~
+\end{flushleft}

@@ -1,0 +1,7 @@
+#Gegenstandsweite g, Bildweite b
+60 285
+80 142
+100 117
+110 85
+120 86
+125 82
