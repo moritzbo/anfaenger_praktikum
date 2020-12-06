@@ -1,13 +1,13 @@
 all: build/D206-Wärmepumpe.pdf
 
-#build/plot1.pdf: python/plot1.py header-matplotlib.tex matplotlibrc python/messungen.txt| build
-		#TEXINPUTS=$$(pwd): python python/plot1.py
+build/plot1.pdf: python/plot1.py header-matplotlib.tex matplotlibrc python/daten.dat| build
+		TEXINPUTS=$$(pwd): python python/plot1.py
 
-#build/plot2.pdf: python/plot2.py header-matplotlib.tex matplotlibrc python/messungen.txt| build
-		#TEXINPUTS=$$(pwd): python python/plot2.py
+build/plot2.pdf: python/plot2.py header-matplotlib.tex matplotlibrc python/daten.dat| build
+		TEXINPUTS=$$(pwd): python python/plot2.py
 
 
-#build/GraphDarstAufg1.pdf: build/plot1.pdf \
+build/D206-Wärmepumpe.pdf: build/plot1.pdf \
 					build/plot2.pdf 		
 
 build/D206-Wärmepumpe.pdf: FORCE | build
