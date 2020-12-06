@@ -1,0 +1,127 @@
+\section{Theoretische Grundlage}
+\label{sec:TheoretischeGrundlagen}
+Der Wärmefluss innerhalb eines abgeschlossenen Systems verhält sich erfahrungsgemäß immer so, dass
+ein heißerer Körper Wärme an einen kälteren Körper abgibt. 
+Dieser Vorgang kann mit einer Wärmepumpe umgekehrt werden, dabei muss lediglich eine Form von Arbeit geleistet werden.
+In diesem Versuch werden zwei Wärmereservoirs mit unterschiedlichen Temperaturen $T_{1}$ und $T_{2}$ verwendet, zwischen denen ein
+Wärmeaustausch stattfindet.
+
+\subsection{Grundlegende Größen}
+\label{sec:GrundlegendeGroessen}
+Im folgenden seien einige grundlegende Größen zur Beschreibung des Wärmeaustausch einer Wärmepumpe genannt.
+\begin{flalign*}
+Q_{1}&:\text{beschreibt die an das warme Reservoir abgegebene Wärmemenge}\\
+Q_{2}&:\text{beschreibt die entnommene Wärmemenge aus dem kalten Reservoir}\\ 
+T_{1}&:\text{Temperatur des Wassers in Reservoir 1}\\
+T_{2}&:\text{Temperatur des Wassers in Reservoir 2}\\
+p_{1}&:\text{Druck auf der Seite von Reservoir 1}\\
+p_{2}&:\text{Druck auf der Seite von Reservoir 2}\\
+A&:\text{angewendete Arbeit}
+\end{flalign*}
+Mit diesen Größen kann nachher unteranderem die Güteziffer $\nu$ berechnet werden.
+
+\subsection{Funktionsweise einer Wärmepumpe}
+\label{sec:Funktionsweise}
+Der Wärmeaustausch eines Systems mit zwei wassergefüllten Reservoirs muss irgendwie transportiert werden, dazu verwendet
+man bei einer Wärmepumpe ein reales Gas. Dieses Gas nimmt beim Verdampfen Wärme auf und gibt diese bei
+der Kondensation wieder ab. Dadurch kann es Wärme durch seine Formumwandlung transportieren.
+Das reale Gas wird anhand eines Kompressors durch die Apperatur durchgeführt. Im folgenden sei die Temperatur $T_{1}$ zugehörig zu
+Reservoir 1 mit einer höheren Temperatur als der Temperatur $T_{2}$ des zweiten Reservoirs .
+Das Gas ist so konzipiert, dass es bei der Temperatur $T_{1}$ und dem Druck $p_{1}$ kondensiert und bei $T_{2}$ und $p_{2}$ verdampft.
+Wenn das verflüssigte Gas nun durch Reservoir 2 geführt wird, entzieht es dem Wasser eine Verdampfungswärme $L$ pro Gramm. Es nimmt also die Wärmemenge $Q_{2}$
+des kälteren Wassers auf. Im Kompressor wird das zuvor verdampfte Gas adiabatisch komprimiert, also steigt sowohl der Druck, sowie die Temperatur des Gases.
+Dadurch gibt es die Wärmemenge $Q_{1}$ an das Wasser in Reservoir 1 ab und wird kondensiert. Damit dies umsetzbar ist benötigt man ein reales Gas mit hoher Kondensationswärme.
+
+\subsection{Die Güteziffer}
+\label{sec:Gueteziffer}
+Die Güteziffer einer Wärmepumpe beschreibt das Verhältniss von abgegebener Wärmemenge $Q_{1}$ und der geleisteten Arbeit $A$. Es folgt
+\begin{equation}
+\label{eqn:eqGueteziffer}
+\nu = \frac{Q_{1}}{A}
+\end{equation}
+Dabei gilt stets der erste Hauptsatz der Wärmelehre welcher direkt aus der Energieerhaltung entspringt.
+\begin{equation}
+\label{eqn:eqHauptsatz}
+Q_{1} = Q_{2} + A
+\end{equation}
+Bei dem zweiten Hauptsatz der Wärmelehre muss nun zwischen einer realen und einer idealen Wärmepumpe unterschieden werden.
+Wenn die Wärmeübertragung durch die Wärmepumpe reversibel, also ohne Verluste wieder umgekehrt werden kann, dann gilt der ideale Fall.
+\begin{equation}
+\label{eqn:idealzweiterhauptsatz}
+\frac{Q_{1}}{T_{1}} - \frac{Q_{2}}{T_{2}} = 0 \quad \to \quad Q_{2} = \frac{T_{2}}{T_{1}} Q_{1}
+\end{equation}
+Die Formel \eqref{eqn:idealzweiterhauptsatz} gibt also die Summe der reduzierten Wärmemengen im Idealfall an, also wenn sich die Temperatur der Reservoirs nicht ändern würde.
+Im Realfall ist der Wärmeaustausch nicht reversibel und es folgt.
+\begin{equation}
+\label{eqn:realzweiterhauptsatz}
+\frac{Q_{1}}{T_{1}} - \frac{Q_{2}}{T_{2}} > 0 \quad \to \quad Q_{2} < \frac{T_{2}}{T_{1}} Q_{1}
+\end{equation}
+Damit ergeben sich zwei Berechnungen für die Güteziffer durch einsetzen der Ergebnisse für $Q_{2}$ in \eqref{eqn:eqHauptsatz} und anschließend \eqref{eqn:eqGueteziffer}
+\begin{align}
+\nu_{\text{ideal}} &= \frac{Q_{1}}{A} = \frac{T_{1}}{T_{1}-T_{2}} \\
+\nu_{\text{real}} &< \frac{T_{1}}{T_{1}-T_{2}}
+\end{align}
+Daraus kann man sofort schließen, dass bei nur kleinen Temperaturunterschieden $\increment T$, also der Differenz zwischen $T_{1}$ und $T_{2}$, eine große Güteziffer
+entsteht. Es wird folglich nur eine kleine Arbeit gebraucht um eine beliebige Wärmemenge $Q_{1}$ zu transportieren. Bei nur kleinen $\increment T$ ist die Wärmepumpe also 
+besonders effizient.
+Um nun die Güteziffer experimentell zu bestimmen, macht es Sinn die relevanten Größen über einen gewissen Zeitraum $\increment t$ zu messen.
+Allgemein gilt für eine beliebige Wärmemenge $Q$
+\begin{equation}
+\label{eqn:allgwaerme}
+Q = cm \increment T
+\end{equation}
+Dabei ist $c$ die spezifische Wärmekapazität, $m$ die Masse des Stoffes und $\increment T$ die Temperaturänderung.
+Durch diesen Zusammenhang lässt sich die Änderung der Wärmemenge $Q_{1}$ pro Zeit $\increment t$ wie folgt berechnen.
+\begin{equation}
+\label{eqn:eqwaermeq1prozeit}
+\frac{\increment Q_{1}}{\increment t} = (m_{1}c_{w} + m_{k}c_{k})\frac{\increment T_{1}}{\increment t}
+\end{equation}
+Wobei $m_{1}c_{w}$ die Wärmekapazität des Wassers in Reservoir 1 und $m_{k}c_{k}$ die Wärmekapazität der Kupferschlange und des Eimers.
+Aus der Gleichung \eqref{eqn:eqGueteziffer} folgt dann sofort
+\begin{equation}
+\label{eqn:gueteziffermesswerte}
+\nu = \frac{\increment Q_{1}}{\increment t N} = (m_{1}c_{w} + m_{k}c_{k})\frac{\increment T_{1}}{\increment t N}
+\end{equation}
+Hierbei ist wichtig, dass $N$ eine über die Zeit $\increment t$ gemittelte Leistung des Kompressors ist.
+Dadurch stimmt am Ende die Dimension der Güteziffer wieder mit der ursprünglichen Gleichung \eqref{eqn:eqGueteziffer} überein.
+
+\subsection{Massedurchsatz}
+\label{sec:massedurchsatz}
+Mit der Gleichung \eqref{eqn:eqwaermeq1prozeit} findet man analog die pro Zeiteinheit entgenommene Wärmemenge $Q_{2}$
+\begin{equation}
+\frac{\increment Q_{2}}{\increment t} = (m_{2}c_{w} + m_{k}c_{k})\frac{\increment T_{2}}{\increment t}
+\end{equation}
+Wie in \ref{sec:TheoretischeGrundlagen} erwähnt kann man die entzogene Wärmemenge $\increment Q_{2}$ auch als Verdampfungswärme $L$ pro Gramm schreiben.
+Dadurch erhält man einen Ausdruck für den Massenstrom.
+\begin{equation}
+\frac{\increment Q_{2}}{\increment t} = L \frac{\increment m}{\increment t} \quad \to \quad \frac{\increment m}{\increment t} = \frac{\increment Q_{2}}{L \increment t}
+\end{equation}
+Also lässt sich der Massendurchsatz innerhalb der Wärmepumpe berechnen, wenn $L$ bekannt ist.
+
+\subsection{Mechanische Kompressorleistung}
+Unter der Annahme, dass die Kompression adiabatisch erfolgt gilt die Poisson Gleichung
+\begin{equation}
+\label{eqn:poisson}
+p_{2}V_{2}^{\kappa} = p_{1}V_{1}^{\kappa} = pV^{\kappa}
+\end{equation}
+Dabei ist $\kappa$ der Isentropenexponent und ist definiert als das Verhältniss der Molwärmen $C_{p}$ und $C_{v}$.
+Die mechanische Arbeit um ein Gas mit Druck $p$ vom Volumen $V_{2}$ auf $V_{1}$ zu reduzieren wird über das Integral
+\begin{equation}
+A_{mech} = - \int_{V_{2}}^{V_{1}} p \symup{dV} = \int_{V_{1}}^{V_{2}} p \symup{dV}
+\end{equation}
+berechnet. Wenn man nun die Poisson Gleichung \eqref{eqn:poisson} nach $p$ auflöst, in das Integral einsetzt und ausrechnet erhält man.
+\begin{equation}
+A_{mech} = \frac{1}{\kappa - 1} \left( p_{1}\sqrt[\kappa]{\frac{p_{2}}{p_{1}}} - p_{2} \right) V_{2}
+\end{equation}
+Die Kompressorleistung $N_{mech}$ folgt direkt als Arbeit pro Zeit und kann dann auch über den Massendurchsatz ausgedrückt werden.
+\begin{equation}
+N_{mech} = \frac{1}{\kappa - 1} \left( p_{1}\sqrt[\kappa]{\frac{p_{2}}{p_{1}}} - p_{2} \right) \frac{V_{2}}{\increment t} = \frac{1}{\kappa - 1} \left( p_{1}\sqrt[\kappa]{\frac{p_{2}}{p_{1}}} - p_{2} \right) \frac{1}{\rho} \frac{\increment m}{\increment t}
+\end{equation}
+Die Dichte bezieht sich hier auf den Zustand von $V_{2}$ also im gasförmigen Zustand kurz nach dem Verdampfen. Man kann diese hier
+durch die ideale Gasgleichung beschreiben.
+\begin{equation}
+p V = nRT = p \cdot \frac{m}{\rho} = nRT \quad \to \quad \rho = \frac{pm}{nRT}
+\end{equation}
+$R$ ist hier die allgemeine Gaskonstante, $n$ die Stoffmenge und $p$ der Druck.
+%der letzte Teil ist noch unklar also die Berechnung von rho über die Gasgleichung, stellt sich wahrscheinlich bei der Auswertung heraus und 
+%sollte dann noch ergänzt werden
