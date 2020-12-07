@@ -7,9 +7,12 @@ build/plot2.pdf: python/plot2.py header-matplotlib.tex matplotlibrc python/daten
 		TEXINPUTS=$$(pwd): python python/plot2.py
 
 
+
+
 build/D206-Wärmepumpe.pdf: build/plot1.pdf \
-					build/plot2.pdf 		
-	
+					build/plot2.pdf  		
+					
+
 build/D206-Wärmepumpe.pdf: FORCE | build
 	  TEXINPUTS=build: \
 	  BIBINPUTS=build: \
