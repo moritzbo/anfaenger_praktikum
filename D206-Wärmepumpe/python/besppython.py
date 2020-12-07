@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from uncertainties import ufloat
 from scipy.optimize import curve_fit
-
+from scipy.stats import sem
 
 
 def T(x, A, B, C):
@@ -16,7 +16,7 @@ t, T1, p1, T2, p2, N = np.genfromtxt("daten.dat", unpack=True)
 t *= 60
 T1 += 273.15
 T2 += 273.15
-
+N_mean = ufloat(np.mean(N), sem(N))
 params1, covariance_matrix1 = curve_fit(T, t, T1)
 params2, covariance_matrix2 = curve_fit(T, t, T2)
 uncertainties1 = np.sqrt(np.diag(covariance_matrix1))
@@ -70,5 +70,27 @@ print(Diff2_400)
 print(Diff2_800)
 print(Diff2_1200)
 print(Diff2_1600)
+print(np.mean(N))
+print(sem(N))
+
+
+nu_real_400 = (2*A1*400 + B1)*(4*4185.1 + 750)*(1/N_mean)
+nu_real_800 = Diff1_800*(4*4185.1 + 750)*(1/N_mean)
+nu_real_1200 = Diff1_1200*(4*4185.1 + 750)*(1/N_mean)
+nu_real_1600 = Diff1_1600*(4*4185.1 + 750)*(1/N_mean)
+print(nu_real_400)
+print(nu_real_800)
+print(nu_real_1200)
+print(nu_real_1600)
+
+
+nu_ideal_400 = T(400, params1[0], params1[1], params1[2])/(T(400, params1[0], params1[1], params1[2])-T(400, params2[0], params2[1], params2[2]))
+print(nu_ideal_400)
+nu_ideal_800 = T(800, params1[0], params1[1], params1[2])/(T(800, params1[0], params1[1], params1[2])-T(800, params2[0], params2[1], params2[2]))
+print(nu_ideal_800)
+nu_ideal_1200 = T(1200, params1[0], params1[1], params1[2])/(T(1200, params1[0], params1[1], params1[2])-T(1200, params2[0], params2[1], params2[2]))
+print(nu_ideal_1200)
+nu_ideal_1600 = T(1600, params1[0], params1[1], params1[2])/(T(1600, params1[0], params1[1], params1[2])-T(1600, params2[0], params2[1], params2[2]))
+print(nu_ideal_1600)
 
 plt.show()

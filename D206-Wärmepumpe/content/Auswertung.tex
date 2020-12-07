@@ -39,7 +39,7 @@ dass die Parameter plausibel sind.
 \begin{flushleft}
 Nun kann man sich jeweils vier verschiedene Messpunkte anschauen und die dazugehörigen Differenzenquotienten bestimmen. Dafür wurden hier
 Messstellen im Abstand von 400 Sekunden gewählt.
-Der Differenzenquotienten des Polynom zweiten Grades lautet wie folgt.
+Der Differenzenquotient des Polynom zweiten Grades lautet wie folgt.
 \end{flushleft}
 \begin{equation}
 \frac{\symup{d}T}{\symup{d}t} = 2 \symup{A} t + \symup{B}
@@ -64,3 +64,40 @@ Dabei lassen sich die Fehler über die Gaußsche Fehlerfortpflanzung berechnen.
   \label{eqn:gaussianmistake}
 \end{equation}
 \subsection{Berechnung der Güteziffer}
+Anhand der ermittelten Differenzenquotienten lassen sich nun die realen Güteziffern berechnen, dazu muss man lediglich in die Gleichung \eqref{eqn:gueteziffermesswerte} einsetzen und die
+gemittelte Leistung $N$ bestimmen.
+Die gemittelte Leistung $N$ mit Fehler des Mittelwerts lautet
+\begin{equation}
+\overline{N_{mech}} = (120.5 \pm 0.15) \text{W}
+\end{equation}
+Für die idealen Güteziffern verwendet man Gleichung \eqref{eqn:idealgueteziffer}. Die Temperaturen $T_{1}$, $T_{2}$ können durch das Polynom mit der jeweiligen Zeit $t$ berechnet werden.
+\begin{table}
+  \centering
+  \caption{Ideale und reale Güteziffern.}
+  \label{tab:gueteziffernidealundreal}
+  \begin{tabular}{c c c}
+    \toprule
+    Zeit {$t \: [\si{\second}]$} & {$\nu_\text{ideal}$} & {$\nu_\text{real}$} \\
+    \midrule
+    400  & 27.44 & 2.57 ± 0.014 \\
+    800  & 14.30 & 2.2 ± 0.017 \\
+    1200  &  10.2 & 1.82 ± 0.02 \\
+    1600 &  8.23 & 1.45 ± 0.024\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+Hier entsteht die Fehlerberechnung wieder durch die Gaußsche Fehlerfortpflanzung wie zuvor, diesmal mit den fehlerbehafteten Größen $N$ und ${\symup{d}T_{1}}/{\symup{d}t}$.
+Man kann einen sehr großen Unterschied zwischen den ausgerechneten Werten $\nu_{real}$ und $\nu_{ideal}$ erkennen. Da der reale Wärmeaustausch allerdings im Gegensatz zum idealen, irreversibel ist,
+und nach Gleichung \eqref{eqn:idealgueteziffer}, sowie \eqref{eqn:realgueteziffer} $\nu_{\text{real}}$ stets kleiner als $\nu_{\text{ideal}}$, scheinen die Ergebnisse plausibel.
+Die verwendeten Parameter zur Berechnung von den Güteziffern \ref{tab:gueteziffernidealundreal} stehen im folgenden nocheinmal aufgelistet.
+\begin{align}
+m_{w} &= \SI{4}{\kilo\gram} \\
+c_{w} &= \SI{4158.1}{\joule\per\kilo\gram\per\kelvin}\\
+c_{k}m_{k} &= \SI{750}{\joule\per\kelvin}\\
+N &= (120.5 \pm 0.15) \text{W}
+\end{align}
+%WERTE UND FEHLER MÜSSTEN ÜBERPUÜFT WERDEN
+\subsection{Massendurchsatz}
+Mit der bereits aufgestellten Gleichung \eqref{eqn:eqmassendurchsatz} kann man den Massendurchsatz der einzelnen Temperaturen angeben.
+Dafür benötigt man allerdings die Verdampfungswärme $L$, welche noch unbekannt ist. Diese kann man allerdings durch eine Dampfdruck-Kurve gewinnen, indem man eine Lineare Regression durchführt.
+

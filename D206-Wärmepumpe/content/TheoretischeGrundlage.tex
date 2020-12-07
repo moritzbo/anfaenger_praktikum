@@ -58,8 +58,8 @@ Im Realfall ist der Wärmeaustausch nicht reversibel und es folgt.
 \end{equation}
 Damit ergeben sich zwei Berechnungen für die Güteziffer durch einsetzen der Ergebnisse für $Q_{2}$ in \eqref{eqn:eqHauptsatz} und anschließend \eqref{eqn:eqGueteziffer}
 \begin{align}
-\nu_{\text{ideal}} &= \frac{Q_{1}}{A} = \frac{T_{1}}{T_{1}-T_{2}} \\
-\nu_{\text{real}} &< \frac{T_{1}}{T_{1}-T_{2}}
+\nu_{\text{ideal}} &= \frac{Q_{1}}{A} = \frac{T_{1}}{T_{1}-T_{2}} \label{eqn:idealgueteziffer}\\
+\nu_{\text{real}} &< \frac{T_{1}}{T_{1}-T_{2}} \label{eqn:realgueteziffer}
 \end{align}
 Daraus kann man sofort schließen, dass bei nur kleinen Temperaturunterschieden $\increment T$, also der Differenz zwischen $T_{1}$ und $T_{2}$, eine große Güteziffer
 entsteht. Es wird folglich nur eine kleine Arbeit gebraucht um eine beliebige Wärmemenge $Q_{1}$ zu transportieren. Bei nur kleinen $\increment T$ ist die Wärmepumpe also 
@@ -94,6 +94,7 @@ Mit der Gleichung \eqref{eqn:eqwaermeq1prozeit} findet man analog die pro Zeitei
 Wie in \ref{sec:TheoretischeGrundlagen} erwähnt kann man die entzogene Wärmemenge $\increment Q_{2}$ auch als Verdampfungswärme $L$ pro Gramm schreiben.
 Dadurch erhält man einen Ausdruck für den Massenstrom.
 \begin{equation}
+\label{eqn:eqmassendurchsatz}
 \frac{\increment Q_{2}}{\increment t} = L \frac{\increment m}{\increment t} \quad \to \quad \frac{\increment m}{\increment t} = \frac{\increment Q_{2}}{L \increment t}
 \end{equation}
 Also lässt sich der Massendurchsatz innerhalb der Wärmepumpe berechnen, wenn $L$ bekannt ist.

@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from uncertainties import ufloat
 from scipy.optimize import curve_fit
-
+from scipy.stats import sem
 
 
 def T(x, A, B, C):
@@ -16,6 +16,8 @@ t, T1, p1, T2, p2, N = np.genfromtxt("python/daten.dat", unpack=True)
 t *= 60
 T1 += 273.15
 T2 += 273.15
+
+N_mean = ufloat(np.mean(N), sem(N))
 
 params1, covariance_matrix1 = curve_fit(T, t, T1)
 params2, covariance_matrix2 = curve_fit(T, t, T2)
