@@ -40,5 +40,32 @@ for name, value, uncertainty in zip('ABC', params1, uncertainties1):
 for name2, value2, uncertainty2 in zip('ABC', params2, uncertainties2): 
     print(f'{name2} = {value2} ± {uncertainty2}')
 
+A1 = ufloat(params1[0], uncertainties1[0])
+B1 = ufloat(params1[1], uncertainties1[1])
+C1 = ufloat(params1[2], uncertainties1[2])
+
+A2 = ufloat(params2[0], uncertainties2[0])
+B2 = ufloat(params2[1], uncertainties2[1])
+C2 = ufloat(params2[2], uncertainties2[2])
+
+Diff1_400 = 2*A1*400 + B1
+Diff1_800 = 2*A1*800 + B1
+Diff1_1200 = 2*A1*1200 + B1
+Diff1_1600 = 2*A1*1600 + B1
+
+Diff2_400 = 2*A2*400 + B2
+Diff2_800 = 2*A2*800 + B2
+Diff2_1200 = 2*A2*1200 + B2
+Diff2_1600 = 2*A2*1600 + B2
+
+print(Diff1_400)
+print(Diff1_800)
+print(Diff1_1200)
+print(Diff1_1600)
+print("Jetzt Diff2")
+print(Diff2_400)
+print(Diff2_800)
+print(Diff2_1200)
+print(Diff2_1600)
 
 plt.savefig("build/plot2.pdf")
