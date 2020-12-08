@@ -38,7 +38,7 @@ dass die Parameter plausibel sind.
 \end{figure}
 \begin{flushleft}
 Nun kann man sich jeweils vier verschiedene Messpunkte anschauen und die dazugehörigen Differenzenquotienten bestimmen. Dafür wurden hier
-Messstellen im Abstand von 400 Sekunden gewählt.
+Messstellen im Abstand von 7min gewählt.
 Der Differenzenquotient des Polynom zweiten Grades lautet wie folgt.
 \end{flushleft}
 \begin{equation}
@@ -46,17 +46,17 @@ Der Differenzenquotient des Polynom zweiten Grades lautet wie folgt.
 \end{equation}
 In den Gleichungen \eqref{eq25} bis \eqref{eq28} sind die ausgerechneten Differenzenquotienten des Temperaturverlaufs $T_{1}$
 \begin{align}
-\left( \frac{\symup{d}T_{1}}{\symup{d}t}\right)_{400} &= (17.7\pm0.1)\cdot 10^{-3} \, \text{[K/s]} \label{eq25}\\
-\left(\frac{\symup{d}T_{1}}{\symup{d}t}\right)_{800} &= (15.1\pm0.1)\cdot 10^{-3} \,\text{[K/s]}\\
-\left(\frac{\symup{d}T_{1}}{\symup{d}t}\right)_{1200} &= (12.54\pm0.14)\cdot 10^{-3} \, \text{[K/s]}\\
-\left(\frac{\symup{d}T_{1}}{\symup{d}t}\right)_{1600} &= (9.97\pm0.16)\cdot 10^{-3} \, \text{[K/s]} \label{eq28}
+\left( \frac{\symup{d}T_{1}}{\symup{d}t}\right)_{420} &= (17.57\pm0.1)\cdot 10^{-3} \, \text{[K/s]} \label{eq25}\\
+\left(\frac{\symup{d}T_{1}}{\symup{d}t}\right)_{840} &= (14.86\pm0.12)\cdot 10^{-3} \,\text{[K/s]}\\
+\left(\frac{\symup{d}T_{1}}{\symup{d}t}\right)_{1260} &= (12.15\pm0.14)\cdot 10^{-3} \, \text{[K/s]}\\
+\left(\frac{\symup{d}T_{1}}{\symup{d}t}\right)_{1680} &= (9.44\pm0.17)\cdot 10^{-3} \, \text{[K/s]} \label{eq28}
 \end{align}
 Für den zweiten Temperaturverlauf $T_{2}$ erhält man
 \begin{align}
-\left( \frac{\symup{d}T_{2}}{\symup{d}t}\right)_{400} &= (10.4\pm0.6)\cdot 10^{-3} \, \text{[K/s]} \label{eq29}\\
-\left(\frac{\symup{d}T_{2}}{\symup{d}t}\right)_{800} &= (9.7\pm0.7)\cdot 10^{-3} \,\text{[K/s]}\\
-\left(\frac{\symup{d}T_{2}}{\symup{d}t}\right)_{1200} &= (8.9\pm0.9)\cdot 10^{-3} \, \text{[K/s]}\\
-\left(\frac{\symup{d}T_{2}}{\symup{d}t}\right)_{1600} &= (8.2\pm1.0)\cdot 10^{-3} \, \text{[K/s]} \label{eq32}
+\left( \frac{\symup{d}T_{2}}{\symup{d}t}\right)_{420} &= (-10.4\pm0.6)\cdot 10^{-3} \, \text{[K/s]} \label{eq29}\\
+\left(\frac{\symup{d}T_{2}}{\symup{d}t}\right)_{840} &= (-9.6\pm0.7)\cdot 10^{-3} \,\text{[K/s]}\\
+\left(\frac{\symup{d}T_{2}}{\symup{d}t}\right)_{1260} &= (-8.8\pm0.9)\cdot 10^{-3} \, \text{[K/s]}\\
+\left(\frac{\symup{d}T_{2}}{\symup{d}t}\right)_{1680} &= (-8.0\pm1.1)\cdot 10^{-3} \, \text{[K/s]} \label{eq32}
 \end{align}
 Dabei lassen sich die Fehler über die Gaußsche Fehlerfortpflanzung berechnen.
 \begin{equation}
@@ -79,10 +79,10 @@ Für die idealen Güteziffern verwendet man Gleichung \eqref{eqn:idealgueteziffe
     \toprule
     Zeit {$t \: [\si{\second}]$} & {$\nu_\text{ideal}$} & {$\nu_\text{real}$} \\
     \midrule
-    400  & 27.44 & 2.57 ± 0.014 \\
-    800  & 14.30 & 2.2 ± 0.017 \\
-    1200  &  10.2 & 1.82 ± 0.02 \\
-    1600 &  8.23 & 1.45 ± 0.024\\
+    420  & 26.14 & 2.55 ± 0.015 \\
+    840  & 13.70 & 2.16 ± 0.017 \\
+    1260  &  9.81 & 1.76 ± 0.02 \\
+    1680 &  8.31 & 1.37 ± 0.024\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -91,7 +91,7 @@ Man kann einen sehr großen Unterschied zwischen den ausgerechneten Werten $\nu_
 und nach Gleichung \eqref{eqn:idealgueteziffer}, sowie \eqref{eqn:realgueteziffer} $\nu_{\text{real}}$ stets kleiner als $\nu_{\text{ideal}}$, scheinen die Ergebnisse plausibel.
 Die verwendeten Parameter zur Berechnung von den Güteziffern \ref{tab:gueteziffernidealundreal} stehen im folgenden nocheinmal aufgelistet.
 \begin{align}
-m_{w} &= \SI{4}{\kilo\gram} \\
+m_{w} &= m_{k} = \SI{4}{\kilo\gram} \\
 c_{w} &= \SI{4158.1}{\joule\per\kilo\gram\per\kelvin}\\
 c_{k}m_{k} &= \SI{750}{\joule\per\kelvin}\\
 N &= (120.5 \pm 0.15) \text{W}
@@ -100,4 +100,104 @@ N &= (120.5 \pm 0.15) \text{W}
 \subsection{Massendurchsatz}
 Mit der bereits aufgestellten Gleichung \eqref{eqn:eqmassendurchsatz} kann man den Massendurchsatz der einzelnen Temperaturen angeben.
 Dafür benötigt man allerdings die Verdampfungswärme $L$, welche noch unbekannt ist. Diese kann man allerdings durch eine Dampfdruck-Kurve gewinnen, indem man eine Lineare Regression durchführt.
-
+Zunächst müssen auf die berechneten Drücke $p_{1}$ und $p_{2}$ jeweils 1 bar addiert werden. Anschließend kann der Druck noch in Pascal umgerechnet werden. In einem Diagramm kann man den Logarithmus des Dampfdrucks $p_{1}$ gegen die reziproke abosolute Temperatur $T_{1}$ darstellen \ref{fig:plot3}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot3.pdf}
+  \caption{Messwerte in einer logarithmisch-reziproken Darstellung}
+  \label{fig:plot3}
+\end{figure}
+Für die Berechnung der Verdampfungswärme kann man eine Lineare Beziehung aus dem Versuch 203 verwenden. Es gilt folgende Beziehung
+\begin{equation}
+\text{ln} p = - \frac{\symup{L}}{\symup{R}} \frac{1}{T} + const
+\end{equation}
+Dabei ist $R$ die allgemeine Gaskonstante. Man erkennt also eine lineare Beziehung zwischen dem logarithmischen Druck und der reziproken Temperatur.
+Mithilfe einer Ausgleichsgerade kann man also die Verdampfungswärme $L$ als Steigung dieser Geraden identifizieren.
+Man verwendet also den Ansatz
+\begin{equation}
+\text{ln} p = - \frac{\symup{A}}{\symup{R}} \left( \frac{1}{T} \right) + \symup{B} 
+\end{equation}
+Hier müssen also die passenden Parameter A und B gefunden werden, was durch eine lineare Regression ermöglicht werden kann.
+Man erhählt folgende Lösungen.
+\begin{align}
+\symup{A} &= (2.05\pm0.06)\cdot 10^{4} \\
+\symup{B} &= (21.65\pm0.23)
+\end{align}
+Mit diesen Parametern lässt sich nun eine Ausgleichsgerade in das Diagramm \ref{fig:plot3} einzeichnen.
+\newpage
+\begin{flushleft}
+Die Steigung $A$ entspricht nun der Verdampfungswärme $L$, die Verdampfungswärme pro Gramm muss also für das verwendete Gas (Dichlordifluormethan) speziell berechnet werden.
+Die molare Masse vom Dichlordifluormethan ist
+\end{flushleft}
+\begin{equation}
+M = \SI{120.91}{\gram\per\mol}
+\end{equation}
+Daraus folgt
+\begin{equation}
+L = \frac{\symup{A}}{M} = (1.69 \pm 0.05) \cdot 10^{5} \, \si{\joule\per\kilo\gram}
+\end{equation}
+Den Fehler erhält wieder durch eine Fehlerfortpflanzung mit nur einem fehlerbehafteten Wert $A$.
+Zusammen mit \eqref{eqn:massendurchsatz2} und \eqref{eqn:eqmassendurchsatz} kann man nun den Massendurchsatz schreiben als
+\begin{equation}
+\frac{\increment m}{\increment t} = (m_{w}c_{w} + m_{k}c_{k})\frac{\increment T_{2}}{\increment t} \frac{1}{L}
+\end{equation}
+Für die vier verschiedenen Differenzenquotienten von $T_{2}$ erhält man dann die folgenden Massendurchsätze
+\begin{align}
+\left( \frac{\increment m}{\increment t} \right)_{420} &= (1.07 \pm 0.07) \si{\gram\per\second} \\
+\left( \frac{\increment m}{\increment t} \right)_{840} &= (1.00 \pm 0.08) \si{\gram\per\second} \\
+\left( \frac{\increment m}{\increment t} \right)_{1260}&= (0.91 \pm 0.1) \si{\gram\per\second} \\
+\left( \frac{\increment m}{\increment t} \right)_{1680}&= (0.83 \pm 0.11) \si{\gram\per\second} 
+\end{align}
+Im folgenden ist noch einmal die konkrete Berechnung des Fehlers aufgeführt.
+Für $\increment \left( \frac{\increment m}{\increment t} \right) $ gilt dann
+\begin{equation}
+\increment \left(\frac{\increment m}{\increment t}\right) = \sqrt{\left( \frac{m_{w}c_{w} + m_{k}c_{k}}{L} \right)^{2} \cdot \left( \increment \left( \frac{\increment T_{2}}{\increment t}\right) \right)^2 +
+\left( \frac{m_{w}c_{w} + m_{k}c_{k}}{L^{2}} \frac{\increment T_{2}}{\increment t}\right)^{2} \cdot (\increment L)^2}
+\end{equation}
+\subsection{Mechanische Kompressorleistung}
+Bei der Berechnung der mechanischen Kompressorleistung zwischen einem Druckunterschied $p_{2} - p_{1}$ benötigt man die Dichte des Transportgases (Dichlordifluormethan) $\ce{CL2F2C}$.
+Dazu kann man sich die ideale Gasgleichung zunutze machen,
+\begin{equation}
+pV = n R T = \text{const}
+\end{equation}
+siehe \eqref{eqn:idealegasgl}. Man kann unter Verwendung von Normalbedingung
+\begin{align}
+p_{0} &= 10^{5} \, \text{Pa} \\
+T_{0} &= \SI{273.15}{\kelvin} \\
+\rho_{0} &= \SI{5.51}{\kilo\gram\per\meter\cubic}
+\end{align}
+folgende Gleichung aufstellen
+\begin{align}
+p_{0} \cdot \frac{m}{\rho_{0}} = nR T_{0} &\implies p_{2} \frac{m}{\rho} = nR T_{2} \\
+&\implies \rho = \frac{\rho_{0}T_{0}p_{2}}{p_{0}T_{2}}
+\end{align}
+Dabei ist $\rho$ die Dichte des Transportmediums bei der Temperatur $T_{2}$ und dem Druck $p_{2}$, welches man zur Berechnung von der Kompressorleistung benötigt.
+Nun lässt sich mit gegeben Isentropenkoeffizient $\kappa = 1.14$ die Kompressorleistung bestimmen.
+\begin{equation}
+N_{mech} = \frac{1}{\kappa - 1} \left( p_{1}\sqrt[\kappa]{\frac{p_{2}}{p_{1}}} - p_{2} \right) \frac{p_{0}T_{2}}{\rho_{0}T_{0}p_{2}} \frac{\increment m}{\increment t}
+\end{equation}
+\newpage
+\begin{flushleft}
+Man erhält die folgenden Werte
+\end{flushleft}
+\begin{table}
+  \centering
+  \caption{Mechanische Kompressorleistung}
+  \label{tab:mechkompr}
+  \begin{tabular}{c c c}
+    \toprule
+    Zeit {$t \: [\si{\second}]$} & Temperatur $T_{2} \, [\si{\kelvin}]$ & Kompressorleistung $N_\text{mech} \, [\si{\watt}]$ \\
+    \midrule
+    420  & 292.35 & 10.93 ± 0.72 \\
+    840  & 288.05 & 15.7 ± 1.26 \\
+    1260  &  284.05 & 17.31 ± 1.9 \\
+    1680 &  281.15 & 18.8 ± 2.5\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\begin{flushleft}
+Der Fehler für die Kompressorleistung lässt sich wieder mit Gauß berechnen und es ergibt sich die Gleichung.
+\end{flushleft}
+\begin{equation}
+  \increment N_{mech} = \frac{1}{\kappa - 1} \left( p_{1}\sqrt[\kappa]{\frac{p_{2}}{p_{1}}} - p_{2} \right) \frac{1}{\rho} \cdot \increment \left( \frac{\increment m}{\increment t} \right)
+\end{equation}

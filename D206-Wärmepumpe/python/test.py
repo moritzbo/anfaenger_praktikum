@@ -17,7 +17,7 @@ x_plot = np.linspace(0, 2100)
 
 
 
-t, T1, p1, T2, p2, N = np.genfromtxt("python/daten.dat", unpack=True)
+t, T1, p1, T2, p2, N = np.genfromtxt("daten.dat", unpack=True)
 t *= 60
 T1 += 273.15
 T2 += 273.15
@@ -26,7 +26,13 @@ p2 += 1
 
 p1 *= 10**5
 p2 *= 10**5
+kappa = 1.14
+T0 = 273.15
+p0 = 10**5
+rho0 = 5.51
 
+print(p1)
+print(p2)
 
 N_mean = ufloat(np.mean(N), sem(N))
 
@@ -81,7 +87,7 @@ print(Diff2_840)
 print(Diff2_1260)
 print(Diff2_1680)
 
-plt.savefig("build/plot2.pdf")
+#plt.savefig("build/plot2.pdf")
 
 plt.clf()
 
@@ -94,8 +100,9 @@ plt.xlabel(r'1/$T_{1}$ [1/K]')
 plt.ylabel(r'log($p_{1}$)')
 plt.plot(1/T1, linreg(1/T1, *params3), 'b--', label='Lineare Regression')
 plt.legend(loc="best")
-plt.savefig("build/plot3.pdf")
+#plt.savefig("build/plot3.pdf")
 
+plt.clf()
 aplot3 = ufloat(params3[0], uncertainties3[0])
 bplot3 = ufloat(params3[1], uncertainties3[1])
 
@@ -106,3 +113,37 @@ print(f'L: {L}')
 
 print(f"A: {aplot3}")
 print(f'B: {bplot3}')
+
+
+md_420 = (4*4185.1 + 750)*Diff2_420 *1/L
+md_840 = (4*4185.1 + 750)*Diff2_840 *1/L
+md_1260 = (4*4185.1 + 750)*Diff2_1260 *1/L
+md_1680 = (4*4185.1 + 750)*Diff2_1680 *1/L
+
+print(f'Massendurchsatz t=420: {md_420}')
+print(f'Massendurchsatz t=840: {md_840}')
+print(f'Massendurchsatz t=1260: {md_1260}')
+print(f'Massendurchsatz t=1680: {md_1680}')
+
+print(p2[8])
+
+rho420 = (rho0*T0*p2[8])/(p0*T2[8])
+rho840 = (rho0*T0*p2[15])/(p0*T2[15])
+rho1260 = (rho0*T0*p2[22])/(p0*T2[22])
+rho1680 = (rho0*T0*p2[29])/(p0*T2[29])
+
+
+#N_mech420 = 1/(kappa-1) * ((p1[8] * (p2[8]/p1[8])**(1/kappa) - p2[8]) *(1/rho420) * md_420
+#N_mech840 = 1/(kappa-1) * ((p1[15] * (p2[15]/p1[15])**(1/kappa) - p2[15]) *(1/rho840) * md_840
+#N_mech1260 = 1/(kappa-1) * ((p1[22] * (p2[22]/p1[22])**(1/kappa) - p2[22]) *(1/rho1260) * md_1260
+#N_mech1680 = 1/(kappa-1) * ((p1[29] * (p2[29]/p1[29])**(1/kappa) - p2[29]) *(1/rho1680) * md_1680
+
+#print(f'Nmech400: {N_mech400}')
+#
+#print(f'Nmech800: {N_mech800}')
+
+#print(f'Nmech1200: {N_mech1200}')
+#
+#print(f'Nmech1600: {N_mech1600}')
+
+plt.show()
