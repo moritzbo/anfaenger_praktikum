@@ -1,7 +1,7 @@
 \section{Auswertung}
 \subsection{Temperaturverläufe}
 Die Temperaturen $T_{1}$ und $T_{2}$ wurden in dem Experiment in Celsius gemessen und können anschließend in Kelvin umgerechnet werden, was die Berechnung
-der gesuchten Größen ermöglicht. Die Temperaturverläufe seien in dem folgedenen Diagramm \ref{fig:plot1} skizziert.
+der gesuchten Größen ermöglicht. Die Temperaturverläufe seien in dem folgenden Diagramm \ref{fig:plot1} skizziert.
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{build/plot1.pdf}
@@ -9,7 +9,7 @@ der gesuchten Größen ermöglicht. Die Temperaturverläufe seien in dem folgede
   \label{fig:plot1}
 \end{figure}
 \begin{flushleft}
-Dabei wurde die Abzisse als Zeit $t$ in Sekunden gewählt. Nun lässt sich eine Ausgleichsfunktion durch
+Dabei wurde die Abszisse als Zeit $t$ in Sekunden gewählt. Nun lässt sich eine Ausgleichsfunktion durch
 die einzelnen Messwerte legen, dafür wurde hier ein Polynomansatz zweiten Grades gewählt. Also
 \end{flushleft}
 \begin{equation}
@@ -89,7 +89,7 @@ Für die idealen Güteziffern verwendet man Gleichung \eqref{eqn:idealgueteziffe
 Hier entsteht die Fehlerberechnung wieder durch die Gaußsche Fehlerfortpflanzung wie zuvor, diesmal mit den fehlerbehafteten Größen $N$ und ${\symup{d}T_{1}}/{\symup{d}t}$.
 Man kann einen sehr großen Unterschied zwischen den ausgerechneten Werten $\nu_{real}$ und $\nu_{ideal}$ erkennen. Da der reale Wärmeaustausch allerdings im Gegensatz zum idealen, irreversibel ist,
 und nach Gleichung \eqref{eqn:idealgueteziffer}, sowie \eqref{eqn:realgueteziffer} $\nu_{\text{real}}$ stets kleiner als $\nu_{\text{ideal}}$, scheinen die Ergebnisse plausibel.
-Die verwendeten Parameter zur Berechnung von den Güteziffern \ref{tab:gueteziffernidealundreal} stehen im folgenden nocheinmal aufgelistet.
+Die verwendeten Parameter zur Berechnung von den Güteziffern \ref{tab:gueteziffernidealundreal} stehen im folgenden noch einmal aufgelistet.
 \begin{align}
 m_{w} &= m_{k} = \SI{4}{\kilo\gram} \\
 c_{w} &= \SI{4158.1}{\joule\per\kilo\gram\per\kelvin}\\
@@ -100,7 +100,7 @@ N &= (120.5 \pm 0.15) \text{W}
 \subsection{Massendurchsatz}
 Mit der bereits aufgestellten Gleichung \eqref{eqn:eqmassendurchsatz} kann man den Massendurchsatz der einzelnen Temperaturen angeben.
 Dafür benötigt man allerdings die Verdampfungswärme $L$, welche noch unbekannt ist. Diese kann man allerdings durch eine Dampfdruck-Kurve gewinnen, indem man eine Lineare Regression durchführt.
-Zunächst müssen auf die berechneten Drücke $p_{1}$ und $p_{2}$ jeweils 1 bar addiert werden. Anschließend kann der Druck noch in Pascal umgerechnet werden. In einem Diagramm kann man den Logarithmus des Dampfdrucks $p_{1}$ gegen die reziproke abosolute Temperatur $T_{1}$ darstellen \ref{fig:plot3}.
+Zunächst müssen auf die berechneten Drücke $p_{1}$ und $p_{2}$ jeweils 1 bar addiert werden. Anschließend kann der Druck noch in Pascal umgerechnet werden. In einem Diagramm kann man den Logarithmus des Dampfdrucks $p_{1}$ gegen die reziproke absolute Temperatur $T_{1}$ darstellen \ref{fig:plot3}.
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{build/plot3.pdf}
@@ -118,7 +118,7 @@ Man verwendet also den Ansatz
 \text{ln} p = - \frac{\symup{A}}{\symup{R}} \left( \frac{1}{T} \right) + \symup{B} 
 \end{equation}
 Hier müssen also die passenden Parameter A und B gefunden werden, was durch eine lineare Regression ermöglicht werden kann.
-Man erhählt folgende Lösungen.
+Man erählt folgende Lösungen.
 \begin{align}
 \symup{A} &= (2.05\pm0.06)\cdot 10^{4} \\
 \symup{B} &= (21.65\pm0.23)
@@ -148,7 +148,7 @@ Für die vier verschiedenen Differenzenquotienten von $T_{2}$ erhält man dann d
 \left( \frac{\increment m}{\increment t} \right)_{1260}&= (0.91 \pm 0.1) \si{\gram\per\second} \\
 \left( \frac{\increment m}{\increment t} \right)_{1680}&= (0.83 \pm 0.11) \si{\gram\per\second} 
 \end{align}
-Im folgenden ist noch einmal die konkrete Berechnung des Fehlers aufgeführt.
+Im Folgenden ist noch einmal die konkrete Berechnung des Fehlers aufgeführt.
 Für $\increment \left( \frac{\increment m}{\increment t} \right) $ gilt dann
 \begin{equation}
 \increment \left(\frac{\increment m}{\increment t}\right) = \sqrt{\left( \frac{m_{w}c_{w} + m_{k}c_{k}}{L} \right)^{2} \cdot \left( \increment \left( \frac{\increment T_{2}}{\increment t}\right) \right)^2 +
