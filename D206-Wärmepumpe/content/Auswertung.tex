@@ -89,6 +89,9 @@ Für die idealen Güteziffern verwendet man Gleichung \eqref{eqn:idealgueteziffe
 Hier entsteht die Fehlerberechnung wieder durch die Gaußsche Fehlerfortpflanzung wie zuvor, diesmal mit den fehlerbehafteten Größen $N$ und ${\symup{d}T_{1}}/{\symup{d}t}$.
 Man kann einen sehr großen Unterschied zwischen den ausgerechneten Werten $\nu_{real}$ und $\nu_{ideal}$ erkennen. Da der reale Wärmeaustausch allerdings im Gegensatz zum idealen, irreversibel ist,
 und nach Gleichung \eqref{eqn:idealgueteziffer}, sowie \eqref{eqn:realgueteziffer} $\nu_{\text{real}}$ stets kleiner als $\nu_{\text{ideal}}$, scheinen die Ergebnisse plausibel.
+Damit die Wärmepumpe möglichst effizient arbeitet, dürfen sich nach der Annahme \eqref{eqn:idealzweiterhauptsatz} die Temperaturen $T_{1}$ und $T_{2}$ praktisch nicht ändern.
+Das ist bei dieser realen Wärmepumpe allerdings nicht umsetzbar, denn man kann nicht vollständig verhindern, dass ein wenig Wärme an die Umgebung abgegeben wird. Ein Grund für
+den Unterschied zwischen realer und idealer Güteziffer ist also die Isolierung der Reservoire.
 Die verwendeten Parameter zur Berechnung von den Güteziffern \ref{tab:gueteziffernidealundreal} stehen im folgenden noch einmal aufgelistet.
 \begin{align}
 m_{w} &= m_{k} = \SI{4}{\kilo\gram} \\
@@ -176,7 +179,6 @@ Nun lässt sich mit gegeben Isentropenkoeffizient $\kappa = 1.14$ die Kompressor
 \begin{equation}
 N_{mech} = \frac{1}{\kappa - 1} \left( p_{1}\sqrt[\kappa]{\frac{p_{2}}{p_{1}}} - p_{2} \right) \frac{p_{0}T_{2}}{\rho_{0}T_{0}p_{2}} \frac{\increment m}{\increment t}
 \end{equation}
-\newpage
 \begin{flushleft}
 Man erhält die folgenden Werte
 \end{flushleft}
