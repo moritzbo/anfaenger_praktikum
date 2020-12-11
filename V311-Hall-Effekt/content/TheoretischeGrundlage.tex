@@ -21,7 +21,7 @@ Beispielsweise würde bei einer ideal kristallinen Gitterstruktur des Metalls ke
 selbst stattfinden. Das liegt vor allem daran, dass sich Materiewellen, also hier die Elektronen streng periodisch ausbreiten. 
 Eine solche ideale Struktur liegt allerdings in den meisten Metallen nicht vor, also rechnet man mit einer endlichen Leitfähigkeit und einer zum Teil chaotischen Bewegung.
 
-\subsection{Berechnung mikroskopischer Paramater}
+\subsection{Berechnung grundlegender Größen}
 Um nun diese chaotische Bewegung beschreiben zu können kann man einige Größen aufstellen die man nachher durch Messung der Hall-Spannung und des Widerstands ermitteln kann.
 Wir haben bereits festgestellt das die sich die Elektronen nicht immer ungehindert ausbreiten. Es gibt also einen Zeitraum $\tau$ in dem ein Leitungselektronen nach einer Wechselwirkung
 beschleunigt wird, bis es wieder durch eine Wechselwirkung mit einer Fehlstelle im Gitter an der Ausbreitung in Stromrichtung gehindert wird.
@@ -37,7 +37,7 @@ F = \vec{b} \cdot m_{0} && F_{el} = -e \cdot \vec{E_{ext}}
 Dabei ist $\vec{b}$ die Beschleunigung, $m_{0}$ die Ruhemasse des Elektrons, $e$ die Elementarladung und $\vec{E_{ext}}$ das von außen angelegte E-Feld.
 Es folgt sofort nach der Gleichsetzung der Kräfte.
 \begin{equation}
-\vec{b} = \frac{-eE_{ext}}{m_{0}}
+\vec{b} = \frac{-e \vec{E_{ext}}}{m_{0}}
 \end{equation}
 Aus der Beschleunigung lässt sich bekanntlich die Geschwindigkeit berechnen. Wenn man sich nun die mittlere Flugzeit $\bar{\tau}$ anschaut, erhält man in diesem Zeitraum durch die
 berechnete Beschleunigung eine Geschwindigkeitsänderung $\increment \vec{\bar{v}}$ in Richtung des E-Feldes, da das E-Feld eine vektorielle Größe ist und die Kraft nur in Richtung des E-Feldes wirkt.
@@ -55,13 +55,63 @@ Man definiert diese aufgrund der gleichmäßig beschleunigten Bewegung in E-Feld
 \end{equation}
 Die Stromdichte entstehend durch das angelegte elektrische Feld lässt sich durch die Driftgeschwindigkeit darstellen zu
 \begin{equation}
+\label{eqn:stromdichteunddrift}
 \vec{j} = \vec{\rho} \cdot \vec{\bar{v_{d}}} = - n \vec{\bar{v_{d}}} e
 \end{equation}
 Dabei ist $\vec{\rho}$ die Ladungsdichte welche aus einem Vielfachen $n$ der Elementarladung $e$ besteht. Dabei gibt $n$ die Anzahl der Ladungsträger an.
 Die zuvor bestimmte Driftgeschwindigkeit \eqref{eqn:drift} zusammen mit der Geschwindigkeitsänderung \eqref{eqn:deltav} lassen sich nun einsetzen und man bekommt.
 
 \begin{equation}
+\label{eqn:stromdichte}
 \vec{j} = n \frac{e^{2}\vec{E}}{2m_{0}} \bar{\tau}
 \end{equation}
 In der Umsetzung ist es allerdings besser möglich den Strom $I$ durch das Metall zu messen und anstatt der elektrischen Feldstärke $E$ mit der E-Feld erzeugenden Spannung $U$
 zu rechnen. Diese stehen beide in einem geometrischen Zusammenhang, was sich in diesem Fall besonders anbietet, da man das zu untersuchende Metall leicht vermessen kann.
+\begin{align}
+\label{eqn:querschnitt}
+I = \vec{j} \cdot \symup{Q} && E = \frac{U}{\symup{L}}
+\end{align}
+Dabei ist die Q Fläche senkrecht zur Stromrichtung und L die Länge des Metalls.
+Aus \eqref{eqn:stromdichte} erhält man also den Strom in Abhängigkeit von $U$, L und Q.
+\begin{equation}
+\label{eqn:strom}
+I = n \frac{e^{2}\bar{\tau} \symup{Q}}{2m_{0}} \cdot \frac{U}{\symup{L}}
+\end{equation}
+Der Widerstand $R$ und die Leitfähigkeit $S$ lassen sich nach dem Ohmschen Gesetz direkt ablesen zu
+\begin{align}
+\label{eqn:widerstand}
+R = \frac{2m_{0}}{e^{2}n \bar{\tau}} \cdot \frac{\symup{L}}{\symup{Q}} && S = \frac{e^{2}n \bar{\tau}}{2m_{0}} \cdot \frac{\symup{Q}}{\symup{L}}
+\end{align}
+Dabei entspricht der Widerstand $R$ der reziproken Leitfähigkeit. Die von $L$ und $Q$ unabhängige spezifische Leitfähigkeit, sowie der spezifische Widerstand sind dann per Definition.
+\begin{align}
+\nonumber
+\rho = \frac{2m_{0}}{e^{2}n \bar{\tau}} && \sigma = \frac{e^{2}n \bar{\tau}}{2m_{0}} 
+\end{align}
+Um nun die Paramater aus \ref{sec:zielsetzung} zu bestimmen braucht man allerdings mehr Messgrößen als nur den Widerstand des Metalls. Das kann man Leicht an Gleichung
+\eqref{eqn:widerstand} erkennen, denn der Widerstand hängt noch von zwei unbekannten Größen $n$ und $\bar{\tau}$ ab.
+Hierbei wird die Hall-Spannung jetzt ausschlaggebend.
+
+\subsection{Berechnungen zur Hall-Spannung}
+An einer Stromdurchflossenen Metallleiterplatte mit Dicke $d$ und Breite $b$ fließt ein Strom $I$, der durch die Gleichung \eqref{eqn:strom} beschrieben werden kann. Senkrecht
+zur Stromrichtung und senkrecht zur Leiterplatte wird anschließend ein Magnetisches Feld $B$ gelegt. Nun wirkt auf die Leitungselektronen im Metall eine Lorentzkraft $F_{L}$ welche folgendermaßend berechnet wird.
+\begin{equation}
+F_{L} =  e \cdot \vec{\bar{v_{d}}} \times \vec{B} \, \to \, F_{L} = e \bar{v_{d}} B
+\end{equation}
+Dabei ist die getroffene Folgerung nur dann korrekt wenn die zuvor gestellte Bedingung, dass alle Vektoren senkrecht aufeinander stehen, erfüllt ist.
+Die Lorentzkraft wirkt also wieder senkrecht zu jeweils Stromrichtung und B-Feld, folglich werden die Elektronen entweder, wie in der Abbildung \ref{fig:kupferblech} erkennbar, in die Zeichenebene hinein oder heraus
+abgelenkt. Durch die entstehende Ladungsverschiebung entsteht wiederum eine Potentialdifferenz zwischen Punkt A und B. Es baut sich also ein E-Feld auf, welches der Lorentzkraft entgegengerichtet ist.
+Ab einem gewissen Zeitpunkt herrscht eine so große Potentialdifferenz, dass die Elektrische Kraft des aufgebauten E-Feldes gleich groß wie die Lorentzkraft ist.
+Es gilt nun
+\begin{align*}
+F_{el} &= F_{L} \quad \to \quad e \tilde{E} = e \bar{v_{d}} B \\
+U_{H} &= \int_{0}^{b} \tilde{E} \symup{d}b = \int_{0}^{b} \bar{v_{d}} B \symup{d}b \quad \to \quad \tilde{E} b = \bar{v_{d}} B b
+\end{align*}
+Dabei ist $\tilde{E}$ das Elektrische Feld mit umgekehrten Vorzeichen zur Lorentzkraft und nicht zu verwechseln mit $E$ dem Elektrischen Feld welches den Strom verursacht.
+Die Hall-Spannung $U_{H}$ hat eine Abhängigkeit von $\bar{v_{d}}$, durch die aufgestellte Beziehung \label{eqn:stromdichteunddrift} in eine Abhängigkeit von $\vec{j}$ umschreiben und 
+anschließend mit den geometrischen Größen zu dem Strom \eqref{eqn:querschnitt} umschreiben. Hier lässt sich der Querschnitt natürlich durch die Dicke und Breite leicht bestimmen. Man erhält
+
+\begin{equation}
+U_{H}(I_{q}) = - \frac{1}{n e} \cdot \frac{B I_{q}}{d}
+\end{equation}
+Diese Gleichung hat jetzt einen großen Vorteil zu den vorherigen, denn hier lassen sich alle größen leicht experimentell bestimmen, so dass man 
+durch eine Rechnung die Anzahl der Ladungsträger $n$ einer beliebigen Probe leicht ermitteln kann.
