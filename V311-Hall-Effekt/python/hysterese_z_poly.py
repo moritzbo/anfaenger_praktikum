@@ -5,7 +5,7 @@ from scipy.optimize import curve_fit
 from scipy.stats import sem
 
 
-x, y = np.genfromtxt("../Daten/daten_magnet_z.txt", unpack = True)
+x, y = np.genfromtxt("Daten/daten_magnet_z.txt", unpack = True)
 
 plt.plot(x,y, 'k.', 
             label='scatter')

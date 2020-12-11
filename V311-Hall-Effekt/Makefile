@@ -1,11 +1,15 @@
 all: build/V311-Hall-Effekt.pdf
 
-#build/plot1.pdf: python/plot1.py header-matplotlib.tex matplotlibrc python/daten.dat| build
-#		TEXINPUTS=$$(pwd): python python/plot1.py
+build/hysterese.pdf: python/hysterese.py header-matplotlib.tex matplotlibrc Daten/daten_magnet_a.txt Daten/daten_magnet_z.txt| build
+		TEXINPUTS=$$(pwd): python python/hysterese.py
+
+build/u_hall.pdf: python/u_hall_bconst.py header-matplotlib.tex matplotlibrc Daten/daten_hall_bconst_pos.txt Daten/daten_hall_bconst_neg.txt| build
+		TEXINPUTS=$$(pwd): python python/u_hall_bconst.py
 
 
-#build/D206-Wärmepumpe.pdf: build/plot1.pdf 
-					
+
+build/V311-Hall-Effekt.pdf: build/hysterese.pdf \
+							build/u_hall.pdf
 
 build/V311-Hall-Effekt.pdf: FORCE | build
 	  TEXINPUTS=build: \
