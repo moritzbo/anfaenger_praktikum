@@ -10,3 +10,4 @@ plt.ylabel(r'$x \ [\si{\centi\meter}]$')
 plt.tight_layout()
 plt.savefig('build/plot1.pdf')
 
+ 
