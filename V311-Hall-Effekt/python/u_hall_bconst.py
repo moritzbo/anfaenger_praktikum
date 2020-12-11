@@ -5,10 +5,11 @@ from scipy.optimize import curve_fit
 from scipy.stats import sem
 import importlib
 
-exec(open('hysterese_a_poly.py').read())
-exec(open('hysterese_z_poly.py').read())
+exec(open('u_hall_bconst+.py').read())
+exec(open('u_hall_bconst-.py').read())
 
 
-#plt.show()
-plt.safefig("../build/hystere.pdf")
+
+plt.show()
+plt.safefig("../build/u_hall.pdf) 
 #ohne fehler bis jetzt
