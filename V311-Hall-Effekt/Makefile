@@ -1,13 +1,13 @@
-all: build/D206-Wärmepumpe.pdf
+all: build/V311-Hall-Effekt.pdf
 
-build/plot1.pdf: python/plot1.py header-matplotlib.tex matplotlibrc python/daten.dat| build
-		TEXINPUTS=$$(pwd): python python/plot1.py
+#build/plot1.pdf: python/plot1.py header-matplotlib.tex matplotlibrc python/daten.dat| build
+#		TEXINPUTS=$$(pwd): python python/plot1.py
 
 
-build/D206-Wärmepumpe.pdf: build/plot1.pdf 
+#build/D206-Wärmepumpe.pdf: build/plot1.pdf 
 					
 
-build/D206-Wärmepumpe.pdf: FORCE | build
+build/V311-Hall-Effekt.pdf: FORCE | build
 	  TEXINPUTS=build: \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
@@ -16,7 +16,7 @@ build/D206-Wärmepumpe.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	D206-Wärmepumpe.tex
+	V311-Hall-Effekt.tex
 
 build:
 	mkdir -p build
