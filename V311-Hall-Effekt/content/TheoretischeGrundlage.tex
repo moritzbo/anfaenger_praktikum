@@ -1,6 +1,6 @@
 \section{Theoretische Grundlage}
-
-Bei der Messung des Hall-Effekts wird eine sehr wichtige Eigenschaft der Atomstrukur von Metallen ausgenutzt.
+\label{sec:theo}
+Bei der Messung des Hall-Effekts wird eine sehr wichtige Eigenschaft der Atomstrukur von Metallen ausgenutzt. %maybe zweiter Satz direkt ändern, mir ist nix besseres zur Überleitung eingefallen
 Die Elektronen auf den äußeren Schalen der Metallatome können sich oft abspalten und sind somit in der Lage
 einen Strom zu leiten. Diese Elektronen werden auch Leitungselektronen genannt und sie können von den äußeren Schalen
 eines Atoms zur nächsten äußeren Schale eines anderen Atoms wandern. Die Elektronen auf der äußeren Schale die sich noch nicht gelöst haben werden Valenzelektronen
@@ -18,7 +18,50 @@ besetzten äußeren Bahnen für die elektrische Leitung in Frage kommen. Dieses 
 Analog darf dann für die nicht leitenden Metalle, also Isolatoren, die äußere Bahn nicht besetzt sein damit auch kein solches Leitfähigkeitsband entsteht.
 Im folgenden kann man sich das Verhalten der mikroskopischen Größen eines Metallleiters anschauen.
 Beispielsweise würde bei einer ideal kristallinen Gitterstruktur des Metalls keine Wechselwirkung zwischen Leitungselektronen und Atomkernen, sowie unter den Elektronen
-selbst stattfinden. Eine solche ideale Struktur liegt allerdings bei den meisten Metallen nicht vor, also rechnet man mit einer endlichen Leitfähigkeit.
+selbst stattfinden. Das liegt vor allem daran, dass sich Materiewellen, also hier die Elektronen streng periodisch ausbreiten. 
+Eine solche ideale Struktur liegt allerdings in den meisten Metallen nicht vor, also rechnet man mit einer endlichen Leitfähigkeit und einer zum Teil chaotischen Bewegung.
 
+\subsection{Berechnung mikroskopischer Paramater}
+Um nun diese chaotische Bewegung beschreiben zu können kann man einige Größen aufstellen die man nachher durch Messung der Hall-Spannung und des Widerstands ermitteln kann.
+Wir haben bereits festgestellt das die sich die Elektronen nicht immer ungehindert ausbreiten. Es gibt also einen Zeitraum $\tau$ in dem ein Leitungselektronen nach einer Wechselwirkung
+beschleunigt wird, bis es wieder durch eine Wechselwirkung mit einer Fehlstelle im Gitter an der Ausbreitung in Stromrichtung gehindert wird.
+Diese Vorgänge lassen sich nun mitteln und man erhält die Zeit $\bar{\tau}$, welche mittlere freie Flugzeit genannt wird.
+Die kann nachher durch den Widerstand $R$ %eqref 
+ermittelt werden und ist für die folgende Darstellung der anderen Größen von großer Bedeutung.
+Wenn man ein äußeres elektrisches Feld an ein Metall anschließt bewegen sich die Leitungselektronen unter den genannten Bedingungen in \ref{sec:theo} und sie erfahren eine Beschleunigung
+die man durch die allgemeinen Kraftgesetze bestimmen kann. Es gilt
+\begin{align}
+\nonumber
+F = \vec{b} \cdot m_{0} && F_{el} = -e \cdot \vec{E_{ext}}
+\end{align}
+Dabei ist $\vec{b}$ die Beschleunigung, $m_{0}$ die Ruhemasse des Elektrons, $e$ die Elementarladung und $\vec{E_{ext}}$ das von außen angelegte E-Feld.
+Es folgt sofort nach der Gleichsetzung der Kräfte.
+\begin{equation}
+\vec{b} = \frac{-eE_{ext}}{m_{0}}
+\end{equation}
+Aus der Beschleunigung lässt sich bekanntlich die Geschwindigkeit berechnen. Wenn man sich nun die mittlere Flugzeit $\bar{\tau}$ anschaut, erhält man in diesem Zeitraum durch die
+berechnete Beschleunigung eine Geschwindigkeitsänderung $\increment \vec{\bar{v}}$ in Richtung des E-Feldes, da das E-Feld eine vektorielle Größe ist und die Kraft nur in Richtung des E-Feldes wirkt.
+Aus der klassischen Mechanik weiß man nun, dass
+\begin{equation}
+\label{eqn:deltav}
+\increment \vec{\bar{v}} = - \frac{e\vec{E_{ext}}}{m_{0}} \bar{\tau}
+\end{equation}
+gelten muss. Nun kann man zusätzlich die Driftgeschwindigkeit $\vec{\bar{v_{d}}}$ definieren, welche die durchschnittliche Geschwindigkeit der Elektronen zwischen zwei Wechselwirkungen
+angibt. Man geht dabei davon aus, dass im Mittel die Elektronen nach einer solchen Wechselwirkung wieder keine Geschwindigkeit in Richtung des E-Feldes haben, also wieder von null beschleunigt werden.
+Man definiert diese aufgrund der gleichmäßig beschleunigten Bewegung in E-Feld Richtung zu
+\begin{equation}
+\label{eqn:drift}
+\vec{\bar{v_{d}}} = \frac{1}{2} \vec{\bar{v}}
+\end{equation}
+Die Stromdichte entstehend durch das angelegte elektrische Feld lässt sich durch die Driftgeschwindigkeit darstellen zu
+\begin{equation}
+\vec{j} = \vec{\rho} \cdot \vec{\bar{v_{d}}} = - n \vec{\bar{v_{d}}} e
+\end{equation}
+Dabei ist $\vec{\rho}$ die Ladungsdichte welche aus einem Vielfachen $n$ der Elementarladung $e$ besteht. Dabei gibt $n$ die Anzahl der Ladungsträger an.
+Die zuvor bestimmte Driftgeschwindigkeit \eqref{eqn:drift} zusammen mit der Geschwindigkeitsänderung \eqref{eqn:deltav} lassen sich nun einsetzen und man bekommt.
 
-
+\begin{equation}
+\vec{j} = n \frac{e^{2}\vec{E}}{2m_{0}} \bar{\tau}
+\end{equation}
+In der Umsetzung ist es allerdings besser möglich den Strom $I$ durch das Metall zu messen und anstatt der elektrischen Feldstärke $E$ mit der E-Feld erzeugenden Spannung $U$
+zu rechnen. Diese stehen beide in einem geometrischen Zusammenhang, was sich in diesem Fall besonders anbietet, da man das zu untersuchende Metall leicht vermessen kann.
