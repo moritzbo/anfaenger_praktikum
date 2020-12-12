@@ -24,6 +24,9 @@ plt.plot(x,
         label='Lineare Regression',
         linewidth=1.5)
 
+
+print(f"a: {params[0]} +- {errors[0]}")
+
 plt.legend(loc="best")
 
 plt.tight_layout()
