@@ -10,5 +10,6 @@ exec(open('python/hysterese_z_poly.py').read())
 
 
 #plt.show()
+plt.tight_layout()
 plt.savefig("build/hysterese.pdf")
 #ohne fehler bis jetzt
