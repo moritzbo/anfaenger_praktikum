@@ -1,22 +1,86 @@
 \section{anhang}
 
+\subsection{Auswertung der Hysteresekurve}
+\label{sec:auswertung_hyst}
+
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{"build/hysterese.pdf"}
-    \label{fig:Bfeld}
     \caption{Annahme: Fehler }
+    \label{fig:Bfeld}
  \end{figure}
 
- \subsection{Auswertung Hysteresekurve}
+ 
  Das durch einen stetigen Strom hervorgerufene Magnetfeld lässt sich als abhängigkeit vom eben genannten Strom $\symup{I}_b$ durch eine sogennante \textbf{Hysteresekurve} modellieren.
  Als Fehler für das wird eine Abweichung von $\pm 1 \symup{m\si{\tesla}}$ für die Messung des Magnetfeld gewertet. Also kaum wahrnehmbar bei hier sehr hohen Werten. Ebeneso lässt sich der Fehler für die x-Achse, den teil des Stroms 
  $\symup{I_b}$ durch die genaue Messvorrichtung auf der Darstellung \ref{fig:Bfeld} kaum bemerken.
  Der Ansteigende und enstrechend Abfallende Teil der Kurve liegen überraschend nahe beiandender, was natürlich für Annehmlichkeiten bezogen auf Auswertung und Berechnungen sorgt, da von man einen einzigen Wert annehmen kann.
- 
- 
+ Die Kurve selbst wird geformt durch einen "polyfit" aus der "numpy" Bibliothek von Python. So entsteht ein Polynom dritten Grades mit den Parametern %einfügen
+
+
+
+\subsection{Auswertung der Hallspannung}
+\label{sec:auswertung_hall}
+
+Die Hallspannung ist grundelegend von zwei Werten abhängig. Dem \textbf{Magnetfeld} und der Spannung  $\symup{I_b}$ die den Elektronen eine Geschwindigkeit $v$ gibt, senkrecht zum Magnetfeld. %eventuell Verweise
+Im folgen haben wir jeweils einen Wert konstant bei max Spannung gehalten, für möglichst aussagenede Ergebnisse, und das Verhalten jeweils untersucht. 
+Zudem differenzieren wir zwischen postiver und nagativer Polung um Messungenauigkeiten die den geräten verschuldet sind im späteren Verlauf auszuschlißen. % mehr Gründe hier.
+Wir finden also zwei Abbildung, die sich sehr ähnlich sind.
+
+\subsubsection{konstantes Magnetfeld}
+\label{sec:Auswertung_bconst}
+
 \begin{figure}
    \centering
     \includegraphics[width=\textwidth]{"build/u_hall.pdf"}
+    \caption{iq variabel, Bfeld const\\Fehler für mT $\pm$ 0.0005\\Fehler für $I_b \pm 0.001$}
     \label{fig:Uhall}
-    \caption{Fehler für mT $\pm$ 0.0005\\Fehler für $I_b \pm 0.001$}
  \end{figure}
+
+Der Graph wird durch ein Polynom dritten Grades dargestellt, verläuft aber annährend linear in beiden Pohl Richtungen. Auffallend ist die verschiebung auf der Y-Achse %Grund 
+welche keinen Physikalischen Hintergrund hat. Also lässt sich diese als Fehler bewerten und gilt zu zukünftiger beachtung in kommenden Rechnungen.
+Die verschiebung lässt sich errechnen in dem man die Werte für $\symup{I-B}=0$ des Polynoms sucht, welches die Form hat:
+
+\begin{align*}
+   &a = -0.000006 &&(\pm 0) \\
+   &b = 0.000112 &&(\pm 0.0003)\\
+   &c = 0.001876 &&(\pm 0.0006) \\
+   &d = 0.000727 &&(\pm 0.0003) 
+\end{align*}
+
+Also eine Funktion:
+\begin{equation}
+   \symup{m\si{\tesla}}(\symup{I_b})=-0.000006 \cdot \symup{I_b}^3 + 0.000112\cdot\symup{I_b}^2 + 0.001876 \cdot\symup{I_b} + 0.000727 
+\end{equation}
+
+Die Nullstelle lässt durch einsetzten von $0$ bestimmen und sieht wie folgt aus:
+
+\begin{align}
+   \symup{m\si{\tesla}}(0)&=-0.000006 \cdot 0^3 + 0.000112 \cdot 0^2 + 0.001876 \cdot 0 + 0.000727 \\
+   \symup{m\si{\tesla}}(0)&=0.000727
+\end{align}
+
+Der Graph ist also um $0.000727$ $\symup{\si{\volt}}$ nach oben verschoben.
+
+
+\subsubsection{konstanter Strom $\symup{I_b}$}
+\label{sec:Auswertung_iconst}
+
+\begin{figure}
+   \centering
+    \includegraphics[width=\textwidth]{"build/u_hall_i.pdf"}
+    \caption{iq const, Bfeld variabelt$\pm$ 0.0005\\Fehler für $I_b \pm 0.001$}
+    \label{fig:Uhall}
+ \end{figure}
+
+
+Die abbildene Kurve der \textbf{Hallspannung} steht in Abhängigkeit zumm Strom $symup{I_b}$ der durch den Elektromagneten fließt und somit ein Magnetfeld erzeugt.
+
+
+
+
+
+
+
+
+\newpage

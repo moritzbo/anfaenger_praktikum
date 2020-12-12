@@ -15,8 +15,8 @@ params, covar_matrix = np.polyfit(x_wert, y_wert, deg= 1, cov=True)
 
 errors = np.sqrt(np.diag(covar_matrix))
 # B = aG + b
-#for name, value, error in zip('ab', params, errors):
-#    print(f'{name} = {value:.3f} ± {error:.3f}')
+for name, value, error in zip('ab', params, errors):
+    print(f'{name} = {value:.3f} ± {error:.3f}')
 x = np.linspace(0, 0.02)
 plt.plot(x, 
         params[0]*x + params[1],
