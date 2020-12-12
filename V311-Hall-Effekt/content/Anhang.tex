@@ -15,8 +15,21 @@
  Als Fehler für das wird eine Abweichung von $\pm 1 \symup{m\si{\tesla}}$ für die Messung des Magnetfeld gewertet. Also kaum wahrnehmbar bei hier sehr hohen Werten. Ebeneso lässt sich der Fehler für die x-Achse, den teil des Stroms 
  $\symup{I_b}$ durch die genaue Messvorrichtung auf der Darstellung \ref{fig:Bfeld} kaum bemerken.
  Der Ansteigende und enstrechend Abfallende Teil der Kurve liegen überraschend nahe beiandender, was natürlich für Annehmlichkeiten bezogen auf Auswertung und Berechnungen sorgt, da von man einen einzigen Wert annehmen kann.
- Die Kurve selbst wird geformt durch einen "polyfit" aus der "numpy" Bibliothek von Python. So entsteht ein Polynom dritten Grades mit den Parametern %einfügen
+ Die Kurve selbst wird geformt durch einen "polyfit" aus der "numpy" Bibliothek von Python. So entsteht ein Polynom dritten Grades mit den Parametern 
 
+\begin{align*}
+&a = -9.148899 &&(\pm 3.8297) \\
+&b = 59.538658 &&(\pm 27.2499) \\
+&c = 186.559181 &&(\pm 52.6997) \\
+&d = 24.964638 &&(\pm 26.6440 )
+\end{align*}
+
+%GROßES THEMA
+%WIE SOLLEN DIE FEHLER INTERPRETIERT WERDEN
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 \subsection{Auswertung der Hallspannung}
@@ -39,7 +52,7 @@ Wir finden also zwei Abbildung, die sich sehr ähnlich sind.
 
 Der Graph wird durch ein Polynom dritten Grades dargestellt, verläuft aber annährend linear in beiden Pohl Richtungen. Auffallend ist die verschiebung auf der Y-Achse %Grund 
 welche keinen Physikalischen Hintergrund hat. Also lässt sich diese als Fehler bewerten und gilt zu zukünftiger beachtung in kommenden Rechnungen.
-Die verschiebung lässt sich errechnen in dem man die Werte für $\symup{I-B}=0$ des Polynoms sucht, welches die Form hat:
+Die verschiebung lässt sich errechnen in dem man die Werte für $\symup{I_b}=0$ des Polynoms sucht, welches die Form hat:
 
 \begin{align*}
    &a = -0.000006 &&(\pm 0) \\

@@ -29,4 +29,7 @@ h = plt.ylabel(r"$\symup{m\si{\tesla}}$")
 h.set_rotation(0)
 
 
+#for name, value, error in zip('abcde', params, errors):
+#   print(f'{name} = {value:.6f} ± {error:.4f}')
+
 #plt.show()
