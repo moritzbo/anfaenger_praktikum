@@ -5,12 +5,12 @@ from scipy.optimize import curve_fit
 from scipy.stats import sem
 import importlib
 
-exec(open('python/u_hall_bconst+.py').read())
-exec(open('python/u_hall_bconst-.py').read())
+exec(open('python/u_hall_iqconst_pos.py').read())
+exec(open('python/u_hall_iqconst_neg.py').read())
 
 
 
 
-plt.savefig("build/u_hall.pdf") 
+plt.savefig("build/u_hall_i.pdf") 
 
 #ohne fehler bis jetzt
