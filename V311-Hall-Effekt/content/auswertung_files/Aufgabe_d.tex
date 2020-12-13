@@ -1,24 +1,9 @@
-\subsection{Aufgabe e)}
-\label{sec:auswertung_hyst}
+\subsection{aufgabe d oder so keine ahnung}
 
- 
- Das durch einen stetigen Strom hervorgerufene Magnetfeld lässt sich als abhängigkeit vom eben genannten Strom $\symup{I}_b$ durch eine sogennante \textbf{Hysteresekurve} modellieren.
- Als Fehler für das wird eine Abweichung von $\pm 1 \symup{m\si{\tesla}}$ für die Messung des Magnetfeld gewertet. Also kaum wahrnehmbar bei hier sehr hohen Werten. Ebeneso lässt sich der Fehler für die x-Achse, den teil des Stroms 
- $\symup{I_b}$ durch die genaue Messvorrichtung auf der Darstellung \ref{fig:Bfeld} kaum bemerken.
- Der Ansteigende und enstrechend Abfallende Teil der Kurve liegen überraschend nahe beiandender, was natürlich für Annehmlichkeiten bezogen auf Auswertung und Berechnungen sorgt, da von man einen einzigen Wert annehmen kann.
- Die Kurve selbst wird geformt durch einen "polyfit" aus der "numpy" Bibliothek von Python. So entsteht ein Polynom dritten Grades mit den Parametern 
 
-\begin{align*}
-&a = -9.148899 &&(\pm 3.8297) \\
-&b = 59.538658 &&(\pm 27.2499) \\
-&c = 186.559181 &&(\pm 52.6997) \\
-&d = 24.964638 &&(\pm 26.6440 )
-\end{align*}
- und der Funnktion
+%
+%Verweise zur Theorie
+%
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{"build/hysterese.pdf"}
-    \caption{Annahme: Fehler }
-    \label{fig:Bfeld}
- \end{figure}
+Bei unseren Probe überwiegt die Elektronenleitung dem contraporduktiven Effekt der Löcher.
+Dies lässt sich mit hilfe der Refferenz \cite[8]{V311.pdf}, dass annzunehmen ist, Kupfer ist ein Elektronenleier, validieren.
