@@ -23,7 +23,7 @@ Eine solche ideale Struktur liegt allerdings in den meisten Metallen nicht vor, 
 
 \subsection{Berechnung grundlegender Größen}
 Um nun diese chaotische Bewegung beschreiben zu können kann man einige Größen aufstellen die man nachher durch Messung der Hall-Spannung und des Widerstands ermitteln kann.
-Wir haben bereits festgestellt das die sich die Elektronen nicht immer ungehindert ausbreiten. Es gibt also einen Zeitraum $\tau$ in dem ein Leitungselektronen nach einer Wechselwirkung
+Wir haben bereits festgestellt das sich die Elektronen nicht immer ungehindert ausbreiten. Es gibt also einen Zeitraum $\tau$ in dem ein Leitungselektronen nach einer Wechselwirkung
 beschleunigt wird, bis es wieder durch eine Wechselwirkung mit einer Fehlstelle im Gitter an der Ausbreitung in Stromrichtung gehindert wird.
 Diese Vorgänge lassen sich nun mitteln und man erhält die Zeit $\bar{\tau}$, welche mittlere freie Flugzeit genannt wird.
 Die kann nachher durch den Widerstand $R$ %eqref 
@@ -95,6 +95,7 @@ Hierbei wird die Hall-Spannung jetzt ausschlaggebend.
 An einer Stromdurchflossenen Metallleiterplatte mit Dicke $d$ und Breite $b$ fließt ein Strom $I$, der durch die Gleichung \eqref{eqn:strom} beschrieben werden kann. Senkrecht
 zur Stromrichtung und senkrecht zur Leiterplatte wird anschließend ein Magnetisches Feld $B$ gelegt. Nun wirkt auf die Leitungselektronen im Metall eine Lorentzkraft $F_{L}$ welche folgendermaßend berechnet wird.
 \begin{equation}
+\label{eqn:lorentz}
 F_{L} =  e \cdot \vec{\bar{v_{d}}} \times \vec{B} \, \to \, F_{L} = e \bar{v_{d}} B
 \end{equation}
 Dabei ist die getroffene Folgerung nur dann korrekt wenn die zuvor gestellte Bedingung, dass alle Vektoren senkrecht aufeinander stehen, erfüllt ist.
@@ -115,3 +116,62 @@ U_{H}(I_{q}) = - \frac{1}{n e} \cdot \frac{B I_{q}}{d}
 \end{equation}
 Diese Gleichung hat jetzt einen großen Vorteil zu den vorherigen, denn hier lassen sich alle größen leicht experimentell bestimmen, so dass man 
 durch eine Rechnung die Anzahl der Ladungsträger $n$ einer beliebigen Probe leicht ermitteln kann.
+
+\subsection{Berechnung weiterer Paramater}
+Wenn man eine mittlere freie Flugzeit $\bar{\tau}$ berechnen kann, so kann man auch die in der Zeit zurückgelegte Weglänge $\bar{\lambda}$ berechnen. Hier betrachtet man allerdings
+eine andere Geschwindigkeit als zuvor, wie zuvor erläutert kann man die Bewegung der Elektronen auch ähnlich wie die eines idealen Gases betrachten. 
+Hier gilt das Gleichverteilungsgesetz der Thermodynamik.
+\begin{equation}
+\bar{E_{kin}} = \frac{1}{2} f k T
+\end{equation}
+Hierbei ist $k$ die Boltzmann Konstante, $T$ die Temperatur und $f$ die Anzahl der Freiheitsgrade. Bei Betrachtung der drei Translationsfreiheitsgrade bekommt man also
+\begin{equation}
+\bar{E_{kin}} = \frac{3}{2} k T
+\end{equation}
+Zusammen mit der klassischen Betrachtung der kinetischen Energie erhält man einen Ausdruck für die sogenannte mittlere Totalgeschwindigkeit $\lvert \bar{v} \rvert$.
+\begin{equation}
+\label{eqn:totgeschw}
+\frac{m_{0}}{2} \lvert \bar{v}^{2} \rvert = \frac{3}{2} k T \quad \to \quad \lvert \bar{v} \rvert = \sqrt{\frac{3kT}{m_{0}}}
+\end{equation}
+Hieraus folgt sofort die mittlere freie Weglänge $\bar{\lambda}$ zu
+\begin{equation}
+\label{eqn:freieweglaenge}
+\bar{\lambda} = \bar{\tau} \cdot \lvert \bar{v} \rvert \quad \to \quad \bar{\lambda} = \bar{\tau} \sqrt{\frac{3kT}{m_{0}}}
+\end{equation}
+Bei den Gleichungen \eqref{eqn:totgeschw} und \eqref{eqn:freieweglaenge} wurde allerdings das Pauli-Prinzip außer Acht gelassen, dies wird anschließend noch in \ref{sec:fermidirac}
+diskutiert. Eine weiter Größe lässt sich allerdings noch mit dem bekannten Wissen definieren, und zwar die Beweglichkeit $\mu$. Diese beschreibt den Proportionalitätsfaktor zwischen
+der möglichen Driftgeschwindigkeit bei angelegtem äußeren E-Feld.
+\begin{equation}
+\vec{\bar{v_{d}}} = \mu \vec{E_{ext}} \quad \to \quad \mu = - \frac{e}{2 m_{0}} \cdot \bar{\tau} 
+\end{equation}
+Die Folgerung entsteht durch die bekannten Ausdrücke der Driftgeschwindigkeit in den Gleichungen \eqref{eqn:drift} und \eqref{eqn:deltav}.
+
+\subsection{Fermi-Dirac-Verteilung}
+\label{sec:fermidirac}
+Die Fermi-Dirac-Verteilung beschreibt ein statistisches Modell zur Darstellung der Wahrscheinlichkeit einzelner Elektronen mit einer bestimmten Energie $E$
+in einer Umgebung aufzufinden. Diese Wahrscheinlichkeitsverteilung unterliegt dem Pauli-Prinzip, also dem Wissen, dass keine Elektronen in dieser Umgebung die gleiche Energie haben können.
+Die Fermi-Dirac-Verteilung wird wie folgt berechnet.
+\begin{equation}
+\label{eqn:fermidiraceq}
+f(E)\symup{d}E = \frac{1}{e^{\frac{E-E_{\symup{F}}}{kT}}+1} \symup{d}E
+\end{equation}
+Die Energie $E_{F}$ ist die sogenannte Fermi-Energie. Diese nehmen die energiereichsten Elektronen am Temperaturnullpunkt, also bei 0 Kelvin, an. 
+In diesem Zustand ist die Energie logischerweise nur noch von den grundlegenden Größen des Festkörpers abhängig, beispielsweise der Ladungsträgerdichte $n$, sowie der Ruhemasse der Elektronen $m_{0}$.
+Das liegt vor allem daran, dass die Atome bei absolutem Nullpunkt still stehen, also keine kinetische Energie vorliegt.
+Die Fermi-Energie lässt sich wie folgt berechnen
+\begin{equation}
+\label{eqn:fermienergie}
+E_{F} = \frac{h^{2}}{2 m_{0}} \sqrt[3]{\left( \frac{3}{8\pi} n \right)^{2}}
+\end{equation}
+Wie zu Beginn des Kapitels beschrieben kommen für die Leitungselektronen nur die Elektronen auf hohen Energieniveaus in Frage, wodurch sich die Energie dieser Elektronen
+mit der Fermi-Energie $E_{F}$ annähern lässt, dadurch kann man also das Problem der Vernchlässigung des Pauli-Prinzips in den Gleichungen \eqref{eqn:totgeschw} und \eqref{eqn:freieweglaenge} eliminieren.
+Man erhält also die angenäherten Gleichungen
+\begin{align}
+\lvert \bar{v} \rvert &\approx \sqrt{\frac{2 E_{F}}{m_{0}}} \\
+\bar{\lambda} &\approx \bar{\tau} \sqrt{\frac{2 E_{F}}{m_{0}}}
+\end{align}
+
+\subsection{Anomaler Hall-Effekt}
+Der anomaler Hall-Effekt beschreibt das Auftreten von positven Ladungsverschiebungen beim Anlegen eines externen E-Felds. Diese entstehen nicht etwa durch Bewegung von einzelnen Protonen, sondern durch Elektronen
+die durch Überlappung von Energiebändern, von einem unteren Band in ein höheres übergehen. Dieser Prozess entsteht abhängig von den jeweils vorliegenden Energieniveaus.
+Die Elektronen hinterlassen ein \enquote{Loch} im Atom. Das Atom hat im Gegensatz zu vorher eine positivere Ladung und bewegt sich dementsprechend in die entgegengesetzte Richtung zu den Leitungselektronen.
