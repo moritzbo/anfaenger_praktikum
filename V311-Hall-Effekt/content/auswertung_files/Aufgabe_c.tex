@@ -2,7 +2,8 @@
 \subsubsection{Lädungsträgerdichte}
 Für die Berechnung der Lädungsträgerdichte $n$ wird die Beziehung \eqref{eqn:hallspannungfuern} verwendet. Hierbei sind die 
 bekannten Größen die Elementarladung $e$, die gemessene Dicke $d$ der Kupferplatte sowie die Magnetische Flussdichte $B$ wenn $I_{b}$ konstant gehalten wird.
-Das bedeutet wir verwenden die entstehende Hall-Spannung bei veränderten Strom $I_{q}$.
+Das bedeutet wir verwenden die entstehende Hall-Spannung bei verändertem Strom $I_{q}$.
+Außerdem betrachten die gemessene Flussdichte der Remanenzkurve bei positiver Polung mit dem Fehler des Teslameters.
 \begin{table}
   \centering
   \caption{Verwendete Größen zur Bestimmung von $n$}
@@ -10,7 +11,26 @@ Das bedeutet wir verwenden die entstehende Hall-Spannung bei veränderten Strom 
   \begin{tabular}{c c c}
     Dicke {$d \: [\si{\micro\meter}]$} & Elementarladung $e \, [\si{\coulomb}]$ & Magnetische Flussdichte $B \, [\si{\milli\tesla}]$ \\
     \midrule
-    105.2   & 1.602 $\cdot 10^{-19}$ & 4 ± 0.1 \\
+    105.2   & 1.602 $\cdot 10^{-19}$ & 1230.1 ± 1 \\
     \bottomrule
   \end{tabular}
 \end{table}
+Wir beschränken uns bei der Auswertung auf die Messung bei zunehmendem Strom ${I_{q}}$, da der Verlauf auch bei Umpolung nahezu linear verläuft.
+Es lässt sich nun durch die gegebenen Werte eine Ausgleichsgerade modellieren, wobei der entstehende Vorfaktor von $n$ abhängt.
+\begin{equation}
+U_{H} = A \cdot I_{q}
+\end{equation}
+Anhand eines Polyfits lässt sich dieser bestimmen zu
+\begin{equation}
+\label{eqn:a-a-wert}
+A = \SI{2.29(7)e-6}{\ohm}
+\end{equation}
+Hierbei ist nur die Steigung der Ausgleichsgeraden interessant, da sie die Information über $n$ enthält.
+Nun lässt sich mit Gleichung \eqref{eqn:hallspannungfuern} und \eqref{eqn:a-a-wert} folgendes berechnen.
+\begin{equation}
+%hier habe ich mir ein minus gemopppst
+A = \frac{1}{n e} \cdot \frac{B}{d} \quad \to \quad n = \frac{B}{Aed}
+\end{equation}
+\begin{equation}
+n = \SI{3.19(10)e31}{}
+\end{equation}
