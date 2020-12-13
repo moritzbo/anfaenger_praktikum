@@ -1,18 +1,35 @@
-\subsection{Aufgaben Teil a oder so, keine ahnung muss noch mal orga kram gemacht werden}
+\subsection{Messung des Widerstands und Geometrie}
 \label{sec:aufgabe_a}
 %eventuell als equation
-Die Aufagbe a) verlangt die Messung des elektrischen Wiederstandes $\si{\ohm}$ und die geometrische Abmessung der metallischen Probe, in unserem Fall Kupfer.
-Zur Verfügung gestellt wurde uns ein Draht der Länge $137\si{\cm}$, Dicke von $0.101 \si{\mm} \hspace{0.5cm} (\pm 0.001 \si{mm})$ mit einem Reinheitsgrad von $99.99$. 
-Das Messmittel der Wahl ist ein Multimeter welches eine Spannung anlegt un den anschließenden Stromfluss misst.
-Durch die wohlbekannte  $URI$ - Formel 
+Die Messung des elektrischen Wiederstandes $\si{\ohm}$ und die geometrische Abmessung der metallischen Probe, in unserem Fall Kupfer sind im folgenden angegeben.
+Zur Verfügung gestellt wurde uns ein Draht der Länge $137\si{\cm}$, Dicke von $\SI{0.101(1)}{\milli\meter}$ mit einem Reinheitsgrad von $99.99$. 
+Das Messmittel der Wahl ist ein Multimeter welches eine Spannung anlegt un den dadurch entstehenden Stromfluss misst.
+Durch den Zusammenhang über das Ohmsche Gesetz \eqref{eqn:ohmgesetz} rechnet der Multimeter die Werte in den Widerstand $\si{\ohm}$ um.
 
 \begin{equation}
    \symup{U} = \symup{R} \cdot \symup{I}
 \end{equation}
 
-ist es dem  Messgerät nun möglich den Wiederstand zu berechnen.
-Der abgelesene Wert lautet $2.6\si{\ohm}$ mit einem Fehler von $\pm 0.13$. \\ 
+Der abgelesene Wert besitzt einen Fehler von $\SI{5}{\percent}$ und wir erhalten.
+
+\begin{equation}
+\label{eqn:ohmgesetz}
+R = \SI{2.60(13)}{\ohm}
+\end{equation}
 
 Die Maße des Bleches sind uns gegeben, was jedoch nur die Dicke einschließt. % eventuell mit neuen Daten speisen
 Der Rest bleibt uns aufgrund der Tatsache, dass der Werkstoff in eine Arte Platine eingeschlossen ist, verborgen.
 Angegebene Maße für die Dicke der Platte sind exakte $0,1052\si{\mm}$.
+Die gemessenen geometrischen Maße sind in der folgenden Tabelle aufgelistet.
+
+\begin{table}
+  \centering
+  \caption{Geometrische Maße des Kupfers}
+  \label{tab:kupfergeo}
+  \begin{tabular}{c c c}
+    Dicke {$d \: [\si{\micro\meter}]$} & Breite $b \, [\si{\centi\meter}]$ & Länge $L \, [\si{\centi\meter}]$ \\
+    \midrule
+    105.2   & 2.5 ± 0.1 & 4 ± 0.1 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
