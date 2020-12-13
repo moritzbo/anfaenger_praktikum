@@ -9,10 +9,13 @@ build/u_hall.pdf: python/u_hall_bconst.py header-matplotlib.tex matplotlibrc Dat
 build/u_hall_i.pdf: python/u_hall_iqconst.py header-matplotlib.tex matplotlibrc Daten/daten_hall_iqconst_pos.txt Daten/daten_hall_iqconst_neg.txt| build
 		TEXINPUTS=$$(pwd): python python/u_hall_iqconst.py
 
+build/plot1.pdf: python/u_hall_bconst_gesamt.py header-matplotlib.tex matplotlibrc Daten/daten_hall_iqconst_pos.txt| build
+		TEXINPUTS=$$(pwd): python python/u_hall_bconst_gesamt.py		
 
 build/V311-Hall-Effekt.pdf: build/hysterese.pdf \
 							build/u_hall.pdf	\
-							build/u_hall_i.pdf
+							build/u_hall_i.pdf	\
+							build/plot1.pdf
 
 build/V311-Hall-Effekt.pdf: FORCE | build
 	  TEXINPUTS=build: \
