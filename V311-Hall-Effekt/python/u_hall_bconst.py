@@ -10,7 +10,7 @@ exec(open('python/u_hall_bconst-.py').read())
 
 
 
-
+plt.tight_layout()
 plt.savefig("build/u_hall.pdf") 
 
 #ohne fehler bis jetzt
