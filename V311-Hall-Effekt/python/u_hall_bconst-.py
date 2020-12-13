@@ -28,6 +28,10 @@ plt.plot(x,
 x_coordinates = [0, 5]
 y_coordinates = [0, 0]
 
+
+for name, value, error in zip('abcde', params, errors):
+    print(f'{name} = {value:.6f} ± {error:.4f}')
+
 #plt.plot(x_coordinates, y_coordinates, 'k-', linewidth=1)
 #eventuell spiegelachse anzeigen
 

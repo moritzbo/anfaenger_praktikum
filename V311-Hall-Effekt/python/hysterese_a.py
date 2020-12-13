@@ -10,7 +10,7 @@ def objective(x, a, b, c, d, e, f, g, h, i):
     return a * x + b * x**2 + c * x**3 + d * c**4 + e * x**5 + f * x**6 +g * x**7 + h * x**8 +i
 
 
-x, y = np.genfromtxt("../Daten/daten_magnet_z.txt", unpack = True)
+x, y = np.genfromtxt("Daten/daten_magnet_z.txt", unpack = True)
 
 #curve_fit
 popt, _ = curve_fit(objective, x, y, maxfev=5000000)

@@ -27,6 +27,9 @@ plt.plot(p,
 plt.errorbar(x ,y ,xerr=0.001, yerr=0.0005, markersize=2, elinewidth=0.8, fmt='ro',
                 label='Fehler Hallspannung -')
 
+#for name, value, error in zip('abcde', params, errors):
+#    print(f'{name} = {value:.6f} ± {error:.4f}')
+
 #x_coordinates = [0, 5]
 #y_coordinates = [0, 0]
 
