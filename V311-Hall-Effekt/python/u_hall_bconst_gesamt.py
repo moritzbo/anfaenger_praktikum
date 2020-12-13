@@ -15,7 +15,7 @@ plt.plot(x, 0.5*((-0.000006*x**3 + 0.000112*x**2 + 0.001876*x + 0.000727)+(-0.00
 #h.set_rotation(0)
 # error kp why
 
-
+plt.tight_layout()
 plt.legend()
 plt.savefig("build/plot1.pdf")
 plt.show()

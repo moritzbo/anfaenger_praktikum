@@ -1,4 +1,4 @@
-\newpage % sonst formatierung im arsch 
+%\newpage % sonst formatierung im arsch 
 \subsection{Aufagbenteil b, analog zu a was orga betrifft}
 \label{sec:aufgabe_b}
 
@@ -70,8 +70,19 @@ Die verschiebung lässt sich errechnen in dem man die Werte für $\symup{I_b}=0$
 %Der Graph ist also um $0.000727$ $\symup{\si{\volt}}$ nach oben verschoben.
 %Was in der Auswertung und berechnung von anderen Werten berücksichtigt werden muss.
 
+%auswertung ugesamt mit der formel
+Es liegen uns also jetzt beide Auswertungen $\symup{U_{ges+}}$ und $\symup{U_{ges-}}$ die wir als folgende Darstellung abbilden können.
+Man erkennt, dass die Spannung nahezun Exponentiell mit dem Magnetfeld ansteigt % was leider nicht passt lol... !!!!!!!!!!!!!
 
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth]{build/plot1.pdf} %achsen beschriften
+   \caption{$\symup{U_h}$ als Überschneidung beider Pole}
+   \label{fig:auswertunghall}
+\end{figure}
 
+Hier wird noch kein Fehler mit einbezogen, der durch die Messung entstanden ist. man kann den graphen bloß als eine art Annährung werten. 
+Es beiet sich an mit Python den Fehler jeweils für die gemessenen Werte ausrechnen zu lassen und als Tabelle auszugeben.
 
 
 
@@ -121,18 +132,7 @@ Dieses mal mit Parametern und Funktion analog zu \ref{sec:Auswertung_bconst}
    \symup{U_h}(\symup{I_b})=-0.000044 \cdot \symup{I_b}^3 + 0.000415\cdot\symup{I_b}^2 -0.003241\cdot\symup{I_b} 0.000137
 \end{equation}
 
-Es liegen uns also jetzt beide Auswertungen $\symup{U_{ges+}}$ und $\symup{U_{ges-}}$ die wir als folgende Darstellung abbilden können.
-Man erkennt, dass die Spannung nahezun Exponentiell zum Magnetfeld ansteigt % was leider nicht passt lol... !!!!!!!!!!!!!
 
-\begin{figure}
-   \centering
-   \includegraphics[width=\textwidth]{build/plot1.pdf}
-   \caption{$\symup{U_h}$ als Überschneidung beider Pole}
-   \label{fig:auswertunghall}
-\end{figure}
-
-Hier wird noch kein Fehler mit einbezogen, der durch die Messung entstanden ist. man kann den graphen bloß als eine art Annährung werten. 
-Es beiet sich an mit Python den Fehler jeweils für die gemessenen Werte ausrechnen zu lassen und als Tabelle auszugeben.
 
 %Tabelle mit weerten aus ugesamt 
 %\begin{tabel}
