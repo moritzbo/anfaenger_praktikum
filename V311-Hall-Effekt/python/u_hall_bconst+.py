@@ -6,7 +6,7 @@ from scipy.stats import sem
 
 
 
-x, y = np.genfromtxt("Daten/daten_hall_bconst_pos.txt", unpack = True)
+x, y = np.genfromtxt("../Daten/daten_hall_bconst_pos.txt", unpack = True)
 
 #plt.plot(x,y, 'bo', markersize=0.05,
 #            label='scatter')
@@ -25,8 +25,8 @@ plt.plot(x,
         label='Hallspannung postive polung',
         linewidth=1.5)
 
-#for name, value, error in zip('abcde', params, errors):
-#    print(f'{name} = {value:.6f} ± {error:.4f}')
+for name, value, error in zip('abcde', params, errors):
+    print(f'{name} = {value:.6f} ± {error:.4f}')
 
 
 
@@ -38,3 +38,4 @@ h.set_rotation(0)
 
 
 #plt.show()
+ 
