@@ -7,7 +7,7 @@ from scipy.stats import sem
 
 
 x = np.linspace(0, 5)
-plt.plot(x, 0.5*((-0.000006*x**3 + 0.000112*x**2 + 0.001876*x + 0.000727)-(-0.000047*x**3 + 0.000280*x**x - 0.002408*x + 0.000084)), "r--",
+plt.plot(x, 0.5*((-0.000146 *x**3 + 0.001047 * x**2 - 0.000053 *x - 0.000740)-( -0.000044 *x**3+ 0.000415 *x**2 - 0.003241 * x + 0.000137)), "r--",
             label="Hallspannung")
 
 #plt.xlabel(r"$\symup{I_b}$")
@@ -17,5 +17,5 @@ plt.plot(x, 0.5*((-0.000006*x**3 + 0.000112*x**2 + 0.001876*x + 0.000727)-(-0.00
 
 plt.tight_layout()
 plt.legend()
-plt.savefig("build/plot1.pdf")
+plt.savefig("build/plot2.pdf")
 plt.show()
