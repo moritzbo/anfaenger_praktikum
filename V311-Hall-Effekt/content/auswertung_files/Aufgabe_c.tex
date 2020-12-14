@@ -11,7 +11,7 @@ Außerdem betrachten die gemessene Flussdichte der Remanenzkurve bei positiver P
   \begin{tabular}{c c c}
     Dicke {$d \: [\si{\micro\meter}]$} & Elementarladung $e \, [\si{\coulomb}]$ & Magnetische Flussdichte $B \, [\si{\milli\tesla}]$ \\
     \midrule
-    105.2   & 1.602 $\cdot 10^{-19}$ & 1230.1 ± 1 \\
+    105.2   & 1.602 $\cdot 10^{-19}$ & 1230.1 ± 1.0 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -80,7 +80,6 @@ Wenn man diese Werte nun einsetzt erhält man für die Anzahl der Leitungselektr
 \begin{equation}
 z = \SI{0.226(7)}{}
 \end{equation}
-\newpage
 Da hier nur die Größe $n$ fehlerbehaftet ist, kann man den Fehler auf $z$ leicht ermitteln durch
 \begin{equation}
 \increment z = \biggl| \frac{1}{n_{\text{Cu,atom}}}\biggr| \cdot (\increment n)
@@ -107,7 +106,7 @@ Die zusätzlichen Konstanten die benötigt werden sind in der folgenden Tabelle 
 \end{table}
 Wenn man anschließend alle Werte einsetzt erhält man das Ergebnis.
 \begin{equation}
-\bar{\tau} = \SI{1.30(10)e-17}{\second}
+\bar{\tau} = \SI{1.30(32)e-17}{\second}
 \end{equation}
 Den Fehler erhält man durch eine Gaußsche Fehlerfortpflanzung der Größen $n$, $R$, $L$ und $b$.
 \begin{equation}
@@ -126,3 +125,57 @@ j = \SI{1}{\ampere\per\milli\meter\squared} = \SI{1e6}{\ampere\per\meter\squared
 \end{equation}
 Also bewegen sich die Elektronen bei der gegebenen Stromdichte im Millimeter pro Sekunde Bereich. In der Diskussion werden wir auf den 
 hier berechneten Wert noch genauer eingehen.
+
+\subsection{Beweglichkeit}
+Die Beweglichkeit lässt sich zusammen mit der bereits bekannten mittleren Flugzeit $\bar{\tau}$ und den Konstanten aus \ref{tab:konstantenrechnung} mithilfe
+der Gleichung \eqref{eqn:beweglich} bestimmen.
+Es gilt
+\begin{equation}
+\mu = - \frac{e}{2 m_{0}} \cdot \bar{\tau} = \SI{-1.15(28)e-6}{\meter\squared\per\volt\per\second}
+\end{equation}
+Der Fehler entsteht wieder durch nur eine fehlerbehaftete Größe. Hier ist diese $\bar{\tau}$ und man kann sie durch
+\begin{equation}
+\increment \mu = \biggl| \frac{-e}{2m_{0}}\biggr| \cdot (\increment \bar{\tau})
+\end{equation}
+
+\subsection{Totalgeschwindigkeit}
+In den Theoretischen Grundlagen wurde beschrieben wie man die Totalgeschwindigkeit bestimmt. Dabei wurden zwei verschiedene Methoden genannt. 
+Es wurde erläutert, dass auf Grund des Pauli-Prinzips eine Betrachtung der Fermi-Energie sinnvoll ist, deswegen wird zunächst die Totalgeschwindigkeit über die Beziehung \eqref{eqn:totalgeschw}
+betrachtet.
+Die Fermi-Energie lässt sich wie folgt berechnen.
+\begin{align}
+E_{F} &= \frac{h^{2}}{2 m_{0}} \sqrt[3]{\left( \frac{3}{8\pi} n \right)^{2}} \\[0.5em]
+\text{mit  } h &= \SI{6.626e-24}{\joule\second}
+\end{align}
+Dabei ist $h$ das Plancksche Wirkungsquantum eine bekannte Naturkonstante.
+Für die Fermi-Energie erhält man
+\begin{equation}
+E_{F}= \SI{5.87(12)e-19}{\joule} = \SI{3.66(8)}{\electronvolt}
+\end{equation}
+Die Totalgeschwindigkeit kann man anschließend sofort mit Gleichung \eqref{eqn:totalgeschw} berechnen.
+\begin{equation}
+\lvert \bar{v} \rvert \approx \sqrt{\frac{2 E_{F}}{m_{0}}} = \SI{1.135(12)e6}{\meter\per\second}
+\end{equation}
+Zum Vergleich geben wir im folgenden nochmal die Berechnung der Totalgeschwindigkeit bei Zimmertemperatur $T \approx \SI{293.15}{\kelvin}$ über die 
+Gleichung \eqref{eqn:totgeschw} an.
+\begin{equation}
+\lvert \bar{v} \rvert = \sqrt{\frac{3kT}{m_{0}}} = \SI{1.15e5}{\meter\per\second}
+\end{equation}
+Man kann also einen Unterschied der Größenordung $10$ erkennen.
+Die Fehler ergeben sich in den obigen Rechnungen wieder analog mit Gaußscher Fehlerfortpflanzung.
+
+\subsection{Mittlere freie Weglänge}
+Bei der Berechnung der mittleren freien Weglänge der Leitungselektronen wird jeweils nur die mittlere Flugzeit $\bar{\tau}$ an die Totalgeschwindigkeit multipliziert.
+Das entspricht den Ausdrücken \eqref{eqn:freieweglaenge} und \eqref{eqn:mittfreierweg}.
+Die Ergebnisse sind in der folgenden Tabelle dargestellt.
+\begin{table}
+  \centering
+  \caption{Mittlere freie Weglänge}
+  \label{tab:tabweg}
+  \begin{tabular}{c c }
+    Weglänge durch Fermi-Dirac {$\bar{\lambda_{F_{E}}} \: [\si{\meter}]$} & Weglänge durch thermische Energie {$\bar{\lambda} \, [\si{\meter}]$} \\
+    \midrule
+    (1.48 $\pm$ 0.4)$\cdot 10^{-11}$  & (1.50 $\pm$ 0.4)$\cdot 10^{-12}$\\
+    \bottomrule
+  \end{tabular}
+\end{table}
