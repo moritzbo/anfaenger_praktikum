@@ -32,5 +32,99 @@ Nun lässt sich mit Gleichung \eqref{eqn:hallspannungfuern} und \eqref{eqn:a-a-w
 A = \frac{1}{n e} \cdot \frac{B}{d} \quad \to \quad n = \frac{B}{Aed}
 \end{equation}
 \begin{equation}
-n = \SI{3.19(10)e31}{}
+\label{eqn:nwert}
+n = \SI{3.19(10)e28}{\per\meter\cubed}
 \end{equation}
+Den Fehler erhält man gemäß der Gaußschen Fehlerfortpflanzung mit den fehlerbehafteten Werten $A$ und $B$ zu.
+\begin{equation}
+\increment n = \sqrt{\left( \frac{1}{A e d}\right)^{2} (\increment B)^{2} + \left( \frac{B}{A^{2} e d}\right)^{2} (\increment A)^{2}}
+\end{equation}
+\subsubsection{Ladungsträger pro Atom}
+Um die Ladungsträger pro Kupferatom zu bestimmen, also die Anzahl der Leitungselektronen, benötigt man zwei Konstanten.
+Zum einen die Masse von Kupfer und die Dichte von Kupfer. Der Zusammenhang lautet wie folgt
+
+\begin{equation}
+\nonumber
+\rho = N \frac{m_{\text{Cu,atom}}}{V_{\text{Cu,atom}}}
+\end{equation}
+Dabei ist $\rho$ die Dichte des gesamten Kupferstücks, $N$ die Teilchenanzahl, $m_{\text{Cu,atom}}$ die Masse des Kupferatoms und $V_{\text{Cu,atom}}$ das Volumen des Kupferatoms.
+Zusammen mit der Definiton von der Ladungsträgerdichte wird man das Volumen allerdings los.
+\begin{equation}
+\nonumber
+n = \frac{N}{V_{\text{Cu,atom}}}
+\end{equation}
+Hier ist $n$ jetzt die Ladungsträgerdichte pro Atom und durch einsetzen erhält man
+\begin{equation}
+\nonumber
+n_{\text{Cu,atom}} = \frac{\rho}{m_{\text{Cu,atom}}}
+\end{equation}
+Die Zahl der Leitungselektronen pro Atom, also der Ladungsträger pro Atom $z$ erhält man jetzt bei Betrachtung aller errechneter Ladungsträger im Kupfer \eqref{eqn:nwert} pro 
+Ladungsträgerdichte der einzelnen Kupferatome. Man erhält also
+\begin{equation}
+\nonumber
+z = \frac{n}{n_{\text{Cu,atom}}} = \frac{n \cdot m_{\text{Cu,atom}}}{\rho}
+\end{equation}
+Die Literaturwerte der Masse und Dichte von Kupfer sind in \ref{tab:kupferlit} noch einmal notiert.
+\begin{table}
+  \centering
+  \caption{Literaturwerte Kupfer}
+  \label{tab:kupferlit}
+  \begin{tabular}{c c }
+    Dichte {$\rho \: [\si{\kilo\gram\per\meter\cubed}]$} & Masse $m_{\text{Cu,atom}} \, [\si{\kilo\gram}]$\\
+    \midrule
+    8920   & 63.4 $\cdot \, 10^{-27}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+Wenn man diese Werte nun einsetzt erhält man für die Anzahl der Leitungselektronen pro Atom im Kupfer folgendes.
+\begin{equation}
+z = \SI{0.226(7)}{}
+\end{equation}
+\newpage
+Da hier nur die Größe $n$ fehlerbehaftet ist, kann man den Fehler auf $z$ leicht ermitteln durch
+\begin{equation}
+\increment z = \biggl| \frac{1}{n_{\text{Cu,atom}}}\biggr| \cdot (\increment n)
+\end{equation}
+
+\subsubsection{Mittlere Flugzeit}
+Durch die Bestimmung von $n$ kann man nun zusammen mit der Messung des Widerstands $R$ und der Beziehung \eqref{eqn:widerstand} die Mittlere Flugzeit $\bar{\tau}$ bestimmen. 
+Zunächst stellt man die Gleichung nach $\bar{\tau}$ um.
+\begin{equation}
+\bar{\tau} = \frac{2m_{0}}{e^{2}n R} \cdot \frac{\symup{L}}{\symup{Q}}
+\end{equation}
+Der Querschnitt $Q$ setzt sich aus der Breite $b$ und Dicke $d$ zusammen aus \ref{tab:kupfergeo}.
+Die zusätzlichen Konstanten die benötigt werden sind in der folgenden Tabelle aufgelistet.
+\begin{table}
+  \centering
+  \caption{Konstanten und Messung}
+  \label{tab:konstantenrechnung}
+  \begin{tabular}{c c c}
+    Ruhemasse des Elektrons {$m_{0} \: [\si{\kilo\gram}]$} & Elementarladung {$e \, [\si{\coulomb}]$} & Gemessener Widerstands {$R \, [\si{\ohm}]$}\\
+    \midrule
+    9.109 $\cdot 10^{-31}$   & 1.602 $\cdot 10^{-19}$ & 2.60 $\pm$ 0.13\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+Wenn man anschließend alle Werte einsetzt erhält man das Ergebnis.
+\begin{equation}
+\bar{\tau} = \SI{1.30(10)e-17}{\second}
+\end{equation}
+Den Fehler erhält man durch eine Gaußsche Fehlerfortpflanzung der Größen $n$, $R$, $L$ und $b$.
+\begin{equation}
+\increment \bar{\tau} = \sqrt{\sum_{\zeta}\left( \left( \frac{2m_{0}L}{e^{2}Rnbd} \cdot \frac{1}{\zeta}\right)^{2} (\increment \zeta)^2 \right) + \left( \frac{2m_{0}}{e^{2}Rnbd} \right)^{2} (\increment L)^{2}} \quad \text{mit } \zeta =[R, n, b]
+\end{equation}
+
+\subsubsection{Mittlere Driftgeschwindigkeit}
+Nun kann man die mittlere Driftgeschwindigkeit bei gegebener Stromdichte $j$ leicht berechnen. Die benötigte Beziehung wurde bereits in \ref{sec:theo} erläutet.
+Hier wird die Gleichung \eqref{eqn:stromdichteunddrift} verwendet. Bei einer Stromdichte $j = \SI{1}{\ampere\per\milli\meter\squared}$ muss man nur noch die zuvor berechneten Werte einsetzen und
+die Einheiten in die SI-Einheiten umrechnen. Hier gilt
+\begin{equation}
+j = \SI{1}{\ampere\per\milli\meter\squared} = \SI{1e6}{\ampere\per\meter\squared}
+\end{equation}
+\begin{equation}
+\bar{v_{d}} = - \frac{j}{n e} = \SI{0.196(6)e-3}{\meters\per\second}
+\end{equation}
+Also bewegen sich die Elektronen bei der gegebenen Stromdichte im Millimeter pro Sekunde Bereich. In der Diskussion werden wir auf den 
+hier berechneten Wert noch genauer eingehen.
+
+\subsection
