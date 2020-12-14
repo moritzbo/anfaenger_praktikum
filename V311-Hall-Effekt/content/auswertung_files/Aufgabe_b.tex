@@ -3,8 +3,8 @@
 \label{sec:aufgabe_b}
 
 Die Hallspannung ist grundlegend von zwei Werten abhängig. Dem \textbf{Magnetfeld} und dem Strom $\symup{I_q}$ durch den die Elektronen eine Geschwindigkeit $\bar{v_{d}}$ erhalten. %eventuell Verweise
-Im folgen haben wir jeweils einen Wert konstant bei hoher Spannung gehalten, für möglichst aussagende Ergebnisse, und das Verhalten jeweils untersucht. 
-Zudem differenzieren wir zwischen postiver und nagativer Polung, um die Messungenauigkeiten die den Geräten verschuldet sind, im späteren Verlauf zu reduzieren. % mehr Gründe hier.
+Im Folgen haben wir jeweils einen Wert konstant bei hoher Spannung gehalten, für möglichst aussagende Ergebnisse, und das Verhalten jeweils untersucht. 
+Zudem differenzieren wir zwischen positiver und negativer Polung, um die Messungenauigkeiten die den Geräten verschuldet sind, im späteren Verlauf zu reduzieren. % mehr Gründe hier.
 Wir finden also zwei Abbildung, die sich sehr ähnlich sind. Für den genauen Wert der Spannung bedienen wir uns anschließend dem Zusammenhang \cite[9]{V311.pdf} 
 \begin{align*}
 \symup{U_{ges+}}&= \symup{U_{h}} + \symup{U_{stör}} \\
@@ -15,7 +15,7 @@ Wir finden also zwei Abbildung, die sich sehr ähnlich sind. Für den genauen We
 \symup{U_{H}}= \frac{1}{2}(\symup{U_{ges+}} -\symup{U_{ges-}})
 \end{equation}
 
-Sowohl $\symup{U_{ges+}}$ als auch $\symup{U_{ges-}}$ sind uns durch die Messungen bekannt, also könenn wir nun die Hall-Spannung ohne Störspannung sowohl 
+Sowohl $\symup{U_{ges+}}$ als auch $\symup{U_{ges-}}$ sind uns durch die Messungen bekannt, also können wir nun die Hall-Spannung ohne Störspannung sowohl 
 ausrechnen als auch darstellen.
 
 \subsubsection{konstantes Magnetfeld}
@@ -31,9 +31,9 @@ Der variable Teil kommt also durch den Strom $\symup{I_q}$ hinzu welcher bei $0\
 \end{figure}
 
 Der Graph wird durch ein Polynom dritten Grades dargestellt, verläuft aber annähernd linear in beide Polrichtungen. Auffallend ist die Verschiebung auf der Y-Achse %Grund 
-welche keinen Physikalischen Hintergrund hat. Also lässt sich diese als Fehler bewerten und gilt zu zukünftiger beachtung in kommenden Rechnungen.
-Die verschiebung lässt sich errechnen in dem man die Werte für $\symup{I_b}=0$ des Polynoms sucht, welches durch folgende Funktion gegeben wird.  
-Die Parameter sind mit jeweiligen Fehler im Anhang aufgerführt.  
+welche keinen Physikalischen Hintergrund hat. Also lässt sich diese als Fehler bewerten und gilt zu zukünftiger Beachtung in kommenden Rechnungen.
+Die Verschiebung lässt sich errechnen in dem man die Werte für $\symup{I_b}=0$ des Polynoms sucht, welches durch folgende Funktion gegeben wird.  
+Die Parameter sind mit jeweiligen Fehler im Anhang aufgeführt.  
 
 \paragraph{positive Polung}
 \begin{equation}
@@ -66,15 +66,15 @@ Es liegen uns also jetzt beide Auswertungen $\symup{U_{ges+}}$ und $\symup{U_{ge
    \label{fig:auswertunghall}
 \end{figure}
 
-Hier wird noch kein Fehler mit einbezogen, der durch die Messung entstanden ist. man kann den graphen bloß als eine art Annährung werten. 
-Es beiet sich an mit Python den Fehler jeweils für die gemessenen Werte ausrechnen zu lassen und als Tabelle auszugeben.
+Hier wird noch kein Fehler mit einbezogen, der durch die Messung entstanden ist. man kann den Graphen bloß als eine Art Annährung werten. 
+Es bietet sich an mit Python den Fehler jeweils für die gemessenen Werte ausrechnen zu lassen und als Tabelle auszugeben.
 
 
 \subsubsection{konstanter Strom $\symup{I_q}$}
 \label{sec:Auswertung_iconst}
 
-Diese abbildene Kurve der \textbf{Hallspannung} steht in Abhängigkeit zum Strom $\symup{I_b}$ der durch den Elektromagneten fließt und somit ein Magnetfeld erzeugt.
-Der Graph ist deutlich stärker Gekrümmt als \ref{fig:Uhall} und wird wieder durch ein Poylnom dritten Grades abgebildet. 
+Diese abbildende  Kurve der \textbf{Hallspannung} steht in Abhängigkeit zum Strom $\symup{I_b}$ der durch den Elektromagneten fließt und somit ein Magnetfeld erzeugt.
+Der Graph ist deutlich stärker Gekrümmt als \ref{fig:Uhall} und wird wieder durch ein Polynom dritten Grades abgebildet. 
 
 
 \begin{figure}
@@ -108,8 +108,8 @@ Dieses mal mit der Funktion analog zu \ref{sec:Auswertung_bconst}
 \end{figure}
 
 Auffallend ist die Darstellung. Diese wurde mit einem Polynom dritten Grades geplottet was eigentlich gegen die physikalischen Zusammenhänge
-spricht. Diese beschreiben nämlich die Spannung als linearen Wachstum, also ein Polynom ersten Grad. Im Vlerauf der Auswertung wird Der Graph durch einen linearen $fit$
-in Python auf ein Grad reduziert um so den physikalischen Bedingungen gerechet zu werden.
+spricht. Diese beschreiben nämlich die Spannung als linearen Wachstum, also ein Polynom ersten Grad. Im Verlauf der Auswertung wird Der Graph durch einen linearen $fit$
+in Python auf ein Grad reduziert um so den physikalischen Bedingungen gerechnet zu werden.
 
 
 %Tabelle einfügen.
