@@ -32,8 +32,8 @@ for name, value, error in zip('abcde', params, errors):
 
 plt.plot(0.5, 0.001, "yo", markersize=5, Label='Ausreißer')
 
-plt.xlabel(r"$\symup{I_q}$")
-h = plt.ylabel(r"$\symup{U_h}$")
+plt.xlabel(r"$\symup{I_q}[A]$")
+h = plt.ylabel(r"$\symup{U_h}[V]$")
 h.set_rotation(0)
 
 

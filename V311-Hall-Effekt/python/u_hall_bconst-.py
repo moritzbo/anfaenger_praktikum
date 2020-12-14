@@ -35,8 +35,8 @@ for name, value, error in zip('abcde', params, errors):
 #plt.plot(x_coordinates, y_coordinates, 'k-', linewidth=1)
 #eventuell spiegelachse anzeigen
 
-plt.xlabel(r"$\symup{I_q}$")
-h = plt.ylabel(r"$\symup{U_h}$")
+plt.xlabel(r"$\symup{I_q}[A]$")
+h = plt.ylabel(r"$\symup{U_h}[V]$")
 h.set_rotation(0)
 
 plt.legend(fontsize=7, loc=3)

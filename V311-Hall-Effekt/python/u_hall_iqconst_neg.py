@@ -36,8 +36,8 @@ plt.errorbar(x ,y ,xerr=0.001, yerr=0.0005, markersize=2, elinewidth=0.8, fmt='r
 #plt.plot(x_coordinates, y_coordinates, 'k-', linewidth=1)
 #eventuell spiegelachse anzeigen
 
-plt.xlabel(r"$\symup{I_b}$")
-h = plt.ylabel(r"$\symup{U_h}$")
+plt.xlabel(r"$\symup{I_b}[A]$")
+h = plt.ylabel(r"$\symup{U_h}[V]$")
 h.set_rotation(0)
 
 plt.legend(fontsize=8, loc=3)

@@ -24,8 +24,8 @@ plt.plot(x,
         label='Hysterese ansteigend',
         linewidth=1.5)
 
-plt.xlabel(r"$\symup{I_b}$")
-h = plt.ylabel(r"$\symup{m\si{\tesla}}$")
+plt.xlabel(r"$\symup{I_b}[A]$")
+h = plt.ylabel("[mT]")
 h.set_rotation(0)
 
 
