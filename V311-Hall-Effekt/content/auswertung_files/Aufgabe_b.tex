@@ -32,29 +32,15 @@ Der variable Teil kommt also durch den Strom $\symup{I_q}$ hinzu welcher bei $0\
 
 Der Graph wird durch ein Polynom dritten Grades dargestellt, verläuft aber annähernd linear in beide Polrichtungen. Auffallend ist die Verschiebung auf der Y-Achse %Grund 
 welche keinen Physikalischen Hintergrund hat. Also lässt sich diese als Fehler bewerten und gilt zu zukünftiger beachtung in kommenden Rechnungen.
-Die verschiebung lässt sich errechnen in dem man die Werte für $\symup{I_b}=0$ des Polynoms sucht, welches durch folgende Parameter und Funktion gegeben wird.
+Die verschiebung lässt sich errechnen in dem man die Werte für $\symup{I_b}=0$ des Polynoms sucht, welches durch folgende Funktion gegeben wird.  
+Die Parameter sind mit jeweiligen Fehler im Anhang aufgerführt.  
+
 \paragraph{positive Polung}
-
-\begin{align*}
-   &a = -0.000006 &&(\pm 0) \\
-   &b = 0.000112 &&(\pm 0.0003)\\
-   &c = 0.001876 &&(\pm 0.0006) \\
-   &d = 0.000727 &&(\pm 0.0003) 
-\end{align*}
-
 \begin{equation}
    \symup{U_{ges+}}(\symup{I_q})=-0.000006 \cdot \symup{I_q}^3 + 0.000112\cdot\symup{I_q}^2 + 0.001876 \cdot\symup{I_q} + 0.000727 
 \end{equation}
 
 \paragraph{negative Polung} 
-
-\begin{align*}
-   &a = -0.000047 &&(\pm 0.0000) \\
-   &b = 0.000280 &&(\pm 0.0001 ) \\
-   &c = -0.002408 &&(\pm 0.0003) \\
-   &d = 0.000084 &&(\pm 0.0002 ) 
-\end{align*}
- 
 \begin{equation}
    \symup{U_{ges-}}(\symup{I_q})=-(-0.000047 \cdot \symup{I_q}^3 + 0.000280\cdot\symup{I_q}^2 -0.002408\cdot\symup{I_q} + 0.000084)
 \end{equation}
@@ -100,28 +86,15 @@ Der Graph ist deutlich stärker Gekrümmt als \ref{fig:Uhall} und wird wieder du
 
 
 
-Dieses mal mit Parametern und Funktion analog zu \ref{sec:Auswertung_bconst}
+Dieses mal mit der Funktion analog zu \ref{sec:Auswertung_bconst}
 \paragraph{Postive Polung}
 
-\begin{align*}
-&a = -0.000146 &&(\pm  0.0001) \\
-&b = 0.001047 &&(\pm  0.0004 ) \\
-&c = -0.000053 &&(\pm  0.0008) \\
-&d = -0.000740 &&(\pm  0.0004) 
-\end{align*}
 
 \begin{equation}
    \symup{U_h}(\symup{I_b})=-0.000146 \cdot \symup{I_b}^3 + 0.001047\cdot\symup{I_b}^2 -0.000053\cdot\symup{I_b} -0.000740
 \end{equation}
 
 \paragraph{negaitve Polung}
-
-\begin{align*}
-&a = -0.000044 &&(\pm 0.0000) \\
-&b = 0.000415 &&(\pm 0.0002) \\
-&c = -0.003241 &&(\pm 0.0004) \\
-&d = 0.000137 &&(\pm 0.0002) 
-\end{align*}
 
 \begin{equation}
    \symup{U_h}(\symup{I_b})=-0.000044 \cdot \symup{I_b}^3 + 0.000415\cdot\symup{I_b}^2 -0.003241\cdot\symup{I_b} 0.000137
@@ -134,7 +107,11 @@ Dieses mal mit Parametern und Funktion analog zu \ref{sec:Auswertung_bconst}
    \label{fig:auswertunghall}
 \end{figure}
 
-Analog zu \ref{fig:auswertunghall} dient lediglich zur Anschauung. 
+Auffallend ist die Darstellung. Diese wurde mit einem Polynom dritten Grades geplottet was eigentlich gegen die physikalischen Zusammenhänge
+spricht. Diese beschreiben nämlich die Spannung als linearen Wachstum, also ein Polynom ersten Grad. Im Vlerauf der Auswertung wird Der Graph durch einen linearen $fit$
+in Python auf ein Grad reduziert um so den physikalischen Bedingungen gerechet zu werden.
+
+
 %Tabelle einfügen.
 
 %Tabelle mit weerten aus ugesamt 

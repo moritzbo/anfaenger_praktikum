@@ -17,5 +17,5 @@ h.set_rotation(0)
 
 plt.tight_layout()
 plt.legend()
-#plt.savefig("build/plot1.pdf")
+plt.savefig("build/plot1.pdf")
 plt.show()
