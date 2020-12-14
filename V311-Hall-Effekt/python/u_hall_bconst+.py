@@ -6,7 +6,7 @@ from scipy.stats import sem
 
 
 
-x, y = np.genfromtxt("../Daten/daten_hall_bconst_pos.txt", unpack = True)
+x, y = np.genfromtxt("Daten/daten_hall_bconst_pos.txt", unpack = True)
 
 #plt.plot(x,y, 'bo', markersize=0.05,
 #            label='scatter')
