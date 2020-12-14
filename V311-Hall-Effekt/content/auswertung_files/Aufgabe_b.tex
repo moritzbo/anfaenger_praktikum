@@ -56,18 +56,18 @@ Die Parameter sind mit jeweiligen Fehler im Anhang aufgeführt.
 %Was in der Auswertung und berechnung von anderen Werten berücksichtigt werden muss.
 
 %auswertung ugesamt mit der formel
-Es liegen uns also jetzt beide Auswertungen $\symup{U_{ges+}}$ und $\symup{U_{ges-}}$ die wir als nach \eqref{eq:ugesamt} folgende Darstellung abbilden können.
+Es liegen uns also jetzt beide Auswertungen $\symup{U_{ges+}}$ und $\symup{U_{ges-}}$ die wir nach \eqref{eq:ugesamt} als Darstellung abbilden können.
  % was leider nicht passt lol... !!!!!!!!!!!!!
 
-\begin{figure}[h]
-   \centering
-   \includegraphics[width=\textwidth]{build/plot1.pdf} %achsen beschriften, werte prüfen!
-   \caption{$\symup{U_h}$ als Überschneidung beider Pole}
-   \label{fig:auswertunghall}
-\end{figure}
+%\begin{figure}[!h]
+%   \centering
+%   \includegraphics[width=7cm]{build/plot1.pdf} %achsen beschriften, werte prüfen!
+%   \caption{$\symup{U_h}$ als Überschneidung beider Pole}
+%   \label{fig:auswertunghall}
+%\end{figure}
 
 Hier wird noch kein Fehler mit einbezogen, der durch die Messung entstanden ist. man kann den Graphen bloß als eine Art Annährung werten. 
-Es bietet sich an mit Python den Fehler jeweils für die gemessenen Werte ausrechnen zu lassen und als Tabelle auszugeben.
+Es bietet sich an mit Python den Fehler jeweils für die gemessenen Werte ausrechnen zu lassen.
 
 
 \subsubsection{konstanter Strom $\symup{I_q}$}
@@ -108,7 +108,7 @@ Dieses mal mit der Funktion analog zu \ref{sec:Auswertung_bconst}
 \end{figure}
 
 Auffallend ist die Darstellung. Diese wurde mit einem Polynom dritten Grades geplottet was eigentlich gegen die physikalischen Zusammenhänge
-spricht. Diese beschreiben nämlich die Spannung als linearen Wachstum, also ein Polynom ersten Grad. Im Verlauf der Auswertung wird der Graph durch einen linearen $fit$
+spricht jedoch die Realtität besser beschreiben kann. Diese beschreiben nämlich die Spannung als linearen Wachstum, also ein Polynom ersten Grad. Im Verlauf der Auswertung wird der Graph durch einen linearen $fit$
 in Python auf ein Grad reduziert um so den physikalischen Bedingungen gerecht zu werden.
 
 

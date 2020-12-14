@@ -10,8 +10,8 @@ x = np.linspace(0, 5)
 plt.plot(x, 0.5*((-0.000006*x**3 + 0.000112*x**2 + 0.001876*x + 0.000727)-(-0.000047*x**3 + 0.000280*x**x - 0.002408*x + 0.000084)), "r--",
             label="Hallspannung")
 
-plt.xlabel("$I_b$")
-h = plt.ylabel("$U_h$ ")
+plt.xlabel("$I_b[A]$")
+h = plt.ylabel("$U_h[V]$ ")
 h.set_rotation(0)
 # error kp why
 
