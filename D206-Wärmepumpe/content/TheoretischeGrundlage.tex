@@ -1,4 +1,4 @@
-\section{Theoretische Grundlage}
+\section{Theoretische Grundlagen}
 \label{sec:TheoretischeGrundlagen}
 Der Wärmefluss innerhalb eines abgeschlossenen Systems verhält sich erfahrungsgemäß immer so, dass
 ein heißerer Körper Wärme an einen kälteren Körper abgibt. 
@@ -18,28 +18,27 @@ p_{1}&:\text{Druck auf der Seite von Reservoir 1}\\
 p_{2}&:\text{Druck auf der Seite von Reservoir 2}\\
 A&:\text{angewendete Arbeit}
 \end{flalign*}
-Mit diesen Größen kann nachher unteranderem die Güteziffer $\nu$ berechnet werden.
 
 \subsection{Funktionsweise einer Wärmepumpe}
 \label{sec:Funktionsweise}
-Der Wärmeaustausch eines Systems mit zwei wassergefüllten Reservoirs muss irgendwie transportiert werden, dazu verwendet
-man bei einer Wärmepumpe ein reales Gas. Dieses Gas nimmt beim Verdampfen Wärme auf und gibt diese bei
-der Kondensation wieder ab. Dadurch kann es Wärme durch seine Formumwandlung transportieren.
-Das reale Gas wird anhand eines Kompressors durch die Apparatur durchgeführt. Im Folgenden sei die Temperatur $T_{1}$ zugehörig zu
+Der Wärmeaustausch eines Systems mit zwei wassergefüllten Reservoirs muss durch ein Medium transportiert werden, dazu wird
+bei einer Wärmepumpe ein reales Gas verwendet. Dieses Gas nimmt beim Verdampfen Wärme auf und gibt diese bei
+der Kondensation wieder ab. Diese Formumwandlung des Gases sorgt also für den Wärmetransport.
+Das reale Gas wird anhand eines Kompressors durch die Apparatur geführt. Im Folgenden sei die Temperatur $T_{1}$ zugehörig zu
 Reservoir 1 mit einer höheren Temperatur als der Temperatur $T_{2}$ des zweiten Reservoirs.
 Das Gas ist so konzipiert, dass es bei der Temperatur $T_{1}$ und dem Druck $p_{1}$ kondensiert und bei $T_{2}$ und $p_{2}$ verdampft.
 Wenn das verflüssigte Gas nun durch Reservoir 2 geführt wird, entzieht es dem Wasser eine Verdampfungswärme $L$ pro Gramm. Es nimmt also die Wärmemenge $Q_{2}$
 des kälteren Wassers auf. Im Kompressor wird das zuvor verdampfte Gas adiabatisch komprimiert, also steigt sowohl der Druck, sowie die Temperatur des Gases.
-Dadurch gibt es die Wärmemenge $Q_{1}$ an das Wasser in Reservoir 1 ab und wird kondensiert. Damit dies umsetzbar ist benötigt man ein reales Gas mit hoher Kondensationswärme.
+Dadurch gibt es die Wärmemenge $Q_{1}$ an das Wasser in Reservoir 1 ab und wird kondensiert. Damit dies umsetzbar ist, wird ein reales Gas mit hoher Kondensationswärme benötigt.
 
 \subsection{Die Güteziffer}
 \label{sec:Gueteziffer}
-Die Güteziffer einer Wärmepumpe beschreibt das Verhältnis von abgegebener Wärmemenge $Q_{1}$ und der geleisteten Arbeit $A$. Es folgt
+Die Güteziffer einer Wärmepumpe beschreibt das Verhältnis zwischen abgegebener Wärmemenge $Q_{1}$ und der geleisteten Arbeit $A$. Es folgt
 \begin{equation}
 \label{eqn:eqGueteziffer}
 \nu = \frac{Q_{1}}{A}
 \end{equation}
-Dabei gilt stets der erste Hauptsatz der Wärmelehre welcher direkt aus der Energieerhaltung entspringt.
+Dabei gilt stets der erste Hauptsatz der Wärmelehre, welcher direkt aus der Energieerhaltung entspringt.
 \begin{equation}
 \label{eqn:eqHauptsatz}
 Q_{1} = Q_{2} + A
@@ -50,21 +49,21 @@ Wenn die Wärmeübertragung durch die Wärmepumpe reversibel, also ohne Verluste
 \label{eqn:idealzweiterhauptsatz}
 \frac{Q_{1}}{T_{1}} - \frac{Q_{2}}{T_{2}} = 0 \quad \to \quad Q_{2} = \frac{T_{2}}{T_{1}} Q_{1}
 \end{equation}
-Die Formel \eqref{eqn:idealzweiterhauptsatz} gibt also die Summe der reduzierten Wärmemengen im Idealfall an, also wenn sich die Temperatur der Reservoirs nicht ändern würde.
+Die Gleichung \eqref{eqn:idealzweiterhauptsatz} gibt also die Summe der reduzierten Wärmemengen im Idealfall an, also wenn sich die Temperatur der Reservoirs nicht ändern würde.
 Im Realfall ist der Wärmeaustausch nicht reversibel und es folgt.
 \begin{equation}
 \label{eqn:realzweiterhauptsatz}
 \frac{Q_{1}}{T_{1}} - \frac{Q_{2}}{T_{2}} > 0 \quad \to \quad Q_{2} < \frac{T_{2}}{T_{1}} Q_{1}
 \end{equation}
-Damit ergeben sich zwei Berechnungen für die Güteziffer durch einsetzen der Ergebnisse für $Q_{2}$ in \eqref{eqn:eqHauptsatz} und anschließend \eqref{eqn:eqGueteziffer}
+Damit ergeben sich zwei Berechnungen für die Güteziffer durch Einsetzen der Ergebnisse für $Q_{2}$ in \eqref{eqn:eqHauptsatz} und anschließend \eqref{eqn:eqGueteziffer}
 \begin{align}
 \nu_{\text{ideal}} &= \frac{Q_{1}}{A} = \frac{T_{1}}{T_{1}-T_{2}} \label{eqn:idealgueteziffer}\\
 \nu_{\text{real}} &< \frac{T_{1}}{T_{1}-T_{2}} \label{eqn:realgueteziffer}
 \end{align}
-Daraus kann man sofort schließen, dass bei nur kleinen Temperaturunterschieden $\increment T$, also der Differenz zwischen $T_{1}$ und $T_{2}$, eine große Güteziffer
+Hiermit lässt sich erklären, dass bei nur kleinen Temperaturunterschieden $\increment T$, also der Differenz zwischen $T_{1}$ und $T_{2}$, eine große Güteziffer
 entsteht. Es wird folglich nur eine kleine Arbeit gebraucht, um eine beliebige Wärmemenge $Q_{1}$ zu transportieren. Bei nur kleinen $\increment T$ ist die Wärmepumpe also 
 besonders effizient.
-Um nun die Güteziffer experimentell zu bestimmen, macht es Sinn die relevanten Größen über einen gewissen Zeitraum $\increment t$ zu messen.
+Um nun die Güteziffer experimentell zu bestimmen, ist es sinnvoll die relevanten Größen über einen gewissen Zeitraum $\increment t$ zu messen.
 Allgemein gilt für eine beliebige Wärmemenge $Q$
 \begin{equation}
 \label{eqn:allgwaerme}
@@ -87,18 +86,24 @@ Dadurch stimmt am Ende die Dimension der Güteziffer wieder mit der ursprünglic
 
 \subsection{Massendurchsatz}
 \label{sec:massedurchsatz}
-Mit der Gleichung \eqref{eqn:eqwaermeq1prozeit} findet man analog die pro Zeiteinheit entnommene Wärmemenge $Q_{2}$
+Mit der Gleichung \eqref{eqn:eqwaermeq1prozeit} folgt analog die pro Zeiteinheit entnommene Wärmemenge $Q_{2}$
 \begin{equation}
 \label{eqn:massendurchsatz2}
 \frac{\increment Q_{2}}{\increment t} = (m_{2}c_{w} + m_{k}c_{k})\frac{\increment T_{2}}{\increment t}
 \end{equation}
-Wie in \ref{sec:TheoretischeGrundlagen} erwähnt kann man die entzogene Wärmemenge $\increment Q_{2}$ auch als Verdampfungswärme $L$ pro Gramm schreiben.
-Dadurch erhält man einen Ausdruck für den Massenstrom.
+Wie in \ref{sec:TheoretischeGrundlagen} erwähnt kann die entzogene Wärmemenge $\increment Q_{2}$ auch als Verdampfungswärme $L$ pro Gramm geschrieben werden.
+Es entsteht ein Ausdruck für den Massenstrom.
 \begin{equation}
 \label{eqn:eqmassendurchsatz}
 \frac{\increment Q_{2}}{\increment t} = L \frac{\increment m}{\increment t} \quad \to \quad \frac{\increment m}{\increment t} = \frac{\increment Q_{2}}{L \increment t}
 \end{equation}
 Also lässt sich der Massendurchsatz innerhalb der Wärmepumpe berechnen, wenn $L$ bekannt ist.
+Wenn $L$ allerdings nicht bekannt ist kann eine Lineare Beziehung helfen. Diese wird vorläufig erst einmal ohne Erläuterung aus der Anleitung des Versuch 203 \cite{ap02} entnommen.
+Diese lautet
+\begin{equation}
+\label{eqn:linbeziehung}
+\text{ln} p = - \frac{\symup{L}}{\symup{R}} \frac{1}{T} + const
+\end{equation}
 
 \subsection{Mechanische Kompressorleistung}
 Unter der Annahme, dass die Kompression adiabatisch erfolgt gilt die Poisson Gleichung
@@ -109,9 +114,10 @@ p_{2}V_{2}^{\kappa} = p_{1}V_{1}^{\kappa} = pV^{\kappa}
 Dabei ist $\kappa$ der Isentropenexponent und ist definiert als das Verhältnis der Molwärmen $C_{p}$ und $C_{v}$.
 Die mechanische Arbeit um ein Gas mit Druck $p$ vom Volumen $V_{2}$ auf $V_{1}$ zu reduzieren wird über das Integral
 \begin{equation}
+\label{eqn:integralitis}
 A_{mech} = - \int_{V_{2}}^{V_{1}} p \symup{dV} = \int_{V_{1}}^{V_{2}} p \symup{dV}
 \end{equation}
-berechnet. Wenn man nun die Poisson Gleichung \eqref{eqn:poisson} nach $p$ auflöst, in das Integral einsetzt und ausrechnet erhält man.
+berechnet. Nun lässt sich die Poisson Gleichung \eqref{eqn:poisson} nach $p$ auflösen, in das Integral \eqref{eqn:integralitis} einsetzen und ausrechnen.
 \begin{equation}
 A_{mech} = \frac{1}{\kappa - 1} \left( p_{1}\sqrt[\kappa]{\frac{p_{2}}{p_{1}}} - p_{2} \right) V_{2}
 \end{equation}
@@ -119,8 +125,7 @@ Die Kompressorleistung $N_{mech}$ folgt direkt als Arbeit pro Zeit und kann dann
 \begin{equation}
 N_{mech} = \frac{1}{\kappa - 1} \left( p_{1}\sqrt[\kappa]{\frac{p_{2}}{p_{1}}} - p_{2} \right) \frac{V_{2}}{\increment t} = \frac{1}{\kappa - 1} \left( p_{1}\sqrt[\kappa]{\frac{p_{2}}{p_{1}}} - p_{2} \right) \frac{1}{\rho} \frac{\increment m}{\increment t}
 \end{equation}
-Die Dichte bezieht sich hier auf den Zustand von $V_{2}$ also im gasförmigen Zustand kurz nach dem Verdampfen. Man kann diese hier
-durch die ideale Gasgleichung beschreiben.
+Die Dichte bezieht sich hier auf den Zustand von $V_{2}$ also im gasförmigen Zustand kurz nach dem Verdampfen. Durch die ideale Gasgleichung lässt sich diese folgendermaßen beschreiben.
 \begin{equation}
 \label{eqn:idealegasgl}
 p V = nRT = p \cdot \frac{m}{\rho} = nRT \quad \to \quad \rho = \frac{pm}{nRT} = \frac{p \symup{M}}{RT}
