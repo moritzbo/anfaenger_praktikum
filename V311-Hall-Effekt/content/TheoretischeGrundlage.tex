@@ -1,35 +1,35 @@
-\section{Theoretische Grundlage}
+\section{Theoretische Grundlagen}
 \label{sec:theo}
 Bei der Messung des Hall-Effekts wird eine sehr wichtige Eigenschaft der Atomstruktur von Metallen ausgenutzt. %maybe zweiter Satz direkt ändern, mir ist nix besseres zur Überleitung eingefallen
 Die Elektronen auf den äußeren Schalen der Metallatome können sich oft abspalten und sind somit in der Lage
 einen Strom zu leiten. Diese Elektronen werden auch Leitungselektronen genannt und sie können von den äußeren Schalen
 eines Atoms zur nächsten äußeren Schale eines anderen Atoms wandern. Die Elektronen auf der äußeren Schale die sich noch nicht gelöst haben werden Valenzelektronen
-genannt. Legt man also ein Elektrisches Feld an ein solches Metall so kann ein Strom von einem Ende zum nächsten fließen.
+genannt. Wenn also ein elektrisches Feld an ein solches Metall gelegt wird, kann ein Strom von einem Ende zum nächsten fließen.
 Die Struktur von Metallen ist oft kristallin, das bedeutet sie besitzen eine räumlich periodische Struktur. In dieser Struktur liegen die einzelnen Atome sehr dicht aneinander 
 was dazu führt, dass die Valenzelektronen ein gemeinsames System bilden. Dieses System lässt sich qualitativ gut durch das Pauli-Prinzip beschreiben welches besagt, dass
 jedes Elektron einen anderen Quantenzustand besitzen muss, folglich muss jedes Elektron eine zwar kleine aber andere Energie besitzen. Mit der Ausnahme von Elektronen
 mit entgegengesetzten Spin wo dies doch der Fall sein kann, da sie trotz gleicher Energie in einem anderen Quantenzustand sind. \\
-Die diskreten Energieniveaus der Schalen werden durch Überlagerung von vielen dieser Niveaus zu kontinuierlichen Energiebändern. Zwischen dieses Energiebändern kann eine Lücke entstehen, die man 
-als verbotene Zone bezeichnet, das bedeutet zwischen zwei Energiebändern existieren Energiebereiche die kein Elektron innerhalb des Körpers annehmen kann.
-Wenn man nun ein einzelnes Atom mit seinen Energieniveaus betrachtet stellt man fest, dass eine solche verbotene Zone zwischen den Energieniveaus vorliegen kann, das bedeutet
+Die diskreten Energieniveaus der Schalen werden durch Überlagerung von vielen dieser Niveaus zu kontinuierlichen Energiebändern. Zwischen dieses Energiebändern kann eine Lücke entstehen, die 
+als verbotene Zone bezeichnet wird, das bedeutet zwischen zwei Energiebändern existieren Energiebereiche die kein Elektron innerhalb des Körpers annehmen kann.
+Wenn nun ein einzelnes Atom mit seinen Energieniveaus betrachtet wird kann festgestellt werden, dass eine solche verbotene Zone zwischen den Energieniveaus vorliegen kann, das bedeutet
 das die Elektronen in einem niedrigeren Niveau keine Energie aufnehmen können wenn ein äußeres E-Feld angelegt wird. Sie kommen also für die Leitung nicht in Frage. 
 Dies gilt grundsätzlich für alle vollständig besetzten Bänder eines Atoms, weshalb nur die Elektronen auf den nicht vollständig
 besetzten äußeren Bahnen für die elektrische Leitung in Frage kommen. Dieses wird als Leitfähigkeitsband bezeichnet.
 Analog darf dann für die nicht leitenden Metalle, also Isolatoren, die äußere Bahn nicht besetzt sein damit auch kein solches Leitfähigkeitsband entsteht.
-Im Folgenden kann man sich das Verhalten der mikroskopischen Größen eines Metallleiters anschauen.
+Im Folgenden lässt sich das Verhalten der mikroskopischen Größen eines Metallleiters untersuchen.
 Beispielsweise würde bei einer ideal kristallinen Gitterstruktur des Metalls keine Wechselwirkung zwischen Leitungselektronen und Atomkernen, sowie unter den Elektronen
 selbst stattfinden. Das liegt vor allem daran, dass sich Materiewellen, also hier die Elektronen streng periodisch ausbreiten. 
-Eine solche ideale Struktur liegt allerdings in den meisten Metallen nicht vor, also rechnet man mit einer endlichen Leitfähigkeit und einer zum Teil chaotischen Bewegung.
+Eine solche ideale Struktur liegt allerdings in den meisten Metallen nicht vor, also wird mit einer endlichen Leitfähigkeit und einer zum Teil chaotischen Bewegung gerechnet.
 
 \subsection{Berechnung grundlegender Größen}
-Um nun diese chaotische Bewegung beschreiben zu können kann man einige Größen aufstellen die man nachher durch Messung der Hall-Spannung und des Widerstands ermitteln kann.
+Um nun diese chaotische Bewegung beschreiben zu können müssen einige Größen aufgestellt werden die nachher durch Messung der Hall-Spannung und des Widerstands zu errechnen sind.
 Wir haben bereits festgestellt das sich die Elektronen nicht immer ungehindert ausbreiten. Es gibt also einen Zeitraum $\tau$ in dem ein Leitungselektronen nach einer Wechselwirkung
 beschleunigt wird, bis es wieder durch eine Wechselwirkung mit einer Fehlstelle im Gitter an der Ausbreitung in Stromrichtung gehindert wird.
-Diese Vorgänge lassen sich nun mitteln und man erhält die Zeit $\bar{\tau}$, welche mittlere freie Flugzeit genannt wird.
+Diese Vorgänge lassen sich nun mitteln und es entsteht die Zeit $\bar{\tau}$, welche mittlere freie Flugzeit genannt wird.
 Die kann nachher durch den Widerstand $R$ %eqref 
 ermittelt werden und ist für die folgende Darstellung der anderen Größen von großer Bedeutung.
-Wenn man ein äußeres elektrisches Feld an ein Metall anschließt bewegen sich die Leitungselektronen unter den genannten Bedingungen in \ref{sec:theo} und sie erfahren eine Beschleunigung
-die man durch die allgemeinen Kraftgesetze bestimmen kann. Es gilt
+Wenn ein äußeres elektrisches Feld an ein Metall angeschlossen wird, bewegen sich die Leitungselektronen unter den genannten Bedingungen in \ref{sec:theo} und sie erfahren eine Beschleunigung
+die durch die allgemeinen Kraftgesetze bestimmt werden kann. Es gilt
 \begin{align}
 \nonumber
 F = \vec{b} \cdot m_{0} && F_{el} = -e \cdot \vec{E_{ext}}
@@ -39,16 +39,16 @@ Es folgt sofort nach der Gleichsetzung der Kräfte.
 \begin{equation}
 \vec{b} = \frac{-e \vec{E_{ext}}}{m_{0}}
 \end{equation}
-Aus der Beschleunigung lässt sich bekanntlich die Geschwindigkeit berechnen. Wenn man sich nun die mittlere Flugzeit $\bar{\tau}$ anschaut, erhält man in diesem Zeitraum durch die
-berechnete Beschleunigung eine Geschwindigkeitsänderung $\increment \vec{\bar{v}}$ in Richtung des E-Feldes, da das E-Feld eine vektorielle Größe ist und die Kraft nur in Richtung des E-Feldes wirkt.
-Aus der klassischen Mechanik weiß man nun, dass
+Aus der Beschleunigung lässt sich bekanntlich die Geschwindigkeit berechnen. Bei Betrachtung der mittleren Flugzeit $\bar{\tau}$, lässt sich in diesem Zeitraum durch die
+berechnete Beschleunigung eine Geschwindigkeitsänderung $\increment \vec{\bar{v}}$ in Richtung des E-Feldes finden, da das E-Feld eine vektorielle Größe ist und die Kraft nur in Richtung des E-Feldes wirkt.
+Aus der klassischen Mechanik folgt
 \begin{equation}
 \label{eqn:deltav}
 \increment \vec{\bar{v}} = - \frac{e\vec{E_{ext}}}{m_{0}} \bar{\tau}
 \end{equation}
-gelten muss. Nun kann man zusätzlich die Driftgeschwindigkeit $\vec{\bar{v_{d}}}$ definieren, welche die durchschnittliche Geschwindigkeit der Elektronen zwischen zwei Wechselwirkungen
-angibt. Man geht dabei davon aus, dass im Mittel die Elektronen nach einer solchen Wechselwirkung wieder keine Geschwindigkeit in Richtung des E-Feldes haben, also wieder von null beschleunigt werden.
-Man definiert diese aufgrund der gleichmäßig beschleunigten Bewegung in E-Feld Richtung zu
+gelten muss. Nun kann zusätzlich die Driftgeschwindigkeit $\vec{\bar{v_{d}}}$ definiert werden, welche die durchschnittliche Geschwindigkeit der Elektronen zwischen zwei Wechselwirkungen
+angibt. Unter der Annahme dass im Mittel die Elektronen nach einer solchen Wechselwirkung wieder keine Geschwindigkeit in Richtung des E-Feldes haben, also wieder von null beschleunigt werden.
+Definiert wird diese aufgrund der gleichmäßig beschleunigten Bewegung in E-Feld Richtung zu
 \begin{equation}
 \label{eqn:drift}
 \vec{\bar{v_{d}}} = \frac{1}{2} \vec{\bar{v}}
@@ -59,20 +59,20 @@ Die Stromdichte entstehend durch das angelegte elektrische Feld lässt sich durc
 \vec{j} = \vec{\rho} \cdot \vec{\bar{v_{d}}} = - n \vec{\bar{v_{d}}} e
 \end{equation}
 Dabei ist $\vec{\rho}$ die Ladungsdichte welche aus einem Vielfachen $n$ der Elementarladung $e$ besteht. Dabei gibt $n$ die Anzahl der Ladungsträger an.
-Die zuvor bestimmte Driftgeschwindigkeit \eqref{eqn:drift} zusammen mit der Geschwindigkeitsänderung \eqref{eqn:deltav} lassen sich nun einsetzen und man bekommt.
+Die zuvor bestimmte Driftgeschwindigkeit \eqref{eqn:drift} zusammen mit der Geschwindigkeitsänderung \eqref{eqn:deltav} lassen sich nun einsetzen.
 
 \begin{equation}
 \label{eqn:stromdichte}
 \vec{j} = n \frac{e^{2}\vec{E}}{2m_{0}} \bar{\tau}
 \end{equation}
 In der Umsetzung ist es allerdings besser möglich den Strom $I$ durch das Metall zu messen und anstatt der elektrischen Feldstärke $E$ mit der E-Feld erzeugenden Spannung $U$
-zu rechnen. Diese stehen beide in einem geometrischen Zusammenhang, was sich in diesem Fall besonders anbietet, da man das zu untersuchende Metall leicht vermessen kann.
+zu rechnen. Diese stehen beide in einem geometrischen Zusammenhang, was sich in diesem Fall besonders anbietet, da das zu untersuchende Metall leicht zu vermessen ist.
 \begin{align}
 \label{eqn:querschnitt}
 I = \vec{j} \cdot \symup{Q} && E = \frac{U}{\symup{L}}
 \end{align}
 Dabei ist die Q Fläche senkrecht zur Stromrichtung und L die Länge des Metalls.
-Aus \eqref{eqn:stromdichte} erhält man also den Strom in Abhängigkeit von $U$, L und Q.
+Aus \eqref{eqn:stromdichte} ergibt sich also der Strom mit Abhängigkeit von $U$, L und Q.
 \begin{equation}
 \label{eqn:strom}
 I = n \frac{e^{2}\bar{\tau} \symup{Q}}{2m_{0}} \cdot \frac{U}{\symup{L}}
@@ -87,8 +87,8 @@ Dabei entspricht der Widerstand $R$ der reziproken Leitfähigkeit. Die von $L$ u
 \nonumber
 \rho = \frac{2m_{0}}{e^{2}n \bar{\tau}} && \sigma = \frac{e^{2}n \bar{\tau}}{2m_{0}} 
 \end{align}
-Um nun die Parameter aus \ref{sec:zielsetzung} zu bestimmen braucht man allerdings mehr Messgrößen als nur den Widerstand des Metalls. Das kann man leicht an Gleichung
-\eqref{eqn:widerstand} erkennen, denn der Widerstand hängt noch von zwei unbekannten Größen $n$ und $\bar{\tau}$ ab.
+Um nun die Parameter aus \ref{sec:zielsetzung} zu bestimmen werden allerdings mehr Messgrößen als nur den Widerstand des Metalls benötigt. Das ist leicht an Gleichung
+\eqref{eqn:widerstand} erkennbar, denn der Widerstand hängt noch von zwei unbekannten Größen $n$ und $\bar{\tau}$ ab.
 Hierbei wird die Hall-Spannung jetzt ausschlaggebend.
 
 \subsection{Berechnungen zur Hall-Spannung}
@@ -101,35 +101,35 @@ F_{L} =  e \cdot \vec{\bar{v_{d}}} \times \vec{B} \, \to \, F_{L} = e \bar{v_{d}
 Dabei ist die getroffene Folgerung nur dann korrekt wenn die zuvor gestellte Bedingung, dass alle Vektoren senkrecht aufeinander stehen, erfüllt ist.
 Die Lorentzkraft wirkt also wieder senkrecht zu jeweils Stromrichtung und B-Feld, folglich werden die Elektronen entweder, wie in der Abbildung \ref{fig:kupferblech} erkennbar, in die Zeichenebene hinein oder heraus
 abgelenkt. Durch die entstehende Ladungsverschiebung entsteht wiederum eine Potentialdifferenz zwischen Punkt A und B. Es baut sich also ein E-Feld auf, welches der Lorentzkraft entgegengerichtet ist.
-Ab einem gewissen Zeitpunkt herrscht eine so große Potentialdifferenz, dass die Elektrische Kraft des aufgebauten E-Feldes gleich groß wie die Lorentzkraft ist.
+Ab einem gewissen Zeitpunkt herrscht eine so große Potentialdifferenz, dass die elektrische Kraft des aufgebauten E-Feldes gleich groß wie die Lorentzkraft ist.
 Es gilt nun
 \begin{align*}
 F_{el} &= F_{L} \quad \to \quad e \tilde{E} = e \bar{v_{d}} B \\
 U_{H} &= \int_{0}^{b} \tilde{E} \symup{d}b = \int_{0}^{b} \bar{v_{d}} B \symup{d}b \quad \to \quad \tilde{E} b = \bar{v_{d}} B b
 \end{align*}
-Dabei ist $\tilde{E}$ das Elektrische Feld mit umgekehrten Vorzeichen zur Lorentzkraft und nicht zu verwechseln mit $E$ dem Elektrischen Feld welches den Strom verursacht.
-Die Hall-Spannung $U_{H}$ hat eine Abhängigkeit von $\bar{v_{d}}$, durch die aufgestellte Beziehung \label{eqn:stromdichteunddrift} in eine Abhängigkeit von $\vec{j}$ umschreiben und 
-anschließend mit den geometrischen Größen zu dem Strom \eqref{eqn:querschnitt} umschreiben. Hier lässt sich der Querschnitt natürlich durch die Dicke und Breite leicht bestimmen. Man erhält
+Dabei ist $\tilde{E}$ das elektrische Feld mit umgekehrten Vorzeichen zur Lorentzkraft und nicht zu verwechseln mit $E$ dem elektrischen Feld welches den Strom verursacht.
+Die Hall-Spannung $U_{H}$ hat eine Abhängigkeit von $\bar{v_{d}}$, durch die aufgestellte Beziehung \label{eqn:stromdichteunddrift} lässt sich dies in eine Abhängigkeit von $\vec{j}$ umwandeln und 
+anschließend mit den geometrischen Größen zu dem Strom \eqref{eqn:querschnitt} umschreiben. Hier lässt sich der Querschnitt natürlich durch die Dicke und Breite leicht bestimmen. Es folgt
 
 \begin{equation}
 \label{eqn:hallspannungfuern}
 U_{H}(I_{q}) = - \frac{1}{n e} \cdot \frac{B I_{q}}{d}
 \end{equation}
-Diese Gleichung hat jetzt einen großen Vorteil zu den vorherigen, denn hier lassen sich alle Größen leicht experimentell bestimmen, so dass man 
-durch eine Rechnung die Anzahl der Ladungsträger $n$ einer beliebigen Probe leicht ermitteln kann.
+Diese Gleichung hat jetzt einen großen Vorteil zu den vorherigen, denn hier lassen sich alle Größen leicht experimentell bestimmen, so dass 
+durch eine Rechnung die Anzahl der Ladungsträger $n$ einer beliebigen Probe leicht ermittelt werden kann.
 
 \subsection{Berechnung weiterer Parameter}
-Wenn man eine mittlere freie Flugzeit $\bar{\tau}$ berechnen kann, so kann man auch die in der Zeit zurückgelegte Weglänge $\bar{\lambda}$ berechnen. Hier betrachtet man allerdings
-eine andere Geschwindigkeit als zuvor, wie zuvor erläutert kann man die Bewegung der Elektronen auch ähnlich wie die eines idealen Gases betrachten. 
+Durch die mittlere freie Flugzeit $\bar{\tau}$ lässt sich auch die in der Zeit zurückgelegte Weglänge $\bar{\lambda}$ berechnen. Hierbei wird allerdings 
+eine andere Geschwindigkeit als zuvor betrachtet, wie zuvor erläutert weist die Bewegung der Elektronen Ähnlichkeiten zu der eines idealen Gases auf. 
 Hier gilt das Gleichverteilungsgesetz der Thermodynamik.
 \begin{equation}
 \bar{E_{kin}} = \frac{1}{2} f k T
 \end{equation}
-Hierbei ist $k$ die Boltzmann Konstante, $T$ die Temperatur und $f$ die Anzahl der Freiheitsgrade. Bei Betrachtung der drei Translationsfreiheitsgrade bekommt man also
+Hierbei ist $k$ die Boltzmann Konstante, $T$ die Temperatur und $f$ die Anzahl der Freiheitsgrade. Bei Betrachtung der drei Translationsfreiheitsgrade gilt also
 \begin{equation}
 \bar{E_{kin}} = \frac{3}{2} k T
 \end{equation}
-Zusammen mit der klassischen Betrachtung der kinetischen Energie erhält man einen Ausdruck für die sogenannte mittlere Totalgeschwindigkeit $\lvert \bar{v} \rvert$.
+Zusammen mit der klassischen Betrachtung der kinetischen Energie folgt ein Ausdruck für die sogenannte mittlere Totalgeschwindigkeit $\lvert \bar{v} \rvert$.
 \begin{equation}
 \label{eqn:totgeschw}
 \frac{m_{0}}{2} \lvert \bar{v}^{2} \rvert = \frac{3}{2} k T \quad \to \quad \lvert \bar{v} \rvert = \sqrt{\frac{3kT}{m_{0}}}
@@ -166,7 +166,7 @@ Die Fermi-Energie lässt sich wie folgt berechnen
 E_{F} = \frac{h^{2}}{2 m_{0}} \sqrt[3]{\left( \frac{3}{8\pi} n \right)^{2}}
 \end{equation}
 Wie zu Beginn des Kapitels beschrieben kommen für die Leitungselektronen nur die Elektronen auf hohen Energieniveaus in Frage, wodurch sich die Energie dieser Elektronen
-mit der Fermi-Energie $E_{F}$ annähern lässt, dadurch kann man also das Problem der Vernachlässigung des Pauli-Prinzips in den Gleichungen \eqref{eqn:totgeschw} und \eqref{eqn:freieweglaenge} eliminieren.
+mit der Fermi-Energie $E_{F}$ annähern lässt, dadurch wird also das Problem der Vernachlässigung des Pauli-Prinzips in den Gleichungen \eqref{eqn:totgeschw} und \eqref{eqn:freieweglaenge} eliminiert.
 Man erhält also die angenäherten Gleichungen
 \begin{align}
 \label{eqn:totalgeschw}
