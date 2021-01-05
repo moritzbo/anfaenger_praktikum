@@ -35,12 +35,12 @@ A = \frac{1}{n e} \cdot \frac{B}{d} \quad \to \quad n = \frac{B}{Aed}
 \label{eqn:nwert}
 n = \SI{3.19(10)e28}{\per\meter\cubed}
 \end{equation}
-Den Fehler erhält man gemäß der Gaußschen Fehlerfortpflanzung mit den fehlerbehafteten Werten $A$ und $B$ zu.
+Den Fehler erhalten wir gemäß der Gaußschen Fehlerfortpflanzung mit den fehlerbehafteten Werten $A$ und $B$ zu.
 \begin{equation}
 \increment n = \sqrt{\left( \frac{1}{A e d}\right)^{2} (\increment B)^{2} + \left( \frac{B}{A^{2} e d}\right)^{2} (\increment A)^{2}}
 \end{equation}
 \subsubsection{Ladungsträger pro Atom}
-Um die Ladungsträger pro Kupferatom zu bestimmen, also die Anzahl der Leitungselektronen, benötigt man zwei Konstanten.
+Um die Ladungsträger pro Kupferatom zu bestimmen, also die Anzahl der Leitungselektronen, benötigen wir zwei Konstanten.
 Zum einen die Masse von Kupfer und die Dichte von Kupfer. Der Zusammenhang lautet wie folgt
 
 \begin{equation}
@@ -48,18 +48,18 @@ Zum einen die Masse von Kupfer und die Dichte von Kupfer. Der Zusammenhang laute
 \rho = N \frac{m_{\text{Cu,atom}}}{V_{\text{Cu,atom}}}
 \end{equation}
 Dabei ist $\rho$ die Dichte des gesamten Kupferstücks, $N$ die Teilchenanzahl, $m_{\text{Cu,atom}}$ die Masse des Kupferatoms und $V_{\text{Cu,atom}}$ das Volumen des Kupferatoms.
-Zusammen mit der Definition von der Ladungsträgerdichte wird man das Volumen allerdings los.
+Zusammen mit der Definition von der Ladungsträgerdichte wird verschwindet das Volumen allerdings.
 \begin{equation}
 \nonumber
 n = \frac{N}{V_{\text{Cu,atom}}}
 \end{equation}
-Hier ist $n$ jetzt die Ladungsträgerdichte pro Atom und durch einsetzen erhält man
+Hier ist $n$ jetzt die Ladungsträgerdichte pro Atom und durch einsetzen:
 \begin{equation}
 \nonumber
 n_{\text{Cu,atom}} = \frac{\rho}{m_{\text{Cu,atom}}}
 \end{equation}
-Die Zahl der Leitungselektronen pro Atom, also der Ladungsträger pro Atom $z$ erhält man jetzt bei Betrachtung aller errechneter Ladungsträger im Kupfer \eqref{eqn:nwert} pro 
-Ladungsträgerdichte der einzelnen Kupferatome. Man erhält also
+Die Zahl der Leitungselektronen pro Atom, also der Ladungsträger pro Atom $z$ erhalten wir jetzt bei Betrachtung aller errechneter Ladungsträger im Kupfer \eqref{eqn:nwert} pro 
+Ladungsträgerdichte der einzelnen Kupferatome. 
 \begin{equation}
 \nonumber
 z = \frac{n}{n_{\text{Cu,atom}}} = \frac{n \cdot m_{\text{Cu,atom}}}{\rho}
@@ -76,18 +76,18 @@ Die Literaturwerte der Masse und Dichte von Kupfer sind in \ref{tab:kupferlit} n
     \bottomrule
   \end{tabular}
 \end{table}
-Wenn man diese Werte nun einsetzt erhält man für die Anzahl der Leitungselektronen pro Atom im Kupfer folgendes.
+Wenn diese Werte nun eingesetzt werden, erhalten wir für die Anzahl der Leitungselektronen pro Atom im Kupfer folgendes.
 \begin{equation}
 z = \SI{0.226(7)}{}
 \end{equation}
-Da hier nur die Größe $n$ fehlerbehaftet ist, kann man den Fehler auf $z$ leicht ermitteln durch
+Da hier nur die Größe $n$ fehlerbehaftet ist, lässt sich der Fehler auf  $z$ leicht ermitteln durch
 \begin{equation}
 \increment z = \biggl| \frac{1}{n_{\text{Cu,atom}}}\biggr| \cdot (\increment n)
 \end{equation}
 
 \subsubsection{Mittlere Flugzeit}
-Durch die Bestimmung von $n$ kann man nun zusammen mit der Messung des Widerstands $R$ und der Beziehung \eqref{eqn:widerstand} die Mittlere Flugzeit $\bar{\tau}$ bestimmen. 
-Zunächst stellt man die Gleichung nach $\bar{\tau}$ um.
+Durch die Bestimmung von $n$ kann nun zusammen mit der Messung des Widerstands $R$ und der Beziehung \eqref{eqn:widerstand} die Mittlere Flugzeit $\bar{\tau}$ bestimmt werden. 
+Zunächst stellen wir die Gleichung nach $\bar{\tau}$ um.
 \begin{equation}
 \bar{\tau} = \frac{2m_{0}}{e^{2}n R} \cdot \frac{\symup{L}}{\symup{Q}}
 \end{equation}
@@ -104,19 +104,19 @@ Die zusätzlichen Konstanten die benötigt werden sind in der folgenden Tabelle 
     \bottomrule
   \end{tabular}
 \end{table}
-Wenn man anschließend alle Werte einsetzt erhält man das Ergebnis.
+Wenn anschließend alle Werte eingesetzt werden, bekommen wir das Ergbenis.
 \begin{equation}
 \bar{\tau} = \SI{1.30(32)e-17}{\second}
 \end{equation}
-Den Fehler erhält man durch eine Gaußsche Fehlerfortpflanzung der Größen $n$, $R$, $L$ und $b$.
+Der Fehler ergibt sich durch eine Gaußsche Fehlerfortpflanzung der Größen $n$, $R$, $L$ und $b$.
 \begin{equation}
 \increment \bar{\tau} = \sqrt{\sum_{\zeta}\left( \left( \frac{2m_{0}L}{e^{2}Rnbd} \cdot \frac{1}{\zeta}\right)^{2} (\increment \zeta)^2 \right) + \left( \frac{2m_{0}}{e^{2}Rnbd} \right)^{2} (\increment L)^{2}} \quad \text{mit } \zeta =[R, n, b]
 \end{equation}
 
 \subsubsection{Mittlere Driftgeschwindigkeit}
-Nun kann man die mittlere Driftgeschwindigkeit bei gegebener Stromdichte $j$ leicht berechnen. Die benötigte Beziehung wurde bereits in \ref{sec:theo} erläutert.
-Hier wird die Gleichung \eqref{eqn:stromdichteunddrift} verwendet. Bei einer Stromdichte $j = \SI{1}{\ampere\per\milli\meter\squared}$ muss man nur noch die zuvor berechneten Werte einsetzen und
-die Einheiten in die SI-Einheiten umrechnen. Hier gilt
+Nun kann die mittlere Driftgeschwindigkeit bei gegebener Stromdichte $j$ leicht berechnet werden. Die benötigte Beziehung wurde bereits in \ref{sec:theo} erläutert.
+Hier wird die Gleichung \eqref{eqn:stromdichteunddrift} verwendet. Bei einer Stromdichte $j = \SI{1}{\ampere\per\milli\meter\squared}$ muss nur noch die zuvor berechneten Werte eingesetzt - und
+die Einheiten in die SI-Einheiten umgerechnet werden. Hier gilt
 \begin{equation}
 j = \SI{1}{\ampere\per\milli\meter\squared} = \SI{1e6}{\ampere\per\meter\squared}
 \end{equation}
@@ -133,13 +133,14 @@ Es gilt
 \begin{equation}
 \mu = - \frac{e}{2 m_{0}} \cdot \bar{\tau} = \SI{-1.15(28)e-6}{\meter\squared\per\volt\per\second}
 \end{equation}
-Der Fehler entsteht wieder durch nur eine fehlerbehaftete Größe. Hier ist diese $\bar{\tau}$ und man kann sie durch
+Der Fehler entsteht wieder durch nur eine fehlerbehaftete Größe. Hier ist diese $\bar{\tau}$ und sie kann wie folgt dargestellt werden
 \begin{equation}
 \increment \mu = \biggl| \frac{-e}{2m_{0}}\biggr| \cdot (\increment \bar{\tau})
 \end{equation}
 
+
 \subsubsection{Totalgeschwindigkeit}
-In den Theoretischen Grundlagen wurde beschrieben wie man die Totalgeschwindigkeit bestimmt. Dabei wurden zwei verschiedene Methoden genannt. 
+In den Theoretischen Grundlagen wurde beschrieben wie die Totalgeschwindigkeit bestimmt wird. Dabei wurden zwei verschiedene Methoden genannt. 
 Es wurde erläutert, dass auf Grund des Pauli-Prinzips eine Betrachtung der Fermi-Energie sinnvoll ist, deswegen wird zunächst die Totalgeschwindigkeit über die Beziehung \eqref{eqn:totalgeschw}
 betrachtet.
 Die Fermi-Energie lässt sich wie folgt berechnen.
@@ -148,11 +149,11 @@ E_{F} &= \frac{h^{2}}{2 m_{0}} \sqrt[3]{\left( \frac{3}{8\pi} n \right)^{2}} \\[
 \text{mit  } h &= \SI{6.626e-24}{\joule\second}
 \end{align}
 Dabei ist $h$ das Plancksche Wirkungsquantum eine bekannte Naturkonstante.
-Für die Fermi-Energie erhält man
+Für die Fermi-Energie erhalten wir
 \begin{equation}
 E_{F}= \SI{5.87(12)e-19}{\joule} = \SI{3.66(8)}{\electronvolt}
 \end{equation}
-Die Totalgeschwindigkeit kann man anschließend sofort mit Gleichung \eqref{eqn:totalgeschw} berechnen.
+Die Totalgeschwindigkeit kann anschließend sofort mit Gleichung \eqref{eqn:totalgeschw} berechnet werden.
 \begin{equation}
 \lvert \bar{v} \rvert \approx \sqrt{\frac{2 E_{F}}{m_{0}}} = \SI{1.135(12)e6}{\meter\per\second}
 \end{equation}
@@ -161,7 +162,7 @@ Gleichung \eqref{eqn:totgeschw} an.
 \begin{equation}
 \lvert \bar{v} \rvert = \sqrt{\frac{3kT}{m_{0}}} = \SI{1.15e5}{\meter\per\second}
 \end{equation}
-Man kann also einen Unterschied der Größenordung $10$ erkennen.
+Es lässt sich also also ein Unterschied der Größenordung $10$ erkennen.
 Die Fehler ergeben sich in den obigen Rechnungen wieder analog mit Gaußscher Fehlerfortpflanzung.
 
 \subsubsection{Mittlere freie Weglänge}
