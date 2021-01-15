@@ -1,1 +1,63 @@
-\newpage
+\section{Theoretische Grundlagen}
+
+Der Grundaufbau und somit die leitende Idee des Geiger-Müller-Zählrohr ist der Kathodenzylinder % beschrieben in ... also REF hinzufügen
+mit innen liegendem, axial verlaufendem Anodendraht. Mit der Funktion ein Elektrisches Feld durch einen Strom $U$ anzulegen.
+
+\subsection{Elektrisches Feld}
+
+Das resultierende Elektrische Fled ist durch den Aufbau radialysymetrisch, verhält sich also also an Orten mit gleichem Radius exakt gleich.
+Beschrieben durch die Formel 
+
+\subsection{Elektrisches Feld} %maybe
+\begin{equation}  %vlt noch herleiten!!!
+\label{eqn:efeld}
+E(r) = \frac{U}{r \hspace{0.1cm} \text{ln} \left( \frac{r_k}{r_a} \right) }
+\end{equation}
+
+\begin{align}
+r_a = \text{Radius Anodendraht}     \hspace{1cm} r_k = \text{Radius Stahlmantel}
+\end{align}
+Zu sehen ist hier, dass das Feld zwar radial abnimmt aber doch nur von einem Paramter $r$ abhängt. Hier also der Abstand vom Anodendraht.
+Um die realistischen Bedingungen nicht zu verletzten, sollte festleget werden $r_a<r<r_k$.
+Folglich ist die Spannung antipropotional zu $r$. Dies ermöglicht eine fast ungehinderte nährung an sehr hohe Feldstärken in der unmittelbaren Nähe des Drahtes, wenn also $r_a$ und somit $r$ klein genug ist. 
+
+\subsection{Wechselwirkung einfallender Teilchen zum Elektrischen Feld} %maybe: 
+Die für das Experiment interessante, einfallendende ionisierende Strahlung der radioaktiven Teilchen bewegt sich nun in den Zylinder unseres Zählrohrs.
+Diese Strahlung kommt auf dem Weg durch das Gas in Kontakt mit Atomen bei denen Ionen und ELektronen herausgeschlagen werden. 
+Nun befinden sich im Elektrischen Feld eine Kombination aus neutralen Atomen, positv geadene Ionen und die negativen ELektronen. 
+%vlt bild einfügen siehe ornder !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Das angelegte Feld führt dazu, dass sich die Ionene und ELektronen entsprechend ihrer Ladung entweder in Richtung des Stahlmantel (Ionen) oder zum Draht (Elektronen) bewegen.
+Als \textbf{Ionisationsakt} bezeichnet man eben diesen Prozess, der solange anhält bis jegliche Energie der Strahlung durch Ionisation aufgebracht ist.
+Die Energie der Teilchen Energie ferhält sich proportional zu Anzahl der enstandenen Elektronen und Ionen. 
+\begin{equation}
+\label{eqn:prop}
+\text{Anzahl}_\text{Elektronen,Ionen} \propto \text{Energie}_\text{Teilchen}
+\end{equation}
+Was mit den abgeschlagen Teilchen der Gasatomen passiert hängt stark von dem Elektrischen Feld, also der angelegten SPannung, ab und lässt sich in 5 Stufen unterteilen.
+
+\paragraph{Abhängigkiet durch Spannung} \mbox{}
+
+\subsubsection{Rekombination vor Sammlung}
+Bei sehr schwacher Spannung reicht die, durch das Elektrische Feld, generierte Beschleunigung auf die Elektronen nur selten aus um den Draht zu erreichen und einen Impuls zu erzeugen.
+Der Hauptteil eben jener Elektronen wird durch \textbf{Rekombination}, ein Umkehrprozess der Ionisation, verhundert. Es liegt also anstelle eines Ionen und Elektronen wieder ein stabiles Gas Atom vor, unberührt vom Feld.
+Diese Art der "Verschmelzung" braucht für seinen Teil auch Energie die durch den Stoß bei schwacher Spannung bereit gestellt wird.
+\subsubsection{Ionisationskammer}
+Ein erhötes Stromniveu führt zur sogenannten \textbf{Ionisationskammer}. Hier ist durch eine stärkere Beschleunigung durch das elektrische Feld die Wahrscheinlichkeit zur Rekombinationstark eingeschränkt und findet nur noch selten statt. 
+Der Zusammenhang \eqref{eqn:prop} führt dazu, dass ein geringer Ionenstrom proportional zur Stromstärke entsteht.
+Das Strahlungsteilchen löst also nun einen Strom an Ionen aus solange es sich mit ausreichend Energie durch den Zylinder bewegt. Vorraussetzung ist eine enstrpechende Länge des Zylinders, damit keine Energie verloren und somit nicht gemessen wird.
+\subsubsection{Proportional-bereich}
+\label{sub:porpotional}
+Die nächste Erhöhung der Spannung würde eine noch schnellere Bewegung der Elektronen hervorrufen. Hier ist die Rekombination komplett ausgeschlossen, die Elektronen bewegen sich mit zu hoher Energie die nach \eqref{eqn:efeld} immer größer mit kleineren Abstand zum Draht wird.
+Sobald ein beschleunigtes ELektron eine gewisse kinetische Energie erlangt ist es selbst in der Lage durch \textbf{Soßionisation} andere Ionen und ELektronen aus den Gasatomen herauszulösen. Der Drahtnahen position zufolge werden diese auch stark beschleunigt und der Vorgang wiederholt sich
+und wird \text{Townsend-Lawine} genannt. Es fallen also eine Vielzahl an Elektronen auf den Draht und es entsteht eine Ladung $Q$ die als \textbf{Ladungsimpuls} abgegriffen wereden kann. 
+Immer noch gilt der Zusammenhang aus \eqref{eqn:prop}, da nur eben jene Elektronen Lawinen auslösen könenn, die nahe genug um Draht sind und wichtiger noch, selbst \textbf{direkt} durch die radioaktive Strahlung erzeugt worden sind. Dieser lässt sich erweitern zu
+\begin{equation}
+\label{eqn:prop}
+Q \propto \text{Energie}_\text{Teilchen}
+\end{equation}
+Die Ladungsimpulse geben also Aufschluss über die Energie und die Intensität der Teilchen. 
+\subsection{Auslösebereich}
+Erreicht die Spannung einen Wert der hoch genug ist verliert die Proportinalität ihre Bedeutung. 
+Der Grund ist eine so hohe kinetische Energie der Elektronen, dass beim Aufprall mit Gas Atomen zusätlich zu den sekundären ELektronen auch noch UV - Photonen erzeugt werden. 
+Wärend die Elektronen weiterhin "Lawinen" in Richtung des Drahtes auslösen, sind die Photonen neutral geladen. Sie bewegen sich selbst mit ausreichend hoher Energie um Atome zu ionisieren aber sind unabhängig von 
+Elektrischen Feldern. Durch diesen Sachverhalt entsehen nun  
