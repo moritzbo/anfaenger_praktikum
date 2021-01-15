@@ -1,11 +1,11 @@
 all: build/DasGeigerMüllerzählrohr.pdf
 
 # hier Python-Skripte:
-#build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-	#TEXINPUTS=$$(pwd): python plot.py
+build/plot1.pdf: python/plot.py matplotlibrc header-matplotlib.tex Daten/Kennlinie.dat| build
+	TEXINPUTS=$$(pwd): python python/plot.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-#build/DasGeigerMüllerzählrohr.pdf: build/plot.pdf
+build/DasGeigerMüllerzählrohr.pdf: build/plot1.pdf
 
 build/DasGeigerMüllerzählrohr.pdf: FORCE | build
 	  TEXINPUTS=build: \
