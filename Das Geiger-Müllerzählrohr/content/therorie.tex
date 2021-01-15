@@ -38,6 +38,7 @@ Die Vorgänge unterscheiden sich für $\alpha$ - und $\beta$ - Teilchen lediglic
 \paragraph{Abhängigkiet durch Spannung} \mbox{}
 
 \subsubsection{Rekombination vor Sammlung}
+\label{sub:Rekombination}
 Bei sehr schwacher Spannung reicht die, durch das Elektrische Feld, generierte Beschleunigung auf die Elektronen nur selten aus um den Draht zu erreichen und einen Impuls zu erzeugen.
 Der Hauptteil eben jener Elektronen wird durch \textbf{Rekombination}, ein Umkehrprozess der Ionisation, verhundert. Es liegt also anstelle eines Ionen und Elektronen wieder ein stabiles Gas Atom vor, unberührt vom Feld.
 Diese Art der "Verschmelzung" braucht für seinen Teil auch Energie die durch den Stoß bei schwacher Spannung bereit gestellt wird.
@@ -72,7 +73,7 @@ Also ist hier keine Information mehr über die Energie der Strahlung selbst, son
 Durch die nun im ganzen Zylinder auftretenden Lawinen ist der Ladungsimpuls jedoch stark erhöt und wesentlich leichter zu messen.
 
 \subsection{Einfluss der positiven Ionen}
-Es befinden sich also nun zwei arten geladener Teilchen im Raum wobei ihre Massen sich unterscheiden
+Es befinden sich also nun zwei Arten geladener Teilchen im Raum wobei ihre Massen sich unterscheiden
 \begin{equation}
 \label{eqn:masse}
 M_\text{Ion} >> M_\text{Elektron}
@@ -94,15 +95,88 @@ Nun können Momente $\Delta T$ enstehen, in denen Die Kraft $\vec{F}(r,t)$ minim
 Bei zu geringer Energie wird also trotz einfallender Strahlung Stoßionisation verhindert. Diesen Zeitraum $\Delta T$ nennt man \textbf{Totzeit}. Es entstehen keine Ladungsimpulse und dadurch kann kein Messwert der Intensität gefunden werden.
 Durch Fehlende Stoßionisation bleibt aber auch die Generierung neue Ionen aus und der "Schlauch" bewegt sich in Richtung des Stahlmantels weg. 
 In diesem Zeitraum der \textbf{Erholungszeit} $\Delta T_E$ lässt sich langsam wieder ein Ladungspuls feststellen der jedoch bis zur komplettten Abnahme des Schlauches abgeschwächt ist.
+
+\paragraph{Bestimmung der Totzeit} 
+\label{para:Totzeit}
+\mbox{} \\
+Da die Totzeit die Ladungsimpulsrate maßgeblich verringert gilt
+\begin{equation*}
+\label{ref:totzeitverhaeltnis}
+N_r < N_w
+\end{equation*}
+Mit $N_r$ als gemessene Ladungsimpulsrate und $N_w$ als tatsächliche Ladungsimpulsrate. 
+Letztere setzt sich zusammen aus der Impuslrate und der Messzeiet.
+\begin{equation*}
+\text{Impulsrate} = N_r \cdot t
+\end{equation*} 
+Also fehlt noch ein Quotient der der Impulsrate die korrektur durch die Totzeit beifügt. Dieser wird Messzeit genannt.
+\begin{equation*}
+\text{Messzeit} = (1-TN_r) \cdot t
+\end{equation*}
+Mit $T$ als Totzeit ist das also der Korrigierende Fakotor. $1-TN_r$ stelllt also den Teil der Zeit da, in der die Ionen die Manteldecke erreicht haben.
+Final lässt sich die Ladungsimpulsrate bestimmmen 
+\begin{equation}
+\label{ref:Ladungsimpulsrate}
+N_w = \frac{N_r}{1-TN_r}
+\end{equation}
+Dabei ist die Zählrate gemäß der Poisson-Statistik verteilt, somit lässt sich der Fehler auf die Zählrate gemäß $\sqrt{N}$
+bestimmen.
+\begin{equation}
+\label{eqn:fehlerzählrate} %!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!poisson HIER MORITZ
+\increment N = \sqrt{N}
+\end{equation}
+Mit dieser Formel und einem weiteren radioaktiven Präperat  lässt sich die Totzeit berechnen. 
+Durch messen von:\\
+1.1)  $N_1$  \\
+1.2) $N_{1+2}$\\
+wobei $N_x$ die jeweilige Zählrate ist.
+Aus dem Zusammenhang 
+\begin{equation*}
+N_{w1+2} = N_{w1} + N_{w2}
+\end{equation*}
+erhält man die Formel
+\begin{equation*}
+\frac{N_{1+2}}{1-TN_{1+2}}=\frac{N_1}{1-TN_1} + \frac{N_2}{1-TN_2}
+\end{equation*}
+nach $T$ umstellen
+\begin{equation}
+\label{eqn:totzeit}
+T \approx \frac{N_1+N_2-N_{1+2}}{2N_1N_2}
+\end{equation}
+
+
 \subsubsection{Nachentladung}
+\label{sub:Nachentladung}
 Analog zu den Elektronen die eine Beschleunigung in Richtung des Drahtes erfahren, bewegen sich die Ionen entegegengesetz, hin zum Stahlmantel.
 Auch wenn die Beschleunigung nach \eqref{eqn:masse} mehr zeit beanspruchen würede kommen sie mit Genug Energie an um Teilchen aus dem Stahl zum "schlagen", sogenannte \textbf{sekundär ELektronen}
 Diese folgen wie die anderen \textbf{primär ELektronen} einer Bewegung in Richtung des Drahtes. Im Fall dass ein einziges Strahlungsteilchen würden diese sekundär ELektronen also verspätet zu den primären ankommen
 und eine sogenannte \textbf{Nachentladung} erzeugen. Diese Verspätung wird durch $\Delta T_L$ ausgedrückt ud entspricht der Zeit die die positiven Ionen zum Mantel bennötigen.
-Der Charakter der Todzeit verspricht, dass zu diesem Zeitpunkt($\Delta T_L$) der schlauch noch nicht den Stahlmantel erreicht hat. Also gilt
+Der Charakter der Totzeit verspricht, dass zu diesem Zeitpunkt($\Delta T_L$) der schlauch noch nicht den Stahlmantel erreicht hat. Also gilt
 \begin{equation*}
 \label{eqn:vergleich}
 \Delta T < \Delta T_L
 \end{equation*}
 
+\subsection{Plateauzustände}
+Bei konstanter Strahlungsintensität gegenüber der Spannung $U$ wird eine lineare Verteilung der Teilchen $N$ erkennbar. Dieser Abschnitt wird 
+\textbf{Plateu} genannt. Das resultiert aus den Verschiedenen Spannungen und deren Einfluss auf die Messung. Bei niedriger Sappnung ist also noch Rekombination \ref{sub:Rekombination} möglcih und im späteren wir ddas Ergebnis durch Nachentladung \ref{sub:Nachentladung} verfälscht. 
+Im Bereich des "Plateus" ist also annehmbar gute Messwerte zu bekommen. Durch nicht optimale Gasgemische lässt sich schon im Plateu einen linearen anstieg bekommen,
+verschuldet durch trotzdem stattfindende Nachentladungen.
 
+
+\subsection{Berechnung der Ladungsmenge im Zählrohr}
+Durch die auschlagenden Elektronen entsteht auf dem Draht eine messbare Ladung die als Impuls weiterverarbeitet werden kann.
+Diese Ladungsmenge kann gemittelt mit der bekannten Beziehung
+\begin{equation}
+U=RI \hspace{2cm} I=\frac{U}{R}
+\end{equation}
+und einer Mittellung mithilfe eines Integrals errechnet werden.
+Der durchschnittlich fließende Strom $\si{\ampere}$ in einem Intervall von $0$ bis $\tau$ wobei gelten soll $\tau>>T$ wird dann ausgedrück durch
+\begin{equation}
+\label{eqn:ladungsmenge}
+\bar{I} \coloneqq \frac{1}{\tau} \int_{0}^{\tau} \frac{U(t)}{R} \text{dt}
+\end{equation}
+Hier ist $R$ der auftrende Wiederstand.
+
+%REST
+%Frage von DC
