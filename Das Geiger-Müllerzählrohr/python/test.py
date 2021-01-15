@@ -7,21 +7,22 @@ import scipy.constants as const
 import uncertainties.unumpy as unp
 
 
-U, N = np.genfromtxt("Daten/Kennlinie.dat", unpack=True)
+U, N = np.genfromtxt("../Daten/Kennlinie.dat", unpack=True)
 
 Nerr = np.sqrt(N)
-print(Nerr)
+#print(Nerr)
 
 
 #xlimit = np.array([310, 710])
 #ylimit = np.array([185, 230])
-plt.errorbar(U, N, xerr=None, yerr=Nerr, fmt='kx', markersize=3.5, label='Messwerte mit Fehlerbalken')
+#plt.errorbar(U, N, xerr=None, yerr=Nerr, fmt='kx', markersize=3.5, label='Messwerte mit Fehlerbalken')
 
-plt.xlabel(r'$U[\si{\volt}]$')
-plt.ylabel(r'$N[\text{Imp} / {60}\si{\second}]$')
-plt.grid()
-
-
+#plt.xlabel(r'$U[\si{\volt}]$')
+#plt.ylabel(r'$N[\text{Imp} / {60}\si{\second}]$')
+#plt.grid()
+#plt.legend(loc='upper left')
+#plt.tight_layout()
+#plt.savefig("build/plot1.pdf")
 
 
 #RECHNUNG
@@ -48,20 +49,3 @@ errors = np.sqrt(np.diag(covariance_matrix))
 
 for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
-
-x_plot = np.linspace(320, 700)
-
-plt.plot(
-    x_plot,
-    params[0] * x_plot + params[1], "b--",
-    label='Lineare Ausgleichsgerade',
-    linewidth=1.5,
-)
-x1 = [370, 630]
-y1 = [10041, 10224]
-
-plt.plot(x1, y1, "rx", label="Plateuintervall")
-
-plt.legend(loc='upper left')
-plt.tight_layout()
-plt.savefig("build/plot1.pdf")
