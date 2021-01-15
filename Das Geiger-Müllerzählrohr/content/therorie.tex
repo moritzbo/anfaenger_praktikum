@@ -1,22 +1,21 @@
 \section{Theoretische Grundlagen}
 
 Der Grundaufbau und somit die leitende Idee des Geiger-Müller-Zählrohr ist der Kathodenzylinder % beschrieben in ... also REF hinzufügen
-mit innen liegendem, axial verlaufendem Anodendraht. Mit der Funktion ein Elektrisches Feld durch einen Strom $U$ anzulegen.
+mit innen liegendem, axial verlaufendem Anodendraht mit der Funktion ein Elektrisches Feld durch einen Strom $U$ anzulegen.
 
 \subsection{Elektrisches Feld}
 
 Das resultierende Elektrische Fled ist durch den Aufbau radialysymetrisch, verhält sich also also an Orten mit gleichem Radius exakt gleich.
 Beschrieben durch die Formel 
 
-\subsection{Elektrisches Feld} %maybe
 \begin{equation}  %vlt noch herleiten!!!
 \label{eqn:efeld}
 E(r) = \frac{U}{r \hspace{0.1cm} \text{ln} \left( \frac{r_k}{r_a} \right) }
 \end{equation}
 
-\begin{align}
+\begin{align*}
 r_a = \text{Radius Anodendraht}     \hspace{1cm} r_k = \text{Radius Stahlmantel}
-\end{align}
+\end{align*}
 Zu sehen ist hier, dass das Feld zwar radial abnimmt aber doch nur von einem Paramter $r$ abhängt. Hier also der Abstand vom Anodendraht.
 Um die realistischen Bedingungen nicht zu verletzten, sollte festleget werden $r_a<r<r_k$.
 Folglich ist die Spannung antipropotional zu $r$. Dies ermöglicht eine fast ungehinderte nährung an sehr hohe Feldstärken in der unmittelbaren Nähe des Drahtes, wenn also $r_a$ und somit $r$ klein genug ist. 
@@ -31,10 +30,11 @@ Als \textbf{Ionisationsakt} bezeichnet man eben diesen Prozess, der solange anh�
 Die Energie der Teilchen Energie ferhält sich proportional zu Anzahl der enstandenen Elektronen und Ionen. 
 \begin{equation}
 \label{eqn:prop}
-\text{Anzahl}_\text{Elektronen,Ionen} \propto \text{Energie}_\text{Teilchen}
+N \propto E
 \end{equation}
+Dabei ist N die Anzahl der Elektronen und Ionen und E die Energie des einfallenden Teilchens.
 Was mit den abgeschlagen Teilchen der Gasatomen passiert hängt stark von dem Elektrischen Feld, also der angelegten SPannung, ab und lässt sich in 5 Stufen unterteilen.
-
+Die Vorgänge unterscheiden sich für $\alpha$ - und $\beta$ - Teilchen lediglich in ihrem ausmaß der erzeugten Elektronen-Ionen-Paare, werden im folgenden also generalisiert dargestellt.
 \paragraph{Abhängigkiet durch Spannung} \mbox{}
 
 \subsubsection{Rekombination vor Sammlung}
@@ -48,16 +48,61 @@ Das Strahlungsteilchen löst also nun einen Strom an Ionen aus solange es sich m
 \subsubsection{Proportional-bereich}
 \label{sub:porpotional}
 Die nächste Erhöhung der Spannung würde eine noch schnellere Bewegung der Elektronen hervorrufen. Hier ist die Rekombination komplett ausgeschlossen, die Elektronen bewegen sich mit zu hoher Energie die nach \eqref{eqn:efeld} immer größer mit kleineren Abstand zum Draht wird.
-Sobald ein beschleunigtes ELektron eine gewisse kinetische Energie erlangt ist es selbst in der Lage durch \textbf{Soßionisation} andere Ionen und ELektronen aus den Gasatomen herauszulösen. Der Drahtnahen position zufolge werden diese auch stark beschleunigt und der Vorgang wiederholt sich
+Sobald ein beschleunigtes ELektron eine gewisse kinetische Energie erlangt ist es selbst in der Lage durch \textbf{Stoßionisation} andere Ionen und ELektronen aus den Gasatomen herauszulösen. Der Drahtnahen position zufolge werden diese auch stark beschleunigt und der Vorgang wiederholt sich
 und wird \text{Townsend-Lawine} genannt. Es fallen also eine Vielzahl an Elektronen auf den Draht und es entsteht eine Ladung $Q$ die als \textbf{Ladungsimpuls} abgegriffen wereden kann. 
 Immer noch gilt der Zusammenhang aus \eqref{eqn:prop}, da nur eben jene Elektronen Lawinen auslösen könenn, die nahe genug um Draht sind und wichtiger noch, selbst \textbf{direkt} durch die radioaktive Strahlung erzeugt worden sind. Dieser lässt sich erweitern zu
 \begin{equation}
-\label{eqn:prop}
-Q \propto \text{Energie}_\text{Teilchen}
+\label{eqn:prop2}
+Q \propto E, I
 \end{equation}
-Die Ladungsimpulse geben also Aufschluss über die Energie und die Intensität der Teilchen. 
-\subsection{Auslösebereich}
+Die Ladungsimpulse geben also Aufschluss über die Energie und die Intensität $I$ der Teilchen. 
+\subsubsection{Auslösebereich}
 Erreicht die Spannung einen Wert der hoch genug ist verliert die Proportinalität ihre Bedeutung. 
-Der Grund ist eine so hohe kinetische Energie der Elektronen, dass beim Aufprall mit Gas Atomen zusätlich zu den sekundären ELektronen auch noch UV - Photonen erzeugt werden. 
-Wärend die Elektronen weiterhin "Lawinen" in Richtung des Drahtes auslösen, sind die Photonen neutral geladen. Sie bewegen sich selbst mit ausreichend hoher Energie um Atome zu ionisieren aber sind unabhängig von 
-Elektrischen Feldern. Durch diesen Sachverhalt entsehen nun  
+Der Grund ist eine so hohe kinetisches Energie der Elektronen, dass beim Aufprall mit Gas Atomen zusätlich zu den ELektronen auch noch UV - Photonen erzeugt werden. 
+Wärend die Elektronen weiterhin "Lawinen" %% ACHTUNG formation
+in Richtung des Drahtes auslösen, sind die Photonen neutral geladen. Sie bewegen sich selbst mit ausreichend hoher Energie um Atome zu ionisieren aber sind unabhängig von 
+Elektrischen Feldern. Durch diesen Sachverhalt entstehen nun im ganzen Zylinder eben diese Lawinen und das ursprünlgich durch Ionisation aufgetretende Elkektron verliert an Bedeutung.
+Für den Fall reduziert sich also die Proportinalität der am Draht auftretenden Ladung auf
+\begin{equation*}
+\label{eqn:prop3}
+Q \propto V, U, I
+\end{equation*}
+$V$ ist hier das Volumen des Zählerrohrs, also des Zylinders. $U$ bleibt weiterhin die angelegte Spannung und $I$ die Intensität.
+Also ist hier keine Information mehr über die Energie der Strahlung selbst, sondern nur dessen Intensität.
+Durch die nun im ganzen Zylinder auftretenden Lawinen ist der Ladungsimpuls jedoch stark erhöt und wesentlich leichter zu messen.
+
+\subsection{Einfluss der positiven Ionen}
+Es befinden sich also nun zwei arten geladener Teilchen im Raum wobei ihre Massen sich unterscheiden
+\begin{equation}
+\label{eqn:masse}
+M_\text{Ion} >> M_\text{Elektron}
+\end{equation}
+Nach Newton's zweitem Axiom wird die Beschleunigung eines Objektes maßgeblich durch ihre Masse beeinflussst
+\begin{equation*}
+\label{eqn:masse}
+a= \frac{F}{m}
+\end{equation*}
+Die Kraft $F$ kommt vom Elektrischen Feld. Es folgt also aus \eqref{eqn:masse}, dass das Elektronen stärker beschleunigt wird. Eine Konsequenz daraus ist der \textbf{Ionenschlauch}. Dieser entseht 
+durch einen längeren Aufenthalt der psotiven Ionen im Raum welche durch ihre Ladung ein eigenes positives Elektrisches Feld erzeugt. Die Richtung des durch die Spannung $U$ erzeugten Feldes ist nun genau dazu gegensetzlich.
+\begin{equation*}
+\label{eqn:Felder}
+E_Z(r)\cdot \vec{e}_r + E_\text{Ionen}(r,t) \cdot \vec{e}_r = \vec{F}(r,t)
+\end{equation*}
+Die Differenz des vom Zählrohr $E_Z(r)\cdot \vec{e}_r$ und den Ionen $E_\text{Ionen}(r) \cdot \vec{e}_r$ ezreugtem Feld bildet nach dem Superpositionsprinzip  die Kraft $\vec{F}(r,t)$.
+\subsubsection{Tod - und Erholungszeit}
+Nun können Momente $\Delta T$ enstehen, in denen Die Kraft $\vec{F}(r,t)$ minimal wird, also auch die Elektronen in Richtung des Drahtes keine Beschleunigung mehr erfahren. 
+Bei zu geringer Energie wird also trotz einfallender Strahlung Stoßionisation verhindert. Diesen Zeitraum $\Delta T$ nennt man \textbf{Totzeit}. Es entstehen keine Ladungsimpulse und dadurch kann kein Messwert der Intensität gefunden werden.
+Durch Fehlende Stoßionisation bleibt aber auch die Generierung neue Ionen aus und der "Schlauch" bewegt sich in Richtung des Stahlmantels weg. 
+In diesem Zeitraum der \textbf{Erholungszeit} $\Delta T_E$ lässt sich langsam wieder ein Ladungspuls feststellen der jedoch bis zur komplettten Abnahme des Schlauches abgeschwächt ist.
+\subsubsection{Nachentladung}
+Analog zu den Elektronen die eine Beschleunigung in Richtung des Drahtes erfahren, bewegen sich die Ionen entegegengesetz, hin zum Stahlmantel.
+Auch wenn die Beschleunigung nach \eqref{eqn:masse} mehr zeit beanspruchen würede kommen sie mit Genug Energie an um Teilchen aus dem Stahl zum "schlagen", sogenannte \textbf{sekundär ELektronen}
+Diese folgen wie die anderen \textbf{primär ELektronen} einer Bewegung in Richtung des Drahtes. Im Fall dass ein einziges Strahlungsteilchen würden diese sekundär ELektronen also verspätet zu den primären ankommen
+und eine sogenannte \textbf{Nachentladung} erzeugen. Diese Verspätung wird durch $\Delta T_L$ ausgedrückt ud entspricht der Zeit die die positiven Ionen zum Mantel bennötigen.
+Der Charakter der Todzeit verspricht, dass zu diesem Zeitpunkt($\Delta T_L$) der schlauch noch nicht den Stahlmantel erreicht hat. Also gilt
+\begin{equation*}
+\label{eqn:vergleich}
+\Delta T < \Delta T_L
+\end{equation*}
+
+
