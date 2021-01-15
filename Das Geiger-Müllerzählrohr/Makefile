@@ -1,13 +1,13 @@
-all: build/main.pdf
+all: build/DasGeigerMüllerzählrohr.pdf
 
 # hier Python-Skripte:
-build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python plot.py
+#build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
+	#TEXINPUTS=$$(pwd): python plot.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/plot.pdf
+#build/DasGeigerMüllerzählrohr.pdf: build/plot.pdf
 
-build/main.pdf: FORCE | build
+build/DasGeigerMüllerzählrohr.pdf: FORCE | build
 	  TEXINPUTS=build: \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
@@ -16,7 +16,7 @@ build/main.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	main.tex
+	DasGeigerMüllerzählrohr.tex
 
 build:
 	mkdir -p build
