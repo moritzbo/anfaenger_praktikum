@@ -1,3 +1,4 @@
+\newpage
 \section{Theoretische Grundlagen}
 
 Der Grundaufbau und somit die leitende Idee des Geiger-Müller-Zählrohr ist der Kathodenzylinder % beschrieben in ... also REF hinzufügen
@@ -24,6 +25,14 @@ Folglich ist die Spannung antipropotional zu $r$. Dies ermöglicht eine fast ung
 Die für das Experiment interessante, einfallendende ionisierende Strahlung der radioaktiven Teilchen bewegt sich nun in den Zylinder unseres Zählrohrs.
 Diese Strahlung kommt auf dem Weg durch das Gas in Kontakt mit Atomen bei denen Ionen und ELektronen herausgeschlagen werden. 
 Nun befinden sich im Elektrischen Feld eine Kombination aus neutralen Atomen, positv geadene Ionen und die negativen ELektronen. 
+
+\begin{figure} %maybe, auflösung tresh lol
+  \centering
+  \includegraphics[width=0.7\textwidth]{bilder/Abbildung3.png}
+  \caption{Orientierung des elektrischen Feldes} %\cite{ap03}
+  \label{fig:efeld}
+\end{figure}
+
 %vlt bild einfügen siehe ornder !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Das angelegte Feld führt dazu, dass sich die Ionene und ELektronen entsprechend ihrer Ladung entweder in Richtung des Stahlmantel (Ionen) oder zum Draht (Elektronen) bewegen.
 Als \textbf{Ionisationsakt} bezeichnet man eben diesen Prozess, der solange anhält bis jegliche Energie der Strahlung durch Ionisation aufgebracht ist.
@@ -74,10 +83,10 @@ Durch die nun im ganzen Zylinder auftretenden Lawinen ist der Ladungsimpuls jedo
 
 \subsection{Einfluss der positiven Ionen}
 Es befinden sich also nun zwei Arten geladener Teilchen im Raum wobei ihre Massen sich unterscheiden
-\begin{equation}
+\begin{equation*}
 \label{eqn:masse}
 M_\text{Ion} >> M_\text{Elektron}
-\end{equation}
+\end{equation*}
 Nach Newton's zweitem Axiom wird die Beschleunigung eines Objektes maßgeblich durch ihre Masse beeinflussst
 \begin{equation*}
 \label{eqn:masse}
@@ -167,9 +176,9 @@ verschuldet durch trotzdem stattfindende Nachentladungen.
 \subsection{Berechnung der Ladungsmenge im Zählrohr}
 Durch die auschlagenden Elektronen entsteht auf dem Draht eine messbare Ladung die als Impuls weiterverarbeitet werden kann.
 Diese Ladungsmenge kann gemittelt mit der bekannten Beziehung
-\begin{equation}
+\begin{equation*}
 U=RI \hspace{2cm} I=\frac{U}{R}
-\end{equation}
+\end{equation*}
 und einer Mittellung mithilfe eines Integrals errechnet werden.
 Der durchschnittlich fließende Strom $\si{\ampere}$ in einem Intervall von $0$ bis $\tau$ wobei gelten soll $\tau>>T$ wird dann ausgedrück durch
 \begin{equation}
@@ -177,6 +186,17 @@ Der durchschnittlich fließende Strom $\si{\ampere}$ in einem Intervall von $0$ 
 \bar{I} \coloneqq \frac{1}{\tau} \int_{0}^{\tau} \frac{U(t)}{R} \text{dt}
 \end{equation}
 Hier ist $R$ der auftrende Wiederstand.
+%wenn relevant in den aufgaben auhc den zweiiten teil
 
-%REST
-%Frage von DC
+\paragraph{frage von moritz} % titel duhhh
+\mbox{}
+\\ 
+Der Versuch ist entsprechend der Anleitung mit einer 204Tl-Quelle aufgebaut. Die Quelle wurde so plaziert, dass bei einer mittleren Z¨ahlrohrspannung eine Z¨ahlrate von 100 Imp/s nicht
+uberschritten wurde. Warum ist das wichtig?\\
+idk\\
+Bei einer höhern Zählrate würde die Bedingung der Totzeit verletzt werde. Wir würden teile des Intervalles in die Messung mit einbeziehn die nicht aussagend ist. In diesen nicht aussagenden Zeiten 
+wird durch den Ionenschlauch das Feld im inneren maßgeblich verändert.
+100 Imp/s ermöglicht möglich viele Messungen durch Impulsen, bei Berücksichtigung der Totzeit. Würde man die Totzeit verringern könenn wäre eine anpassung der Impulse pro Zeit möglich. Es folgt
+\begin{equation*}
+T \approx \frac{Imp}{sec}
+\end{equation*}
