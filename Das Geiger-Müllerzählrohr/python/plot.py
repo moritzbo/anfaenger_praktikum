@@ -49,7 +49,7 @@ errors = np.sqrt(np.diag(covariance_matrix))
 for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
 
-x_plot = np.linspace(320, 700)
+x_plot = np.linspace(370, 630)
 
 plt.plot(
     x_plot,
@@ -57,10 +57,6 @@ plt.plot(
     label='Lineare Ausgleichsgerade',
     linewidth=1.5,
 )
-x1 = [370, 630]
-y1 = [10041, 10224]
-
-plt.plot(x1, y1, "rx", label="Plateuintervall")
 
 plt.legend(loc='upper left')
 plt.tight_layout()
