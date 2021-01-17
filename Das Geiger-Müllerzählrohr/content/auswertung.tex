@@ -1,6 +1,7 @@
 \section{Auswertung}
 
 \subsection{Charakteristik des Geiger-Müllerzählrohrs}
+\label{sec:charakteristik}
 
 Die gemessenen Daten zur Charakteristik des Geiger-Müllerzählrohrs sind in der Tabelle \ref{tab:ogemessdaten}
 angegeben. Dabei ist die Zählrate poissonverteilt und lässt sich gemäß Gleichung \ref{eqn:fehlerzählrate} berechnen.
@@ -89,7 +90,15 @@ a_{\si{\percent}} = \SI{1.104(218)}{\percent\per{100}\volt}
 \subsection{Bestimmung der Totzeit}
 
 \subsubsection{Ablesen am Oszilloskop}
-blablabla
+Bei der Versuchsdurchführung wurde am Oszilloskop folgendes abgebildet (siehe Abbildung \ref{fig:abb4}).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.65\textwidth]{bilder/Abbildung4.png}
+  \caption{Spannungsimpulse am Oszilloskop \cite{ap031}.}
+  \label{fig:abb4}
+\end{figure}
+
 
 \subsubsection{Zwei-Quellen-Methode}
 Anhand der Zwei-Quellen-Methode lässt sich die Totzeit $T_{tot}$ des verwendeten Zählrohrs mit Gleichung \eqref{eqn:totzeit} bestimmen.
@@ -107,4 +116,22 @@ Für die Totzeit $T_{tot}$ ergibt sich nach der Zwei-Quellen-Methode folglich
 
 \begin{equation}
 T_{tot} \approx \SI{115(47)}{\micro\second}
+\end{equation}
+
+\subsection{Bestimmung der pro Teilchen freigesetzten Ladung}
+
+Zunächst gilt nach Beziehung \eqref{eqn:teilchen} ein reziproker Zusammenhang zwischen $Z$ der freigesetzten Ladung pro eingefallenem Teilchen und $N$ der
+Zählrate. In Abschnitt \ref{sec:charakteristik} wurde ein linearer Zusammenhang \eqref{eqn:Param} zwischen der Zählrate und der angelegten Spannung $U$ gefunden.
+Aus den gemessenen Werten der Stromstärke in Tabelle \ref{tab:ogemessdaten2} kann nun eine mittlere Stromstärke $\bar{I}$ bestimmt werden.
+Es gilt
+
+\begin{equation}
+\bar{I} = \sum_{j}^{} \frac{I_{j}}{M}
+\end{equation}
+
+Hierbei ist $M$ die Anzahl aller Strommessungen. Setzt man die gemessene Werte ein und rechnet $\si{\micro\ampere}$ in $\si{\ampere}$ um folgt
+unter Berücksichtigung des Fehlers
+
+\begin{equation}
+\bar{I} = \sum_{j}^{} \frac{I_{j}}{8} = \SI{7.38(17)e-07}{\ampere}
 \end{equation}

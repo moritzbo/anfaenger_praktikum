@@ -31,6 +31,19 @@ print(f"Totzeit ist {totzeit(N1u, N2u, N12u):.6f}")
 
 U, N = np.genfromtxt("../Daten/Kennlinie.dat", unpack=True)
 
+U2, I, Ierr = np.genfromtxt("../Daten/Zaehlrohrstrom.dat", unpack=True)
+
+I = I * 10**(-6)
+print(I)
+
+Ierr = Ierr * 10**(-6)
+
+Iges = []
+
+for u in range(7):
+    Iges.append(ufloat(I[u], Ierr[u]))
+
+
 Nerr = np.sqrt(N)
 #print(Nerr)
 
@@ -98,3 +111,9 @@ def blabla(var):
 print(f"{newfunc(N_31array, N_5array):.6f}")
 print(f"{blabla(value):.6f}")
 
+
+Imean = np.sum(Iges)/8
+
+print(Imean)
+
+print(Iges)
