@@ -4,6 +4,10 @@
 Der Grundaufbau und somit die leitende Idee des Geiger-Müller-Zählrohr ist der Kathodenzylinder % beschrieben in ... also REF hinzufügen
 mit innen liegendem, axial verlaufendem Anodendraht mit der Funktion ein Elektrisches Feld durch einen Strom $U$ anzulegen.
 
+Radioaktivität beschreibt den spontanen Wechsel eines instabilen Atomks unter Abgabe von Energie. In Form von ionisierender Strahlung "verlässt" die Energie nun das Atom, häufig in Gestalt von Photonen oder auch ganzen Teilchen.
+
+
+
 \subsection{Elektrisches Feld}
 
 Das resultierende Elektrische Fled ist durch den Aufbau radialysymetrisch, verhält sich also also an Orten mit gleichem Radius exakt gleich.
@@ -173,7 +177,7 @@ Im Bereich des "Plateus" ist also annehmbar gute Messwerte zu bekommen. Durch ni
 verschuldet durch trotzdem stattfindende Nachentladungen.
 
 
-\subsection{Berechnung der Ladungsmenge im Zählrohr}
+\subsection{Berechnung der Ladungsmenge im Zählrohr und Zählerstrom}
 Durch die auschlagenden Elektronen entsteht auf dem Draht eine messbare Ladung die als Impuls weiterverarbeitet werden kann.
 Diese Ladungsmenge kann gemittelt mit der bekannten Beziehung
 \begin{equation*}
@@ -183,9 +187,23 @@ und einer Mittellung mithilfe eines Integrals errechnet werden.
 Der durchschnittlich fließende Strom $\si{\ampere}$ in einem Intervall von $0$ bis $\tau$ wobei gelten soll $\tau>>T$ wird dann ausgedrück durch
 \begin{equation}
 \label{eqn:ladungsmenge}
-\bar{I} \coloneqq \frac{1}{\tau} \int_{0}^{\tau} \frac{U(t)}{R} \text{dt}
+\bar{\si{I}} \coloneqq \frac{1}{\tau} \int_{0}^{\tau} \frac{U(t)}{R} \text{dt}
 \end{equation}
-Hier ist $R$ der auftrende Wiederstand.
+Hier ist $R$ der auftrende Wiederstand. 
+Es folgt die Möglichkiet $\bar{\si{I}}$ als Ladungungsunterschied $\Delta \si{Q}$ pro vergange Zeit $\Delta \si{t}$ darzustellen. 
+Also gilt auch
+\begin{equation}
+\label{eqn:mittelstromQ}
+\bar{\si{I}} = \frac{\Delta \si{Q}}{\Delta\si{t}}\si{Z}
+\end{equation}  
+Hierbei ist $\si{Z}$ die Anzahl der am Prozess teilnehmenden Teilchen.
+Aus diesen zwei Zusammenhängen \eqref{eqn:ladungsmenge} und \eqref{eqn:mittelstromQ} lässt sich nun Z selbst errechen. Sollte also der mittlere 
+Zählerstrom bekannt sein, kann daraus durch 
+\begin{equation}
+\label{eqn:teilchen}
+\si{Z} = \frac{\si{I}}{e_0N}
+\end{equation}
+Die genaue Teilchenzahl errechnet werden.
 %wenn relevant in den aufgaben auhc den zweiiten teil
 
 %\paragraph{frage von moritz} % titel duhhh
