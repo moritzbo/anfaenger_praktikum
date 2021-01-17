@@ -49,3 +49,15 @@ errors = np.sqrt(np.diag(covariance_matrix))
 
 for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
+
+
+print(N[8])
+print(N[18])
+
+N_8array = ufloat(N[8], np.sqrt(N[8]))
+N_18array = ufloat(N[18], np.sqrt(N[18]))
+
+def percentfunction (h, l):
+    return 100 * ((h - l)/ h)
+
+print(percentfunction(N_18array, N_8array))
