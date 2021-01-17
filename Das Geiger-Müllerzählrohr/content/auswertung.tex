@@ -75,3 +75,21 @@ a_{\si{\percent}} = \SI{1.5(14)}{\percent}
   \caption{Messdaten und Fehlerbalken der Geiger-Müller Charakteristik}
   \label{fig:plot1}
 \end{figure}
+
+\subsection{Bestimmung der Totzeit}
+Anhand der Zwei-Quellen-Methode lässt sich die Totzeit $T_{tot}$ des verwendeten Zählrohrs mit Gleichung \eqref{eqn:totzeit} bestimmen.
+Zusammen mit der Fehlerbehaftung der Messwerte nach der Poissonverteilung \eqref{eqn:fehlerzählrate} lässt sich nun wieder eine
+Gaußsche Fehlerfortpflanzung formulieren.
+Dabei werden die Werte aus \ref{tab:ogemessdaten3} verwendet und auf $\SI{1}{\per\second}$ umgerechnet.
+
+\begin{equation*}
+\increment T_{tot} = \sqrt{\left( \frac{N_{1+2} - N_{2}}{2 N_{1}^{2} N_{2}}\right)^2 \cdot (\increment N_{1})^{2} 
+\left( \frac{N_{1+2} - N_{1}}{2 N_{2}^{2} N_{1}}\right)^2 \cdot (\increment N_{2})^{2} 
+\left( \frac{1}{2 N_{1} N_{2}}\right)^2 \cdot (\increment N_{1+2})^{2}} 
+\end{equation*}
+
+Für die Totzeit $T_{tot}$ ergibt sich nach der Zwei-Quellen-Methode also
+
+\begin{equation}
+T_{tot} = \SI{115(47)}{\micro\second}
+\end{equation}

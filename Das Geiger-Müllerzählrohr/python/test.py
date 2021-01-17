@@ -7,6 +7,28 @@ import scipy.constants as const
 import uncertainties.unumpy as unp
 
 
+N1 = 96041 / 120
+N12 = 158479 / 120
+N2 = 76518 / 120
+
+N1err = np.sqrt(N1)
+N2err = np.sqrt(N2)
+N12err = np.sqrt(N12)
+
+N1u = ufloat(N1, N1err)
+N2u = ufloat(N2, N2err)
+N12u = ufloat(N12, N12err)
+
+def totzeit (k, l, m):
+    return (k + l - m)/(2*k*l)
+
+print("Totzeit")
+h = totzeit(N1u, N2u, N12u)
+print(f"Totzeit ist {totzeit(N1u, N2u, N12u):.6f}")
+
+
+
+
 U, N = np.genfromtxt("../Daten/Kennlinie.dat", unpack=True)
 
 Nerr = np.sqrt(N)
@@ -61,3 +83,6 @@ def percentfunction (h, l):
     return 100 * ((h - l)/ h)
 
 print(percentfunction(N_18array, N_8array))
+
+
+
