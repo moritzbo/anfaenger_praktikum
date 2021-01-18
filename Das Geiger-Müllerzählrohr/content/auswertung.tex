@@ -91,6 +91,13 @@ a_{\si{\percent}} = \SI{1.104(218)}{\percent\per{100}\volt}
 
 \subsubsection{Ablesen am Oszilloskop}
 Bei der Versuchsdurchführung wurde am Oszilloskop folgendes abgebildet (siehe Abbildung \ref{fig:abb4}).
+Anhand dieser Abbildung lässt sich die Totzeit durch den Abstand zwischen dem ersten zu erkennenden Minimum und dem Minimum der Nachentladung dahinter 
+feststellen. Hierbei wurde das Oszilloskop auf $\SI{100}{\micro\second\per{\text{DIV}}}$ gestellt.
+Die Totzeit lässt sich grob ablesen zu
+
+\begin{equation*}
+T_{tot} \approx \SI{80}{\micro\second}
+\end{equation*}
 
 \begin{figure}[h]
   \centering
@@ -101,15 +108,19 @@ Bei der Versuchsdurchführung wurde am Oszilloskop folgendes abgebildet (siehe A
 
 
 \subsubsection{Zwei-Quellen-Methode}
-Anhand der Zwei-Quellen-Methode lässt sich die Totzeit $T_{tot}$ des verwendeten Zählrohrs mit Gleichung \eqref{eqn:totzeit} bestimmen.
+Durch die Zwei-Quellen-Methode lässt sich die Totzeit $T_{tot}$ des verwendeten Zählrohrs mit Gleichung \eqref{eqn:totzeit} bestimmen.
 Zusammen mit der Fehlerbehaftung der Messwerte nach der Poissonverteilung \eqref{eqn:fehlerzählrate} lässt sich nun wieder eine
 Gaußsche Fehlerfortpflanzung formulieren.
 
-\begin{equation*}
-\increment T_{tot} = \sqrt{\left( \frac{N_{1+2} - N_{2}}{2 N_{1}^{2} N_{2}}\right)^2 \cdot (\increment N_{1})^{2} 
-\left( \frac{N_{1+2} - N_{1}}{2 N_{2}^{2} N_{1}}\right)^2 \cdot (\increment N_{2})^{2} 
-\left( \frac{1}{2 N_{1} N_{2}}\right)^2 \cdot (\increment N_{1+2})^{2}} 
-\end{equation*}
+\begin{align*}
+\increment T_{tot} &= \sqrt{\left( \frac{\symup{d}T_{tot}}{\symup{d}N_{1}}\right)^{2} (\increment N_{1})^{2}
++\left( \frac{\symup{d}T_{tot}}{\symup{d}N_{2}}\right)^{2} (\increment N_{2})^{2}
++\left( \frac{\symup{d}T_{tot}}{\symup{d}N_{1+2}}\right)^{2} (\increment N_{1+2})^{2}
+} \\[1em]
+\increment T_{tot} &= \sqrt{\left( \frac{N_{1+2} - N_{2}}{2 N_{1}^{2} N_{2}}\right)^2 \cdot N_{1} 
++\left( \frac{N_{1+2} - N_{1}}{2 N_{2}^{2} N_{1}}\right)^2 \cdot N_{2}
++\left( \frac{1}{2 N_{1} N_{2}}\right)^2 \cdot N_{1+2}} 
+\end{align*}
 
 Hier werden die Werte aus der Tabelle \ref{tab:ogemessdaten3} verwendet und vor dem Einsetzen auf $\text{Imp} / \si{\second}$ umgerechnet.
 Für die Totzeit $T_{tot}$ ergibt sich nach der Zwei-Quellen-Methode folglich
@@ -120,18 +131,59 @@ T_{tot} \approx \SI{115(47)}{\micro\second}
 
 \subsection{Bestimmung der pro Teilchen freigesetzten Ladung}
 
-Zunächst gilt nach Beziehung \eqref{eqn:teilchen} ein reziproker Zusammenhang zwischen $Z$ der freigesetzten Ladung pro eingefallenem Teilchen und $N$ der
-Zählrate. In Abschnitt \ref{sec:charakteristik} wurde ein linearer Zusammenhang \eqref{eqn:Param} zwischen der Zählrate und der angelegten Spannung $U$ gefunden.
-Aus den gemessenen Werten der Stromstärke in Tabelle \ref{tab:ogemessdaten2} kann nun eine mittlere Stromstärke $\bar{I}$ bestimmt werden.
-Es gilt
+Es gilt nach Beziehung \eqref{eqn:teilchen} ein reziproker Zusammenhang zwischen der freigesetzten Ladung pro eingefallenem Teilchen $Z$ und der
+Zählrate $N$ . Bei der Versuchsdurchführung wurde bei der Änderung der Spannung um jeweils $\increment U = \SI{50}{\volt}$ der Zählrohrstrom $I$ gemessen, sowie die Zählrate
+$N$ in $\text{Imp}$/$60\si{\second}$. Nun kann die Anzahl der pro Teilchen freigesetzten Ladungen $Z$ aus den gemessenen Werten in Tabelle \ref{tab:ogemessdaten2} bestimmt und anschließend
+in Abhängigkeit von der Spannung graphisch dargestellt werden.
+\newline
+\\
+Es gilt wie zuvor der Fehler auf die einzelnen Zählraten $N$ gemäß $\sqrt{N}$ und der angegebene Fehler der Strommessungen in Tabelle \ref{tab:ogemessdaten2} von $\SI{5}{\micro\ampere}$.
+Mit der Elementarladung
 
-\begin{equation}
-\bar{I} = \sum_{j}^{} \frac{I_{j}}{M}
-\end{equation}
+\begin{equation*}
+e = \SI{1.6022e-19}{\coulomb}
+\end{equation*}
+\begin{flushleft}
+folgen dann die Werte für $Z$ nach Umrechnung der Einheiten in das SI-System und einsetzen in die Gleichung 
+\eqref{eqn:teilchen}
+\end{flushleft}
+\begin{table}
+\centering
+\caption{Ergebnisse der pro Teilchen freigesetzten Ladung $Z$.}
+\label{tab:result}
+\begin{tabular}{c c c c}
+    \toprule
+    Spannung $U$[$\si{\volt}$] & Zählrate $N$[$\text{Imp}$/$\si{\second}$] & Stromstärke $I$[$\si{\ampere}$] & Anzahl $Z$ \\
+    \midrule
+    350  & $\SI{163.95(1280)}{}$ & $\SI{0.30(5)e-6}{}$  & $\SI{1.14(21)e10}{}$\\
+    400	 & $\SI{166.58(1290)}{}$ & $\SI{0.40(5)e-6}{}$  & $\SI{1.50(22)e10}{}$\\
+    450	 & $\SI{171.06(1308)}{}$ & $\SI{0.70(5)e-6}{}$  & $\SI{2.55(27)e10}{}$\\
+    500	 & $\SI{169.18(1300)}{}$ & $\SI{0.80(5)e-6}{}$  & $\SI{2.95(29)e10}{}$\\
+    550	 & $\SI{169.73(1303)}{}$ & $\SI{1.00(5)e-6}{}$  & $\SI{3.68(34)e10}{}$\\
+    600	 & $\SI{170.88(1307)}{}$ & $\SI{1.30(5)e-6}{}$  & $\SI{4.70(40)e10}{}$\\
+    650	 & $\SI{174.88(1322)}{}$ & $\SI{1.40(5)e-6}{}$  & $\SI{5.00(40)e10}{}$\\
+    700	 & $\SI{192.45(1387)}{}$ & $\SI{1.80(5)e-6}{}$  & $\SI{5.80(50)e10}{}$\\
+    \bottomrule
+\end{tabular}
+\end{table}
 
-Hierbei ist $M$ die Anzahl aller Strommessungen. Setzt man die gemessene Werte ein und rechnet $\si{\micro\ampere}$ in $\si{\ampere}$ um folgt
-unter Berücksichtigung des Fehlers
+Der Fehler für $Z$ lässt sich wieder durch eine Gaußsche Fehlerfortpflanzung bestimmen.
 
-\begin{equation}
-\bar{I} = \sum_{j}^{} \frac{I_{j}}{8} = \SI{7.38(17)e-07}{\ampere}
-\end{equation}
+\begin{align*}
+\increment Z &= \sqrt{\left( \frac{\symup{d}Z}{\symup{d}I} \right)^{2} \cdot (\increment I)^{2} 
++ \left( \frac{\symup{d}Z}{\symup{d}N} \right)^{2} \cdot (\increment N)^{2}
+}\\
+\increment Z &=\sqrt{\left( \frac{1}{e N} \right)^{2} \cdot (\increment I)^{2} 
++ \left( \frac{I}{e N^{2}} \right)^{2} \cdot (\increment N)^{2}
+}
+\end{align*}
+\begin{flushleft}
+Abschließend können die ermittelten Werte in Äbhängigkeit von der Spannung $U$ graphisch aufgezeichnet werden.
+Dies ist in der Abbildung \ref{fig:plot2} dargestellt.
+\end{flushleft}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot2.pdf}
+  \caption{Anzahl der pro Teilchen freigesetzten Ladung in Abhängigkeit der Spannung.}
+  \label{fig:plot2}
+\end{figure}

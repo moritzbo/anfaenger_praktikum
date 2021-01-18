@@ -6,6 +6,9 @@ from scipy.stats import sem
 import scipy.constants as const
 import uncertainties.unumpy as unp
 
+print(const.physical_constants["elementary charge"])
+
+e = const.physical_constants["elementary charge"][0]
 
 N1 = 96041 / 120
 N12 = 158479 / 120
@@ -33,6 +36,8 @@ U, N = np.genfromtxt("../Daten/Kennlinie.dat", unpack=True)
 
 U2, I, Ierr = np.genfromtxt("../Daten/Zaehlrohrstrom.dat", unpack=True)
 
+e = 
+
 I = I * 10**(-6)
 print(I)
 
@@ -40,8 +45,14 @@ Ierr = Ierr * 10**(-6)
 
 Iges = []
 
+NNeu = []
+
+
 for u in range(7):
     Iges.append(ufloat(I[u], Ierr[u]))
+
+def Z(x, y):
+    return x/(e*y)
 
 
 Nerr = np.sqrt(N)

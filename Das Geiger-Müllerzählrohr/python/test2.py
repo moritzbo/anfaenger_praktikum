@@ -9,6 +9,7 @@ import uncertainties.unumpy as unp
 
 U, N = np.genfromtxt("../Daten/Kennlinie.dat", unpack=True)
 
+
 Nerr = np.sqrt(N)
 print(Nerr)
 
