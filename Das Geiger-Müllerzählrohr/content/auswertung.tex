@@ -10,15 +10,16 @@ Zunächst sollen die Messpunkte mit einem Fehlerbalken in ein Diagramm eingezeic
 eine lineare Ausgleichsgerade erstellt werden. Graphisch lässt sich der Plateau-Bereich, also der Bereich in der die Zählrate kaum zunimmt bei ansteigender angelegter Spannung, grob
 als Intervall von $\SI{370}{\volt}$ bis $\SI{630}{\volt}$ festlegen. Durch dieses Intervall kann nun eine lineare Ausgleichsgerade mit folgendem Ansatz gewählt werden.
 
-\begin{equation}
+\begin{equation*}
 y = a \cdot x + b
-\end{equation}
+\end{equation*}
 wobei $a$ die Steigung der Geraden und $b$ der $y$-Achsenabschnitt ist.
 Durch einen linearen Fit lassen sich die Parameter bestimmen zu
 
 \begin{align}
 \label{eqn:Param}
 a &= \SI{1.138(241)}{{\text{Imp}}\per(\volt\cdot{60}\second)} \\
+\label{eqn:Param2}
 b &= \SI{9590.735(121824)}{{\text{Imp}}\per{60}\second}
 \end{align}
 
@@ -31,9 +32,9 @@ bestimmt werden. Dazu werden die zugehörigen Zählraten $N_{370}$ und $N_{630}$
 Geraden \eqref{eqn:Param} bestimmt. Da allerdings die prozentuale Steigerung in $\si{\percent\per{100}\volt}$ gefragt ist muss durch den Faktor $2{,}6$ geteilt
 werden, da
 
-\begin{equation}
+\begin{equation*}
 \frac{\SI{630}{\volt} - \SI{370}{\volt}}{\SI{100}{\volt}} = 2{,}6
-\end{equation}
+\end{equation*}
 
 Für die Prozentuale Steigung $a_{\si{\percent}}$ gilt somit
 
@@ -54,7 +55,7 @@ ein $\increment a_{\si{\percent}}$ folgendermaßen bestimmen.
 (\increment b)^{2}}
 \end{align}
 
-Nach dem Einsetzen der Werte \eqref{eqn:Param} sowie den Spannungen $U_{370} = \SI{370}{\volt}$ und $U_{630} = \SI{630}{\volt}$ 
+Nach dem Einsetzen der Werte aus \eqref{eqn:Param} und \eqref{eqn:Param2} sowie den Spannungen $U_{370} = \SI{370}{\volt}$ und $U_{630} = \SI{630}{\volt}$ 
 findet sich die prozentuale Steigerung $a_{\si{\percent}}$ auf dem gesamten Plateu-Bereich zu
 
 %\begin{table}
