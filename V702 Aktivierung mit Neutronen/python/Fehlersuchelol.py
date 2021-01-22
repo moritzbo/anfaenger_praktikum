@@ -13,7 +13,7 @@ for n in x:
     error.append(np.sqrt(n))
 
 N = unp.uarray(x,error)
-
-#print(N) #poisson vertielter fehler 
+for x in N:
+    print(f"{N[x]:.2}") #poisson vertielter fehler 
 #print(N[1]+N[2])
-print((np.sum(N)/len(N))/20) #mittel der poission sachen
+#print((np.sum(N)/len(N))) #mittel der poission sachen

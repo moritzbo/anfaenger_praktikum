@@ -37,7 +37,7 @@ for x in Nfinal:
     print(f"{x:.5f}") #Faktor 1/10 wegen intervall anpassung
 
 Ntxt = np.transpose(np.array([t,Nfinal]))
-np.savetxt("../daten/werte.dat", Ntxt , header="time N zählungen", fmt='%1.20s' )
+np.savetxt("../daten/werte.txt", Ntxt , header="time N zählungen", fmt='%1.20s' )
 
 print(Ntxt)
 

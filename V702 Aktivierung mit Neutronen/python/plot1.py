@@ -29,10 +29,16 @@ import uncertainties.unumpy as unp
 #
 #plt.savefig('build/plot2.pdf')
 
+x = [129, 143, 144, 136, 139, 126, 158]
+error = []
 
+for n in x:
+    error.append(np.sqrt(n))
 
-
-
+NulleffektE = unp.uarray(x,error)
+Nulleffekt = sum(NulleffektE)/len(NulleffektE)
+NulleffektOHNE = sum(x)/len(x)
+Nullerror = sum(error)/len(error)
 
 t,n = np.loadtxt('daten/Vanadium.txt', skiprows=1, unpack=True)
 
@@ -43,13 +49,21 @@ for x in n:
 
 N = unp.uarray(n,Nerr)
 
-plt.plot(t, n, 'k.',label="Vandium Messdaten")
+#plt.plot(t, n-NulleffektOHNE/10, 'r.',label="Vandium Messdaten abzüglich Nulleffekt. ohne Fehler")
+Err = []
+for x in range(len(Nerr)):
+    Err.append(Nullerror + Nerr[x])
+
+
+plt.errorbar(t,n-NulleffektOHNE/10, xerr=None, yerr=Err, fmt='bo', markersize=3.5, label='Messwerte mit Fehlerbalken')
+print(Err)
 
 plt.xlabel("t")
 plt.ylabel("N")
 plt.tight_layout()
 
 plt.legend(loc="best")
-
+#print(n-NulleffektOHNE/10)
 plt.savefig('build/plot1.pdf')
+
 #plt.show()
