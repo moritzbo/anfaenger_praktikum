@@ -73,5 +73,43 @@ Der Zerfallprozess sieht hier folgendermaßen aus.
 \begin{equation}
 \ce{^{9}_{4}Be + ^{4}_{2}{\alpha} -> ^{12}_{6}C + ^{1}_{0}n}
 \end{equation}
-Dabei wurden die $\alpha$-Teilchen aus dem Zerfall von $\ce{^{226}Ra}$-Kernen gewonnen. Um diese Neutronen nun abzubremsen wird eine Materieschicht verwendet durch die sie hindurchdiffundieren müssen.
-Diese wird genau so gewählt, dass
+Dabei wurden die $\alpha$-Teilchen aus dem Zerfall von $\ce{^{226}Ra}$-Kernen gewonnen. Um diese Neutronen nun abzubremsen werden dicke Materieschichten verwendet durch die sie hindurchdiffundieren müssen.
+Diese Materieschichten müssen aus leichten Kernen bestehen, damit die Neutronen möglichst viel Energie an die Materieschicht abgeben. Das liegt an dem allgemeinen Gesetz
+des elastischen Stoßes.
+\begin{equation}
+E_{ü} = E_{0} \cdot \frac{4Mm}{(M+m)^{2}}
+\end{equation}
+Die übergebene Energie $E_{ü}$ wird also umso größer je näher die beiden Massen $m$ und $M$ aneinander liegen.
+Aufgrund dieser Überlegungen eignet sich Wasserstoff besonders gut und die benutzte Neutronenquelle wird deshalb mit Paraffin ummantelt.
+Die mittlere kinetische Energie der Neutronen nach einigen Stößen mit der Paraffin beträgt
+\begin{equation*}
+\overline{E_{\text{kin}}} = \SI{0.025}{\electronvolt} \quad \to \quad \overline{v_{\text{Neutron}}} = \SI{2.2e6}{\meter\per\second}
+\end{equation*}
+Dies gilt für eine Temperatur von $T = \SI{290}{\kelvin}$. Die Neutronen mit diesen Energien werden thermische Neutronen genannt.
+
+\subsection{Zerfallsgesetz und Bestimmung der Halbwertszeit}
+Die zu untersuchenden Zerfälle von Vanadium und Rhodium gehorchen den Gesetzmäßigkeiten des radioaktiven Zerfalles. Dieses besagt, dass die Zählrate $N(t)$ der noch nicht zerfallenen Kerne durch
+\begin{equation}
+\label{eqn:zerfallsgesetz}
+N(t) = N_{0} e^{-\lambda t}
+\end{equation}
+gegeben ist (siehe \cite{skript2}). $N_{0}$ ist die am Anfang vorliegende Anzahl an instabilen Kernen und $\lambda$ die Zerfallskonstante.
+Die Halbwertszeit ist also der Zeitpunkt $t$ bei der $N(t) = 1/2 \, N_{0}$ gilt.
+Wenn dies eingesetzt und logarithmiert wird folgt die Halbwertszeit $T$.
+\begin{equation}
+\text{ln}\left( \frac{1}{2}\right) = -\lambda T \quad \to \quad T = \frac{\text{ln}(2)}{\lambda}
+\end{equation}
+Dies führt allerdings in der Durchführung zu Problemen, denn $N(t)$ lässt sich nur unzuverlässig bestimmen, deshalb werden in diesem Versuch die Zerfälle in
+festgelegten Zeitintervallen $\increment t$ gemessen.
+Die Definition von $N_{\increment t}$ lässt sich nun über das Zerfallsgesetz \eqref{eqn:zerfallsgesetz} schreiben.
+\begin{align}
+\label{eqn:g1}
+N_{\increment t}(t) &=  N(t) - N(t + \increment t) \\
+\label{eqn:g2}
+N_{\increment t}(t) &= N_{0} (1-e^{-\lambda \increment t}) e^{-\lambda t}
+\end{align}
+Dabei folgt die Gleichung \eqref{eqn:g2} nach dem Einsetzten von dem Zerfallsgesetz \eqref{eqn:zerfallsgesetz} in Gleichung \eqref{eqn:g1}.
+Wird diese Darstellung anschließend logarithmiert, kann ein linearer Zusammenhang festgestellt werden, wodurch sich nachher die Zerfallskonstante $\lambda$ ermitteln lässt.
+\begin{equation}
+\text{ln}(N_{\increment t}(t)) = \text{ln}(N_{0}(1-e^{-\lambda \increment t})) - \lambda t
+\end{equation}
