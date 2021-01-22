@@ -46,3 +46,32 @@ Der Wirkungsquerschnitt ist dabei die Fläche die der Kern besitzen müsste, um 
 \sigma = \frac{u}{nKd}
 \end{equation}
 Dabei ist $u$ die Anzahl der Einfänge, $n$ die Anzahl der Neutronen pro Sekunde, $d$ die Dicke der Atome in $\si{\centi\meter\squared}$ und $K$ die Anzahl der Atome in $\si{\centi\meter\cubed}$
+Der Wirkungsquerschnitt hängt stark von der Geschwindigkeit der Neutronen ab, dehalb wird zwischen schnellen und langsamen Neutronen unterschieden.
+Bei der Betrachtung der De-Broglie Wellenlänge
+\begin{equation}
+\lambda = \frac{h}{m_{\text{Neutron}} \cdot v} 
+\end{equation}
+ist zu erkennen, dass bei hohen Geschwindigkeit die Materiewelle deutlich kleiner wird. Hier kann eine geometrische Betrachtung den Wirkungsquerschnitt ersetzen, denn $\lambda << R$ wobei $R$ der Kernradius ist.
+Bei kleinen Geschwindigkeiten hingegen sind die geometrischen Überlegungen unbrauchbar und der Wirkungsquerschnitt ist mehrere Zehnerpotenzen größer als die der geometrische Betrachtung.
+Die Formel zur Berechnung des Querschnitts berücksichtigt nun die Energiedifferenzen der einzelnen Energieniveaus des Kerns, bei der ein Neutron vom Atomkern absorbiert wird.
+Berechnet wird diese durch
+\begin{equation}
+\sigma(E) = \sigma_{0} \sqrt{\frac{E_{r_{i}}}{E}} \cdot \frac{\tilde{c}}{(E - E_{r_{i}})^{2} + \tilde{c}}
+\end{equation}
+wobei $\tilde c$ und $\sigma_{0}$ charakteristische Konstanten der Kernreaktion sind. $E_{{r}_{i}}$ sind die Energieniveaus des Zwischenkerns und somit wird für eine Energie $E = E_{{r}_{i}}$
+der Wirkungsquerschnitt maximal. Wenn allerdings $E << E_{{r}_{i}}$ ist dann gilt
+\begin{equation}
+\sigma \propto \frac{1}{\sqrt{E}} \propto \frac{1}{v}
+\end{equation}
+somit existiert bei niedrigerer Neutronengeschwindigkeit eine höherer Wirkungsquerschnitt und somit eine höhrere Wahrscheinlichkeit von dem Atomkern aufgenommen zu werden.
+In dem Versuch wurden genau diese langsamen Neutronen verwendet und die Erzeugung dieser Neutronen wird im Folgenden diskutiert.
+
+\subsection{Erzeugung niederenergetischer Neutronen}
+Ein Neutron als freies Teilchen ist instabil daher müss es für die Verwendung von Kernreaktionen zunächst erzeugt werden.
+In diesem Fall wird dies durch einen Beschuss von $\alpha$-Teilchen auf Berylliumkerne ($\ce{^{9}Be}$) erlangt.
+Der Zerfallprozess sieht hier folgendermaßen aus.
+\begin{equation}
+\ce{^{9}_{4}Be + ^{4}_{2}{\alpha} -> ^{12}_{6}C + ^{1}_{0}n}
+\end{equation}
+Dabei wurden die $\alpha$-Teilchen aus dem Zerfall von $\ce{^{226}Ra}$-Kernen gewonnen. Um diese Neutronen nun abzubremsen wird eine Materieschicht verwendet durch die sie hindurchdiffundieren müssen.
+Diese wird genau so gewählt, dass
