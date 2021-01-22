@@ -7,7 +7,7 @@ all: build/V702AktivierungmitNeutronen.pdf
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 #build/main.pdf: build/plot.pdf
 
-build/main.pdf: FORCE | build
+build/V702AktivierungmitNeutronen.pdf: FORCE | build
 	  TEXINPUTS=build: \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
