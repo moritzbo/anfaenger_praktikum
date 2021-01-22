@@ -5,5 +5,44 @@ Wenn das Verhältnis der beiden Teilchen diese Grenze allerdings überschreitet 
 unterschiedlichen Zerfallsprozessen in ein stabiles Atom. Je nach instabilem Atom und Anzahl der Protonen und Neutronen findet ein anderer
 Zerfallsprozess statt.
 \\
+\newline
 Eine wichtige zu betrachtende Größe in der Kernphysik ist die Halbwertszeit $T$, sie entspricht dem Zeitraum $\increment t$ in der eine Anzahl von instabilen
-Kernen gerade um die Hälfte zerfallen ist. Für die Bestimmung der Halbwertszeit existieren unterschiedliche Methoden, im Folgenden soll 
+Kernen gerade um die Hälfte zerfallen ist. Die Halbwertszeit instabiler Atomkerne variiert dabei in der Größenordnung 
+$t = \SI{10e23}{\second}$, deshalb werden im Folgenden Halbwertszeiten von Atomen betrachtet die im Bereich einiger Sekunden bis Stunden liegen.
+Diese Atomkerne müssen vor der Versuchsdurchführung erzeugt werden, dazu wird ein stabiler Atomkern mit einem Neutron beschossen. Die Neutronen haben dabei
+den Vorteil ladungsfrei zu sein und somit nicht die Potentialbarriere des Atomkerns überwinden zu müssen.
+
+\subsection{Kernreaktionen mit Neutronen}
+Die Wechselwirkung eines Teilchens mit einem Atomkern wird Kernreaktion genannt. 
+Unter Verwendung von Neutronen kann dieses Neutron in einen stabilen Atomkern $A$ eindringen und durch die Absorption des Neutrons
+entsteht anschließend ein neuer Kern $A^{*}$. In diesem Zustand besitzt der sogenannte Zwischenkern eine Energie welche um die kinetische- und Bindungsenergie
+des aufgenommenen Neutrons höher ist, als der vorherige Zustand $A$. Die aufgenommene Energie sorgt für die Anregung vieler Protonen und Neutronen auf höhere Energiezustände
+wodurch der Kern $A^{*}$ kein Neutron oder anderes schweres Teilchen mehr abstoßen kann. 
+\\
+Wenn dies der Fall ist geht der angeregte Zustand $A^{*}$ über folgende Reaktionen wieder in einen stabilen Zustand zurück.
+\begin{equation}
+    \ce{^{m}_{z}A + ^{1}_{0}\symup{n} -> ^{m+1}_{z}A^{*} -> ^{m+1}_{z}A} + \gamma
+\end{equation}
+Hier ist $m$ die Massenzahl, also die Anzahl an Neutronen und Protonen, $z$ die Kernladungszahl, also die Anzahl der Protonen und $\gamma$ ist ein durch den Übergang zu dem nicht angeregten Kernzustand $A$
+entstehendes hochenergetisches Photon.
+\\
+Der entstehende Zustand besitzt allerdings immernoch ein zusätzliches Neutron wodurch es weiterhin kein stabilde Atomkern ist. Unter Abgabe eines Elektrons und Antineutrinos entsteht ein stabiler Kern
+mit einer erhöhten Kernladungszahl, also mit einem Proton mehr. Diese Umwandlung lässt sich folgendermaßen aufschreiben.
+\begin{equation}
+\ce{^{m+1}_{z}A -> ^{m+1}_{z+1}C} +\beta^{-} + \bar{\nu_{e}} + E_{\text{kin}}
+\end{equation}
+Die zusätzliche kinetische Energie entsteht durch einen Massenunterschied der Zustände vor und nach dem Zerfall und bezieht sich auf das austretende Elektron und Antineutrino. Dieser wird
+Massendefekt genannt und kann über 
+\begin{equation}
+\label{eqn:einsteineq}
+\increment E = \increment m \cdot c^2
+\end{equation}
+bestimmt werden. 
+\\
+Wenn ein Atomkern mit einem Neutron beschossen wird, kommt es allerdings nicht immer zu einer Absorption. Die Wahrscheinlichkeit mit der ein Neutron von einem Atomkern eingefangen wird nennt sich
+Wirkungsquerschnitt und wird mit $\sigma$ abgekürzt.
+Der Wirkungsquerschnitt ist dabei die Fläche die der Kern besitzen müsste, um alle auftreffenden Neutronen einzufangen, er ist definiert als
+\begin{equation}
+\sigma = \frac{u}{nKd}
+\end{equation}
+Dabei ist $u$ die Anzahl der Einfänge, $n$ die Anzahl der Neutronen pro Sekunde, $d$ die Dicke der Atome in $\si{\centi\meter\squared}$ und $K$ die Anzahl der Atome in $\si{\centi\meter\cubed}$
