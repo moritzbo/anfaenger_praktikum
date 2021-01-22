@@ -1,11 +1,11 @@
-all: build/main.pdf
+all: build/V702AktivierungmitNeutronen.pdf
 
 # hier Python-Skripte:
-build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python plot.py
+#build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
+#	TEXINPUTS=$$(pwd): python plot.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/plot.pdf
+#build/main.pdf: build/plot.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
@@ -16,7 +16,7 @@ build/main.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	main.tex
+	V702AktivierungmitNeutronen.tex
 
 build:
 	mkdir -p build
