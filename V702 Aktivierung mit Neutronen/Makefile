@@ -1,11 +1,11 @@
 all: build/V702AktivierungmitNeutronen.pdf
 
 # hier Python-Skripte:
-#build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-#	TEXINPUTS=$$(pwd): python plot.py
+build/plot1.pdf: python/plot1.py header-matplotlib.tex matplotlibrc daten/Vanadium.txt| build
+		TEXINPUTS=$$(pwd): python python/plot1.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-#build/main.pdf: build/plot.pdf
+build/V702AktivierungmitNeutronen.pdf: build/plot1.pdf
 
 build/V702AktivierungmitNeutronen.pdf: FORCE | build
 	  TEXINPUTS=build: \
