@@ -14,6 +14,6 @@ for n in x:
 
 N = unp.uarray(x,error)
 
-print(N) #poisson vertielter fehler 
+#print(N) #poisson vertielter fehler 
 #print(N[1]+N[2])
-print(np.sum(N)/len(N)) #mittel der poission sachen
+print((np.sum(N)/len(N))/20) #mittel der poission sachen
