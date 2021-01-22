@@ -29,8 +29,10 @@ entstehendes hochenergetisches Photon.
 Der entstehende Zustand besitzt allerdings immernoch ein zusätzliches Neutron wodurch es weiterhin kein stabilde Atomkern ist. Unter Abgabe eines Elektrons und Antineutrinos entsteht ein stabiler Kern
 mit einer erhöhten Kernladungszahl, also mit einem Proton mehr. Diese Umwandlung lässt sich folgendermaßen aufschreiben.
 \begin{equation}
+\label{eqn:zerfalleinfach}
 \ce{^{m+1}_{z}A -> ^{m+1}_{z+1}C} +\beta^{-} + \bar{\nu_{e}} + E_{\text{kin}}
 \end{equation}
+Das ${\beta}^{-}$ ist dabei der $\beta$-Zerfall bei dem unter Abgabe eines Elektrons und Antineutrinos ein Proton entsteht.
 Die zusätzliche kinetische Energie entsteht durch einen Massenunterschied der Zustände vor und nach dem Zerfall und bezieht sich auf das austretende Elektron und Antineutrino. Dieser wird
 Massendefekt genannt und kann über 
 \begin{equation}
@@ -113,3 +115,46 @@ Wird diese Darstellung anschließend logarithmiert, kann ein linearer Zusammenha
 \begin{equation}
 \text{ln}(N_{\increment t}(t)) = \text{ln}(N_{0}(1-e^{-\lambda \increment t})) - \lambda t
 \end{equation}
+Dabei ist $\text{ln}(N_{0}(1-e^{-\lambda \increment t}))$ der y-Achsenabschnitt und $\lambda$ die gesuchte Steigung.
+Problematisch ist hier die Wahl des Zeitintervalls $\increment t$, da es zu großen systematischen oder statistischen Fehlern kommen kann.
+
+\subsection{Zerfall von Vanadium und Rhodium}
+Zunächst wird der Zerfall von Vanadium beschrieben da Rhodium im Vergleich einige Besonderheiten aufweist, auf die eingangen werden muss.
+Wie in dem Zerfallprozess \eqref{eqn:zerfalleinfach} , passiert bei Vanadium $\ce{^{52}_{23}V}$ folgendes.
+\begin{equation}
+\ce{^{51}_{23}V + ^{1}_{0}n -> ^{52}_{23}V -> ^{52}_{24}Cr} + {\beta}^{-} + \bar{\nu_{e}} 
+\end{equation}
+Die Besonderheit an Rhodium ($\ce{^{103}_{45}Rh}$) ist, dass bei Beschuss eines Neutrons zwei unterschiedliche instabile Zustände resultieren können. 
+Diese sind in den folgenden Zerfallsprozessen angegeben.
+\begin{align}
+\ce{^{103}_{45}Rh + ^{1}_{0}n &->[10{\si{\percent}}] ^{104\text{i}}_{45}Rh -> ^{104}_{45}Rh} + \gamma \ce{-> ^{104}_{46}Pd} + {\beta}^{-} + \bar{\nu_{e}} \\[3pt]
+\ce{^{103}_{45}Rh + ^{1}_{0}n &->[90{\si{\percent}}] ^{104}_{45}Rh -> ^{104}_{46}Pd} + {\beta}^{-} + \bar{\nu_{e}} 
+\end{align}
+Zu erkennen ist, dass auch ein isomerer Zustand $\ce{^{104{\text{i}}}_{45}Rh}$ auftreteten kann welcher nach einem weiteren Zerfall bei Abgabe eines $\gamma$-Quants wieder zu $\ce{^{104}_{45}Rh}$ wird.
+Beide Prozesse laufen allerdings simultan ab und werden beide vom Detektor aufgefasst. 
+Die Gesamtaktivität der Probe setzt sich additiv aus den beiden Einzelaktivitäten zusammen. Beide Prozesse besitzen unterschiedliche Halbwertszeiten die hinreichend
+groß voneinander abweichen. Nach einiger Zeit ist der Zustand $\ce{^{104}_{45}Rh}$ praktisch zerfallen und nur noch der isomere Zustand $\ce{^104{\text{i}}_{45}Rh}$ mit höherer Halbwertszeit zerfällt.
+\\
+\newline
+Eine solche Zerfallskurve ist in Abbildung \ref{fig:AbbildungKurve} dargestellt.
+Zunächst kann an diesem Diagramm ein Zeitpunkt $t^{*}$ abgelesen werden bei dem wieder ein linearer Verlauf entsteht. Nun kann mit Gleichung 
+\eqref{eqn:g2} für alle $t_{i} > t_{*}$ eine Gerade mit einem Zerfallskoeffizienten $\lambda_{\text{lang}}$ bestimmt werden.
+Für den Zerfall des kurzlebigen Isotops werden von den Gesamtzählraten $N_{\increment t}(t_{i})$ (für $t_{i} < t^{*}$) die Zerfallswerte des langlebigen Isotops abgezogen.
+\begin{equation}
+N_{{\increment t}_{\text{kurz}}}(t_{i}) = N_{\increment t}(t_{i}) - N_{{\increment t}_{\text{lang}}}(t_{i})
+\end{equation}
+\\
+\begin{flushleft}
+$N_{\increment t}(t_{i})$ ergibt sich dabei aus der bereits aufgestellten Gleichung \eqref{eqn:g2} und für $N_{{\increment t}_{\text{lang}}}(t_{i})$ wird diese ebenfalls durch Gleichung \eqref{eqn:g2} zu
+\end{flushleft}
+\begin{equation}
+N_{\increment t_{\text{lang}}}(t) = N_{{0}_{\text{lang}}} (1-e^{-{\lambda}_{\text{lang}} \increment t}) e^{-{\lambda}_{\text{lang}} t}
+\end{equation}
+\\
+Durch erneute Logarithmierung kann der zugehörige Koeffizient $\lambda_{\text{lang}}$ bestimmt werden. 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{bilder/AbbildungKurve.png}
+  \caption{Zerfallskurve aus 2 Isotopen mit unterschiedlichen Zerfallskonstanten \cite{skript}.}
+  \label{fig:AbbildungKurve}
+\end{figure}
