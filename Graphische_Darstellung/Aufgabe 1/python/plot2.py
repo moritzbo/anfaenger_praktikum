@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 x_messung, y_messung = np.genfromtxt("python/messungen.txt", unpack=True)
-plt.plot(x_messung, y_messung, 'k.', label="Messwerte")
+plt.plot(x_messung, y_messung, 'kx', label="Messwerte")
 plt.xlim(0, 7)
 plt.ylim(0, 5)
 plt.xlabel(r'$m \ [\si{\gram}]$')
@@ -19,6 +19,7 @@ plt.plot(x,
         'b--',
         label='Lineare Regression',
         linewidth=1.5)
+plt.grid()
 
 plt.legend(loc="best")
 

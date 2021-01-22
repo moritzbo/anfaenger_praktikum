@@ -5,12 +5,12 @@ x_wert, y_wert = np.genfromtxt("python/messungen3.txt", unpack=True)
 x_wert = [1/60, 1/80, 1/100, 1/110, 1/120, 1/125]
 y_wert = [1/285, 1/142, 1/117, 1/85, 1/86, 1/82]
 
-plt.plot(x_wert, y_wert, 'k.', label="Messwerte")
+plt.plot(x_wert, y_wert, 'kx', label="Messwerte")
 plt.xlabel(r"$\symup{G}$")
 plt.ylabel(r"$\symup{B}$")
 plt.xlim(0, 0.02)
 plt.ylim(0, 0.021)
-
+plt.grid()
 params, covar_matrix = np.polyfit(x_wert, y_wert, deg= 1, cov=True)
 
 errors = np.sqrt(np.diag(covar_matrix))

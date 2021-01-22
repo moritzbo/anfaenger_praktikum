@@ -1,5 +1,5 @@
 \section{Aufgabe 2}
-\subsection{Linsengleichung}
+\subsection{Bestimmung der Brennweite}
 Die allgemeine Linsengleichung lautet
 \begin{equation}
 \frac{1}{f} = \frac{1}{g} + \frac{1}{b}
@@ -10,6 +10,7 @@ Die sechs verschiedenen Kombinationen der Brennweite können über die Linsengle
 
 \begin{table}
 \centering
+\caption{Bestimmung der Brennweite.}
 \label{tab:lösunga}
 \begin{tabular}{c c c}
     Gegenstandsweite $g [\symup{mm}]$ & Bildweite $b [\symup{mm}]$ & Brennweite $f [\symup{mm}]$\\
@@ -24,26 +25,26 @@ Die sechs verschiedenen Kombinationen der Brennweite können über die Linsengle
 \end{tabular}
 \end{table}
 \begin{flushleft}
-Der Mittelwert lässt sich wie folgt berechnen
+Der Mittelwert lässt sich dann wie folgt berechnen.
 \end{flushleft}
 \begin{equation}
 \bar{f} = \frac{1}{n} \sum_{i=1}^n f_i = \SI{50.2}{\milli\meter}
 \label{eqn:mittelwert_f}
 \end{equation}
-Die Standardabweichung auf zwei Kommastellen gerundet ist
+Die Standardabweichung auf zwei Kommastellen gerundet ergibt sich folglich zu
 \begin{equation}
 \sigma_f = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (f_i - \bar{f})^2} = \SI{2.04}{\milli\meter}
 \label{eqn:sigma_f}
 \end{equation}
-Der Fehler auf dem Mittelwert beträgt
+Der Fehler auf dem Mittelwert kann dann ebenfalls bestimmt werden.
 \begin{equation}
 \increment \bar{f} = \sqrt{\frac{1}{n(n-1)} \sum_{i=1}^n (f_i - \bar{f})^2} = \SI{0.83}{\milli\meter}
 \label{eqn:seoftm_f}
 \end{equation}
 \subsection{b)}
-Definiert man $\symup{G} = \frac{1}{g}$ und $\symup{B} = \frac{1}{B}$, dann kann man ein G-B Diagramm mit den gegebenen
-Daten skizzieren. Die Lineare Regression lässt sich wieder durch die Methode der kleinsten Abstandsquadrate ermittlen analog zur Aufgabe 1. Diesmal mache ich dies direkt
-über die Bibliothek \enquote{matplotlib} in Python und man erhält.
+Wenn $\symup{G} = \frac{1}{g}$ und $\symup{B} = \frac{1}{B}$ gesetzt wird, dann kann ein G-B Diagramm mit den gegebenen
+Daten skizziert werden. Die Lineare Regression lässt sich wieder durch die Methode der kleinsten Abstandsquadrate ermittlen analog zur Aufgabe 1. Diesmal direkt
+über die Bibliothek \enquote{matplotlib} in Python und es ergibt sich.
 
 \begin{align}
 a &= -1.010 \pm 0.118 \\
@@ -53,18 +54,18 @@ b &= 0.020 \pm 0.001
 \begin{figure}[t]
   \centering
   \includegraphics[width=\textwidth]{build/plot3.pdf}
-  \caption{Messdaten und Lineare Regression zur Bestimmung der Brennweite}
+  \caption{Messdaten und Lineare Regression zur Bestimmung der Brennweite.}
   \label{fig:plot3}
 \end{figure}
 \begin{flushleft}
-Also erhält man eine Ausgleichsgerade \eqref{eqn:ausglg2} die man in den Graphen einzeichnen kann
+Gefunden wird eine Ausgleichsgerade \eqref{eqn:ausglg2} die in den Graphen einzeichnet werden kann
 \end{flushleft}
 \begin{equation}
 \symup{B} = -1.01 \symup{G} + 0.02
 \label{eqn:ausglg2}
 \end{equation}
 \begin{flushleft}
-Die Brennweite $f$ kann man nun durch den Achsenabschnitt errechnen, denn für $G=0$ gilt
+Die Brennweite $f$ kann nun durch den Achsenabschnitt errechnet werden, denn für $G=0$ gilt
 \end{flushleft}
 \begin{equation}
 \frac{1}{f} = \frac{1}{b} = \symup{B} \to f = \frac{1}{\symup{B}} = \SI{50}{\milli\meter}
