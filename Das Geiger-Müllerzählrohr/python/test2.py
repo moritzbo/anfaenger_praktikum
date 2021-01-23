@@ -72,6 +72,6 @@ def percentfunction(k, j):
     return (100/2.6) * (pande0 * k + pande1 - pande0 * j -  pande1)/(pande0* k + pande1)
 
 print(f'{percentfunction(630, 370):.6f}')
-
+ 
 print(f"{Nerrarray[0]:.6f}")
 print(f"{Nerrarray[26]:.6f}")
