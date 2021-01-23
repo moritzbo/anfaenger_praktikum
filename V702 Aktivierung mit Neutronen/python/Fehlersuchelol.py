@@ -14,6 +14,11 @@ for n in x:
 
 N = unp.uarray(x,error)
 
-print(N) #poisson vertielter fehler 
+print(np.sum(N)/len(N)) #erst poisson dann mittel
+
+B = ufloat(sum(x)/len(x), np.sqrt(sum(x)/len(x))) 
+
+print(B) #erst mittel dann poisson #THIS IS THE WAY
+
 #print(N[1]+N[2])
 #print((np.sum(N)/len(N))) #mittel der poission sachen

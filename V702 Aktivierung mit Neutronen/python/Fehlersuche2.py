@@ -14,7 +14,13 @@ error = []
 for n in x:
     error.append(np.sqrt(n))
 
-NulleffektE = unp.uarray(x,error)
+N = unp.uarray(x,error)
+
+print(np.sum(N)/len(N)) #erst poisson dann mittel
+
+B = ufloat(sum(x)/len(x), np.sqrt(sum(x)/len(x)))
+
+NulleffektE = B
 Nulleffekt = sum(NulleffektE)/len(NulleffektE)
 
 print(Nulleffekt)
