@@ -44,7 +44,9 @@ Daraus ergibt sich eine Untergrundrate mit einem Fehler welche in den nachfolgen
 Für die Auswertung werden diese Angaben für jeweils $\si{{\text{Imp\per}{15}}\second}$ und $\si{{\text{Imp\per}{30}}\second}$ gebraucht, dazu werden die Messwerte aus Tabelle \ref{tab:ogemessdaten4} zunächst 
 auf die jeweilige Einheit gebracht und dann die analoge Rechnung durchgeführt. Es ergibt sich
 \begin{align}
-\overline{N_{U_{15}}} &= \SI{6.96(424)}{{\text{Imp}\per{15}\second}} \\                %schöner machen
+\label{eqn:d1}
+\overline{N_{U_{15}}} &= \SI{6.96(424)}{{\text{Imp}\per{15}\second}} \\   
+\label{eqn:d2}
 \overline{N_{U_{30}}} &= \SI{13.93(141)}{{\text{Imp}\per{30}\second}}
 \end{align}
 
@@ -67,6 +69,7 @@ wobei wieder eine Gaußsche Fehlerfortpflanzung nötig wird. Der Fehler auf $N_{
 Die ermittelten Werte lassen sich nun in eine halblogarithmische Darstellung einzeichnen wobei eine lineare Ausgleichsgerade
 von der Form
 \begin{equation}
+\label{eqn:lin}
 y = a \cdot x + b
 \end{equation}
 mit einem linearen Fit bestimmt werden kann. Die Parameter ergeben sich zu
@@ -92,6 +95,7 @@ Wobei sich der Fehler aus der folgenden Gaußschen Fehlerfortpflanzung ergibt.
 \begin{equation}
 \increment T_{\text{Vanadium}} = \frac{\text{ln}(2)}{\lambda^{2}} \cdot (\increment \lambda)
 \end{equation}
+
 %Der Fehler auf den Mitteltwert lässt sich nun wie folgt angeben.
 %\begin{align*}
 %\increment{\overline{N}} &= \sqrt{\frac{1}{n(n-1)} \sum_{k=1}^n (N_{i} - \overline{N})^2} \\[2.5pt]
@@ -134,23 +138,95 @@ Wobei sich der Fehler aus der folgenden Gaußschen Fehlerfortpflanzung ergibt.
 %  \label{fig:tndiagramm}
 %\end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht!]
   \centering
   \includegraphics[width=\textwidth]{build/plot2.pdf}
-  \caption{Messwerte und Ausgleichsgerade in halblogarithmischer Darstellung}
+  \caption{Messwerte von Vanadium und Ausgleichsgerade in halblogarithmischer Darstellung}
   \label{fig:plot2}
 \end{figure}
-
-
-\begin{figure}[h]
+\begin{figure}[ht!]
   \centering
   \includegraphics[width=\textwidth]{build/plot1.pdf}
-  \caption{Messwerte und lineare Ausgleichsgerade.}
+  \caption{Messwerte von Vanadium und lineare Ausgleichsgerade.}
   \label{fig:plot1}
 \end{figure}
 
-\newpage
-
 \subsection{Bestimmung der Halbwertszeit von Rhodium}
+Für die Bestimmung der Halbwertszeit von Rhodium muss, wie in dem Kapitel \ref{sec:zerfallxd} erwähnt die Besonderheit beachtet werden, dass es bei Beschuss eines Neutrons
+im Zustand $\ce{^{103}_{45}Rh}$ in zwei Zustände übergehen kann, einen isomeren und einen nicht isomeren. Der Zustand mit der längeren Halbwertszeit $T_{\text{lang}}$
+ist dabei der isomere Zustand $\ce{^{104{\text{i}}}_{45}Rh}$. Von den gemessenen poissonverteilten Zählraten lässt sich zunächst die ermittelte Untergrundrate $N_{U}$ in $\si{{\text{Imp\per}{15}}\second}$ 
+us Gleichung \ref{eqn:d2} abziehen.
 
+\begin{equation}
+N_{\text{Rhodium}} = N_{\text{gem}} - \overline{N_{U_{15}}}
+\end{equation}
+Der Fehler lässt sich wieder analog durch eine Fehlerfortpflanzung bestimmen.
+\begin{equation}
+\increment N_{{\text{Rhodium}_{i}}} = \sqrt{N_{{\text{gem}_{i}}} + (\overline{\increment N_{U_{15}}})^{2} }
+\end{equation}
+Diese Werte lassen sich nun in ein Diagramm halblogarithmisch einzeichnen. Es lässt sich anschließend ein Wert $t^{*}$ ablesen bei dem die Steigung wieder annähernd
+linear und sehr klein ist. Für alle Zeiten $t > t^{x}$ lässt sich nun analog zum Verfahren von Vanadium eine Ausgleichsgerade für dieses Zeitintervall erstellen.
+Die Ausgleichsgerade zusammen mit den $N_{\text{Rhodium}}$-Werten sind in Diagramm \ref{fig:plot3} halblogarithmisch dargestellt.
 
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot3.pdf}
+  \caption{Messwerte von Rhodium und lineare Ausgleichsgerade.}
+  \label{fig:plot3}
+\end{figure}
+
+Für die Parameter des linearen Fits der Form \eqref{eqn:lin} ergeben sich die folgenden Werte.
+\begin{align}
+a_{\text{lang}} &= \SI{3.21(62)}{\per\milli\second} \\
+b_{\text{lang}} &= \SI{4.51(31)}{}
+\end{align}
+Die Zerfallskonstante ist wie zuvor bestimmbar durch $a_{\text{lang}} = - \lambda_{\text{lang}}$ sowie die Halbwertszeit durch Beziehung 
+\eqref{eqn:187}. Es ergibt sich
+\begin{align}
+\lambda_{\text{lang}} &= \SI{3.21(62)}{\per\milli\second} \\[1.5pt]
+T_{\text{lang}} &= \frac{\text{ln}(2)}{\lambda_{\text{lang}}} = \SI{215.93(4170)}{\second} \quad  \widehat{=} \quad \SI{3.60(70)}{\minute}
+\end{align}
+Der Fehler ergibt sich gemäß der Fehlerfortpflanzung.
+\begin{equation}
+\increment T_{\text{lang}} = \frac{\text{ln}(2)}{\lambda_{\text{lang}}^{2}} \cdot (\increment \lambda_{\text{lang}})
+\end{equation}
+Das $T_{\text{lang}}$ ist also die Halbwertszeit für den Zerfall des isomeren Zustands $\ce{^{104{\text{i}}}_{45}Rh}$.
+Für den kurzen Zerfall werden zunächst wie in Gleichung \eqref{eqn:kurz} angegeben die Werte für den Zerfall mit $\lambda_{\text{lang}}$ von den Zählraten $N_{\text{Rhodium}}$ abgezogen. Hierbei muss
+ein Intervall $t_{i} < t^{*}$ gewählt werden, damit es nicht zu statistischen Schwankungen kommt.
+Die Zählraten für den schnellen Zerfall werden also folgendermaßen bestimmt.
+\begin{equation}
+\label{eqn:nkurz}
+N_{{\increment t}_{\text{kurz}}}(t_{i}) = N_{\increment t}(t_{i}) - N_{{\increment t}_{\text{lang}}}(t_{i})
+\end{equation}
+Dabei muss für die $N_{{\increment t}_{\text{lang}}}(t_{i})$-Werte die zuvor ermittelte Ausgleichsgerade extrapoliert werden. Da die Gerade logarithmisch dargestellt
+ist müssen die Werte zunächst exponentiell angehoben werden. Es folgt
+\begin{equation}
+N_{{\increment t}_{\text{kurz}}}(t_{i}) = N_{\increment t}(t_{i}) - \text{exp}(-\lambda_{\text{lang}} \cdot t_{i} + b)
+\end{equation}
+Um nun die Zerfallskonstante für die obigen Zählraten zu bestimmen, werden diese wieder logarithmiert. Durch die Wertepaare mit den $t_{i}$ kann eine lineare 
+Ausgleichsgerade bestimmt werden. Für die folgende Ausgleichsgerade wurde eine Zeit $t$ für alle
+\begin{equation*}
+t_{i} \leq \SI{195}{\second}
+\end{equation*}
+gewählt.
+Es ergeben sich die folgenden Parameter der Ausgleichsgeraden.
+\begin{align}
+a_{\text{kurz}} &= \SI{17.65(62)}{\milli\second}\\
+b_{\text{kurz}} &= \SI{6.75(138)}{}
+\end{align}
+Diese Gerade kann ebenfalls noch in das Diagramm \ref{fig:plot4} eingezeichnet werden.
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot4.pdf}
+  \caption{Messwerte von Rhodium und lineare Ausgleichsgeraden.}
+  \label{fig:plot4}
+\end{figure}
+Die Zerfallskonstante $\lambda_{\text{kurz}}$ sowie die Halbwertszeit $T_{\text{kurz}}$ folgen analog zu den vorherigen Rechnungen.
+\begin{align}
+\lambda_{\text{kurz}} &= \SI{17.65(62)}{\milli\second} \\
+T_{\text{kurz}} &= \SI{39.27(138)}{\second} 
+\end{align}
+Wobei sich der Fehler wieder aus der Gaußschen Fehlerfortpflanzung ergibt.
+\begin{equation}
+\increment T_{\text{klein}} = \frac{\text{ln}(2)}{\lambda_{\text{klein}}^{2}} \cdot (\increment \lambda_{\text{klein}})
+\end{equation}

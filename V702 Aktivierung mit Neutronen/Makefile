@@ -7,9 +7,17 @@ build/plot1.pdf: python/halbwertszeitvanadium.py header-matplotlib.tex matplotli
 build/plot2.pdf: python/halbwertszeitvanadium.py header-matplotlib.tex matplotlibrc daten/Vanadium.txt| build
 		TEXINPUTS=$$(pwd): python python/halbwertszeitvanadium.py
 
+build/plot3.pdf: python/halbwertszeitvanadium.py header-matplotlib.tex matplotlibrc daten/Vanadium.txt| build
+		TEXINPUTS=$$(pwd): python python/rhodium.py
+
+build/plot4.pdf: python/halbwertszeitvanadium.py header-matplotlib.tex matplotlibrc daten/Vanadium.txt| build
+		TEXINPUTS=$$(pwd): python python/rhodium.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/V702AktivierungmitNeutronen.pdf: build/plot1.pdf \
-										build/plot2.pdf
+										build/plot2.pdf \
+										build/plot3.pdf \
+										build/plot4.pdf
 
 build/V702AktivierungmitNeutronen.pdf: FORCE | build
 	  TEXINPUTS=build: \

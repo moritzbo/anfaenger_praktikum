@@ -6,7 +6,7 @@ from scipy.stats import sem
 import scipy.constants as const
 import uncertainties.unumpy as unp
 
-t, N = np.genfromtxt("daten/Rhodium.dat", unpack=True)
+t, N = np.genfromtxt("../daten/Rhodium.dat", unpack=True)
 
 Nerr = N**(1/2)
 
@@ -99,20 +99,19 @@ for name, value, error in zip('ab', params, errors):
 
 x_plot = np.linspace(330, 660)
 
-plt.plot(
-    x_plot,
-    params[0] * x_plot + params[1], "b--",
-    label='Lineare Ausgleichsgerade für den langen Zerfall',
-    linewidth=1.5)
-plt.legend(loc="best")
-#plt.errorbar(t, Nneuecht, xerr=None, yerr=Nneufehler, fmt='kx', markersize=3.5, label='Zählraten Rhodium')
-##plt.yscale("log")
+#plt.plot(
+#    x_plot,
+#    params[0] * x_plot + params[1], "b--",
+#    label='Lineare Ausgleichsgerade für den langen Zerfall',
+#    linewidth=1.5)
+#plt.legend(loc="best")
+##plt.errorbar(t, Nneuecht, xerr=None, yerr=Nneufehler, fmt='kx', markersize=3.5, label='Zählraten Rhodium')
+###plt.yscale("log")
+##
+##plt.xlabel(r'$t[\si{\second}]$')
+##plt.ylabel(r'$N[\text{Imp} / {15}\si{\second}]$')
+#plt.tight_layout()
 #
-plt.xlabel(r'$t[\si{\second}]$')
-plt.ylabel(r'$N[\text{Imp} / {15}\si{\second}]$')
-plt.tight_layout()
-plt.savefig("build/plot3.pdf")
-
 
 
 
@@ -142,6 +141,17 @@ plt.savefig("build/plot3.pdf")
 #plt.show()
 
 
+
+lambda2 = ufloat(0.00321, 0.00062)
+
+t2 = np.log(2)/ (lambda2*60) 
+
+print(f"{t2:.3f}")
+
+
+print(Nneu)
+
+
 Nneu2 = []
 
 for g in range(13):
@@ -162,8 +172,14 @@ for z in range(13):
 
 print(Nklein)
 
-#plt.errorbar(t, Nneuecht, xerr=None, yerr=Nneufehler, fmt='kx', markersize=3.5, label='Zählraten Rhodium')
-##plt.yscale("log")
+#plt.plot(
+#    x_plot,
+#    params[0] * x_plot + params[1], "g--",
+#    label='Lineare Ausgleichsgerade für den kurzen Zerfall',
+#    linewidth=1.5)
+#plt.legend(loc="best")
+##plt.errorbar(t, Nneuecht, xerr=None, yerr=Nneufehler, fmt='kx', markersize=3.5, label='Zählraten Rhodium')
+###plt.yscale("log")
 ##
 ##plt.xlabel(r'$t[\si{\second}]$')
 ##plt.ylabel(r'$N[\text{Imp} / {15}\si{\second}]$')
@@ -191,15 +207,3 @@ lambda3 = ufloat(0.01765, 0.00062)
 t3 = np.log(2)/ (lambda3) 
 
 print(f"{t3:.3f}")
-
-u = np.linspace(0, 200)
-
-
-plt.plot(
-    u,
-    params2[0] * u + params2[1], "g--",
-    label='Lineare Ausgleichsgerade für den kurzen Zerfall',
-    linewidth=1.5)
-
-plt.legend(loc="best")
-plt.savefig("build/plot4.pdf")
