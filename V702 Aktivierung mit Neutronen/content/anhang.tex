@@ -2,6 +2,26 @@
 
 
 \subsection{Messdaten}
+
+\begin{table}
+\centering
+\caption{Gemessene Untergrundrate bei $\increment t = \SI{300}{\second}$\cite{hinweis}.}
+\label{tab:ogemessdaten4}
+\begin{tabular}{c }
+    \toprule
+    Untergrundrate $N_{U}$[$\text{Imp}$/$300\si{\second}$] \\
+    \midrule
+    129 \\
+    143 \\
+    144 \\
+    136 \\
+    139 \\
+    126 \\ 
+    158 \\
+    \bottomrule
+\end{tabular}
+\end{table}
+
 \begin{table}
     \caption*{Messwerte der Präparate \cite{skript}.}
     \begin{minipage}{.5\linewidth}
@@ -55,7 +75,7 @@
         1230  & 20  & 4{,}47\\
         1260  & 18  & 4{,}24\\
         1290  & 16  & 4{,}00\\
-        1320  & 17 4{,}12\\
+        1320  & 17 & 4{,}12\\
             \bottomrule
         \end{tabular}
     \end{minipage}
@@ -115,40 +135,38 @@
         \end{tabular}
     \end{minipage}
 \end{table}
-\newpage
-\subsection{Fehler}
+
+
+%\paragraph{Fehler des Nulleffekt} \mbox{} \\
+%
+%%\begin{equation}
+%$\bar{\Delta N} = \begin{cases}
+%\centering
+%129.0 & \pm 11.357   \\
+%143.0 & \pm 11.958    \\
+%144.0 & \pm 12.000      \\
+%136.0 & \pm 11.661    \\
+%139.0 & \pm 11.789   \\
+%126.0 & \pm 11.224   \\
+%158.0 & \pm 12.569    
+%\end{cases}$
+%
+%\end{equation}
 
 \begin{table}
-\centering
-\caption{Gemessene Untergrundrate bei $\increment t = \SI{300}{\second}$\cite{hinweis}.}
-\label{tab:ogemessdaten4}
-\begin{tabular}{c }
+  \centering
+  \caption{Halbwertszeiten und Literaturwerte \cite{rhodium} \cite{vanadium}.}
+  \label{tab:params123}
+  \bgroup
+    \def\arraystretch{1.5}
+  \begin{tabular}{c c c c S[table-format=2.2]}
     \toprule
-    Untergrundrate $N_{U}$[$\text{Imp}$/$300\si{\second}$] \\
+    {Isotop}& Halbwertszeit {$T$} & {$T_\text{lit}$} & Abweichung in {$\si{\percent}$}\\
     \midrule
-    129 \\
-    143 \\
-    144 \\
-    136 \\
-    139 \\
-    126 \\ 
-    158 \\
+    $\ce{^{52}_{23}V}$  & $\SI{3.64(16)}{\minute}$  & $\SI{3.74(5)}{\minute}$  & $\SI{2.75}{\percent}$\\
+    $\ce{^{104}_{45}Rh}$  & $\SI{39.27(138)}{\second}$   & $\SI{42.3(4)}{\second}$ & $\SI{7.16}{\percent}$ \\
+    $\ce{^{104{\text{i}}}_{45}Rh}$ & $\SI{3.60(70)}{\minute}$ & $\SI{4.34(3)}{\minute}$ & $\SI{17.05}{\percent}$   \\
     \bottomrule
-\end{tabular}
+  \end{tabular}
+  \egroup
 \end{table}
-
-\paragraph{Fehler des Nulleffekt} \mbox{} \\
-
-%\begin{equation}
-$\bar{\Delta N} = \begin{cases}
-\centering
-129.0 & \pm 11.357   \\
-143.0 & \pm 11.958    \\
-144.0 & \pm 12.000      \\
-136.0 & \pm 11.661    \\
-139.0 & \pm 11.789   \\
-126.0 & \pm 11.224   \\
-158.0 & \pm 12.569    
-\end{cases}$
-
-%\end{equation}

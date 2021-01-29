@@ -33,7 +33,7 @@ Anschließend können diese Werte gemittelt werden, dabei gilt
 \begin{equation}
 \overline{N_{U}} = \frac{1}{n} \sum_{i=1}^n N_{U_{i}}
 \end{equation}
-sowie mit einer Gaußschen Fehlerfortpflanzung die Fehler auf diesen Mitteltwert.
+Hier lässt sich mit einer Gaußschen Fehlerfortpflanzung der Fehler auf diesen Mitteltwert berechnen.
 \begin{equation}
 \increment \overline{N_{U}} = \sqrt{\sum_{i=0}^{n} \left( \frac{\text{d}\overline{N_{U}}}{\text{d}N_{U_{i}}}\right)^{2} (\increment N_{U_{i}})^{2}}
 \end{equation}
@@ -59,13 +59,13 @@ Tabelle \ref{tab:Vanadium} mit eingetragen.
 \newline
 Die zuvor bestimmte Untergrundrate $N_{U}$ in $\si{{\text{Imp\per}{30}}\second}$ muss nun von der fehlerbehafteten Zählrate
 $N_{\text{gem}}$ abgezogen werden. Also gilt,
-\begin{equation}
+\begin{equation*}
 N_{\text{Vanadium}} = N_{\text{gem}} - \overline{N_{U_{30}}}
-\end{equation}
+\end{equation*}
 wobei wieder eine Gaußsche Fehlerfortpflanzung nötig wird. Der Fehler auf $N_{\text{Vanadium}}$ berechnet sich wie folgt.
-\begin{equation}
+\begin{equation*}
 \increment N_{{\text{Vanadium}_{i}}} = \sqrt{N_{{\text{gem}_{i}}} + (\overline{\increment N_{U_{30}}})^{2} }
-\end{equation}
+\end{equation*}
 Die ermittelten Werte lassen sich nun in eine halblogarithmische Darstellung einzeichnen wobei eine lineare Ausgleichsgerade
 von der Form
 \begin{equation}
@@ -141,7 +141,7 @@ Wobei sich der Fehler aus der folgenden Gaußschen Fehlerfortpflanzung ergibt.
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=\textwidth]{build/plot2.pdf}
-  \caption{Messwerte von Vanadium und Ausgleichsgerade in halblogarithmischer Darstellung}
+  \caption{Messwerte von Vanadium und Ausgleichsgerade in halblogarithmischer Darstellung.}
   \label{fig:plot2}
 \end{figure}
 \begin{figure}[ht!]
@@ -157,13 +157,13 @@ im Zustand $\ce{^{103}_{45}Rh}$ in zwei Zustände übergehen kann, einen isomere
 ist dabei der isomere Zustand $\ce{^{104{\text{i}}}_{45}Rh}$. Von den gemessenen poissonverteilten Zählraten lässt sich zunächst die ermittelte Untergrundrate $N_{U}$ in $\si{{\text{Imp\per}{15}}\second}$ 
 us Gleichung \ref{eqn:d2} abziehen.
 
-\begin{equation}
+\begin{equation*}
 N_{\text{Rhodium}} = N_{\text{gem}} - \overline{N_{U_{15}}}
-\end{equation}
+\end{equation*}
 Der Fehler lässt sich wieder analog durch eine Fehlerfortpflanzung bestimmen.
-\begin{equation}
+\begin{equation*}
 \increment N_{{\text{Rhodium}_{i}}} = \sqrt{N_{{\text{gem}_{i}}} + (\overline{\increment N_{U_{15}}})^{2} }
-\end{equation}
+\end{equation*}
 Diese Werte lassen sich nun in ein Diagramm halblogarithmisch einzeichnen. Es lässt sich anschließend ein Wert $t^{*}$ ablesen bei dem die Steigung wieder annähernd
 linear und sehr klein ist. Für alle Zeiten $t > t^{x}$ lässt sich nun analog zum Verfahren von Vanadium eine Ausgleichsgerade für dieses Zeitintervall erstellen.
 Die Ausgleichsgerade zusammen mit den $N_{\text{Rhodium}}$-Werten sind in Diagramm \ref{fig:plot3} halblogarithmisch dargestellt.
@@ -228,5 +228,5 @@ T_{\text{kurz}} &= \SI{39.27(138)}{\second}
 \end{align}
 Wobei sich der Fehler wieder aus der Gaußschen Fehlerfortpflanzung ergibt.
 \begin{equation}
-\increment T_{\text{klein}} = \frac{\text{ln}(2)}{\lambda_{\text{klein}}^{2}} \cdot (\increment \lambda_{\text{klein}})
+\increment T_{\text{kurz}} = \frac{\text{ln}(2)}{\lambda_{\text{kurz}}^{2}} \cdot (\increment \lambda_{\text{kurz}})
 \end{equation}

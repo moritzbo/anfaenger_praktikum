@@ -207,3 +207,5 @@ lambda3 = ufloat(0.01765, 0.00062)
 t3 = np.log(2)/ (lambda3) 
 
 print(f"{t3:.3f}")
+
+
