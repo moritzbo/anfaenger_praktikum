@@ -46,6 +46,25 @@ plt.annotate(r"$K_{\beta}$",
 plt.errorbar(theta1, n1, xerr=None, yerr=n1err, fmt="gx",markersize=4, label=r"$K_{\beta}-\text{Linie}$", elinewidth=0.6)
 plt.errorbar(theta2, n2, xerr=None, yerr=n2err, fmt="bx",markersize=4, label=r"$K_{\alpha}-\text{Linie}$", elinewidth=0.6)
 
+plt.plot([20.06,20.06], [0,799.5], color ='grey', linewidth=1, linestyle="--")
+plt.plot([20.55,20.55], [0,799.5], color ='grey', linewidth=1, linestyle="--")
+plt.plot([20.06,20.55], [799.5,799.5], color ='grey', linewidth=1, linestyle="--")
+
+plt.plot([22.35,22.35], [0,2525], color ='grey', linewidth=1, linestyle="--")
+plt.plot([22.85,22.85], [0,2525], color ='grey', linewidth=1, linestyle="--", label="Halbwertsbreite")
+plt.plot([22.35,22.85], [2525,2525], color ='grey', linewidth=1, linestyle="--")
+
+X1 = np.linspace(20.06, 20.55)
+Y1 = 799.5
+
+plt.fill_between(X1, 0, Y1, color='blue', alpha=.1)
+
+X2 = np.linspace(22.35, 22.85)
+Y2 = 2525
+
+plt.fill_between(X2, 0, Y2, color='blue', alpha=.1)
+
+plt.ylim(0,5300)
 plt.xlabel(r'$\theta[\textdegree]$')
 plt.ylabel(r'$N[\si{{\text{Imp}}\per\second}]$')
 plt.grid()

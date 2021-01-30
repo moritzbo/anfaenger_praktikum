@@ -59,6 +59,7 @@ E_{n,j} = -R_{\infty} \left(z_{{{\text{eff}}^{2}}_{1}} \cdot \frac{1}{n^{2}} + {
 Das $\alpha$ steht für die Sommerfeldsche Feinstrukturkonstante. Elektronen aus der K-Schale besitzen die Energiequantenzahl $n = 1$ woraus sich zusammen mit der zuvor angegebenen Bindungsenergie \ref{eqn:sommerfeldenergie} eine
 Abschirmkonstante bestimmen lässt.
 \begin{equation}
+\label{eqn:kackeq}
 \sigma_{K} = Z - \sqrt{\frac{E_{K}}{R_{\infty}} - \frac{{\alpha}^{2}Z^{4}}{4}}
 \end{equation}
 Dieser berücksichtigt die Feinstrukturaufspaltung der Energieniveaus der K-Schale.
@@ -69,14 +70,20 @@ Hierbei wird das Röntgenstrahlung auf ein dreidimensionales Gitter geschickt wo
 Der Winkel $\theta$ unter dem konstruktive Interferenzmuster stattfindet wird Glanzwinkel genannt und bei bekannter Gitterkonstante lässt sich durch Winkelzusammenhänge folgende Bedingung aufschreiben.
 Diese Bedingung wird auch Bragg´sche Bedingung genannt.
 \begin{equation}
-\nonumber
+\label{eqn:lambda}
 2 d \text{sin}(\theta) =  m \lambda \quad | m \in \mathbb{N}
 \end{equation}
 Hierbei ist $m$ ein ganze natürliche Zahl. Dies folgt aus der Vorraussetzung für konstruktive Interferenz. Die Gitterkonstante $d$ ist dabei abhängig vom verwendeten Kristall.
 Eine schematische Darstellung des Beugungsvorgangs ist in Abbildung \ref{fig:bild1} gezeigt.
+\\
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.3\textwidth]{bilder/bild1.png}
   \caption{Schematische Darstellung einer Reflexion am Kristall.}
   \label{fig:bild1}
 \end{figure}
+Über den Zusammenhang $E = h f$  und \ref{eqn:lambda} lässt sich die Bragg´sche Bedingung auch als Energie abhängig vom Winkel angeben (für $m=1$).
+\begin{equation}
+    \label{eqn:braggEnergy}
+    E = \frac{h c}{2 d \sin (\theta )}.
+\end{equation}
