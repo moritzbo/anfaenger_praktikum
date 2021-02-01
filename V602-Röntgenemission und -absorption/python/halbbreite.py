@@ -87,3 +87,4 @@ print(F"SIGMA1 ist: {sigma1:.4f}")
 print(F"SIGMA2 ist: {sigma2:.4f}")
 print(F"SIGMA3 ist: {sigma3:.4f}")
 print(ryddi)
+

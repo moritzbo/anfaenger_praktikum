@@ -17,8 +17,15 @@ Der Winkel mit der höchsten Zählrate lässt sich am Diagramm \ref{fig:plot1} u
 feststellen.
 Die theoretische Lage des Maximums ist bei fest eingestellten 14$\textdegree$ des Kristalls genau das doppelte. Also hat der Sollwert einen Winkel von $\theta_{\text{soll}} = 28{\textdegree}$. Es ergibt sich folgende Abweichung vom Sollwert.
 \begin{equation}
-\increment \theta = \theta_{\text{max}} - \theta_{\text{soll}} = 0{,}2{\textdegree}
+\increment \theta_{\text{ges}} = \theta_{\text{max}} - \theta_{\text{soll}} = 0{,}2{\textdegree}
 \end{equation}
+Im folgenden stellt sich also aus geometrischen Gründen ein Fehler auf den Winkel $\theta$ von
+\begin{equation}
+\label{eqn:fehlerwinkel}
+\increment \theta = 0{,}1{\textdegree}
+\end{equation}
+ein. Dieser bezieht sich also nicht mehr auf den gesamten Winkel sondern nur noch auf den Ausfallenden, der bei Verwendung der Bragg-Bedingung \eqref{eqn:braggEnergy}
+verwendet wird.
 
 \subsection{Analyse eines Emissionsspektrums einer Kupfer-Röntgenröhre}
 
@@ -32,9 +39,10 @@ Der Bremsberg ist im Diagramm durch schwarze Punkte dargestellt, sie zeigen die 
 Außerdem sind zwei charakteristische Linien zu erkennen, die $K_{\beta}$ und $K_{\alpha}$-Linie. 
 Die Maxima dieser Linien liegen bei.
 \begin{align}
-K_{\alpha} &= 20{,}2\textdegree \\
-K_{\beta} &= 22{,}5\textdegree
+K_{\alpha} &= (20{,}2 \pm 0{,}1)\textdegree \\
+K_{\beta} &= (22{,}5 \pm 0{,}1)\textdegree
 \end{align}
+Der Fehler stammt aus der Überprüfung der Bragg-Bedingung \eqref{eqn:fehlerwinkel}.
 Sie zeigen jeweils die Winkeleinstellung, bei der ein Photon durch das zurückfallen eines Elektrons auf eine
 niedrigere Schale, in dem Fall von $n=2$ auf $n=1$ für $K_{\alpha}$ und von $n=3$ auf $n=1$ für $K_{\beta}$, am Kristall reflektiert wird. 
 An den ermittelten Werten lässt sich keine minimale Wellenlänge und keine maximale Energie des Bremsbergs bestimmen. Für Information auf die minimale Wellenlänge müsste bei einer geringe Winkeleinstellung
@@ -55,20 +63,21 @@ Dies kann nach $\theta$ umgeformt werden und auf den Wert $\theta_{P_{1}}$ addie
 \end{equation}
 Es ergeben sich die Werte.
 \begin{align}
-\theta_{K_{\beta}\text{,links}} &= 22{,}35\textdegree\\
-\theta_{K_{\beta}\text{,rechts}} &= 22{,}85\textdegree
+\theta_{K_{\beta}\text{,links}} &= (22{,}35 \pm 0{,}1)\textdegree\\
+\theta_{K_{\beta}\text{,rechts}} &= (22{,}85\pm 0{,}1)\textdegree
 \end{align}
+Der Fehler entsteht dabei durch die Fehlerbehaftung von $\theta_{P_{1}}$ von $\increment \theta_{P_{1}} = 0{,}1\textdegree$ aus der Überprüfung der Bragg-Bedingung.
 Für die rechte Seite muss dabei beachtet werden, dass sich das Vorzeichen der Steigung ändert.
 Die Halbwertsbreite für $K_{\beta}$ ist also.
 \begin{equation}
-\text{FWHM}_{K_{\beta}} = \theta_{K_{\beta}\text{,rechts}} - \theta_{K_{\beta}\text{,links}} = 0{,}5\textdegree
+\text{FWHM}_{K_{\beta}} = \theta_{K_{\beta}\text{,rechts}} - \theta_{K_{\beta}\text{,links}} = (0{,}5 \pm 0{,}14)\textdegree
 \end{equation}
 FWHM steht dabei für \enquote{Full Width at Half Maximum}.
 Mit einer analogen Rechnung für $K_{\alpha}$ ergeben sich die folgenden Werte.
 \begin{align}
-\theta_{K_{\alpha}\text{,links}} &= 20{,}06\textdegree \\
-\theta_{K_{\alpha}\text{,rechts}} &= 20{,}55\textdegree \\
-\text{FWHM}_{K_{\alpha}} &= 0{,}49\textdegree
+\theta_{K_{\alpha}\text{,links}} &= (20{,}06\pm 0{,}1)\textdegree \\
+\theta_{K_{\alpha}\text{,rechts}} &= (20{,}55\pm 0{,}1)\textdegree \\
+\text{FWHM}_{K_{\alpha}} &=  (0{,}49 \pm 0{,}14)\textdegree
 \end{align}
 Die Halbwertsbreiten sind ebenfalls in das Diagramm \ref{fig:plot2} eingezeichnet.
 \begin{figure}[h]
@@ -77,6 +86,10 @@ Die Halbwertsbreiten sind ebenfalls in das Diagramm \ref{fig:plot2} eingezeichne
   \caption{Röntgenspektrum einer Kupfer-Röntgenröhre.}
   \label{fig:plot2}
 \end{figure}
+Die Fehler auf den Halbwertsbreiten ergeben sich durch eine Gaußsche Fehlerfortpflanzung.
+\begin{equation}
+\increment \text{FWHM}_{K_{\text{i}}} = \sqrt{(\increment \theta_{K_{\text{i}}\text{,rechts}})^{2} + (\increment \theta_{K_{\text{i}}\text{,links}})^{2}}
+\end{equation}
 \subsubsection{Auflösevermögen}
 Für das Auflösevermögen müssen die Energien der charakteristischen Linien $E_{K}$ bestimmt werden, sowie die Energiedifferenz der Halbwertsbreiten $\increment E_{\text{FWHM}}$.
 Das Auflösevermögen $A$ lässt sich durch
@@ -94,41 +107,53 @@ Die folgende Wertetabelle gibt die Ergebnisse an.
     \toprule
     Linie & $E_{\text{peak}}$[$\si{\kilo\electronvolt}$] & $E_{\text{FWHM,links}}$[$\si{\kilo\electronvolt}$] & $E_{\text{FWHM,rechts}}$[$\si{\kilo\electronvolt}$] & $\increment E_{\text{FWHM}}$[$\si{\kilo\electronvolt}$] \\
     \midrule
-    $K_{\alpha}$ & $\SI{8.043}{}$& $\SI{8.974}{}$& $\SI{8.769}{}$ & $\SI{205.045}{}$\\
-    $K_{\beta}$ &$\SI{8.914}{}$ &$\SI{8.095}{}$ &$\SI{7.927}{}$ & $\SI{167.938}{}$ \\
+    $K_{\alpha}$ & $\SI{8.043(34)}{}$& $\SI{8.974(43)}{}$& $\SI{8.769(41)}{}$ & $\SI{0.205(59)}{}$\\
+    $K_{\beta}$ &$\SI{8.914(42)}{}$ &$\SI{8.095(34)}{}$ &$\SI{7.927(33)}{}$ & $\SI{0.168(48)}{}$ \\
     \bottomrule
 \end{tabular}
 \end{table}
+\\
+Die Fehler entspringen der folgenden Fehlerfortpflanzung.
+\begin{equation}
+\increment E_{\text{i}} = \frac{h \cdot c \cdot \text{cos}(\theta_{\text{i}})}{2 \cdot d \cdot {\text{sin}(\theta_{\text{i}})}^{2}} \cdot \increment \theta_{\text{i}}
+\end{equation}
 Diese Werte lassen sich nun in die Gleichung \eqref{eqn:gg} einsetzen und es folgen zwei Werte des Auflösevermögens für die beiden Linien.
 \begin{align}
-A_{K_{\alpha}} &= 39.227 \\
-A_{K_{\beta}} &= 53.080
+A_{K_{\alpha}} &= \SI{39.23(1133)}{} \\
+A_{K_{\beta}} &= \SI{53.08(1502)}{}
 \end{align}
+Hier werden die Fehler durch die beiden fehlerbehafteten Energieterme bestimmt, mit folgender Fehlerfortpflanzung.
+\begin{equation}
+\increment A_{\text{i}} = \sqrt{\left( \frac{1}{E_{\text{FWHM}}}\right)^{2} (\increment E_{\text{K}})^{2} + \left( \frac{E_{\text{K}}}{{E_{\text{FWHM}}}^{2}}\right)^{2} (\increment E_{\text{FWHM}})^{2}}
+\end{equation}
 
 \subsubsection{Bestimmung der Abschirmkonstanten}
 Aus den Gleichungen \eqref{eqn:sommerfeldenergie} und \eqref{eqn:kackeq} lassen sich bei Vernachlässigung des Drehimpulsbeitrages die Abschirmkonstanen für Kupfer folgendermaßen angeben.
 \begin{align}
 \label{eqn:11}
 \sigma_1 &= Z_{\text{Cu}} - \sqrt{\frac{E_{\symup{K,abs}}}{R_{\infty}} } \\
-\sigma_2 &= Z_{\text{Cu}} - 2 \sqrt{\frac{R_{\infty}(z - \sigma_1)^2 - E_{\symup{\alpha}}}{R_{\infty}}} \\
+\sigma_2 &= Z_{\text{Cu}} - 2 \sqrt{\frac{R_{\infty}(z - \sigma_1)^2 - E_{\symup{K_{\alpha}}}}{R_{\infty}}} \\
 \label{eqn:33}
-\sigma_3 &= Z_{\text{Cu}} - 2 \sqrt{\frac{R_{\infty}(z - \sigma_1)^2 - E_{\symup{\beta}}}{R_{\infty}}} 
+\sigma_3 &= Z_{\text{Cu}} - 2 \sqrt{\frac{R_{\infty}(z - \sigma_1)^2 - E_{\symup{K_{\beta}}}}{R_{\infty}}} 
 \end{align}
 Für die Berechnung von $\sigma_1$ wird die Absorptionsenergie der K-Kante benötigt hierzu wird ein Literaturwert zur Rate gezogen.
 Dieser ist nach \cite{random}.
 \begin{equation}
-E_{\symup{K,abs}} = \SI{8987.96(15)}{\electronvolt}
+E_{\symup{K,abs}} = \SI{8987.96}{\electronvolt}
 \end{equation}
 Dieser Wert kann nun zusammen mit den bereits bestimmten Energien an den Peaks der $K_{\alpha}$ und $K_{\beta}$-Linie aus Tabelle \ref{tab:lol} in die Gleichungen \eqref{eqn:11} bis
 \eqref{eqn:33} eingesetzt werden.
 \begin{align}
-\sigma_1 &= \SI{3.2978(2)}{}\\
-\sigma_2 &= \SI{12.3354(13)}{}\\
-\sigma_3 &= \SI{24.3434(47)}{}
+\sigma_1 &= \SI{3.298}{}\\
+\sigma_2 &= \SI{12.335(299)}{}\\
+\sigma_3 &= \SI{24.343(1335)}{}
 \end{align}
-
+Die Fehler auf den Energien $E_{\symup{K_{\beta}}}$ und $E_{\symup{K_{\alpha}}}$ führen zu einem Fehler auf den Abschirmkonstante $\sigma_{2}$ und $\sigma_{3}$ gemäß.
+\begin{align*}
+\increment \sigma_{2} &= \left( \frac{R_{\infty}(z - \sigma_{1})^{2} - E_{\symup{K_{\alpha}}}}{R_{\infty}}\right)^{-1} \cdot \left( \frac{\increment E_{\symup{K_{\alpha}}}}{R_{\infty}}\right)^{2} \\
+\increment \sigma_{3} &= \left( \frac{R_{\infty}(z - \sigma_{1})^{2} - E_{\symup{K_{\beta}}}}{R_{\infty}}\right)^{-1} \cdot \left( \frac{\increment E_{\symup{K_{\beta}}}}{R_{\infty}}\right)^{2}
+\end{align*}
 \subsection{Analyse der Absorptionsspektren}
-
 
 ....TEXT
 
