@@ -125,6 +125,7 @@ A_{K_{\beta}} &= \SI{53.08(1502)}{}
 \end{align}
 Hier werden die Fehler durch die beiden fehlerbehafteten Energieterme mit folgender Fehlerfortpflanzung bestimmt.
 \begin{equation}
+\label{eqn:idk}
 \increment A_{\text{i}} = \sqrt{\left( \frac{1}{E_{\text{FWHM}}}\right)^{2} (\increment E_{\text{K}})^{2} + \left( \frac{E_{\text{K}}}{{E_{\text{FWHM}}}^{2}}\right)^{2} (\increment E_{\text{FWHM}})^{2}}
 \end{equation}
 
@@ -208,6 +209,7 @@ es ergeben sich die folgenden Absorptionsenergiewerte und Abschirmkonstanten unt
 \end{table}
 Die Fehlerrechnung auf die Energiewerte wird bereits durch Gleichung \eqref{eqn:fehleritin} angegeben. Für die Abschirmkonstanten muss nun eine weitere Fehlerfortpflanzung berechnet werden.
 \begin{equation}
+\label{eqn:sigmadings}
 \increment \sigma_{\text{i}} = \frac{1}{2} \left(\frac{E_{k\text{,abs}}}{R_{\infty}} - \frac{{\alpha}^{2}Z^{4}}{4}\right)^{-\frac{1}{2}} \cdot \left( \frac{\increment E_{k\text{,abs}}}{R_{\infty}}\right)
 \end{equation}
 Für die Versuchsvorbereitung wurden passende Literaturwerte der Energien herausgesucht und damit Winkel und Abschirmkonstante errechnet.
@@ -215,7 +217,7 @@ Der Winkel folgt wieder aus der Bragg-Bedingung \eqref{eqn:braggEnergy} und läs
 \begin{equation}
 \theta = \text{arcsin}\left(\frac{h \cdot c}{2d \cdot E_{k}}\right)
 \end{equation}
-Die Literaturwerte sind in Tabelle \ref{tab:vorbereitung} angegeben, daraus kann im folgenden eine Prozentuale Abweichung zu den ermittelten Werten aus \ref{tab:whatever2} bestimmt werden.
+Die Literaturwerte sind in Tabelle \ref{tab:vorbereitung} angegeben, daraus kann im folgenden eine Prozentuale Abweichung zu den ermittelten Werten aus Tabelle \ref{tab:whatever2} und \ref{tab:whatever} bestimmt werden.
 \begin{table}
 \centering
 \caption{Prozentuale Abweichung zu den Literaturwerten.}
@@ -277,6 +279,6 @@ R_{\infty} = \SI{13.605693}{\electronvolt}
 beträgt die Abweichung zur Literatur $\SI{5.80(29)}{\percent}$.
 Für die Rydbergfrequenz $R$ muss die Rydbergenergie lediglich durch das Plancksche Wirkungsquantum $h$ geteilt werden.
 \begin{equation}
-R = \frac{R_{infty}}{h} = \SI{3.48(1)e15}{\hertz}
+R = \frac{R_{\infty}}{h} = \SI{3.48(1)e15}{\hertz}
 \end{equation}
 Die Abweichung zur Literatur beträgt hier wieder $\SI{5.80(29)}{\percent}$.
