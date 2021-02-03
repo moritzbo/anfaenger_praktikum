@@ -233,3 +233,50 @@ Die Literaturwerte sind in Tabelle \ref{tab:vorbereitung} angegeben, daraus kann
     \bottomrule
 \end{tabular}
 \end{table}
+
+\subsection{Bestimmung der Rydbergkonstanten}
+Aus der verwendeten Gleichung \eqref{eqn:11} kann nach Umstellen zur Energie $E_{k,\text{abs}}$ das Moseley´sche Gesetz
+definiert werden. Dieses besagt.
+\begin{equation}
+\label{eqn:moseleyeqn}
+E_{k,\text{abs}} = R_{\infty} (Z - \sigma)^{2}
+\end{equation}
+Durch Wurzelziehen kann ein linearer Zusammenhang zwischen den Energien, Kernladungszahlen 
+und Abschirmkonstanten aus der Tabelle \ref{tab:whatever2} hergestellt werden. Dieser lautet.
+\begin{equation}
+\sqrt{E_{k,\text{abs}}} = \sqrt{R_{\infty}} (Z - \sigma)
+\end{equation}
+Durch einen linearen Fit der Form
+\begin{equation*}
+y = a \cdot x + b
+\end{equation*}
+lassen sich in Python die Parameter dieser Geraden bestimmen zu.
+\begin{align*}
+a &= \SI{3.79(1)}{\electronvolt} \\
+b &= \SI{-2.00(16)}{\electronvolt}
+\end{align*}
+Die Ausgleichsgerade und die Messpunkte können zunächst in dem Diagramm \ref{fig:plotmoseley} graphisch dargestellt werden.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{build/plotmoseley.pdf}
+  \caption{Diagramm zur Bestimmung der Rydbergkonstanten.}
+  \label{fig:plotmoseley}
+\end{figure}
+
+\newpage
+\begin{flushleft}
+Dabei ist der Parameter $a$ die Steigung der Gerade und somit die Wurzel der Rydbergenergie im Moseley´schen Gesetz \ref{eqn:moseleyeqn}.
+\end{flushleft}
+\begin{equation}
+a = \sqrt{R_{\infty}} \quad \to \quad R_{\infty} = \SI{14.39(4)}{\electronvolt}
+\end{equation}
+Bei einem Literaturwert von \cite{chemie}
+\begin{equation}
+R_{\infty} = \SI{13.605693}{\electronvolt}
+\end{equation}
+beträgt die Abweichung zur Literatur $\SI{5.80(29)}{\percent}$.
+Für die Rydbergfrequenz $R$ muss die Rydbergenergie lediglich durch das Plancksche Wirkungsquantum $h$ geteilt werden.
+\begin{equation}
+R = \frac{R_{infty}}{h} = \SI{3.48(1)e15}{\hertz}
+\end{equation}
+Die Abweichung zur Literatur beträgt hier wieder $\SI{5.80(29)}{\percent}$.

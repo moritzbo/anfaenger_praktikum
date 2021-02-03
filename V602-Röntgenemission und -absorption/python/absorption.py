@@ -216,3 +216,13 @@ print(F"PROZENT für BROM: {prozentBROMsigma}")
 print(F"PROZENT für RUBIDIUM: {prozentRUBIDIUMsigma}")
 print(F"PROZENT für STRONTIUM: {prozentSTRONTIUMsigma}")
 print(F"PROZENT für ZIRKONIUM: {prozentZIRKONIUMsigma}")
+
+print(F"Energie: Eabszink: {Eabszink}")
+print(F"Energie: Eabsgallium: {Eabsgallium}")
+print(F"Energie: Eabsbrom: {Eabsbrom}")
+print(F"Energie: Eabsrubidium: {Eabsrubidium}")
+print(F"Energie: Eabsstrontium: {Eabsstrontium}")
+print(F"Energie: Eabszirkonium: {Eabszirkonium}")
+
+
+

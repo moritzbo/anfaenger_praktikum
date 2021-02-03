@@ -24,6 +24,10 @@ build/plotstrontium.pdf: python/plot6.py matplotlibrc header-matplotlib.tex data
 build/plotzirkonium.pdf: python/plot6.py matplotlibrc header-matplotlib.tex data/Zirkonium.txt | build
 	TEXINPUTS=$$(pwd): python python/plot6.py
 
+build/plotmoseley.pdf: python/newplot.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python python/newplot.py
+
+
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/V602-Röntgenemissionund-absorption.pdf: build/plot1.pdf \
@@ -34,6 +38,7 @@ build/V602-Röntgenemissionund-absorption.pdf: build/plot1.pdf \
 												build/plotrubidium.pdf \
 												build/plotstrontium.pdf \
 												build/plotzirkonium.pdf \
+												build/plotmoseley.pdf \
 
 
 build/V602-Röntgenemissionund-absorption.pdf: FORCE | build
