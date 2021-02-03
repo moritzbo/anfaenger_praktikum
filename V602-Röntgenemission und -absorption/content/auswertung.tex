@@ -11,14 +11,14 @@ Die Werte sind in der Tabelle \ref{tab:ogemessdaten1} angegeben und lassen sich 
   \label{fig:plot1}
 \end{figure}
 Der Winkel mit der höchsten Zählrate lässt sich am Diagramm \ref{fig:plot1} und an den Messwerten \ref{tab:ogemessdaten1} als
-\begin{equation}
+\begin{equation*}
 \theta_{\text{max}} = 28{,}2{\textdegree}
-\end{equation}
+\end{equation*}
 feststellen.
 Die theoretische Lage des Maximums ist bei fest eingestellten 14$\textdegree$ des Kristalls genau das doppelte. Also hat der Sollwert einen Winkel von $\theta_{\text{soll}} = 28{\textdegree}$. Es ergibt sich folgende Abweichung vom Sollwert.
-\begin{equation}
+\begin{equation*}
 \increment \theta_{\text{ges}} = \theta_{\text{max}} - \theta_{\text{soll}} = 0{,}2{\textdegree}
-\end{equation}
+\end{equation*}
 Im folgenden stellt sich also aus geometrischen Gründen ein Fehler auf den Winkel $\theta$ von
 \begin{equation}
 \label{eqn:fehlerwinkel}
@@ -31,17 +31,17 @@ verwendet wird.
 
 Das Emissionsspektrum wurde mit einer Integrationszeit von $\increment t = \SI{10}{\second}$ in jeweils $\increment \theta = 0{,}1\textdegree$ Abständen gemessen.
 Die ermittelten Zählraten sind poissonverteilt, somit lässt sich der Fehler gemäß
-\begin{equation}
+\begin{equation*}
 \increment N_{i} = \sqrt{N_{i}}
-\end{equation}
+\end{equation*}
 berechnen. Diese Werte lassen sich nun mit einem Fehlerbalken in ein Diagramm \ref{fig:plot2} eintragen wobei die Charakteristik des Zählrohrs gut zu erkennen ist.
 Der Bremsberg ist im Diagramm durch schwarze Punkte dargestellt, sie zeigen die Strahlung welche durch Abbremsung der Elektronen am Kupfer entsteht. 
 Außerdem sind zwei charakteristische Linien zu erkennen, die $K_{\beta}$ und $K_{\alpha}$-Linie. 
 Die Maxima dieser Linien liegen bei.
-\begin{align}
+\begin{align*}
 K_{\alpha} &= (20{,}2 \pm 0{,}1)\textdegree \\
 K_{\beta} &= (22{,}5 \pm 0{,}1)\textdegree
-\end{align}
+\end{align*}
 Der Fehler stammt aus der Überprüfung der Bragg-Bedingung \eqref{eqn:fehlerwinkel}.
 Sie zeigen jeweils die Winkeleinstellung, bei der ein Photon durch das zurückfallen eines Elektrons auf eine
 niedrigere Schale, in dem Fall von $n=2$ auf $n=1$ für $K_{\alpha}$ und von $n=3$ auf $n=1$ für $K_{\beta}$, am Kristall reflektiert wird. 
@@ -53,32 +53,32 @@ Für jede charakteristische Linie kann eine Halbwertsbreite ermittelt werden, da
 annehmen bestimmen die Halbwertsbreite.
 Zunächst hat $K_{\beta}$ eine halbierte Peakintensität von $N_{\beta} = \SI{2525}{{\text{Imp}}\per\second}$ die gemessenen Werte liegen zwischen diesem Wert, deshalb kann eine
 lineare Approximation verwendet werden. Es gilt.
-\begin{equation}
+\begin{equation*}
 2525 = \frac{P_{2}-P_{1}}{0{,}1} \cdot \theta + P_{1}
-\end{equation}
+\end{equation*}
 Dabei ist $P_{2}$ der Punkt der gerade über der halben Peakintensität ist und $P_{1}$ der, welcher gerade darunter liegt.
 Dies kann nach $\theta$ umgeformt werden und auf den Wert $\theta_{P_{1}}$ addiert werden. Es ergibt sich also der Punkt der Halbwertsbreite links vom Maximum.
-\begin{equation}
+\begin{equation*}
 \theta_{\text{links}} = 0{,}1 \cdot \frac{2525-P_{1}}{P_{2}-P_{1}} + \theta_{P_{1}}
-\end{equation}
+\end{equation*}
 Es ergeben sich die Werte.
-\begin{align}
+\begin{align*}
 \theta_{K_{\beta}\text{,links}} &= (22{,}35 \pm 0{,}1)\textdegree\\
 \theta_{K_{\beta}\text{,rechts}} &= (22{,}85\pm 0{,}1)\textdegree
-\end{align}
+\end{align*}
 Der Fehler entsteht dabei durch die Fehlerbehaftung von $\theta_{P_{1}}$ von $\increment \theta_{P_{1}} = 0{,}1\textdegree$ aus der Überprüfung der Bragg-Bedingung.
 Für die rechte Seite muss dabei beachtet werden, dass sich das Vorzeichen der Steigung ändert.
 Die Halbwertsbreite für $K_{\beta}$ ist also.
-\begin{equation}
+\begin{equation*}
 \text{FWHM}_{K_{\beta}} = \theta_{K_{\beta}\text{,rechts}} - \theta_{K_{\beta}\text{,links}} = (0{,}5 \pm 0{,}14)\textdegree
-\end{equation}
+\end{equation*}
 FWHM steht dabei für \enquote{Full Width at Half Maximum}.
 Mit einer analogen Rechnung für $K_{\alpha}$ ergeben sich die folgenden Werte.
-\begin{align}
+\begin{align*}
 \theta_{K_{\alpha}\text{,links}} &= (20{,}06\pm 0{,}1)\textdegree \\
 \theta_{K_{\alpha}\text{,rechts}} &= (20{,}55\pm 0{,}1)\textdegree \\
 \text{FWHM}_{K_{\alpha}} &=  (0{,}49 \pm 0{,}14)\textdegree
-\end{align}
+\end{align*}
 Die Halbwertsbreiten sind ebenfalls in das Diagramm \ref{fig:plot2} eingezeichnet.
 \begin{figure}[h]
   \centering
@@ -87,9 +87,9 @@ Die Halbwertsbreiten sind ebenfalls in das Diagramm \ref{fig:plot2} eingezeichne
   \label{fig:plot2}
 \end{figure}
 Die Fehler auf den Halbwertsbreiten ergeben sich durch eine Gaußsche Fehlerfortpflanzung.
-\begin{equation}
+\begin{equation*}
 \increment \text{FWHM}_{K_{\text{i}}} = \sqrt{(\increment \theta_{K_{\text{i}}\text{,rechts}})^{2} + (\increment \theta_{K_{\text{i}}\text{,links}})^{2}}
-\end{equation}
+\end{equation*}
 \subsubsection{Auflösevermögen}
 Für das Auflösevermögen müssen die Energien der charakteristischen Linien $E_{K}$ bestimmt werden, sowie die Energiedifferenz der Halbwertsbreiten $\increment E_{\text{FWHM}}$.
 Das Auflösevermögen $A$ lässt sich durch
@@ -119,10 +119,10 @@ Die Fehler entspringen der folgenden Fehlerfortpflanzung.
 \increment E_{\text{i}} = \frac{h \cdot c \cdot \text{cos}(\theta_{\text{i}})}{2 \cdot d \cdot {\text{sin}(\theta_{\text{i}})}^{2}} \cdot \increment \theta_{\text{i}}
 \end{equation}
 Diese Werte lassen sich nun in die Gleichung \eqref{eqn:gg} einsetzen und es folgen zwei Werte des Auflösevermögens für die beiden Linien.
-\begin{align}
+\begin{align*}
 A_{K_{\alpha}} &= \SI{39.23(1133)}{} \\
 A_{K_{\beta}} &= \SI{53.08(1502)}{}
-\end{align}
+\end{align*}
 Hier werden die Fehler durch die beiden fehlerbehafteten Energieterme mit folgender Fehlerfortpflanzung bestimmt.
 \begin{equation}
 \label{eqn:idk}
@@ -140,30 +140,30 @@ Aus den Gleichungen \eqref{eqn:sommerfeldenergie} und \eqref{eqn:kackeq} lassen 
 \end{align}
 Für die Berechnung von $\sigma_1$ wird die Absorptionsenergie der K-Kante benötigt hierzu wird ein Literaturwert zur Rate gezogen.
 Dieser ist nach \cite{random}.
-\begin{equation}
+\begin{equation*}
 E_{\symup{K,abs}} = \SI{8987.96}{\electronvolt}
-\end{equation}
+\end{equation*}
 Dieser Wert kann nun zusammen mit den bereits bestimmten Energien an den Peaks der $K_{\alpha}$ und $K_{\beta}$-Linie aus Tabelle \ref{tab:lol} in die Gleichungen \eqref{eqn:11} bis
 \eqref{eqn:33} eingesetzt werden.
-\begin{align}
+\begin{align*}
 \sigma_1 &= \SI{3.298}{}\\
 \sigma_2 &= \SI{12.335(299)}{}\\
 \sigma_3 &= \SI{24.343(1335)}{}
-\end{align}
+\end{align*}
 Die Fehler auf den Energien $E_{\symup{K_{\beta}}}$ und $E_{\symup{K_{\alpha}}}$ führen zu den Fehlern auf den Abschirmkonstanten $\sigma_{2}$ und $\sigma_{3}$ gemäß.
 \begin{align*}
 \increment \sigma_{2} &= \left( \frac{R_{\infty}(z - \sigma_{1})^{2} - E_{\symup{K_{\alpha}}}}{R_{\infty}}\right)^{-\frac{1}{2}} \cdot \left( \frac{\increment E_{\symup{K_{\alpha}}}}{R_{\infty}}\right) \\
 \increment \sigma_{3} &= \left( \frac{R_{\infty}(z - \sigma_{1})^{2} - E_{\symup{K_{\beta}}}}{R_{\infty}}\right)^{-\frac{1}{2}} \cdot \left( \frac{\increment E_{\symup{K_{\beta}}}}{R_{\infty}}\right)
 \end{align*}
 \subsection{Analyse der Absorptionsspektren}
-Zwischen dem LiF (Lithiumfluorid)-Kristall und das Geiger-Müllerzählrohr wurden verschiedene Absorber gesetzt und die Absorptionsspektren aufgezeichnet.
+Zwischen dem LiF (Lithiumfluorid)-Kristall und dem Geiger-Müllerzählrohr wurden verschiedene Absorber gesetzt und die Absorptionsspektren aufgezeichnet.
 Die Zählraten sind im Nachfolgenden für die Elemente Zink, Gallium, Brom, Strontium, Zirkonium und Rubidium in den Diagrammen \ref{fig:plotzink} bis \ref{fig:plotzirkonium} in Abhängigkeit vom 
 Winkel $\theta$ aufgetragen.
 Aus den Diagrammen der einzelnen Absorptionsspektren lässt sich nun die Mitte der jeweiligen Kante ermitteln.
 Hierbei gilt.
-\begin{equation}
+\begin{equation*}
 I_{\text{K,mitte}} = I_{\text{K}}^{\text{min}} + \frac{I_{\text{K}}^{\text{max}} - I_{\text{K}}^{\text{min}}}{2}
-\end{equation}
+\end{equation*}
 Dabei ist $I_{\text{K}}^{\text{min}}$ das Minimum einer Kante und $I_{\text{K}}^{\text{max}}$ das Maximum.
 In der folgenden Tabelle \ref{tab:whatever} sind die berechneten Werte der Intensitätsmittelpunkte und die dazugehörigen Winkel grob abgeschätzt angegeben.
 \begin{table}
@@ -189,9 +189,9 @@ Mit diesen Winkeln können nun die Absorptionsenergien der einzelnen K-Kanten de
 Hierzu wird für die Energie wieder die aufgestellte Bragg-Beziehung \eqref{eqn:braggEnergy} verwendet und jeweils der Winkel aus Tabelle \ref{tab:whatever}
 eingesetzt. Für die Berechnung der Abschirmkonstanten wird Gleichung \eqref{eqn:kackeq} verwendet. Die Kernladungszahlen der Elemente sind in der Tabelle \ref{tab:whatever} angegeben und
 es ergeben sich die folgenden Absorptionsenergiewerte und Abschirmkonstanten unter Verwendung der Sommerfeldschen Feinstrukturkonstanten \cite{skript}.
-\begin{equation} 
+\begin{equation*} 
 \alpha = \SI{7.2973525376e-3}{}
-\end{equation}
+\end{equation*}
 \begin{table}
 \centering
 \caption{Absorptionsenergien und Abschirmkonstanten.}
@@ -216,10 +216,10 @@ Die Fehlerrechnung auf die Energiewerte wird bereits durch Gleichung \eqref{eqn:
 \end{equation}
 Für die Versuchsvorbereitung wurden passende Literaturwerte der Energien herausgesucht und damit Winkel und Abschirmkonstante errechnet.
 Der Winkel folgt wieder aus der Bragg-Bedingung \eqref{eqn:braggEnergy} und lässt sich folgendermaßen ausdrücken.
-\begin{equation}
+\begin{equation*}
 \theta = \text{arcsin}\left(\frac{h \cdot c}{2d \cdot E_{k}}\right)
-\end{equation}
-Die Literaturwerte sind in Tabelle \ref{tab:vorbereitung} angegeben, daraus kann im folgenden eine Prozentuale Abweichung zu den ermittelten Werten aus Tabelle \ref{tab:whatever2} und \ref{tab:whatever} bestimmt werden.
+\end{equation*}
+Die Literaturwerte sind in Tabelle \ref{tab:vorbereitung} angegeben, daraus können im folgenden prozentuale Abweichungen zu den ermittelten Werten aus Tabelle \ref{tab:whatever2} und \ref{tab:whatever} bestimmt werden. Diese sind in Tabelle \ref{tab:whatever3} dargestellt.
 \begin{table}
 \centering
 \caption{Prozentuale Abweichung zu den Literaturwerten.}
@@ -237,6 +237,7 @@ Die Literaturwerte sind in Tabelle \ref{tab:vorbereitung} angegeben, daraus kann
     \bottomrule
 \end{tabular}
 \end{table}
+\newpage
 
 \subsection{Bestimmung der Rydbergkonstanten}
 Aus der verwendeten Gleichung \eqref{eqn:11} kann nach Umstellen zur Energie $E_{k,\text{abs}}$ das Moseley´sche Gesetz
@@ -247,9 +248,9 @@ E_{k,\text{abs}} = R_{\infty} (Z - \sigma)^{2}
 \end{equation}
 Durch Wurzelziehen kann ein linearer Zusammenhang zwischen den Energien, Kernladungszahlen 
 und Abschirmkonstanten aus der Tabelle \ref{tab:whatever2} hergestellt werden. Dieser lautet.
-\begin{equation}
+\begin{equation*}
 \sqrt{E_{k,\text{abs}}} = \sqrt{R_{\infty}} (Z - \sigma)
-\end{equation}
+\end{equation*}
 Durch einen linearen Fit der Form
 \begin{equation*}
 y = a \cdot x + b
@@ -269,18 +270,18 @@ Die Ausgleichsgerade und die Messpunkte können zunächst in dem Diagramm \ref{f
 
 \newpage
 \begin{flushleft}
-Dabei ist der Parameter $a$ die Steigung der Gerade und somit die Wurzel der Rydbergenergie im Moseley´schen Gesetz \ref{eqn:moseleyeqn}.
+Dabei ist der Parameter $a$ die Steigung der Geraden und somit die Wurzel der Rydbergenergie im Moseley´schen Gesetz \ref{eqn:moseleyeqn}.
 \end{flushleft}
-\begin{equation}
+\begin{equation*}
 a = \sqrt{R_{\infty}} \quad \to \quad R_{\infty} = \SI{14.39(4)}{\electronvolt}
-\end{equation}
+\end{equation*}
 Bei einem Literaturwert von \cite{chemie}
-\begin{equation}
+\begin{equation*}
 R_{\infty} = \SI{13.605693}{\electronvolt}
-\end{equation}
+\end{equation*}
 beträgt die Abweichung zur Literatur $\SI{5.80(29)}{\percent}$.
 Für die Rydbergfrequenz $R$ muss die Rydbergenergie lediglich durch das Plancksche Wirkungsquantum $h$ geteilt werden.
-\begin{equation}
+\begin{equation*}
 R = \frac{R_{\infty}}{h} = \SI{3.48(1)e15}{\hertz}
-\end{equation}
+\end{equation*}
 Die Abweichung zur Literatur beträgt hier wieder $\SI{5.80(29)}{\percent}$.
