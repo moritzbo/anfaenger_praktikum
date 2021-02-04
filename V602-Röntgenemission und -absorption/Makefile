@@ -1,7 +1,10 @@
 all: build/V602-Röntgenemissionund-absorption.pdf
 
 # hier Python-Skripte:
-build/plot1.pdf: python/plot1.py matplotlibrc header-matplotlib.tex data/Bragg.txt | build
+build/plo
+
+
+t1.pdf: python/plot1.py matplotlibrc header-matplotlib.tex data/Bragg.txt | build
 	TEXINPUTS=$$(pwd): python python/plot1.py
 build/plot2.pdf: python/plot2.py matplotlibrc header-matplotlib.tex data/Emissionsspektrum.txt | build
 	TEXINPUTS=$$(pwd): python python/plot2.py
