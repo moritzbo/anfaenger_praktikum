@@ -8,9 +8,10 @@ sind zwei verschiedene Streuungsvorgänge zu erkennen, eine klassische inelastis
 Die inelastische Streeung ist auch als Compton-Streuung bekannt. Das Photon gibt einen Teil seiner Energie an ein naheliegendes freies Elektron ab, ändert seine Wellenlänge und wird unter einem 
 bestimmten Winkel $\theta$ gestreut. Das Elektron nimmt diese Energie in Form von kinetischer Energie auf. Aus der Energie- und Impulserhaltung kann die Wellenlängenanderung des Photons ermittelt werden.
 Der Wellenlängenunterschied
-\begin{equation*}
+\begin{equation}
+\label{eqn:diff}
 \increment \lambda = \lambda_{2} - \lambda_{1}
-\end{equation*}
+\end{equation}
 lässt sich durch die allgemeine Beschreibung der Photonenenergie
 \begin{equation}
 \label{eqn:photoneneq}
@@ -89,5 +90,16 @@ Die Energie ergibt sich durch Einsetzen der Gleichung \eqref{eqn:lambda} in \eqr
     \label{eqn:braggEnergy}
     E = n \cdot \frac{h c}{2 d \sin (\theta)}
 \end{equation}
+Für die Berechnung der Transmission ist es meist notwendig bei Verwendung eines Geiger-Müllerzählrohrs eine Totzeitkorrektur durchzuführen.
+Der korrigierte Wert der Zählraten kann dabei geschrieben werden als.
+\begin{equation}
+\label{eqn:totzeit}
+I = \frac{N}{1 - \tau \cdot N}
+\end{equation}
+Das verwendete Geiger-Müllerzählrohr in der Versuchsdurchführung hat eine Totzeit von $\tau = \SI{90}{\micro\second}$.
+Die Transmission $T$ erhält man anschließend durch eine Betrachtung der Strahlungszählratenverhältnisse mit und ohne Absorber.
+\begin{equation}
+\label{eqn:wichtig}
+T = \frac{I_{\text{absorber}}}{I_{\text{ohne}}}
+\end{equation}
 
-\textbf{EVENTUELL NOCH TOTZEITKORREKTUR ODER ERGÄNZUNGEN AUS DER AUSWERTUNG ODER HINWEISEN!!!!}
