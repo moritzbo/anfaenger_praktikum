@@ -95,7 +95,24 @@ Wobei sich der Fehler aus der folgenden Gaußschen Fehlerfortpflanzung ergibt.
 \begin{equation}
 \increment T_{\text{Vanadium}} = \frac{\text{ln}(2)}{\lambda^{2}} \cdot (\increment \lambda)
 \end{equation}
-
+\\
+\newline
+Es ist zu erkennen, dass die letzten Messwerte sehr geringe Zählraten haben und in den Untergrund übergehen, daher ist es sinnvoll eine zweite Ausgleichsgerade
+nur bis zur doppelten Halbwertszeit $t = 2 \cdot T_{\text{Vanadium}}$ durchzuführen.
+Die doppelte Halbwertszeit beträgt dabei $2 \cdot T_{\text{Vanadium}} = \SI{437.3(221)}{\second}$
+Dazu wird wieder analog eine Ausgleichsgerade mit Python erstellt.
+Es ergeben sich die Paramer zu.
+\begin{align*}
+a &= \SI{-3.71(34)}{\per\milli\second} \\
+b &= \SI{5.39(9)}{}
+\end{align*}
+Die Ausgleichsgerade ist in Diagramm \ref{tab:plot1} eingezeichnet.
+Durch den Steigungsparameter $a$ folgt wieder die Zerfallskonstante sowie die Halbwertszeit $T_{\text{Vanadium}}$ nach den Gleichungen \eqref{eqn:g2} und \eqref{eqn:187}.
+\begin{align}
+\lambda &= \SI{3.71(34)}{\per\milli\second} \\
+T_{\text{Vanadium,2}} &=  \SI{186.99(1729)}{\second}
+\end{align}
+Die Abweichung der beiden ermittelten Halbwertszeiten beträgt $\SI{14.49(901)}{\percent}$.
 %Der Fehler auf den Mitteltwert lässt sich nun wie folgt angeben.
 %\begin{align*}
 %\increment{\overline{N}} &= \sqrt{\frac{1}{n(n-1)} \sum_{k=1}^n (N_{i} - \overline{N})^2} \\[2.5pt]

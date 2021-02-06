@@ -92,14 +92,51 @@ errors = np.sqrt(np.diag(covariance_matrix))
 for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.5f} ± {error:.5f}')
 
+
+tneu = []
+
+for x in range(14):
+    tneu.append(t[x])
+
+logecht2 = []
+
+for h in range(14):
+    logecht2.append(logecht[h])
+
+
+params1, covariance_matrix1 = np.polyfit(tneu, logecht2, deg=1, cov=True)
+
+errors1 = np.sqrt(np.diag(covariance_matrix1))
+
+#pande0 = ufloat(params[0], errors[0])
+#pande1 = ufloat(params[1], errors[1])
+
+
+for name, value, error in zip('ab', params1, errors1):
+    print(f'{name} = {value:.5f} ± {error:.5f}')
+
+
+
+
 x_plot = np.linspace(0, 1330)
+
+labels=["T"]
 
 plt.plot(
     x_plot,
     params[0] * x_plot + params[1], "b--",
-    label='Lineare Ausgleichsgerade',
+    label='Lineare Ausgleichsgerade 1',
     linewidth=1.5)
 plt.ylim((0,5.5))
+plt.legend(loc="best")
+
+plt.plot(
+    x_plot,
+    params1[0] * x_plot + params1[1], "g--",
+    label='Lineare Ausgleichsgerade 2',
+    linewidth=1.5)
+plt.ylim((0,5.5))
+plt.plot([437.3, 437.3], [0,5.5], color ='grey', linewidth=1, linestyle="--", label="Doppelte Halbwertszeit")
 plt.legend(loc="best")
 plt.savefig("build/plot1.pdf")
 plt.clf()
@@ -141,3 +178,26 @@ plt.savefig("build/plot2.pdf")
 
 
 
+for name, value, error in zip('ab', params1, errors1):
+    print(f'HIER HIERHIERHIEHREIHI{name} = {value:.5f} ± {error:.5f}')
+
+awhat = ufloat(-params1[0], errors1[0])
+
+lol = np.log(2)/(awhat)
+
+print(f"LOLOLOLOL: {lol:.4f}")
+
+lambdawert = ufloat(0.00317, 0.00016)
+
+twert = np.log(2)/lambdawert
+
+pro = 100 - 100 * ( lol / twert )
+
+print(f"YOYOOYOY: {pro:.5f}")
+
+
+tlit = ufloat(3.74 * 60, 0.05 * 60)
+
+pro2 = 100 - 100 * ( lol / tlit )
+
+print(f"BRBRBR: {pro2:.4f}")
