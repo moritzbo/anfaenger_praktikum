@@ -50,12 +50,12 @@ Diese Zählraten sind poissonverteilt und somit lässt sich der Fehler bezüglic
 \increment N_{i} = \sqrt{N_{i}}
 \end{equation*}
 angeben. Die originalen Messwerte sowie die poissonverteilten Fehler sind in Tabelle \ref{tab:alu} angegeben. Diese Wertepaare können nun durch die angegebene Totzeitkorrektur in Gleichung \eqref{eqn:totzeit}
-angepasst werden. Dazu werden die Werte mit der festen Totzeit $\tau = \SI{90}{\micro\second}$, wobei eine Gaußsche Fehlerfortpflanzung nötig wird. Diese ergibt sich wie folgt.
+angepasst werden. Dazu werden die Werte mit der festen Totzeit $\tau = \SI{90}{\micro\second}$ berechnet, wobei eine Gaußsche Fehlerfortpflanzung nötig wird. Diese ergibt sich wie folgt.
 \begin{equation*}
 \increment I = \left( \frac{1}{1 - \tau \cdot N} + \frac{\tau \cdot N_{i}}{(1 - \tau \cdot N_{i})^{2}} \right) \increment N_{i}
 \end{equation*}
 Die korrigierten Intensitätswerte sind nun zusammen mit ihrem Fehler in der Tabelle \ref{tab:korrektur} angegeben.
-Für die erste Beugungsordnung gilt nach Gleichung \ref{eqn:lambda} ein direkter Zusammenhang zwischen dem Kristallwinkel und den Wellenlängen der Strahlung.
+Für die erste Beugungsordnung gilt nach Gleichung \eqref{eqn:lambda} ein direkter Zusammenhang zwischen dem Kristallwinkel und den Wellenlängen der Strahlung.
 Mit dem Zusammenhang \eqref{eqn:wichtig} kann die Transmission bestimmt werden. Hierbei gilt.
 \begin{equation*}
 T = \frac{I_{Al}}{I_{\text{ohne}}}
