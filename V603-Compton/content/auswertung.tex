@@ -23,7 +23,9 @@ K_{\beta} &= 20{,}2\textdegree
 Aus diesen Winkeln lässt sich mit der aufgestellten Beziehung \eqref{eqn:braggEnergy} die Energie dieser K-Linien berechnen. Hierbei wird die Beugungsordnung $n = 1$ betrachtet.
 Es ergeben sich die Werte.
 \begin{align}
+\label{eqn:q1}
 E_{\text{K,}\alpha} &= \SI{8.043}{\kilo\electronvolt} \\
+\label{eqn:q2}
 E_{\text{K,}\beta} &= \SI{8.914}{\kilo\electronvolt}
 \end{align}
 Die Abweichungen zu den angegebenen Literaturwerten \ref{tab:vorbereitung} sind in der folgenden Tabelle \ref{tab:litabweichung1} in Prozent angegeben.
@@ -49,9 +51,9 @@ Diese Zählraten sind poissonverteilt und somit lässt sich der Fehler bezüglic
 \end{equation*}
 angeben. Die originalen Messwerte sowie die poissonverteilten Fehler sind in Tabelle \ref{tab:alu} angegeben. Diese Wertepaare können nun durch die angegebene Totzeitkorrektur in Gleichung \eqref{eqn:totzeit}
 angepasst werden. Dazu werden die Werte mit der festen Totzeit $\tau = \SI{90}{\micro\second}$, wobei eine Gaußsche Fehlerfortpflanzung nötig wird. Diese ergibt sich wie folgt.
-\begin{equation}
+\begin{equation*}
 \increment I = \left( \frac{1}{1 - \tau \cdot N} + \frac{\tau \cdot N_{i}}{(1 - \tau \cdot N_{i})^{2}} \right) \increment N_{i}
-\end{equation}
+\end{equation*}
 Die korrigierten Intensitätswerte sind nun zusammen mit ihrem Fehler in der Tabelle \ref{tab:korrektur} angegeben.
 Für die erste Beugungsordnung gilt nach Gleichung \ref{eqn:lambda} ein direkter Zusammenhang zwischen dem Kristallwinkel und den Wellenlängen der Strahlung.
 Mit dem Zusammenhang \eqref{eqn:wichtig} kann die Transmission bestimmt werden. Hierbei gilt.
@@ -59,9 +61,9 @@ Mit dem Zusammenhang \eqref{eqn:wichtig} kann die Transmission bestimmt werden. 
 T = \frac{I_{Al}}{I_{\text{ohne}}}
 \end{equation*}
 Da beide Zählraten fehlerbehaftet sind kann zunächst wieder eine Fehlerfortpflanzung bestimmt werden, diese lautet.
-\begin{equation}
+\begin{equation*}
 \increment T = \sqrt{\left( \frac{1}{I_{\text{ohne}}}\right)^{2} (\increment I_{Al})^{2} + \left( \frac{I_{Al}}{(I_{\text{ohne}})^{2}}\right)^{2} (\increment I_{\text{ohne}})^{2}}
-\end{equation}
+\end{equation*}
 Aus den Wellenlängen $\lambda$ und der Transmission $T$ lässt sich nun ein $\lambda$-$T$ Diagramm erstellen, die Wertepaare sind in Tabelle \ref{tab:VIVONZULUL} angegeben.
 
 \begin{figure}[h]
@@ -73,9 +75,9 @@ Aus den Wellenlängen $\lambda$ und der Transmission $T$ lässt sich nun ein $\l
 
 Bei der Bestimmung der Compton-Wellenlänge müssen einigen Transmissionswerten Wellenlängen zugeordnet werden, somit bietet es sich an eine lineare Ausgleichsgerade der
 Form
-\begin{equation}
+\begin{equation*}
 y = a \cdot x + b
-\end{equation}
+\end{equation*}
 durch die Werte zu legen.
 Ein linearer Fit in Python liefert die folgenden Parameter.
 \begin{align*}
@@ -97,9 +99,9 @@ der ungestreuten und gestreuten Röntgenstrahlung ermittelt werden. Nach der Gle
 \label{eqn:d1}
 T_{1} = \frac{I_{1}}{I_{\text{ohne}}}
 \end{equation}
-\label{eqn:d2}
 Analog gilt für die gestreute Transmission.
 \begin{equation}
+\label{eqn:d2}
 T_{2} = \frac{I_{2}}{I_{\text{ohne}}}
 \end{equation}
 $I_{1}$ ist dabei die Intensität ohne Streuung, $I_{2}$ die Intensität mit Streuung  und $I_{0}$ die die Intensität ohne Absorber.
@@ -117,7 +119,6 @@ Eingesetzt in die Geradengleichung \eqref{eqn:gerade} liefern sie die zugehörig
 \lambda_{c} &= \SI{3.758e-12}{\meter} 
 \end{align}
 Die prozentuale Abweichung vom Literaturwert aus Gleichung \eqref{eqn:comptontheoriewert} entspricht $\SI{54.89}{\percent}$.
-
-\textbf{HIER MAYBE ÄNDERN}
-Eine Totzeitkorrektur ist bei klein werdenen Zählraten meist nicht von nöten da der Nenner der Gleichung \eqref{eqn:totzeit} gegen 1 konvergiert und somit keine
+\\
+Eine Totzeitkorrektur ist bei klein werdenen Zählraten meist nicht vonnöten da der Nenner der Gleichung \eqref{eqn:totzeit} gegen 1 konvergiert und somit keine
 Korrektur stattfindet. Dies liegt außerdem an der bereits sehr kleinen Totzeit von $\SI{90}{\micro\second}$ welche dazu führt, dass dieser schneller gegen 1 verläuft.
