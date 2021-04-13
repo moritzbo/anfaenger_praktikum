@@ -7,7 +7,7 @@ all: build/V203-Verdampfungswärme.pdf
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 #build/main.pdf: build/plot.pdf
 
-build/main.pdf: FORCE | build
+build/V203-Verdampfungswärme.pdf: FORCE | build
 	  TEXINPUTS=build: \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
