@@ -9,5 +9,77 @@ Es exestieren also in jeder Phase genau zwei Freiheitsgrade ohne das sich der Zu
 
 % screen einfügen
 
-Die verschieden Aggregatzuständen werden durch Kurven getrennt, im Falle vom Wechsel: gasförmig $\longleftrightarrow$ flüssig \\
-nennt man diese Kurve
+Die verschieden Aggregatzuständen werden durch Kurven getrennt, im Falle vom Wechsel: gasförmig $\longleftrightarrow$ flüssig,
+nennt man diese Begrenzung Dampfdurckkurve. (In der Darstellung % citen
+die Kurve zwischen TP und KP)
+
+Sollten Druck und Temnperatur einen Zustand auf eben einer solchen Kurve erzeugen existiert der Stoff in beiden Phasen.
+Um so zu bleiben reduzieren sich die Freiheitsgrade um einen Grad. Dieser Parameter wird Verdampfungwärme gennant und ist von der Temperatur
+abhängig. 
+
+\subsection{Mikroskopische Betrachtung bei Verdampfung und Kondensation}
+Wenn im evakuiertem Raum die Flüssigkeit zum Verdampfen grbacht wird, lässt sich ein Druckanstieg feststellen.
+Dieser Resultiert aus der jetzt gasförmigen Flüssigkeit. Auf molekularer Ebene verlasen eben die Teilchen die Flüssigkeit, die genug kintische Energie 
+inne haben um die Oberfläche zu verlassen. Dafür müssen sie mehr Kraft aufbringen können als die Molekularkraft des Stoffes zum Binden benötigt.
+Diese Zusätliche Arbeit wird durch den Wärmevorrat des Stoffes unterstützt oder von außen hinzugefügt.
+Als molare Verdampfungswärme $L$ versteht sich also das Maß an Energie, pro Mol der Flüssigkleit, um den Stoff bei gleicher Temperatur gasförmig zu machen.
+Die Abgabe der aufgenommen Energie passiert durch Kondensation. Sie ist quasi das Gegenstück zur Verdampfung.
+Kondensation führt der Flüssigkeit wieder Molekühle zurück, ebenso werden von der Oberfläche der Flüssigkeit wieder Teile des Gases aufgefangen.
+Folglich, bei konstanten Bedingungen, verliert die Flüssigkeit eine Menge durch Phasenwechsel zu Gas, gewinnt aber auch eben gleichviel 
+zurück durch Kondensation und Wiederaufnahme. Es hat sich ein Gleichgewicht mit konstantem Druck gebildet welcher Sättigungsdruck genannt wird.
+Der Druck würde also bei zunehmender Temperatur, aufgrund der erhöhten kinetischen Energie und den folgloch stärkeren Stößen, ansteigen.
+Trotz Änderung des Volumens bleibt der Sättigungsdruck immer, nach entsprechender Anpassung durch Verdampfung oder Kondensation, gleich.
+
+\subsection{Darstellung durch eine passende Differentialgleichung}
+Die Natur des Systems lässt auf eine Lösung der Allgemeinen Gasgleichung vermuten,
+$p \cdot V = R \cdot T$
+welcher aber den Druck antiproportional zum Volumen wachsen lässt. Der Zusammenhang ist hier nicht zutreffend.
+
+% abb 2 einfügen
+Um also eine passende Darstellung für den Druck zu finden lässt sich zunächst einen anderen Thermodynamischen Zusammenhang nutzen. 
+Cite !!! Die Darstellung zeigt die Änderung von Druck und Volumen einer Flüssigkeit mit Wärmekapazität $C_F$ in einem reversiblen Kreisprozess.
+Beginnend bei Punkt A mit einem Druck $p$, einer Temperatur $T$ und einem Volumen $V_F$ ist das System ruhig und konstant. Die Temperartur wird so
+gewählt, dass die einzige Phase in der sich Die Flüssigkeit befinden kann flüssig ist.
+Nach Zugabe der Energie $\Delta Q_{AB}$ in Form von Wärme steigt der Druck und mit ihr die Temperatur um jeweils $\Delta p$ bzw $\Delta T$.
+Die Zugefügte Energie muss nach den Hauptsätzen der Thermodynamik im Stoff enthalten sein und es lässt sich sagen:
+\begin{equation}
+    \Delta Q_{AB} = C_F \cdot \Delta T
+\end{equation}
+Nach wiederholter Zugabe von Energie, hier als Verdampfungswärme um die Phase zu wechseln bei gleichem Druck, befindet sich das System im dritten Zustand
+C. Hier ist die Flüssigkeit restlos verdampft und das Volum hat sich vergrößert. Bei der Vergrößerung wurde eine Arbeit $A_{BC}$ verrichtet. 
+Da bei einem gewissen Druck $p +\Delta p$ sich das Volumen $V$  um $\Delta V$ erweitert hat, lässt sich die Arbeit also beschreiben als
+\begin{equation}
+\label{eqn:BC}
+    -A_{BC} = (p+ \Delta p) \cdot (V_D-V_F)
+\end{equation}
+Hierbei wurde verwendet, dass $\Delta V$ eben der Abstand zwischen $V_F \text{und} V_D$ ist. Die Arbiet wird vom Gas verrichet um in eben diese Phase
+zu kommen, folglich ist das Vorzeichen negativ. \\
+Lässt man von hier das Gas auf die ursprüngliche Temperatur $T$ abkühlen, wird wiederum Energie vom System abgegeben.
+Die Tatsache, dass die Molwärme eines Stoffes multipliziert mit der Temperatur die Wärmeenergie angiebt, führt anlog zu vorher auf den Zusammenhang
+\begin{equation}
+    -\Delta Q_{CD} = C_D \cdot \Delta T
+\end{equation}
+$C_D$ beschreibt die Wärmekapazität des Gases und da die Wärme hier verschwindet ist auch das Vorzeichen Negativ.
+Die vierte Strecke findet bei konstanter Temperatur und konstantem Druck statt. Wie bei \eqref{eqn:BC} wird hier die Phase gewechselt, es wird also Wärmeenergie 
+abgegeben.
+\begin{equation}
+    -A_{DA} = p \cdot (V_D - V_F)
+\end{equation}
+Summiert man die hinzu - und abgegebene Wärme muss diese nach dem ersten Hauptsatz der Thermodynamik gleich der summierten, verrichteten Arbeit sein.
+Also gilt:
+\begin{align*}
+     \Delta Q_{ges} &= C_F \cdot \Delta T - C_D \cdot \Delta T + L(T) + \Delta L - L(T) \\
+     \intertext{Das $-L(T)$ ensteht durch die wieder abgezogene Verdampfungswärme bei der Kondensation}
+    \Delta A_{ges} &= -((p+ \Delta p) \cdot (V_D-V_F)) \cdot -(p \cdot (V_D - V_F)) \\
+    \hookrightarrow \Delta A_{ges} &= \Delta p (V_D - V_F) 
+\end{align*}
+Gleichsetzen liefert 
+\begin{equation}
+    (C_F-C_D)\Delta T + \Delta L = (V_D - V_F) \Delta p
+\end{equation}
+Ebenso wird verlangt, dass nicht mehr Energie abgegeben wird als aufgenommen. Es lässt sich also nach dem zweiten Hauptsatz der Thermodynamik
+sagen, dass die Summe aller reduzierten Wärmemengen null sein muss.
+\begin{align*}
+    \sum_i \frac{Q_i}{T_i} &= 0 \\
+    \hookrightarrow \frac{C_F \cdot\Delta T}{T} + \frac{L + \Delta L}{T+ \Delta T}-\frac{C_D \cdot \Delta T}{T}-\frac{L}{T} &= 0
+\end{align*}
