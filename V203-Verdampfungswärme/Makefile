@@ -1,11 +1,20 @@
 all: build/V203-Verdampfungswärme.pdf
 
 # hier Python-Skripte:
-#build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-#	TEXINPUTS=$$(pwd): python plot.py
+build/plot1.pdf: python/plot1.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python python/plot1.py
+build/plot2.pdf: python/plot2.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python python/plot2.py
+build/plot3.pdf: python/plot3.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python python/plot3.py
+build/plot4.pdf: python/plot4.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python python/plot4.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-#build/main.pdf: build/plot.pdf
+build/V203-Verdampfungswärme.pdf: build/plot1.pdf \
+									build/plot2.pdf \
+									build/plot3.pdf \
+									build/plot4.pdf \
 
 build/V203-Verdampfungswärme.pdf: FORCE | build
 	  TEXINPUTS=build: \
