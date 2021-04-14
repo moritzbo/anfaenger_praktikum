@@ -36,7 +36,12 @@ Trotz Änderung des Volumens bleibt der Sättigungsdruck immer, nach entsprechen
 
 \subsection{Darstellung durch eine passende Differentialgleichung}
 Die Natur des Systems lässt auf eine Lösung der Allgemeinen Gasgleichung vermuten,
-$p \cdot V = R \cdot T$
+
+\begin{equation}
+    \label{eqn:gas}
+    p \cdot V = R \cdot T
+\end{equation}
+
 welcher aber den Druck antiproportional zum Volumen wachsen lässt. Der Zusammenhang ist hier nicht zutreffend.
 
 \begin{figure}
@@ -84,16 +89,42 @@ Also gilt:
 \end{align*}
 Gleichsetzen liefert 
 \begin{equation}
+    \label{eqn:sum1}
     (C_F-C_D)\Delta T + \Delta L = (V_D - V_F) \Delta p
 \end{equation}
 Ebenso wird verlangt, dass nicht mehr Energie abgegeben wird als aufgenommen. Es lässt sich also nach dem zweiten Hauptsatz der Thermodynamik
 sagen, dass die Summe aller reduzierten Wärmemengen null sein muss.
-\begin{align*}
+\begin{align}
+\label{eqn:sum}
     \sum_i \frac{Q_i}{T_i} &= 0 \\
     \hookrightarrow \frac{C_F \cdot\Delta T}{T} + \frac{L + \Delta L}{T+ \Delta T}-\frac{C_D \cdot \Delta T}{T}-\frac{L}{T} &= 0
-\end{align*}
+\end{align}
 Mit der Temperatur $T$ multipliziert verinfacht sich der Term. Außerdem wird genutzt, dass 
 \begin{equation*}
     \frac{L+ \Delta L}{T + \Delta T} = \frac{L}{T} + \frac{\Delta L}{T} - \frac{L \Delta T}{T^2}
 \end{equation*}
-nach einer Reihenentwicklung bis zu erster Ordnun wie angegeben aussieht.
+nach einer Reihenentwicklung bis zu erster Ordnung wie angegeben aussieht. Es folgt der Term
+\begin{equation}
+    (C_F - C_D) \Delta T + \Delta L - \frac{L \Delta T}{T} = 0
+\end{equation}
+Der erste Teil ist bekannt und hat sowhol das als auch ein anderes Ergebnis. Aus \eqref{eqn:sum1} folgt der andere Zusammenhang.
+\begin{equation}
+    \label{eqn:dgl}
+    (V_D-V_F) \Delta p = \frac{L \Delta T}{T}
+\end{equation}  
+Diese Differentialgleichung trägt den Namen Clausius-Clapeyronsche Gleichung und ist nur schwer lösbar aufgrund der vielfachen Abhänigkeiten von der 
+Temperatur.
+
+\subsection{Lösung der Differentialgleichung}
+Um \eqref{eqn:dgl} vollständig zu lösen müssen voerst Annahmen getroffen werden. 
+Erstens soll gelten, dass das Anfgangsvolumen $V_F$ keine auswirkung auf die Differenz $V_D - V_F$ haben soll. Zweitens wird eingeführt, dass 
+sich das einzig relevante VOlumen $V_D$ nach den Regeln der idealen Gasgleichung verhält \eqref{eqn:gas}. Drittens soll $L$ sowhol von der Temperatur
+als auch vom Durck abhängig sein.
+Es folgt die Gleichung
+\begin{align}
+    \frac{R}{p} \Delta &= \frac{L}{T^2} \Delta T \\
+    \intertext{Integration auf beiden Seiten nach entsprechender Variabel}
+    \hookrightarrow p &= p_0 \cdot exp(-\frac{L}{R} \cdot \frac{1}{T})
+\end{align}
+Grundlage der Formel ist die Boltzmann-Statistik welche die kinetische Energie beschreibt die hochg genug für einen Phasenwechsel ist. 
+% maybe mehr?
