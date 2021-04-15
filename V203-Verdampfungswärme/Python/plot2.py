@@ -17,7 +17,7 @@ p_neu = np.log(p)
 plt.plot(T1_neu, 
         p_neu,
         'bx',
-        label='Punkte',
+        label='Messwerte',
         linewidth=1.5)
 
 print(T1_neu)
@@ -37,4 +37,5 @@ plt.plot(x,
 plt.grid()
 plt.xlabel(r'$1/T[1/\si{\kelvin}]$')
 plt.ylabel(r'$\text{ln}(p)$')
+plt.legend()
 plt.savefig("build/plot2.pdf")

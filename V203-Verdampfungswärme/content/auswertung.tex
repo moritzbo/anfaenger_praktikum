@@ -55,6 +55,23 @@ Der Fehler auf die Verdampfungswärme entspringt aus der folgenden Gaußschen Fe
 \increment L = -R \cdot \increment a
 \end{equation}
 
+Um festzustellen wie viel Arbeit aufgebracht werden muss, um die Anziehungskräfte der restlichen Moleküle zu überwinden,
+kann mit der allgemeinem Gasgleichung die Verdampfungswärme $L$ angenähert werden.
+Dazu wird, auf Grund der Dimension, die Gleichung \eqref{eqn:gas} auf [$\si{\joule}/\si{\mol}$] angepasst und entsprechend gekürzt.
+\begin{equation}
+    \left[\frac{\si{\bar\meter\tothe{3}}}{\si{\mol}}=\frac{\si{\joule}}{\si{\mol\kelvin}}\si{\kelvin}\right]
+\end{equation}
+Mit der gegebenen Temperatur erschließt sich ein Wert von $3101\si{\joule\per\mol}$ für $L_a$. Die Differenz folgt.
+\begin{align*}
+    L_i&=L-L_a \hspace{1cm}  | L = \SI{39.168(0363)}{\kilo\joule\per\mol\per\kelvin}
+    L_i= \SI{36.067(0363)}{\kilo\joule\per\mol\per\kelvin}
+\end{align*}
+Um ein Ergbenis pro Molekül zu bekommen gilt es nun $L_i$ durch den für ein $\si{\mol}$ definierten Wert zu teilen.
+In Elektronenvolt umgeformt beträgt die Verdampfungswärme.
+\begin{equation}    
+    L_i= \SI{0.406(0003)}{eV}
+\end{equation}
+
 \subsection{Berechnung der Verdampfungswärme im hohen Druckbereich}
 
 Analog zu der vorherigen Auswertung kann hier die Verdampfungswärme $L$ für die ermittelte Dampfdruckkurve im zweiten Teil des Versuchs \ref{fig:figskizze2} errechnet werden.
@@ -65,10 +82,27 @@ Die Dampfdruckkurve ist zunächst in Abbildung \ref{fig:plot3} dargestellt.
     \caption{Gemessene Dampfdruckkurve bei höheren Drücken.}
     \label{fig:plot3}
 \end{figure}
-Wie zuvor wird die Darstellung durch Logarithmierung angepasst und eine Ausgleichsgerade ermittelt. Das Ergebnis ist im Diagramm ----
+Wie zuvor wird die Darstellung durch Logarithmierung angepasst und eine Ausgleichsgerade ermittelt. Das Ergebnis ist in Diagramm \ref{fig:plot4} abgebildet.
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{build/plot4.pdf}
     \caption{Linearer Fit durch die Messpunkte bei hohem Druck.}
     \label{fig:plot4}
 \end{figure}
+Die Parameter der Ausgleichsgeraden lauten hier wie folgt.
+\begin{align}
+    a &= \SI{-6164.084(16549)}{\kelvin} \\
+    b &= \SI{15.905(0384)}{}
+\end{align}
+Durch den erneuten Vergleich mit Gleichung \eqref{eqn:1} lässt sich nun wieder die Verdampfungswärme $L$ finden.
+\begin{equation}
+L = \SI{51.251(1375)}{\kilo\joule\per\mol\per\kelvin}
+\end{equation}
+\\
+Zusätzlich kann hier noch die Verdampfungswärme in Abhängigkeit von der Temperatur ermittelt werden. Dazu wird die Clausius-Clapeyronsche
+Differentialgleichung \eqref{eqn:dgl} zunächst nach $L$ aufgelöst.
+
+\begin{equation}
+    \label{eqn:lol}
+L = (V_{D}-V_{F})T \cdot \frac{\text{d}p}{\text{d}T}
+\end{equation}
