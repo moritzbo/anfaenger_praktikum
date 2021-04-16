@@ -63,8 +63,8 @@ Dazu wird, auf Grund der Dimension, die Gleichung \eqref{eqn:gas} auf [$\si{\jou
 \end{equation}
 Mit der gegebenen Temperatur erschließt sich ein Wert von $3101\si{\joule\per\mol}$ für $L_a$. Die Differenz folgt.
 \begin{align*}
-    L_i&=L-L_a \hspace{1cm}  | L = \SI{39.168(0363)}{\kilo\joule\per\mol\per\kelvin}
-    L_i= \SI{36.067(0363)}{\kilo\joule\per\mol\per\kelvin}
+    L_i&=L-L_a \hspace{1cm}  | L = \SI{39.168(0363)}{\kilo\joule\per\mol\per\kelvin} \\
+    L_i&= \SI{36.067(0363)}{\kilo\joule\per\mol\per\kelvin}
 \end{align*}
 Um ein Ergbenis pro Molekül zu bekommen gilt es nun $L_i$ durch den für ein $\si{\mol}$ definierten Wert zu teilen.
 In Elektronenvolt umgeformt beträgt die Verdampfungswärme.
@@ -106,3 +106,25 @@ Differentialgleichung \eqref{eqn:dgl} zunächst nach $L$ aufgelöst.
     \label{eqn:lol}
 L = (V_{D}-V_{F})T \cdot \frac{\text{d}p}{\text{d}T}
 \end{equation}
+Hier kann nun wieder die Annahme $V_{F} = 0$ wie bei der Lösung der Differentialgleichung verwendet werden. Das Volumen $V_{D}$ lässt sich nun allerdings wie zuvor erwähnt nicht mehr
+durch die allgemeine Gasgleichung bestimmen. Hier gilt die folgende Annäherung.
+\begin{equation}
+\left( p + \frac{a}{V^{2}}V = R \cdot T \right)
+\end{equation}
+Die Lösung für $V$ folgt dann als Lösung des Polynom zweiten Grades und sie kann direkt in die Gleichung \eqref{eqn:lol} eingesetzt werden.
+\begin{equation}
+L = \left(\frac{RT}{2p} \pm \sqrt{\left( \frac{RT}{2p}\right)^2 -\frac{a}{p}}\right) T \cdot \frac{\text{d}p}{\text{d}T}
+\end{equation}
+Der Druck $p$ sowie der auftretende Differentialquotient $\text{d}p$/$\text{d}T$ kann durch ein Polynom dritten Grades bestimmt werden. Dazu wird ein
+Fit durch die gemessenen Punkte gelegt. Das Polynom hat dann die folgende Form.
+\begin{equation}
+p(T) = AT^{3} + BT^{2} + CT + D
+\end{equation}
+Die passenden Parameter lauten.
+\begin{align*}
+    A &= \SI{0.000010(2)}{\bar\per\kelvin\tothe{3}} \\
+    B &= \SI{-0.002939 (952)}{\bar\per\kelvin\tothe{2}} \\
+    C &= \SI{0.365120 (150603)}{\bar\per\kelvin}\\
+    D &=  \SI{-17.336223 (7844842)}{\bar} \\
+\end{align*}
+Nun kann das Polynom noch abgeleitet werden
