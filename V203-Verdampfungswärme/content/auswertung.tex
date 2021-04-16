@@ -48,7 +48,7 @@ a = -\frac{L}{R} \quad \to \quad L = -R \cdot a
 Die universelle Gaskonstante $R$ ist eine exakte Größe und lässt sich der Literatur \cite{Naturkonstanten} entnehmen.
 Für die Verdampfungswärme $L$ ergibt sich letztendlich.
 \begin{equation}
-L = \SI{39.168(0363)}{\kilo\joule\per\mol\per\kelvin}
+L = \SI{39.168(0363)}{\kilo\joule\per\mol}
 \end{equation}
 Der Fehler auf die Verdampfungswärme entspringt aus der folgenden Gaußschen Fehlerfortpflanzung. Diese ist hier besonders simpel auf Grund des linearen Zusammenhangs zwischen $a$ und $L$. 
 \begin{equation}
@@ -63,8 +63,8 @@ Dazu wird, auf Grund der Dimension, die Gleichung \eqref{eqn:gas} auf [$\si{\jou
 \end{equation}
 Mit der gegebenen Temperatur erschließt sich ein Wert von $3101\si{\joule\per\mol}$ für $L_a$. Die Differenz folgt.
 \begin{align*}
-    L_i&=L-L_a \hspace{1cm}  | L = \SI{39.168(0363)}{\kilo\joule\per\mol\per\kelvin} \\
-    L_i&= \SI{36.067(0363)}{\kilo\joule\per\mol\per\kelvin}
+    L_i&=L-L_a \hspace{1cm}  | L = \SI{39.168(0363)}{\kilo\joule\per\mol} \\
+    L_i&= \SI{36.067(0363)}{\kilo\joule\per\mol}
 \end{align*}
 Um ein Ergbenis pro Molekül zu bekommen gilt es nun $L_i$ durch den für ein $\si{\mol}$ definierten Wert zu teilen.
 In Elektronenvolt umgeformt beträgt die Verdampfungswärme.
@@ -96,7 +96,7 @@ Die Parameter der Ausgleichsgeraden lauten hier wie folgt.
 \end{align}
 Durch den erneuten Vergleich mit Gleichung \eqref{eqn:1} lässt sich nun wieder die Verdampfungswärme $L$ finden.
 \begin{equation}
-L = \SI{51.251(1375)}{\kilo\joule\per\mol\per\kelvin}
+L = \SI{51.251(1375)}{\kilo\joule\per\mol}
 \end{equation}
 \\
 Zusätzlich kann hier noch die Verdampfungswärme in Abhängigkeit von der Temperatur ermittelt werden. Dazu wird die Clausius-Clapeyronsche
@@ -124,12 +124,38 @@ p(T) = AT^{3} + BT^{2} + CT + D
 Die passenden Parameter lauten.
 \begin{align*}
     A &= \SI{0.974(0198)}{\pascal\per\kelvin\tothe{3}} \\
-    B &= \SI{-293.860(95173)}{\pascal\per\kelvin\tothe{2}} \\
-    C &= \SI{36.512 (15060)e3}{\pascal\per\kelvin}\\
-    D &=  \SI{-1.734 (7845)e6}{\pascal} \\
+    B &= \SI{-1.092(0257)e3}{\pascal\per\kelvin\tothe{2}} \\
+    C &= \SI{4.150 (1113)e5}{\pascal\per\kelvin}\\
+    D &=  \SI{-5.347 (1602)e7}{\pascal} \\
 \end{align*}
 Nun kann das Polynom noch abeleitet
 \begin{equation}
 \frac{\text{d}p}{\text{d}T} = 3AT^{2} + 2BT + C
 \end{equation}
 und zusammen mit $p(T)$ in die Gleichung \eqref{eqn:ok} eingesetzt werden.
+Es folgt die gesuchte temperaturabhängige Verdampfungswärme.
+\begin{equation}
+L = \frac{3AT^{3} + 2BT^{2} + CT}{AT^{3} + BT^{2} + CT + D}\left(\frac{RT}{2} \pm \sqrt{\left( \frac{RT}{2}\right)^{2} -a(AT^{3} + BT^{2} + CT + D)}\right) 
+\end{equation}
+Das Ausgleichspolynom ist im folgenden Diagramm \ref{fig:plot5} dargestellt.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{build/plot5.pdf}
+    \caption{Ausgleichspolynom dritten Grades.}
+    \label{fig:plot5}
+\end{figure}
+Die temperaturabhängige Verdampfungswärme $L(T)$ besitzt nun zwei Darstellungen, eine mit dem Additionsterm und eine mit dem Subraktionsterm. Diese lassen sich jetzt für 
+ein Temperaturintervall $\increment T$ skizzieren. Dafür wurde das von uns aufgenommene Intervall zwischen $120$ und $\SI{200}{\celsius}$ verwendet.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{build/plot6.pdf}
+    \caption{Temperaturabhängige Verdampfungswärme mit Additionsterm.}
+    \label{fig:plot6}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{build/plot7.pdf}
+    \caption{Temperaturabhängige Verdampfungswärme mit Subraktionsterm.}
+    \label{fig:plot7}
+\end{figure}
+\newpage
