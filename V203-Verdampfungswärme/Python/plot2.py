@@ -11,6 +11,9 @@ T1, Tunnnnnnnötig, p = np.genfromtxt("Daten/ndd.txt", unpack=True)
 T1 = (T1 + 273.15)
 
 T1_neu = 1/T1
+
+p = p * 10**(2)
+
 p_neu = np.log(p)
 
 

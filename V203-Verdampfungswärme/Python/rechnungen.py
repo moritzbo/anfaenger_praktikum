@@ -21,6 +21,8 @@ T1, p = np.genfromtxt("../Daten/über.tx", unpack=True)
 
 print(f"{L:.3f}")
 
+p = p * 10**(5)
+
 params, covar_matrix = np.polyfit(T1, p, deg= 3, cov=True)
 
 errors = np.sqrt(np.diag(covar_matrix))

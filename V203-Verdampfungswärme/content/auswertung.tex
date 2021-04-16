@@ -12,7 +12,7 @@ ergibt sich folgender linearer Zusammenhang.
 \end{equation}
 \\
 In dieser Geradengleichung ist die Verdampfungswärme $L$ die Steigung und sie kann deshalb durch eine lineare Ausgleichsrechnung gewonnen werden.
-Das p-T-Diagramm ist zunächst in Abbildung \ref{fig:plot1} geplottet, dabei wurden die Temperaturen in Kelvin umgerechnet.
+Das p-T-Diagramm ist zunächst in Abbildung \ref{fig:plot1} geplottet, dabei wurden die Temperaturen in Kelvin und die Drücke in Pascal umgerechnet.
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{build/plot1.pdf}
@@ -37,7 +37,7 @@ Die Ausgleichsgerade ist von der Form
 und die folgenden Parameter ergeben sich.
 \begin{align}
 a &= \SI{-4710.774(43656)}{\kelvin} \\
-b &= \SI{19.492(0133)}{}
+b &= \SI{24.097(0133)}{}
 \end{align}
 Aus dem bereits zuvor genannten Zusammenhang \eqref{eqn:1} folgt nun sofort.
 
@@ -91,8 +91,8 @@ Wie zuvor wird die Darstellung durch Logarithmierung angepasst und eine Ausgleic
 \end{figure}
 Die Parameter der Ausgleichsgeraden lauten hier wie folgt.
 \begin{align}
-    a &= \SI{-6164.084(16549)}{\kelvin} \\
-    b &= \SI{15.905(0384)}{}
+    a &= \SI{-6164.084(165492)}{\kelvin} \\
+    b &= \SI{27.417(0384)}{}
 \end{align}
 Durch den erneuten Vergleich mit Gleichung \eqref{eqn:1} lässt sich nun wieder die Verdampfungswärme $L$ finden.
 \begin{equation}
@@ -109,10 +109,11 @@ L = (V_{D}-V_{F})T \cdot \frac{\text{d}p}{\text{d}T}
 Hier kann nun wieder die Annahme $V_{F} = 0$ wie bei der Lösung der Differentialgleichung verwendet werden. Das Volumen $V_{D}$ lässt sich nun allerdings wie zuvor erwähnt nicht mehr
 durch die allgemeine Gasgleichung bestimmen. Hier gilt die folgende Annäherung.
 \begin{equation}
-\left( p + \frac{a}{V^{2}}V = R \cdot T \right)
+\left( p + \frac{a}{V^{2}}\right)V = R \cdot T 
 \end{equation}
 Die Lösung für $V$ folgt dann als Lösung des Polynom zweiten Grades und sie kann direkt in die Gleichung \eqref{eqn:lol} eingesetzt werden.
 \begin{equation}
+    \label{eqn:ok}
 L = \left(\frac{RT}{2p} \pm \sqrt{\left( \frac{RT}{2p}\right)^2 -\frac{a}{p}}\right) T \cdot \frac{\text{d}p}{\text{d}T}
 \end{equation}
 Der Druck $p$ sowie der auftretende Differentialquotient $\text{d}p$/$\text{d}T$ kann durch ein Polynom dritten Grades bestimmt werden. Dazu wird ein
@@ -122,9 +123,13 @@ p(T) = AT^{3} + BT^{2} + CT + D
 \end{equation}
 Die passenden Parameter lauten.
 \begin{align*}
-    A &= \SI{0.000010(2)}{\bar\per\kelvin\tothe{3}} \\
-    B &= \SI{-0.002939 (952)}{\bar\per\kelvin\tothe{2}} \\
-    C &= \SI{0.365120 (150603)}{\bar\per\kelvin}\\
-    D &=  \SI{-17.336223 (7844842)}{\bar} \\
+    A &= \SI{0.974(0198)}{\pascal\per\kelvin\tothe{3}} \\
+    B &= \SI{-293.860(95173)}{\pascal\per\kelvin\tothe{2}} \\
+    C &= \SI{36.512 (15060)e3}{\pascal\per\kelvin}\\
+    D &=  \SI{-1.734 (7845)e6}{\pascal} \\
 \end{align*}
-Nun kann das Polynom noch abgeleitet werden
+Nun kann das Polynom noch abeleitet
+\begin{equation}
+\frac{\text{d}p}{\text{d}T} = 3AT^{2} + 2BT + C
+\end{equation}
+und zusammen mit $p(T)$ in die Gleichung \eqref{eqn:ok} eingesetzt werden.

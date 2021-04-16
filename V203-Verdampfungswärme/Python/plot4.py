@@ -11,6 +11,9 @@ T1, p = np.genfromtxt("Daten/über.tx", unpack=True)
 T1 = (T1 + 273.15)
 
 T1_neu = 1/T1
+
+p = p * 10**(5)
+
 p_neu = np.log(p)
 
 
