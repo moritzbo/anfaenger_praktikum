@@ -19,9 +19,8 @@ abhängig.
 
 \subsection{Mikroskopische Betrachtung bei Verdampfung und Kondensation}
 Wenn im evakuiertem Raum die Flüssigkeit zum Verdampfen gebracht wird, lässt sich ein Druckanstieg feststellen.
-Dieser Resultiert aus der jetzt gasförmigen Flüssigkeit. Auf molekularer Ebene verlassen eben die Teilchen die Flüssigkeit, die genug kinetische Energie 
-inne haben um sich von der Oberfläche zu entfernen. Dafür müssen sie mehr Kraft aufbringen können als die Molekularkraft des Stoffes zum Binden benötigt.
-Diese Zusätzliche Arbeit wird durch den Wärmevorrat des Stoffes unterstützt oder von außen hinzugefügt.
+Dieser resultiert aus der jetzt gasförmigen Flüssigkeit. Auf molekularer Ebene verlassen eben die Teilchen die Flüssigkeit, die genug kinetische Energie haben um sich von der Oberfläche zu entfernen. Dafür müssen sie mehr Kraft aufbringen können als die Molekularkraft des Stoffes zum Binden benötigt.
+Diese zusätzliche Arbeit wird durch den Wärmevorrat des Stoffes unterstützt oder von außen hinzugefügt.
 Als molare Verdampfungswärme $L$ versteht sich also das Maß an Energie, pro Mol der Flüssigkeit, um den Stoff bei gleicher Temperatur gasförmig zu machen.
 Die Abgabe der aufgenommen Energie passiert durch Kondensation. Sie ist quasi das Gegenstück zur Verdampfung.
 Kondensation führt der Flüssigkeit wieder Moleküle zurück, ebenso werden von der Oberfläche der Flüssigkeit wieder Teile des Gases aufgefangen.
@@ -36,7 +35,7 @@ Die Natur des Systems lässt auf eine Lösung der Allgemeinen Gasgleichung vermu
     \label{eqn:gas}
     p \cdot V = R \cdot T
 \end{equation}
-welcher aber den Druck antiproportional zum Volumen wachsen lässt. Der Zusammenhang ist hier nicht zutreffend.
+welcher aber den Druck antiproportional zum Volumen wachsen lässt. Der Zusammenhang ist hier nicht zutreffend, da der Sättigungsdruck unabhängig vom Volumen ist.
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{bilder/theoskizze2.png}
@@ -46,22 +45,22 @@ welcher aber den Druck antiproportional zum Volumen wachsen lässt. Der Zusammen
 Um also eine passende Darstellung für den Druck zu finden lässt sich zunächst ein anderer thermodynamischer Zusammenhang nutzen. 
 Die Darstellung \ref{fig:figtheo2} zeigt die Änderung von Druck und Volumen einer Flüssigkeit mit Wärmekapazität $C_F$ in einem reversiblen Kreisprozess.
 Beginnend bei Punkt A mit einem Druck $p$, einer Temperatur $T$ und einem Volumen $V_F$ ist das System ruhig und konstant. Die Temperatur wird so
-gewählt, dass die einzige Phase in der sich Die Flüssigkeit befinden kann flüssig ist.
+gewählt, dass die einzige Phase in der sich die Flüssigkeit befinden kann flüssig ist.
 Nach Zugabe der Energie $\Delta Q_{AB}$ in Form von Wärme steigt der Druck und mit ihr die Temperatur um jeweils $\Delta p$ bzw $\Delta T$.
 Die Zugefügte Energie muss nach den Hauptsätzen der Thermodynamik im Stoff enthalten sein und es lässt sich sagen:
 \begin{equation}
     \Delta Q_{AB} = C_F \cdot \Delta T
 \end{equation}
 Nach wiederholter Zugabe von Energie, hier als Verdampfungswärme um die Phase zu wechseln bei gleichem Druck, befindet sich das System im dritten Zustand
-C. Hier ist die Flüssigkeit restlos verdampft und das Volum hat sich vergrößert. Bei der Vergrößerung wurde eine Arbeit $A_{BC}$ verrichtet. 
-Da bei einem gewissen Druck $p +\Delta p$ sich das Volumen $V$  um $\Delta V$ erweitert hat, lässt sich die Arbeit also beschreiben als.
+C. Hier ist die Flüssigkeit restlos verdampft und das Volumen hat sich vergrößert. Bei der Vergrößerung wurde eine Arbeit $A_{BC}$ verrichtet. 
+Da sich das Volumen $V$ bei einem gewissen Druck $p +\Delta p$ um $\Delta V$ erweitert hat, lässt sich die Arbeit also beschreiben als.
 \begin{equation}
 \label{eqn:BC}
     -A_{BC} = (p+ \Delta p) \cdot (V_D-V_F)
 \end{equation}
 Hierbei wurde verwendet, dass $\Delta V$ eben der Abstand zwischen $V_F$ und $V_D$ ist. Die Arbeit wird vom Gas verrichtet um in eben diese Phase
 zu kommen, folglich ist das Vorzeichen negativ. \\
-Wird von hier das Gas auf die ursprüngliche Temperatur $T$ abkühlen, wird wiederum Energie vom System abgegeben.
+Wird von hier das Gas auf die ursprüngliche Temperatur $T$ abgekühlt, wird wiederum Energie vom System abgegeben.
 Die Tatsache, dass die Molwärme eines Stoffes multipliziert mit der Temperatur die Wärmeenergie angibt, führt auf den Zusammenhang.
 \begin{equation}
     -\Delta Q_{CD} = C_D \cdot \Delta T
@@ -72,7 +71,7 @@ abgegeben.
 \begin{equation}
     -A_{DA} = p \cdot (V_D - V_F)
 \end{equation}
-Summiert sich nun die hinzu - und abgegebene Wärme muss diese nach dem ersten Hauptsatz der Thermodynamik gleich der summierten, verrichteten Arbeit sein.
+Summiert sich nun die hinzu - und abgegebene Wärme, muss diese nach dem ersten Hauptsatz der Thermodynamik gleich der summierten verrichteten Arbeit sein.
 Also gilt:
 \begin{align*}
      \Delta Q_{ges} &= C_F \cdot \Delta T - C_D \cdot \Delta T + L(T) + \Delta L - L(T) \\
@@ -117,7 +116,7 @@ Es folgt die Gleichung.
 \begin{align}
 \label{eqn:wichtig}
     \frac{R}{p} \Delta p &= \frac{L}{T^2} \Delta T \\
-    \intertext{Integration auf beiden Seiten nach entsprechender Variabel und unter Anwendung der $e$ Funktion liefert}
+    \intertext{Integration auf beiden Seiten nach entsprechender Variabel und unter Anwendung der $e$-Funktion liefert}
     \hookrightarrow p &= p_0 \cdot \text{exp} \left(-\frac{L}{R} \cdot \frac{1}{T}\right)
 \end{align}
 Grundlage der Formel ist die Boltzmann-Statistik welche eben die kinetische Energie beschreibt die hoch genug für einen Phasenwechsel ist. 
