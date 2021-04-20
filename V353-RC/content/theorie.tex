@@ -44,7 +44,7 @@ Die Beziehungen können nun genutzt werden, um die obige Gleichung \eqref{eqn:1}
 \end{equation}
 Für die Differentialgleichung bezüglich $U_{C}$(t) muss lediglich der Strom $I$ in Abhängigkeit von der Kondensatorspannung $U_{C}$ aufgestellt werden. Dazu werden die Gleichungen \eqref{eqn:2} und \eqref{eqn:3} ineinander eingesetzt.
 \begin{equation}
-    I = -\frac{\text{d}Q}{\text{d}t} = C \frac{\text{d}U_{C}}{\text{d}t}
+    I = \frac{\text{d}Q}{\text{d}t} = C \frac{\text{d}U_{C}}{\text{d}t}
 \end{equation}
 Daraus folgt die zweite lineare homogene Differentialgleichung erster Ordnung.
 \begin{equation}
@@ -52,7 +52,37 @@ Daraus folgt die zweite lineare homogene Differentialgleichung erster Ordnung.
 \end{equation}
 Die Lösungen dieser Differentialgleichungen sind Exponentialfunktionen wobei die Randbedingungen $Q(t=0) = Q_{0}$ und $U_{C}(t=0) = U_{0}$ erfüllt seien sollen.
 \begin{align}
-    Q(t) &= Q_{0}\text{exp}(- \frac{1}{RC}) \\
-    U_{C} &= U_{0} \text{exp}(- \frac{1}{RC})
+    Q(t) &= Q_{0}\text{exp}\left(- \frac{t}{RC}\right) \\
+    U_{C}(t) &= U_{0} \text{exp}\left(- \frac{t}{RC}\right)
 \end{align}
-TEST TEST
+Aus den Ergebnissen kann nun durch Logarithmierung ein linearer Zusammenhang gefunden werden.
+\begin{equation}
+    \label{eqn:gerade}
+\text{ln}(U_{C}(t)) = -\frac{t}{RC} + \text{ln}(U_{0})
+\end{equation}
+Die Relaxationszeit $\tau$ ist definiert als
+\begin{equation}
+\tau = RC
+\end{equation}
+somit liefert die Steigung der Geradengleichung \eqref{eqn:gerade} einen hinreichenden Zusammenhang um $\tau$ zu bestimmen.
+\subsubsection{Aufladungskurve}
+Für die Aufladungskurve wird nun von außen eine Rechteckspannung $U_{0}$ angelegt, hierzu lassen sich nun ähnliche Gleichungen finden.
+Die Maschenregel in diesem Fall lautet.
+\begin{equation}
+    \label{eqn:masche2}
+    U_{0} = U_{C} + U_{R}
+\end{equation}
+Ganz analog zur Entladung lässt sich dieser Ausdruck wieder umformulieren.
+\begin{align}
+    \frac{\text{d}Q}{\text{d}t} &= - \frac{1}{RC} Q(t) + \frac{U_{0}}{R} \\
+    \frac{\text{d}U_{C}}{\text{d}t} &= - \frac{1}{RC} U_{C}(t) + \frac{U_{0}}{RC}
+\end{align}
+Beide Gleichungen besitzen die gleiche homogene Lösung wie zuvor bei der Entladung, allerdings mit anderen Randbedingungen. Für die Gesamtlösung fehlt nur noch die inhomogene Lösung.
+\begin{equation}
+Q_{\text{inh}}(t) = \text{exp}\left( - \frac{t}{RC}\right) \int_{}^{} \frac{U_{0}}{R} \text{exp}\left(\frac{t}{RC}\right) \text{d}t = U_{0}C
+\end{equation}
+Die beiden Lösungen lauten somit unter den Randbedingungen $Q(0) = 0$ und $U_{C}(0)= 0$.
+\begin{align}
+    Q(t) &= U_{0}C \cdot \left( 1 - \text{exp}\left(- \frac{t}{RC}\right) \right)\\
+    U_{C}(t) &= U_{0} \left( 1 - \text{exp}\left(- \frac{t}{RC}\right)\right)
+\end{align}
