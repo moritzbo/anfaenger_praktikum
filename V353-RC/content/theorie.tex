@@ -1,0 +1,58 @@
+\section{Theoretische Grundlagen}
+\subsection{Allgemeine Relaxationsgleichung}
+Die Relaxationszeit $\tau$ ist ein Maß dafür, wie schnell ein System von seinem Anfangszustand in seinen Endzustand, oder oder umgekehrt, übergeht. Allgemein lassen sich Relaxationserscheinungen also in vielen physikalischen Gebieten finden.
+Die Steigung einer beliebigen Größe $A$ im Punkt $t$ lässt sich als proportional zur Abweichung von $A$ um den Endzustand $A$($\infty$) angeben.
+\begin{equation}
+    \frac{\text{d}A}{\text{d}t} =  c (A(t) - A(\infty))
+\end{equation}
+Hier ist $c$ eine zu bestimmende Konstante.
+Diese allgemeine Gleichung lässt sich nun beispielsweise vom Zeitpunkt $t=0$ bis zu einer beliebigen Zeit integrieren.
+\begin{equation}
+    \int_{A(0)}^{A(t)} \frac{\text{d}A'}{A' - A(\infty)} = \int_{0}^{t} c \text{d}t'
+\end{equation}
+Die Integration davon liefert nun eine allgemeine Gleichung eines Relaxationsvorgangs.
+\begin{equation}
+    A(t) = A(\infty) + (A(0) - A(\infty))e^{ct}
+\end{equation}
+Wichtig ist hierbei noch zu erwähnen, dass die Relaxationserscheinung sich hier auf nicht oszillierende Systeme beschränkt.
+Außerdem muss die Konstante $c < 0$ sein, damit $A(t)$ beschränkt ist, sonst wird $A$ unendlich groß und somit seinen Endzustand nie erreichen.
+Im folgenden werden die Differentialgleichungen der Auf- und Entladungsvorgänge am RC-Kreis hergeleitet, welche genau diese Struktur aufweisen.
+\subsection{RC-Kreis}
+Ein RC-Kreis beschreibt eine elektrische Schaltung mit einem Ohmschen Widerstand $R$ und einem Kondensator mit Kapazität $C$. Die Reihenfolge dieser Elemente bestimmt darüber ob er als Tief- oder Hochpassfilter wirkt. Der typische Aufbau ist in Abbildung .......HIER...... dargestellt. Wenn der Kondensator zu Beginn ungeladen ist, kann er von außen mit einer Rechteckspannung $U_{0}$ über einen Widerstand $R$ aufgeladen werden. Dieser Vorgang wird Aufladung genannt. Umgekehrt und analog kann nun bei vollständiger Aufladung des Kondensators die äußere Spannung abgestellt werden. Über den Widerstand $R$ kann die Ladung nun abnehmen. Dieser Vorgang beschreibt die Entladung.
+\subsubsection{Entladungskurve}
+Zu Beginn der Entladung befindet sich am Kondensator eine Ladung $Q$, also liegt dort eine feste Spannung $U_{0}$. 
+Nach der Kirchhoffschen Maschenregel liegt nun der folgende Zusammenhang vor.
+\begin{equation}
+\label{eqn:1}
+    0 = U_{C} + U_{R}
+\end{equation}
+Dabei ist $U_{R}$ die Spannung welche über den Widerstand abfließt und $U_{C}$ die Spannung am Kondensator, welche als Funktion der Zeit gesucht wird. 
+Die Spannung am Kondensator lässt sich im Allgemeinen schreiben als.
+\begin{equation}
+\label{eqn:2}
+    U_{C} = \frac{Q}{C}
+\end{equation}
+Die Ladung vom Kondensator kann nur über den Widerstand $R$ abfließen, somit gilt.
+\begin{equation}
+\label{eqn:3}
+    I = \frac{\text{d}Q}{\text{d}t}
+\end{equation}
+Dies kann auch mit einem Minus definiert werden, dann müsste allerdings die Maschenregel \eqref{eqn:1} ebenfalls mit einem Minus geschrieben werden.
+Die Beziehungen können nun genutzt werden, um die obige Gleichung \eqref{eqn:1} auf eine Differentialgleichung zu bringen. Dabei gibt es zwei Möglichkeiten. Zum einen die Darstellung von der Ladung $Q(t)$, dazu wird die Gleichung \eqref{eqn:2}, sowie Gleichung \eqref{eqn:3} über den Zusammenhang $U = RI$ in Gleichung \eqref{eqn:1} eingesetzt. Nach kleinen Umformungen folgt.
+\begin{equation}
+    \frac{\text{d}Q}{\text{d}t} = - \frac{1}{RC} Q(t)
+\end{equation}
+Für die Differentialgleichung bezüglich $U_{C}$(t) muss lediglich der Strom $I$ in Abhängigkeit von der Kondensatorspannung $U_{C}$ aufgestellt werden. Dazu werden die Gleichungen \eqref{eqn:2} und \eqref{eqn:3} ineinander eingesetzt.
+\begin{equation}
+    I = -\frac{\text{d}Q}{\text{d}t} = C \frac{\text{d}U_{C}}{\text{d}t}
+\end{equation}
+Daraus folgt die zweite lineare homogene Differentialgleichung erster Ordnung.
+\begin{equation}
+    \frac{\text{d}U_{C}}{\text{d}t} = - \frac{1}{RC} U_{C}(t)
+\end{equation}
+Die Lösungen dieser Differentialgleichungen sind Exponentialfunktionen wobei die Randbedingungen $Q(t=0) = Q_{0}$ und $U_{C}(t=0) = U_{0}$ erfüllt seien sollen.
+\begin{align}
+    Q(t) &= Q_{0}\text{exp}(- \frac{1}{RC}) \\
+    U_{C} &= U_{0} \text{exp}(- \frac{1}{RC})
+\end{align}
+TEST TEST

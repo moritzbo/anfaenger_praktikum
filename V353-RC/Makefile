@@ -1,13 +1,13 @@
-all: build/V353 Das Relaxationsverhalten eines RC-KreisesDatei.pdf
+all: build/V353-RC.pdf
 
 # hier Python-Skripte:
 #build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python plot.py
+	#TEXINPUTS=$$(pwd): python plot.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: 
+#build/main.pdf: 
 
-build/V353 Das Relaxationsverhalten eines RC-KreisesDatei.pdf: FORCE | build
+build/V353-RC.pdf: FORCE | build
 	  TEXINPUTS=build: \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
