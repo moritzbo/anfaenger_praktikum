@@ -6,7 +6,7 @@ from scipy.stats import sem
 import scipy.constants as const
 import uncertainties.unumpy as unp
 
-U, t = np.genfromtxt("../data/ab.dat", unpack=True)
+U, t = np.genfromtxt("data/ab.dat", unpack=True)
 ulog = np.log(U)
 
 
@@ -15,9 +15,9 @@ tneu = t[:-1]
 tneu = tneu * (10)**(-3)
 
 plt.plot(tneu, 
-        Uneu,
+        Uneu, 
         'bx',
-        label='entladen',
+        label='Messwerte',
         linewidth=1.5)
 print(U)
 print(Uneu)
@@ -33,5 +33,8 @@ plt.plot(x,
         'k--',
         label='Lineare Ausgleichsgerade',
         linewidth=1.5)
-#plt.yscale("log")
-plt.show()
+plt.grid()
+plt.legend()
+plt.xlabel(r'$t[\si{\second}]$')
+plt.ylabel(r'$\text{ln}(U_c)$')
+plt.savefig("build/plot1.pdf")
