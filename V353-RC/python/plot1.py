@@ -27,7 +27,7 @@ errors = np.sqrt(np.diag(covar_matrix))
 
 for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
-x = np.linspace(0, 0.043)
+x = np.linspace(0, 0.0043)
 plt.plot(x, 
         params[0]*x + params[1],
         'k--',
