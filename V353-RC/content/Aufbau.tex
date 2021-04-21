@@ -1,28 +1,30 @@
 \section{Aufbau}
-\begin{minipage}[t] {0.5\textwidth}
-    Grundlegend wir der Versuch an einem Oszillator ausgeführt.
-    Dafür wird insbesondere ein Generator gebraucht, der in der Lage ist Spannungen verschiedener 
-    Typen herzustellen. Hier beschränken wir uns auf eine Rechteck - und Sinusspannung. 
-    Vom Oszillator soll dann jeweils die unmittelbare Spannung gemessen werden und die, 
-    die durch einen Kondensator und Widerstand modifiziert wurde.
-    Auf dem Display sieht man also sowohl die eingehende (Rechteck/ - Sinusspannung) als 
-    auch die ausgehende Spannung, also die Darstellung des Lade - und Entladungsevorgang des Kondensators.
+
+\begin{minipage}{0.6\textwidth}
+Grundlegend wir der Versuch an einem Oszillator ausgeführt.
+Dafür wird insbesondere ein Generator gebraucht, der in der Lage ist Spannungen verschiedener 
+Typen herzustellen. Hier beschränken wir uns auf eine Rechteck - und Sinusspannung. 
+Vom Oszillator soll dann jeweils die unmittelbare Spannung gemessen werden und die, 
+die durch einen Kondensator und Widerstand modifiziert wurde.
+Auf dem Display sieht man also sowohl die eingehende (Rechteck/ - Sinusspannung) als 
+auch die ausgehende Spannung, also die Darstellung des Lade - und Entladungsevorgang des Kondensators.
 \end{minipage}
-\begin{minipage} {0.5\textwidth}
-%\begin{figure}
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{bilder/oszillator.jpg}
-%    \caption{Oszillator und Generator mit Verkabelung.}
-%    \label{fig:aufbau}
-%\end{figure}
+\begin{minipage}[c]{0.3\textwidth}
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{bilder/oszillator.png}
+        \caption{Oszillator und Generator mit Verkabelung.}
+        \label{fig:aufbau}
+        \end{figure}     
 \end{minipage}
+ 
 \section{Durchführung}
 Die Durchführung teilt sich in die  drei folgenden Konfigurationen auf.
 \subsection{Bestimmung der Zeitkonstante}
 Um das Maß für die Geschwindigkeit zu errechnen gilt es also die Konstante $\text{RC}$ zu messen.
 Dafür wird eine Rechtecksspannung vom Generator angelegt und am Oszillator das Laden beziehungsweise Entladen
 Kondensators beobachtet. In Intervallen von $\Delta t = \SI{2.5}{ms}$ wird der Strom $U_c$ abgelesen und die
-Daten in eine Tabelle aufgenommen. Diese Daten haben jeweils einen Messfehler von 
+Daten in eine Tabelle aufgenommen. 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{bilder/RC.png}
@@ -32,7 +34,7 @@ Daten in eine Tabelle aufgenommen. Diese Daten haben jeweils einen Messfehler vo
 
 \subsection{Amplitudenbestimmung der Kondensatorspannung}
 \label{sectionref}
-Nun wird eine Sinusspannung vom Generator erzeugt, mit einer Frequenz die im Laufe jeweils um einen Wert
+Nun wird eine Sinusspannung vom Generator erzeugt mit einer Frequenz, die im Laufe jeweils um einen Wert
 von $\Delta\si{\hertz}= \SI{500}{\hertz}$ angehoben wird. Die entsprechende Amplitude $U_c$ wir 
 dem Oszillator entnommen und in eine Tabelle eingetragen.
  \begin{figure}
@@ -44,18 +46,26 @@ dem Oszillator entnommen und in eine Tabelle eingetragen.
 
 
 \subsection{Messung der Phasenverschiebung}
-Bei Beibehaltung der aktuellen Konfiguration wird der Vorgang aus \ref{sectionref} im gleichen Intervall 
+Bei Beibehaltung der aktuellen Konfiguration wird der Vorgang aus \ref{sectionref} in gleichen Intervallen
 wiederholt. Dabei werden beide Spannungen, die Eingehende und Ausgehende, angezeigt und achsensymetrisch
-zur X - Achse ausgerichtet.
+zur X - Achse ausgerichtet.\\
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{bilder/ab.png}
     \caption{Schaltplan zur Bestimmung der Phasenverschiebung zwischen zwei Spannungen.\cite{skript}}
     \label{fig:ab}
 \end{figure}
+Ein nun messbarer Abstand $a$ und $b$ %ref zur darstlellung
+ist bei entsprechender Frequenz und Amplitude zu entnehmen. Hier bildet $b$ eben die Wellenlänge
+der Spannung $U_g$ ab. Die Phasenverschiebung $\varphi$ resultiert aus folgender Gleichung.
+\begin{equation}
+    \varphi= \frac{a}{b} \cdot 2 \pi
+\end{equation}
 
-Ein nun messbarer Abstand $a \text{und} b$ %ref zur darstlellung
-ist nun bei entsprechender Frequenz und Amplitude zu entnehmen. Dieser wird wiederum in eine Tabelle 
-eingetragen und im späteren zur Bestimmung der Phasenverschiebung zu benutzen.
-
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{bilder/ab2.png}
+    \caption{Art der Ablesung von Paramter $a$ und $b$.\cite{skript}}
+    \label{fig:ab}
+\end{figure}
 %Fehler noch einfügen
