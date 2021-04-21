@@ -12,7 +12,7 @@ ulog = np.log(U)
 
 Uneu = ulog[:-1]
 tneu = t[:-1]
-tneu = tneu * (10)**(-3)
+tneu = tneu * (10)**(-4)
 
 plt.plot(tneu, 
         Uneu, 
@@ -33,8 +33,16 @@ plt.plot(x,
         'k--',
         label='Lineare Ausgleichsgerade',
         linewidth=1.5)
+
 plt.grid()
 plt.legend()
 plt.xlabel(r'$t[\si{\second}]$')
 plt.ylabel(r'$\text{ln}(U_c)$')
-plt.savefig("build/plot1.pdf") 
+
+
+yo = ufloat(params[0], errors[0])
+
+tau = - 1/(yo)
+print(tau)
+
+plt.savefig("build/plot1.pdf")
