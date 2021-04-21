@@ -86,3 +86,49 @@ Die beiden Lösungen lauten somit unter den Randbedingungen $Q(0) = 0$ und $U_{C
     Q(t) &= U_{0}C \cdot \left( 1 - \text{exp}\left(- \frac{t}{RC}\right) \right)\\
     U_{C}(t) &= U_{0} \left( 1 - \text{exp}\left(- \frac{t}{RC}\right)\right)
 \end{align}
+\subsubsection{Relaxation bei periodischer Spannung}
+Statt der Rechteckförmigen Spannung wird hier nun eine Wechselspannung der Form
+\begin{equation}
+    \label{eqn:y2}
+U(t) = U_{0}\text{cos}(\omega t)
+\end{equation}
+verwendet,
+dabei ist $\omega$ die Kreisfrequenz. Bei sehr niedrigen Frequenzen von $w << 1$/$RC$ ist die Spannung am Kondensator quasi $U(t)$. Bei höher werdenden Frequenzen
+kommt es allerdings zu einer Phasenverschiebung $\phi$ zwischen angelegter Spannung $U(t)$ und Kondensatorspannung $U_{C}$. Zusätzlich wird die Amplitude $A$ der Kondensatorspannung 
+mit zunehmender Frequenz kleiner.
+Daher nimmt die Kondensatorspannung die Form
+\begin{equation}
+    \label{eqn:y1}
+U_{C}(t) = A(\omega) \cdot \text{cos}(\omega t + \phi(\omega))
+\end{equation}
+an. Nun gilt wieder die Maschenregel \eqref{eqn:masche2} wobei $U_{0}$ mit der Wechselspannung $U(t)$ ersetzt wird. Nun können die Ausdrücke für $U_{C}$, $U_{t}$ und $U_{R}$ in Abhängigkeit von $U_{C}$ aus den Gleichungen \eqref{eqn:y1} und \eqref{eqn:y2}
+eingesetzt werden.
+Es folgt der Zusammenhang.
+\begin{equation}
+    \label{eqn:okdude}
+    U_{0}\text{cos}(\omega t) = A(\omega)\omega R C \cdot \text{sin}(\omega t + \phi) + A(\omega) \text{cos}(\omega t + \phi)
+\end{equation}
+Diese Gleichung muss also für alle Zeiten $t$ erfüllt sein. Eine Lösungsmöglichkeit bietet eine Wahl von $\omega t$, so dass sich die Gleichung möglichst vereinfacht wird.
+Für $\omega t = \pi$/$2$ folgt durch einige trigonometrische Zusammenhänge eine Bedingung für die Phasenverschiebung.
+\begin{equation}
+\phi(\omega) = \text{arctan}(-\omega RC)
+\end{equation}
+Dies bestätigt also, dass für niedrige Frequenzen $w$ keine Phasenverschiebung vorliegt und für größere Frequenz die Phasenverschiebung asympotisch gegen $\pi$/$2$ geht.
+Für die Amplitude wird ein ähnlicher Lösungsansatz verwendet, wobei $\omega t + \phi= \pi$/$2$ sein soll. Dadurch verschwindet also die Phasenverschiebung in der Gleichung \eqref{eqn:okdude}.
+Es folgt
+\begin{equation}
+A(\omega) = \frac{U_{0}}{\sqrt{1+(\omega RC)^{2}}}
+\end{equation}
+\subsubsection{Integrationsverhalten}
+Unter bestimmten Voraussetzungen kann ein RC-Kreis eine Eingangsspannung $U(t)$ integrieren. Mathematisch ausgedrückt bedeutet das.
+\begin{equation}
+U_{C} \propto \int_{}^{} U(t) \text{d}t
+\end{equation}
+In einem RC-Kreis mit einer von außen angelegten Spannung $U(t)$ gilt nun wieder die Gleichung.
+\begin{equation*}
+U(t) = RC \frac{\text{d}U_{C}}{\text{d}t} + U_{C}(t)
+\end{equation*}
+Mit der Voraussetzung $\omega >> 1$/$RC$ ist $|U_{C}| << |U(t)|$ somit gilt näherungsweise.
+\begin{equation}
+U(t) = RC \cdot \frac{\text{d}U_{C}}{\text{d}t} \quad \to \quad U_{C}(t) = \frac{1}{RC} \int_{0}^{t}U(t') \text{d}t'
+\end{equation}
