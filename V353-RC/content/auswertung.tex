@@ -1,10 +1,19 @@
 \section{Auswertung}
-\subsection{a)}  %--> idk wie wir layout mache wollen/section gerüst usw
-Zur Bestimmung der vorher definierten Zeitkonstante RC wird der Entladungsvorgung des Kondensators untersucht.
-Dazu werden die gemessenen Spannungen $U_c$ bei entsprechender Zeit $t$ in einem halblogarithmischen Diagramm dargestellt.
-Anschließend folgt die Annährung einer linearen Ausgleichsgerade durch Python, mit einem charakteristischen Steigungsparamter
-der Form $1/RC$. Die Parmater der Gerade lauten.
+\subsection{Bestimmung der Relaxationszeit $\tau$)}  %--> idk wie wir layout mache wollen/section gerüst usw
+Zur Bestimmung der vorher definierten Relaxationszeit $\tau = RC$ wird der Entladungsvorgung des Kondensators untersucht.
+Dazu werden die gemessenen Spannungen $U_{C}$ bei entsprechender Zeit $t$ in einem halblogarithmischen Diagramm dargestellt.
+Anschließend folgt die Annährung einer linearen Ausgleichsgerade durch Python, mit einem charakteristischen Steigungsparamter $a$
+der Form $1/RC$. 
+Die ermittelte Ausgleichsgerade hat also die Form.
+\begin{equation}
+    \text{ln}(U_{C}(t)) = a \cdot t + b
+\end{equation}
+Die Parmater der Gerade lauten.
 % \begin{align*}
-    % 1/{RC} &= 
+    % a &= 
     % b &= 
 % \end{align*}
+Der Vergleich mit der Gleichung \eqref{eqn:gerade} zeigt nochmal die Verbindung zwischen $a$ und $\tau$. Die Relaxationszeit ist folglich.
+\begin{equation}
+\tau = RC = - \frac{1}{a}
+\end{equation}
