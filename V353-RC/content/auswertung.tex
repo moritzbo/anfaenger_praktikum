@@ -10,17 +10,51 @@ Die ermittelte Ausgleichsgerade hat also die Form.
 \end{equation}
 Die Parameter der Gerade lauten.
  \begin{align*}
-     a &= \SI{-804.325(52531)}{\si{\per\second}} \\
-     b &= \SI{0.950(123)}{}
+     a &= \SI{-80.432(5253)}{\si{\per\second}} \\
+     b &= \SI{0.095(0123)}{}
  \end{align*}
 Der Vergleich mit der Gleichung \eqref{eqn:gerade} zeigt nochmal die Verbindung zwischen $a$ und $\tau$. Die Relaxationszeit ist folglich.
 \begin{equation}
-\tau = RC = - \frac{1}{a} = \SI{1.24(8)}{\milli\second}
+\tau = RC = - \frac{1}{a} = \SI{12.4(8)}{\milli\second}
 \end{equation}
- 
+Der Fehler ergibt sich aus einer Fehlerfortpflanzung welche bestimmt werden kann durch.
+\begin{equation}
+\increment \tau = \sqrt{\left( \frac{\partial \tau}{\partial a}\right)^{2} \cdot (\increment a)^{2}} = \left( \frac{\increment a}{a^{2}}\right) 
+\end{equation}
 \begin{figure}
     \centering 
     \includegraphics[width=\textwidth]{build/plot1.pdf}
     \caption{Messwerte der Entladungskurve in halblogarithmischer Darstellung mit Ausgleichsgeraden.}
     \label{plt:plot1}
 \end{figure} 
+
+\subsection{Frequenzabhängige Amplitudenmessung und Ausgleichsrechnung}
+
+Alternativ zur Aufnahme von Auf- und Entladungskurven lässt sich das Relaxationsverhalten auch bei anliegenden Wechselspannung ermitteln.
+Dabei wird die Wechselspannung auf eine Spannungsamplitude $U_{0}$ eingestellt und bei verschiedenen Frequenzen $f$ wird die Kondensatorspannungsamplitude $A(\omega)$ notiert.
+Die zugehörigen Messgrößen sind in der Tabelle \ref{tab:freq} notiert und die Generatorspannungsamplitude betrug $U_{0} = \SI{11}{\volt}$.
+\\
+Die Gleichung \eqref{eqn:yeahyeah} liefert anschließend den Zusammenhang zwischen der Amplitude $A(\omega)$, Frequenz $f$ und Relaxationszeit $\tau$.
+Durch eine nichtlineare Ausgleichsrechnung kann die Relaxationszeit nun aus den Messwerten bestimmt werden, dazu wird die Gleichung zunächst durch $U_{0}$ geteilt.
+\begin{equation}
+    \frac{A(\omega)}{U_{0}} = \frac{1}{\sqrt{1+(\omega RC)^{2}}}
+\end{equation}
+Ein Curvefit dieser angepassten Wertepaare liefert die Relaxationszeit.
+\begin{equation*}
+\tau = \SI{16.4(4)}{\milli\second}
+\end{equation*}
+Der theoretische Wert der Amplitude 
+\begin{figure}
+    \centering 
+    \includegraphics[width=\textwidth]{build/plot5.pdf}
+    \caption{Frequenzabhängige Amplituden und Ausgleichsrechnung in logarithmischer Darstellung.}
+    \label{plt:plot5}
+\end{figure} 
+
+\begin{figure}
+    \centering 
+    \includegraphics[width=\textwidth]{build/plot4.pdf}
+    \caption{Frequenzabhängige Amplituden und Ausgleichsrechnung in linearer Darstellung.}
+    \label{plt:plot4}
+\end{figure} 
+
