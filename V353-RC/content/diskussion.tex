@@ -1,0 +1,27 @@
+\section{Diskussion}
+
+Zunächst lässt sich an der Auswertung folgendes feststellen. Die aufgenommene Entladungskurve liefert einen Wert für die 
+Relaxationszeit $\tau$ mittels linearer Ausgleichsgeraden. Diese besitzt für das gesamte Entladungsintervall von $\increment t = \SI{42.5}{\milli\second}$ eine annehmbare
+Größenordnung. Auf diesem Ergebnis liegen sowohl statistische als auch systematische Fehler welche durch ein größeres Messintervall und weitere Messungsdurchläufe verringert werden 
+können. Das Oszilloskop besitzt zusätzlich nur eine gewisse Genauigkeit bei der Aufzeichnung von Auf- und Entladevorgängen. Die Spannung am Kondensators erreicht beispielweise 
+nie den gänzlich vollendladenen Zustand.
+Es gibt allerdings keinen Grund zur Annahme, dass das Ergebnis für die Relaxationszeit eine große Abweichung besitzt.
+\\
+\newline
+Zur Bestimmung einer optimierten Relaxationszeit wurde die Spannungsamplitude am Kondensators in Abhängigkeit von der Frequenz gemessen. 
+Erwartet wird, dass bei größer werdenden Frequenzen die Spannungsamplitude am Kondensators abfällt.
+Dies konnte ebenfalls durch die Messwerte festgestellt werden und es bestätigt die Eigenschaft des 
+RC-Kreises als Tiefpassfilter. Er lässt kleine Frequenzen ungehindert hindurch aber hohe Frequenzen werden unterdrückt.
+Ein großes Problem ergibt sich allerdings durch das gewählte Messintervall der Frequenz.
+Der größte Spannungsabfall des Kondensators geschieht schon bei Frequenz zwischen $\SI{10}{}$-$\SI{100}{\hertz}$ welche in der aufgenommenen Messreihe ausgelassen wurden.
+Sinnvoll ist es also bei der Frequenzmessung logarithmische Abstände zu wählen. Diese Wahl der Messintervalle stellen vor allem bei der Phasenverschiebung ein größeres Problem dar.
+Die Abweichung der Relaxationszeit beträgt hier bereits $\SI{24.4(18)}{\percent}$, deshalb kann das Ergebnis nicht als Optimierung betrachtet werden.
+\\
+\newline
+Die Phasenverschiebung zwischen Generator- und Kondensatorspannung sollte bei größeren Frequenzen zunehmen, dies ist auch erkennbar allerdings
+wieder nur zwischen zwei Messwerten.
+Das Resultat ist ein Sprung zwischen der Frequenz $\SI{10}{\hertz}$ 
+und $\SI{500}{\hertz}$ welcher genau diesen Sachverhalt zeigt. Anschließend ist allerdings ein Rücklauf der Phasenverschiebung für noch größere Frequenzwerte erkennbar.
+Dies ist wieder auf die ungünstig gewählten Messintervalle zurückzuführen. Statt einem grundsätzlich steigenden Verlauf erhalten wir also einen leicht abfallenden Verlauf über die meisten Werte, welche die 
+Ausgleichsrechnung drastisch beeinflusst. Erkennbar ist dennoch die zu Beginn kleine Phasenverschiebung bei $\SI{10}{\hertz}$, welche stark ansteigt und sich einer
+Phasenverschiebung von $\pi$/$2$ annähert wie vorhergesagt.
