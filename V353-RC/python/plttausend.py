@@ -6,7 +6,7 @@ from scipy.stats import sem
 import scipy.constants as const
 import uncertainties.unumpy as unp
 
-f, U, a, b, phi = np.genfromtxt("../data/teilcd.dat", unpack=True)
+f, U, a, b, phi = np.genfromtxt("data/teilcd.dat", unpack=True)
 
 
 
@@ -29,7 +29,7 @@ x = np.linspace(10, 10000)
 plt.plot(f, 
         phi, 
         'kx',
-        label='messwerte',
+        label='Messwerte',
         linewidth=1.5)
 
 plt.plot(x, 
@@ -37,8 +37,10 @@ plt.plot(x,
         'b--',
         label='Nichtlinearer Fit',
         linewidth=1.5)
-plt.legend()        
-plt.show()
-
+plt.legend(loc=4)        
+#plt.show()
+plt.xlabel(r'$f[\si{\hertz}]$')
+plt.ylabel(r'$\phi(f)[\si{\radian}]$')
 t=params[0]
 print(t)
+plt.savefig("build/plot6.pdf")

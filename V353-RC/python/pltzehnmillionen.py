@@ -8,18 +8,49 @@ import uncertainties.unumpy as unp
 
 f, U, a, b, phi = np.genfromtxt("../data/teilcd.dat", unpack=True)
 
-A =  -(np.sin(phi)/(f*-0.037))*11
 
-np.grad2deg
+def sigmoid(f, p):
+    return (np.sin(p)/(f*2*np.pi*0.0164))
+
+
+params, covariance_matrix = curve_fit(sigmoid, f, phi)
+
+uncertainties = np.sqrt(np.diag(covariance_matrix))
+
+for name, value, uncertainty in zip('p', params, uncertainties): 
+    print(f'{name} = {value:.4f} ± {uncertainty:.4f}')
 
 
 
-A = - (np.sin(phi)/(f*-0.037))*1.375
+params, covar_matrix = np.polyfit(phi, U/11, deg= 2, cov=True)
+ 
+errors = np.sqrt(np.diag(covar_matrix))
 
-plt.polar(phi, 
-        A, 
-        'kx',
-        label='messwerte',
+for name, value, error in zip('ab', params, errors):
+    print(f'{name} = {value:.3f} ± {error:.3f}')
+x=np.linspace(1.4,2)
+plt.polar(x, 
+        params[0]*x**2 +params[1]*x+params[2],
+        'k--',
+        label='Messwerte',
         linewidth=1.5)
+
+#x = np.linspace(1.4,2)
+#plt.polar(x, 
+#        sigmoid(x,params[0]), 
+#        'k--',
+#        label='Messwerte',
+#        linewidth=1.5)
+plt.polar(phi, 
+        U/11, 
+        'bx',
+        label='Messwerte',
+        linewidth=1.5)
+plt.plot()
+# plt.polar(phi, 
+#         A*11, 
+#         'kx',
+#         label='messwerte',
+#         linewidth=1.5)
 
 plt.show()

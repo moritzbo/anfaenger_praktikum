@@ -17,5 +17,8 @@ print(phi360)
 a1 = ufloat(12.4, 0,8)
 a2 = ufloat(16.4 , 0.4)
 
-erg = 100* ((a2 - a1)/a2)
-print(erg)
+b1 = ufloat(37.9, 0.7)
+
+erg = 100* ((a2 - b1)/a2)
+
+print(f'{erg:.4f}')
