@@ -6,20 +6,22 @@ from scipy.stats import sem
 import scipy.constants as const
 import uncertainties.unumpy as unp
 
-f, U, a, b, phi = np.genfromtxt("../data/teilcd.dat", unpack=True)
+f, U, phi = np.genfromtxt("../data/art.dat", unpack=True)
 
-A =  -(np.sin(phi)/(f*-0.037))*11
+phi_rad=np.deg2rad(phi)
 
-np.grad2deg
+U = - (np.sin(phi)/(f*np.pi*2*-0.0014))*3
 
-
-
-A = - (np.sin(phi)/(f*-0.037))*1.375
-
-plt.polar(phi, 
-        A, 
+plt.polar(phi_rad, 
+        U, 
         'kx',
         label='messwerte',
         linewidth=1.5)
+# plt.polar(phi, 
+#         U, 
+#         'bx',
+#         label='messwerte',
+#         linewidth=1.5)
+
 
 plt.show()
