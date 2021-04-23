@@ -8,7 +8,9 @@ import uncertainties.unumpy as unp
 
 f, U, a, b, phi = np.genfromtxt("../data/teilcd.dat", unpack=True)
 
-A = - np.sin(phi)/(f*-0.037)*11
+A =  -(np.sin(phi)/(f*-0.037))*11
+
+np.grad2deg
 
 plt.polar(A, 
         phi, 
