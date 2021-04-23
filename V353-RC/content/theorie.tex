@@ -2,23 +2,23 @@
 \subsection{Allgemeine Relaxationsgleichung}
 Die Relaxationszeit $\tau$ ist ein Maß dafür, wie schnell ein System von seinem Anfangszustand in seinen Endzustand, oder oder umgekehrt, übergeht. Allgemein lassen sich Relaxationserscheinungen also in vielen physikalischen Gebieten finden.
 Die Steigung einer beliebigen Größe $A$ im Punkt $t$ lässt sich als proportional zur Abweichung von $A$ um den Endzustand $A$($\infty$) angeben.
-\begin{equation}
+\begin{equation*}
     \frac{\text{d}A}{\text{d}t} =  c (A(t) - A(\infty))
-\end{equation}
+\end{equation*}
 Hier ist $c$ eine zu bestimmende Konstante.
 Diese allgemeine Gleichung lässt sich nun beispielsweise vom Zeitpunkt $t=0$ bis zu einer beliebigen Zeit integrieren.
-\begin{equation}
+\begin{equation*}
     \int_{A(0)}^{A(t)} \frac{\text{d}A'}{A' - A(\infty)} = \int_{0}^{t} c \text{d}t'
-\end{equation}
+\end{equation*}
 Die Integration davon liefert nun eine allgemeine Gleichung eines Relaxationsvorgangs.
-\begin{equation}
+\begin{equation*}
     A(t) = A(\infty) + (A(0) - A(\infty))e^{ct}
-\end{equation}
+\end{equation*}
 Wichtig ist hierbei noch zu erwähnen, dass die Relaxationserscheinung sich hier auf nicht oszillierende Systeme beschränkt.
 Außerdem muss die Konstante $c < 0$ sein, damit $A(t)$ beschränkt ist, sonst wird $A$ unendlich groß und somit seinen Endzustand nie erreichen.
-Im folgenden werden die Differentialgleichungen der Auf- und Entladungsvorgänge am RC-Kreis hergeleitet, welche genau diese Struktur aufweisen.
+Im folgenden werden die Differentialgleichungen der Auf- und Entladungsvorgänge am RC-Kreis motiviert, welche genau diese Struktur aufweisen.
 \subsection{RC-Kreis}
-Ein RC-Kreis beschreibt eine elektrische Schaltung mit einem Ohmschen Widerstand $R$ und einem Kondensator mit Kapazität $C$. Die Reihenfolge dieser Elemente bestimmt darüber ob er als Tief- oder Hochpassfilter wirkt. Der typische Aufbau ist in Abbildung .......HIER...... dargestellt. Wenn der Kondensator zu Beginn ungeladen ist, kann er von außen mit einer Rechteckspannung $U_{0}$ über einen Widerstand $R$ aufgeladen werden. Dieser Vorgang wird Aufladung genannt. Umgekehrt und analog kann nun bei vollständiger Aufladung des Kondensators die äußere Spannung abgestellt werden. Über den Widerstand $R$ kann die Ladung nun abnehmen. Dieser Vorgang beschreibt die Entladung.
+Ein RC-Kreis beschreibt eine elektrische Schaltung mit einem Ohmschen Widerstand $R$ und einem Kondensator mit Kapazität $C$. Die Reihenfolge dieser Elemente bestimmt darüber ob er als Tief- oder Hochpassfilter wirkt. Der typische Aufbau ist in Abbildung \ref{fig:RC} dargestellt. Wenn der Kondensator zu Beginn ungeladen ist, kann er von außen mit einer Rechteckspannung $U_{0}$ über einen Widerstand $R$ aufgeladen werden. Dieser Vorgang wird Aufladung genannt. Umgekehrt und analog kann nun bei vollständiger Aufladung des Kondensators die äußere Spannung abgestellt werden. Über den Widerstand $R$ kann die Ladung nun abnehmen. Dieser Vorgang beschreibt die Entladung.
 \subsubsection{Entladungskurve}
 Zu Beginn der Entladung befindet sich am Kondensator eine Ladung $Q$, also liegt dort eine feste Spannung $U_{0}$. 
 Nach der Kirchhoffschen Maschenregel liegt nun der folgende Zusammenhang vor.
@@ -39,31 +39,31 @@ Die Ladung vom Kondensator kann nur über den Widerstand $R$ abfließen, somit g
 \end{equation}
 Dies kann auch mit einem Minus definiert werden, dann müsste allerdings die Maschenregel \eqref{eqn:1} ebenfalls mit einem Minus geschrieben werden.
 Die Beziehungen können nun genutzt werden, um die obige Gleichung \eqref{eqn:1} auf eine Differentialgleichung zu bringen. Dabei gibt es zwei Möglichkeiten. Zum einen die Darstellung von der Ladung $Q(t)$, dazu wird die Gleichung \eqref{eqn:2}, sowie Gleichung \eqref{eqn:3} über den Zusammenhang $U = RI$ in Gleichung \eqref{eqn:1} eingesetzt. Nach kleinen Umformungen folgt.
-\begin{equation}
+\begin{equation*}
     \frac{\text{d}Q}{\text{d}t} = - \frac{1}{RC} Q(t)
-\end{equation}
+\end{equation*}
 Für die Differentialgleichung bezüglich $U_{C}$(t) muss lediglich der Strom $I$ in Abhängigkeit von der Kondensatorspannung $U_{C}$ aufgestellt werden. Dazu werden die Gleichungen \eqref{eqn:2} und \eqref{eqn:3} ineinander eingesetzt.
-\begin{equation}
+\begin{equation*}
     I = \frac{\text{d}Q}{\text{d}t} = C \frac{\text{d}U_{C}}{\text{d}t}
-\end{equation}
+\end{equation*}
 Daraus folgt die zweite lineare homogene Differentialgleichung erster Ordnung.
-\begin{equation}
+\begin{equation*}
     \frac{\text{d}U_{C}}{\text{d}t} = - \frac{1}{RC} U_{C}(t)
-\end{equation}
+\end{equation*}
 Die Lösungen dieser Differentialgleichungen sind Exponentialfunktionen wobei die Randbedingungen $Q(t=0) = Q_{0}$ und $U_{C}(t=0) = U_{0}$ erfüllt seien sollen.
-\begin{align}
+\begin{align*}
     Q(t) &= Q_{0}\text{exp}\left(- \frac{t}{RC}\right) \\
     U_{C}(t) &= U_{0} \text{exp}\left(- \frac{t}{RC}\right)
-\end{align}
+\end{align*}
 Aus den Ergebnissen kann nun durch Logarithmierung ein linearer Zusammenhang gefunden werden.
 \begin{equation}
     \label{eqn:gerade}
 \text{ln}(U_{C}(t)) = -\frac{t}{RC} + \text{ln}(U_{0})
 \end{equation}
 Die Relaxationszeit $\tau$ ist definiert als
-\begin{equation}
+\begin{equation*}
 \tau = RC
-\end{equation}
+\end{equation*}
 somit liefert die Steigung der Geradengleichung \eqref{eqn:gerade} einen hinreichenden Zusammenhang um $\tau$ zu bestimmen.
 \subsubsection{Aufladungskurve}
 Für die Aufladungskurve wird nun von außen eine Rechteckspannung $U_{0}$ angelegt, hierzu lassen sich nun ähnliche Gleichungen finden.
@@ -73,19 +73,19 @@ Die Maschenregel in diesem Fall lautet.
     U_{0} = U_{C} + U_{R}
 \end{equation}
 Ganz analog zur Entladung lässt sich dieser Ausdruck wieder umformulieren.
-\begin{align}
+\begin{align*}
     \frac{\text{d}Q}{\text{d}t} &= - \frac{1}{RC} Q(t) + \frac{U_{0}}{R} \\
     \frac{\text{d}U_{C}}{\text{d}t} &= - \frac{1}{RC} U_{C}(t) + \frac{U_{0}}{RC}
-\end{align}
+\end{align*}
 Beide Gleichungen besitzen die gleiche homogene Lösung wie zuvor bei der Entladung, allerdings mit anderen Randbedingungen. Für die Gesamtlösung fehlt nur noch die inhomogene Lösung.
-\begin{equation}
+\begin{equation*}
 Q_{\text{inh}}(t) = \text{exp}\left( - \frac{t}{RC}\right) \int_{}^{} \frac{U_{0}}{R} \text{exp}\left(\frac{t}{RC}\right) \text{d}t = U_{0}C
-\end{equation}
+\end{equation*}
 Die beiden Lösungen lauten somit unter den Randbedingungen $Q(0) = 0$ und $U_{C}(0)= 0$.
-\begin{align}
+\begin{align*}
     Q(t) &= U_{0}C \cdot \left( 1 - \text{exp}\left(- \frac{t}{RC}\right) \right)\\
     U_{C}(t) &= U_{0} \left( 1 - \text{exp}\left(- \frac{t}{RC}\right)\right)
-\end{align}
+\end{align*}
 \subsubsection{Relaxation bei periodischer Spannung}
 Statt der Rechteckförmigen Spannung wird hier nun eine Wechselspannung der Form
 \begin{equation}
@@ -110,9 +110,9 @@ Es folgt der Zusammenhang.
 \end{equation}
 Diese Gleichung muss also für alle Zeiten $t$ erfüllt sein. Eine Lösungsmöglichkeit bietet eine Wahl von $\omega t$, so dass sich die Gleichung möglichst vereinfacht wird.
 Für $\omega t = \pi$/$2$ folgt durch einige trigonometrische Zusammenhänge eine Bedingung für die Phasenverschiebung.
-\begin{equation}
+\begin{equation*}
 \phi(\omega) = \text{arctan}(-\omega RC)
-\end{equation}
+\end{equation*}
 Dies bestätigt also, dass für niedrige Frequenzen $w$ keine Phasenverschiebung vorliegt und für größere Frequenz die Phasenverschiebung asympotisch gegen $\pi$/$2$ geht.
 Für die Amplitude wird ein ähnlicher Lösungsansatz verwendet, wobei $\omega t + \phi= \pi$/$2$ sein soll. Dadurch verschwindet also die Phasenverschiebung in der Gleichung \eqref{eqn:okdude}.
 Es folgt
@@ -122,14 +122,14 @@ A(\omega) = \frac{U_{0}}{\sqrt{1+(\omega RC)^{2}}}
 \end{equation}
 \subsubsection{Integrationsverhalten}
 Unter bestimmten Voraussetzungen kann ein RC-Kreis eine Eingangsspannung $U(t)$ integrieren. Mathematisch ausgedrückt bedeutet das.
-\begin{equation}
+\begin{equation*}
 U_{C} \propto \int_{}^{} U(t) \text{d}t
-\end{equation}
+\end{equation*}
 In einem RC-Kreis mit einer von außen angelegten Spannung $U(t)$ gilt nun wieder die Gleichung.
 \begin{equation*}
 U(t) = RC \frac{\text{d}U_{C}}{\text{d}t} + U_{C}(t)
 \end{equation*}
 Mit der Voraussetzung $\omega >> 1$/$RC$ ist $|U_{C}| << |U(t)|$ somit gilt näherungsweise.
-\begin{equation}
+\begin{equation*}
 U(t) = RC \cdot \frac{\text{d}U_{C}}{\text{d}t} \quad \to \quad U_{C}(t) = \frac{1}{RC} \int_{0}^{t}U(t') \text{d}t'
-\end{equation}
+\end{equation*}
