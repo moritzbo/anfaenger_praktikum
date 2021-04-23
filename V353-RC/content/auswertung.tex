@@ -67,6 +67,26 @@ Zu erkennen ist also eine systematische Abweichung, des errechneten Wertes der E
 \subsection{Phasenverschiebung der Kondensatorspannung}
 Aus der dritten Messreihe können die Phasenverschiebung durch die Gleichung \eqref{eqn:phi} errechnet werden. Diese sind zusammen
 mit den Frequenzen $f$ in der Tabelle \ref{tab:freq} angegeben.
+Der Zusammenhang aus \eqref{eqn:sadge} liefert uns eine enstprechend dritte Art zur Bestimmung der Zeitkonstante $RC$.
+\begin{equation}
+    \phi(\omega) = \text{arctan}(-\omega RC)
+\end{equation}
+Analog zu den vorherigen Teil wird hier eine nichtlineare Ausgleichsfunktion mit Hilfe eines Curvefit in Python gefunden.
+Der Parameter $\tau$ enstpricht der Zeitkonstante $RC$ und beträgt.
+\begin{equation}
+    \tau = \SI{37.9(07)}{\ms}
+\end{equation}
+Die abbildene Funktion ist in Abbildung \ref{fig:plttausend} dargestellt. Im Vergleich zu den anderen Messreihen fällt hier eine besonders
+große Differenz zur optimalen Zeitkonstante auf.
+\begin{equation*}
+    \label{eqn:Mp1kompletterMuell}
+    \tau_{\si{\percent}} = \SI{131.1(71)}{\percent}
+\end{equation*}
+\begin{figure}
+    \centering 
+    \includegraphics[width=\textwidth]{build/plot6.pdf}
+    \caption{Frequenzabhängige Phasenverschiebung und Ausgleichsrechnung in nicht linearer Darstellung.}
+    \label{fig:plttausend}
+\end{figure} 
 
-
-WWWE
+\subsection{Abhängigkeit der Relativamplitude von der Phase}
