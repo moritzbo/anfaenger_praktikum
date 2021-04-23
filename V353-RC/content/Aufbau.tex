@@ -1,6 +1,12 @@
+\newpage
 \section{Aufbau}
 
-\begin{minipage}{0.6\textwidth}
+\begin{wrapfigure}{r}{6cm}
+        \includegraphics[scale=0.05]{bilder/oszillator.png}
+        \caption{Oszillator.}
+        \label{fig:aufbau}          
+\end{wrapfigure}
+
 Grundlegend wir der Versuch an einem Oszillator ausgeführt.
 Dafür wird insbesondere ein Generator gebraucht, der in der Lage ist Spannungen verschiedener 
 Typen herzustellen. Hier beschränken wir uns auf eine Rechteck - und Sinusspannung. 
@@ -8,22 +14,14 @@ Vom Oszillator soll dann jeweils die unmittelbare Spannung gemessen werden und d
 die durch einen Kondensator und Widerstand modifiziert wurde.
 Auf dem Display sieht man also sowohl die eingehende (Rechteck/ - Sinusspannung) als 
 auch die ausgehende Spannung, also die Darstellung des Lade - und Entladungsevorgang des Kondensators.
-\end{minipage}
-\begin{minipage}[c]{0.3\textwidth}
-     \begin{figure}[H]
-        \centering
-        \includegraphics[width=\textwidth]{bilder/oszillator.png}
-        \caption{Oszillator und Generator mit Verkabelung.}
-        \label{fig:aufbau}
-        \end{figure}     
-\end{minipage}
- 
+
+%\vspace{1cm}
 \section{Durchführung}
 Die Durchführung teilt sich in die  drei folgenden Konfigurationen auf.
 \subsection{Bestimmung der Zeitkonstante}
 Um das Maß für die Geschwindigkeit zu errechnen gilt es also die Konstante $\text{RC}$ zu messen.
 Dafür wird eine Rechtecksspannung vom Generator angelegt und am Oszillator das Laden beziehungsweise Entladen
-Kondensators beobachtet. In Intervallen von $\Delta t = \SI{0.25}{ms}$ wird der Strom $U_c$ abgelesen und die
+Kondensators beobachtet. In Intervallen von $\Delta t = \SI{2.5}{ms}$ wird der Strom $U_c$ abgelesen und die
 Daten in eine Tabelle aufgenommen. 
 \begin{figure}
     \centering
@@ -35,7 +33,7 @@ Daten in eine Tabelle aufgenommen.
 \subsection{Amplitudenbestimmung der Kondensatorspannung}
 \label{sectionref}
 Nun wird eine Sinusspannung vom Generator erzeugt mit einer Frequenz, die im Laufe jeweils um einen Wert
-von $\Delta\si{\hertz}= \SI{500}{\hertz}$ angehoben wird. Die entsprechende Amplitude $U_c$ wir 
+von $\Delta \text{f}= \SI{500}{\hertz}$ angehoben wird. Die entsprechende Amplitude $U_c$ wird 
 dem Oszillator entnommen und in eine Tabelle eingetragen.
  \begin{figure}
     \centering
@@ -57,7 +55,7 @@ zur X - Achse ausgerichtet.\\
 \end{figure} 
 Ein nun messbarer Abstand $a$ und $b$ %ref zur darstlellung
 ist bei entsprechender Frequenz und Amplitude zu entnehmen. Hier bildet $b$ eben die Wellenlänge
-der Spannung $U_g$ ab. Die Phasenverschiebung $\varphi$ resultiert aus folgender Gleichung.
+der Spannung $U_g$ ab. Die Phasenverschiebung $\phi$ resultiert aus folgender Gleichung.
 \begin{equation}
     \label{eqn:phi}
     \phi= \frac{a}{b} \cdot 2 \pi
