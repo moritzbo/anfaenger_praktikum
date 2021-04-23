@@ -20,7 +20,7 @@ params, covariance_matrix = curve_fit(sigmoid, f, phi)
 
 uncertainties = np.sqrt(np.diag(covariance_matrix))
 
-for name, value, uncertainty in zip('tau', params, uncertainties): 
+for name, value, uncertainty in zip('t', params, uncertainties): 
     print(f'{name} = {value:.4f} ± {uncertainty:.4f}')
 
 

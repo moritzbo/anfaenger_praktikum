@@ -37,24 +37,28 @@ Die zugehörigen Messgrößen sind in der Tabelle \ref{tab:freq} notiert und die
 Die Gleichung \eqref{eqn:yeahyeah} liefert anschließend den Zusammenhang zwischen der Amplitude $A(\omega)$, Frequenz $f$ und Relaxationszeit $\tau$.
 Durch eine nichtlineare Ausgleichsrechnung kann die Relaxationszeit nun aus den Messwerten bestimmt werden, dazu wird die Gleichung zunächst durch $U_{0}$ geteilt.
 \begin{equation}
-    \frac{A(\omega)}{U_{0}} = \frac{1}{\sqrt{1+(\omega RC)^{2}}}
+    \label{eqn:yikers}
+    \frac{A(\omega)}{U_{0}} = \frac{1}{\sqrt{1+(\omega \tau)^{2}}}
 \end{equation}
 Ein Curvefit dieser angepassten Wertepaare liefert die Relaxationszeit.
 \begin{equation*}
 \tau = \SI{16.4(4)}{\milli\second}
 \end{equation*}
-Der theoretische Wert der Amplitude 
+Die Ausgleichsfunktion welche die Form von Gleichung \eqref{eqn:yikers} hat, lässt sich zusammen mit den Messwerten in einem Diagramm darstellen. In Diagramm \ref{fig:plot5}
+ist eine logarithmische und in \ref{fig:plot4} eine linaere Darstellung abgebildet. 
 \begin{figure}
     \centering 
     \includegraphics[width=\textwidth]{build/plot5.pdf}
     \caption{Frequenzabhängige Amplituden und Ausgleichsrechnung in logarithmischer Darstellung.}
-    \label{plt:plot5}
+    \label{fig:plot5}
 \end{figure} 
-
 \begin{figure}
     \centering 
     \includegraphics[width=\textwidth]{build/plot4.pdf}
     \caption{Frequenzabhängige Amplituden und Ausgleichsrechnung in linearer Darstellung.}
-    \label{plt:plot4}
+    \label{fig:plot4}
 \end{figure} 
-
+Zu erkennen ist also eine systematische Abweichung, des errechneten Wertes der Entladungskurve, von.
+\begin{equation}
+\tau_{\si{\percent}} = \SI{24.4(18)}{\percent}
+\end{equation}
