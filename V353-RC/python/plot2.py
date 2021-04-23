@@ -6,7 +6,7 @@ from scipy.stats import sem
 import scipy.constants as const
 import uncertainties.unumpy as unp
 
-f, U, a, b = np.genfromtxt("data/teilcd.dat", unpack=True)
+f, U, a, b, p = np.genfromtxt("data/teilcd.dat", unpack=True)
 
 U_0 = 11
 
