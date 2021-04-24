@@ -8,13 +8,17 @@ build/plot4.pdf: python/plot2.py matplotlibrc header-matplotlib.tex | build
 build/plot5.pdf: python/plot2.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python python/plot2.py
 build/plot6.pdf: python/plttausend.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python python/plttausend.py
+	TEXINPUTS=$$(pwd): python python/plttausend.py,
+build/plot10.pdf: python/pltzehnmillionen.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python python/pltzehnmillionen.py
+ 
  
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/V353-RC.pdf: build/plot1.pdf \
 					build/plot4.pdf \
 					build/plot5.pdf \
 					build/plot6.pdf \
+					build/plot10.pdf \
 
 build/V353-RC.pdf: FORCE | build
 	  TEXINPUTS=build: \

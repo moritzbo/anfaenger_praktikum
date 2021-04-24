@@ -74,6 +74,7 @@ Der Zusammenhang aus \eqref{eqn:sadge} liefert uns eine enstprechend dritte Art 
 Analog zu den vorherigen Teil wird hier eine nichtlineare Ausgleichsfunktion mit Hilfe eines Curvefit in Python gefunden.
 Der Parameter $\tau$ enstpricht der Zeitkonstante $RC$ und beträgt.
 \begin{equation}
+    \label{eqn:bäääh}
     \tau = \SI{37.9(07)}{\ms}
 \end{equation}
 Die abbildene Funktion ist in Abbildung \ref{fig:plttausend} dargestellt. Im Vergleich zu den anderen Messreihen fällt hier eine besonders
@@ -90,3 +91,27 @@ große Differenz zur optimalen Zeitkonstante auf.
 \end{figure} 
 
 \subsection{Abhängigkeit der Relativamplitude von der Phase}
+Die errechneten Werte aus $a$ und $b$ liefern die Phasenverschiebung
+bei entsprechnder Frequenz \eqref{eqn:phi}. Aus dem physiaklischen Zusammenhang wird entnommen,
+dass diese auch in Abhängigkeit zur Zeitkonstante $RC$ steht und durch die Gleichung 
+\begin{equation*}
+    A(f)=-\frac{\text{sin{$\phi$}}}{f \cdot RC}U_0
+\end{equation*}
+beschrieben wird. Der Wert für die Konstante wird der Bestimmung durch die vorhergegangene Methode entnommen \eqref{eqn:bäääh}.
+Die Aufgestellte Formel ermöglicht es, mit einem Curvefit einen Wert für die Phasenverschiebung zu finden, der abhängig 
+von der Frequenz $f$ ist. Der gesuchte Paramter lautet.
+\begin{equation*}
+    \phi=\SI{1.57(6381896)}{\radian}
+\end{equation*}
+Mit diesem Wert lässt sich die Relativamplitude $A(\omega)/U_0$ für jede Frequenz annährend finden. Die Darstellung 
+\ref{fig:pltmill}
+zeigt sowohl die Messwerte, als auch die gefundene - nichtlineare Ausgleichsfunktion in einem Polarkoordinatensystem.
+
+\begin{figure}
+    \centering 
+    \includegraphics[width=\textwidth]{build/plot10.pdf}
+    \caption{Relativamplitude in Abhängigkeit der Frequenz.}
+    \label{fig:pltmill}
+\end{figure} 
+
+
