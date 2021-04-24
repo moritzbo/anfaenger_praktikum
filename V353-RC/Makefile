@@ -8,7 +8,7 @@ build/plot4.pdf: python/plot2.py matplotlibrc header-matplotlib.tex | build
 build/plot5.pdf: python/plot2.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python python/plot2.py
 build/plot6.pdf: python/plttausend.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python python/plttausend.py,
+	TEXINPUTS=$$(pwd): python python/plttausend.py
 build/plot10.pdf: python/pltzehnmillionen.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python python/pltzehnmillionen.py
  
