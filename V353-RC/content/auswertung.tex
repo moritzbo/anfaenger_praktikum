@@ -92,18 +92,26 @@ große Differenz zur optimalen Zeitkonstante auf.
 
 \subsection{Abhängigkeit der Relativamplitude von der Phase}
 Die errechneten Werte aus $a$ und $b$ liefern die Phasenverschiebung
-bei entsprechnder Frequenz \eqref{eqn:phi}. Aus dem physiaklischen Zusammenhang wird entnommen,
-dass diese auch in Abhängigkeit zur Zeitkonstante $RC$ steht und durch die Gleichung 
+bei entsprechender Frequenz \eqref{eqn:phi}. Aus dem physikalischen Zusammenhang wird entnommen,
+dass diese auch in Abhängigkeit zur Zeitkonstante $\tau$ steht und durch die Gleichung 
 \begin{equation*}
-    A(f)=-\frac{\text{sin{$\phi$}}}{f \cdot RC}U_0
+    A(\omega)=-\frac{\text{sin{$\phi$}}}{\omega \cdot RC}U_0
 \end{equation*}
 beschrieben wird. Der Wert für die Konstante wird der Bestimmung durch die vorhergegangene Methode entnommen \eqref{eqn:bäääh}.
+<<<<<<< HEAD
 Die Aufgestellte Formel ermöglicht es, mit einem Curvefit einen Wert für die Phasenverschiebung zu finden, der abhängig 
 von der Frequenz $f$ ist. 
 %Der gesuchte Paramter lautet.
 %\begin{equation*}
 %    \phi=\SI{1.57(6381896)}{\radian}
 %\end{equation*}
+=======
+Die aufgestellte Formel ermöglicht es, mit einem Curvefit einen Wert für die Phasenverschiebung zu finden, der abhängig 
+von der Frequenz $f$ ist. Der gesuchte Paramter lautet.
+\begin{equation*}
+    \phi=\SI{1.57(6381896)}{\radian}
+\end{equation*}
+>>>>>>> 92d8bc3bd21e04964b38311e8d3b57b5e432549c
 Mit diesem Wert lässt sich die Relativamplitude $A(\omega)/U_0$ für jede Frequenz annährend finden. Die Darstellung 
 \ref{fig:pltmill}
 zeigt sowohl die Messwerte, als auch die gefundene - nichtlineare Ausgleichsfunktion in einem Polarkoordinatensystem.
@@ -114,5 +122,10 @@ zeigt sowohl die Messwerte, als auch die gefundene - nichtlineare Ausgleichsfunk
     \caption{Relativamplitude in Abhängigkeit der Frequenz.}
     \label{fig:pltmill}
 \end{figure} 
+
+\subsection{Integratorfunktion des RC-Kreises}
+An der Messreihe zur frequenzabhängigen Phasenverschiebung kann festgestellt werden, dass die Kondensatorspannung $U_{C}$ die Eingangsspannung
+integriert, dabei muss die Frequenz einen Minimalwert annehmen. Die gesamte Messreihe besitzt bereits hinreichend große Frequenz somit entsteht eine Kosinusförmige Kondensatorspannung
+zur Sinusförmigen Eingangsspannung. Die Integratoreigenschaft ist hier also erfüllt.
 
 
