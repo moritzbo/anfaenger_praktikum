@@ -14,7 +14,7 @@ build/V302-Brückenschaltung.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	V302.tex
+	V302-Brückenschaltung.tex
 
 build:
 	mkdir -p build
