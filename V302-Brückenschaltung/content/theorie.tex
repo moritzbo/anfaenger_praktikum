@@ -1,1 +1,80 @@
-test
+\section{Theorie}
+Die Anwendung von Brückenschaltungen liegt in der Messtechnik,  vorallem von Wiederständen. 
+Hier sollen sie durch eine Nullmethode die Auflösung der Messsung erhöhen um so präzisere Ergebnise
+auslesen zu können. Dadurch lassen sich nicht nur reele wie komplexe Wiederstände, sondern auch eben 
+solche Daten messen die den Wiederstand beeinflussen, wie zum Beispiel Temperatur oder Längenänderung. %ist das der grund?
+Die Funktionsart eine Brückenschaltung beschränkt sich im wesentlichen auf die Abtastung einer 
+Potentialdifferenz zwischen zwei Punkten. 
+%figure abb1
+Diese Differenz der Spannung $U_Bs$ wir im allgemeinen Brückenspannung genannt und zwischen den Punkten $A$ und $B$ gemessen.
+
+\subsection{Kirchhoff'schen Gesetze}
+Zentrale Grundlage der Berechnung sind die sogenannten Kirchhoff'schen Gesetze. Diese sind zweigeteilt und 
+geben Auskumpft über den fließenden Strom in einem geschlossenen Kreis.
+Das erste Gesetz besagt, dass in einem Knoten, also in einem Ort in dem der Strom zusammen - oder auseinander fließt, 
+die Summe von elektrischen Strömen gleich Null ist.
+\begin{equation}
+    \sum_k \text{I}_k = 0
+\end{equation}
+Das zweite Gesetzt erläutert den Erhalt des fließenden Stroms, so dass in jedem abgeschlossenen Stromkreis, also einer Masche,
+die Summe aller Teilspannungen gleich Null ist.
+\begin{equation}
+    \label{eqn:kirch2}
+    \sum_k \text{U}_k = 0
+\end{equation}
+%maybe abb3.
+Die Spannung U aus der Gleichung ist ein Produkt aus dem Strom und den von diesem erfahrenen Wiederstand.
+\begin{equation}
+    \text{U} = \text{R}\cdot \text{I}
+\end{equation}
+Unter Anwendung dieser Gesetze auf den Schaltplan %ref auf fig abb1
+lässt sich der folgene Zusammenhang finden. Hier bezeichnet $U_s$ die vom Generator erezugte Spannung, also die Speisespannung. 
+\begin{equation}
+     U= \frac{R_2R_3 - R_1R_4}{(R_3+R_4)(R_1+R_2)}\cdot U_s
+\end{equation}
+Sollte die Brückenspannung verschwinden liegt eine sogenante abgeglichene Brücke da. 
+Hieraus lassen sich also die Werte für unekannten Widerständen in diesem Stromkreis finden.
+Die Bedingung dafür ist.
+\begin{equation}
+    \label{eqn:bedingung}
+    R_1 R_4 = R_2 R_3
+\end{equation}
+
+\subsection{komplexe Widerstände}
+Wenn ein Widerstand von einem Kondensator oder durch Induktivität erzeugt wird, ist dieser nicht mehr reines 
+Element der reellen Zahlen. 
+Die jetzt zum Teil komplexe Darstellung setzt sich aus dem reellen Teil des Wirkwiderstandes $X$ mit 
+dem imaginären Blindwiederstand $Y$ zusammen. 
+\begin{align*}
+    R &= X +iY \\
+    \Re{R} &= X \\
+    \Im{R} &= Y 
+\end{align*} 
+Hier liegen also pro Widerstand zwei Paramter vor. Nach der Bedingung \eqref{eqn:bedingung} müssen also
+nun der reelee und der imaginäre Teil übereinstimmen. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\subsecton{Kirchhoffscheregel} %check title,
+%\subsection{komplexe wiederstände}
+%\subsection{wheatstone}
+%\subsection{kapazitätbrücke}
+%\subsection{Induktivitätsbrücke}
+%\subsection{maxwellBrücke}
+%\subsection{wienrobinson}
+%\subsection{TT-Brücke}
