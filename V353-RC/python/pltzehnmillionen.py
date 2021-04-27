@@ -9,7 +9,7 @@ import uncertainties.unumpy as unp
 f, U, a, b, phi = np.genfromtxt("data/teilcd.dat", unpack=True)
 
 
-def sigmoid(f, p):
+def sigmoid(g):
     return (np.sin(p)/(f*2*np.pi*0.0164))
 
 
