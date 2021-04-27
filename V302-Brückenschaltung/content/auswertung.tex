@@ -45,8 +45,14 @@ Analog wie bei der Induktivitätsmessbrücke wird hier die Induktivität $L_{17}
     R_{17} &= \SI{109.7(47)}{\ohm} 
 \end{align}
 
-
 \subsection{Wien-Robinson-Brücke}
+Zunächst lässt sich für den Aufbau der Wien-Robinson-Brücke die erwartete Frequenz $f_{0}$ berechnen, bei der die Brückenspannung in der Theorie nach Gleichung \eqref{eqn:ya}
+verschwindet. Dies erfolgt durch die Beziehung \eqref{eqn:ma}, wobei ein Kondensator $C$ mit der Kapazität $\SI{294.75}{\nano\farad}$ und ein Widerstand $R$ mit $\SI{1}{\kilo\ohm}$ verwendet wurde.
+\begin{equation}
+\omega_{0} = \frac{1}{RC} = \SI{3392.71}{\hertz}  \quad \to \quad f_{0} = \SI{539.97}{\hertz}
+\end{equation}
+Die Messreihe aus Tabelle \ref{tab:frequencyitis} lässt sich anschließend in ein halblogarithmisches Diagramm eintragen. Auf der x-Achse werden die Werte $\omega$/$\omega_{0}$ und auf der y-Achse werden die Brückenspannungen $U_{B}$ eingetragen. 
+Ebenfall lässt sich eine Theoriekurve nach Gleichung \eqref{eqn:ya} berechnen. Das Diagramm ist in Abbildung \ref{fig:plot1} dargestellt.
 
 \begin{figure}
     \centering
@@ -54,3 +60,21 @@ Analog wie bei der Induktivitätsmessbrücke wird hier die Induktivität $L_{17}
     \caption{Messwerte und Theoriekurve der frequenzabhängigen Brückenspannung.} 
     \label{fig:plot1}
 \end{figure}
+Zusätzlich kann hier noch der Klirrfaktor berechnet werden. Dazu ist es allerdings notwendig die Berechnungen des Klirrfaktors $k$ nach Gleichung \eqref{eqn:GlasGoesklirr} anzunähern. 
+Die Summe über alle Oberwellen wird hier durch die zweite Oberwelle nach unten abgeschätzt und es folgt
+\begin{equation}
+k = \frac{U_{2}}{U_{1}}
+\end{equation}
+wobei $U_{1}$ die Amplitude der Grundwelle ist. Für die zweite Oberwelle $U_{2}$ mit $\Omega = 2$ gilt nach Formel \eqref{eqn:ya}.
+\begin{equation}
+U_{2} = \frac{U_{B\text{,}{f_{0}}  }}{\sqrt{\frac{(\Omega^2 - 1)^{2}}{9(1- \Omega^2)^{2} + 9 \Omega^2}}} 
+\end{equation}
+Die Spannung $U_{B\text{,}{f_{0}}}$ kann als die niedrigst gemessene Spannung aus Tabelle \ref{tab:frequencyitis} abgelesen werden. Es gilt somit.
+
+\begin{equation}
+    U_{2} = \SI{0.001}{\volt} \cdot \sqrt{45} = \SI{6.71e-3}{\volt}
+\end{equation}
+Da die Amplitude der Grundwelle $U_{1}$ für diese Messreihe $\SI{1}{\volt}$ beträgt, folgt ein Klirrfaktor von.
+\begin{equation}
+k = \SI{6.71e-3}{}
+\end{equation}

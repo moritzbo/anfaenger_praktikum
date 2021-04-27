@@ -31,4 +31,8 @@ plt.ylabel(r"$U_{B}$[$\si{\volt}$]")
 plt.grid()
 plt.legend(loc="best")
 
+omeganull = 2 * np.pi *omega
+print(omeganull)
+print(omega)
+
 plt.savefig("build/plot1.pdf")
