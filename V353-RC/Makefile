@@ -10,7 +10,7 @@ build/plot5.pdf: python/plot2.py matplotlibrc header-matplotlib.tex | build
 build/plot6.pdf: python/plttausend.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python python/plttausend.py
 build/plot10.pdf: python/pltzehnmillionen.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python python/pltzehnmillionen.py
+	TEXINPUTS=$$(pwd): python python/pltzehnmillionen.py 
  
  
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
