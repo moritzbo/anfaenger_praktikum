@@ -1,1 +1,40 @@
-test
+\section{Aufbau und Durchführung}
+
+Für die Versuchsdurchführung wird grundsätzlich ein Spannungsmessgerät benötigt, dabei wurde ein digitales Oszilloskop verwendet. Die Aufbauten variieren je nach Messgröße und sind
+im folgenden unterteilt. Die sinusförmige Speisespannung wurde zur Optimierung einiger Brückenspannungswerte in den einzelnen Versuchen geändert. Zur Regelung von Widerständen wird ein Potentiometer mit $\SI{1}{\kilo\ohm}$ Gesamtwiderstand 
+genutzt.
+
+\subsection{Wheatstonesche Brücke}
+Zunächst wird eine Schaltung gemäß Abbildung ... aufgebaut. Dabei werden nur ohmsche Widerstände verwendet, wodurch es nur eine Abgleichbedingung gibt. Die Speisespannung $U_{S}$ wird mit einer Frequenz von
+$\SI{80}{\hertz}$ und einer Spannungsamplitude von $\SI{1}{\volt}$ betrieben. Der Wiederstand mit dem Wert $10$ soll nun gemessen werden. Dazu wird ein Referenzwiderstand $R_{2}$ gewählt und anhand eines Potentiometers die Widerstände 
+$R_{3}$ und $R_{4}$ so eingestellt, dass die Brückenspannung am Oszilloskop nahezu verschwindet. Dieser Vorgang wird für einen anderen Referenzwiderstand $R_{2}$ wiederholt. 
+\\
+\newline
+Die Toleranz des Referenzwiderstands beträgt hierbei $\pm\SI{0.2}{\percent}$ und das Verhältnis $R_{3}$/$R_{4}$ zeigt unsystematische Abweichung von $\pm\SI{0.5}{\percent}$.
+Folgende Werte aus Tabelle .... wurden bei erfüllter Abgleichbedingung gefunden.
+
+\subsection{Kapazitätsmessbrücke}
+Die Schaltung wird wie in Abbildung .... dargestellt aufgebaut. Hier soll ein Kondesator mit dielektrischen Verlusten gemessen werden also wird ein Widerstand $R_{2}$ benötigt. Dieser wird wieder über einen
+zweiten Potentiometer realisiert. Der zu messende Kondesator mit 
+Verlusten hat den Wert $9$ und wird über die Regelung der Widerstände $R_{2}$, $R_{3}$ und $R_{4}$ ermittelt. Hierzu werden die Widerstände wieder so lange angepasst, bis die Brückenspannung am Oszilloskop verschwindet.
+Die sinusförmige Speisespannung ist hier immer noch bei $\SI{80}{\hertz}$ mit gleicher Amplitude. Die Kapazität $C_{2}$ wurde hierbei festgelegt mit einer Kapazität von $\SI{399}{\nano\farad}$.
+\\
+\newline
+Die Toleranz des Widerstands $R_{2}$ ist hier $\pm\SI{3}{\percent}$ und der Referenzkapazität $C_{2}$ $\pm\SI{0.2}{\percent}$
+
+\subsection{Induktivitätsmessbrücke}
+Um die Induktivität einer Spule zu bestimmen wird eine Schaltung, wie in Abbildung .... gezeigt, aufgebaut. Dieser Aufbau ist identisch mit dem vorherigen, nur das hier die verlustbehafteten Kondesatoren mit verlustbehafteten Induktivitäten
+ersetzt werden. Wie zuvor werden die drei Widerstände $R_{2}$, $R_{3}$ und $R_{4}$ so angepasst, dass die Brückenspannung verschwindet. Alle Widerstände und Induktivitäten werden anschließend notiert. Die sinusförmige Speisespannung $U_{S}$
+wurde hirbei auf $\SI{1000}{\hertz}$ erhöht, da damit eine geringere Brückenspannung erzielt werden konnte.
+Der verwendete Referenzwert $L_{2}$ beträgt hier $\SI{27.5}{\milli\henry}$. 
+\\
+\newline
+Die Toleranz des Widerstands $R_{2}$ ist $\pm\SI{3}{\percent}$ und der Refereninduktivität $L_{2}$ $\pm\SI{0.2}{\percent}$.
+
+\subsection{Maxwell-Brücke}
+Mit der Maxwell-Brücke lässt sich auf eine andere Art und Weise die Induktivität $L$ bestimmen. Um die vorherigen Ergebnisse überprüfen zu können wird hier die selbe Induktivität $L_{x}$ mit Wert 17 gemessen. Die Widerstände $R_{3}$ und $R_{4}$ sind
+jetzt unabhänig voneinander verbaut, also nicht zusammen als Potentiometer. Statt einer Referenzinduktivität wie zuvor wird nun hinter den verstellbaren Widerstand $R_{3}$ eine Parallelschaltung von einer Referenzkapazität $C_{4}$ und einem 
+weiteren verstellbaren Widerstand $R_{4}$ verbaut. Die Referenzkapazität $C_{4}$ beträgt hier $\SI{399}{\nano\farad}$ und der feste Widerstand $R_{2}$ hat $\SI{1}{\kilo\ohm}$. Die Speisespannung ist vom vorherigen Versuch unverändert.
+\\
+\newline
+Die Toleranz der Widerstände $R_{3}$ und $R_{4}$ ist $\pm\SI{3}{\percent}$ und die Referenzwerte $R_{2}$ und $C_{4}$ besitzen jeweils $\SI{0.2}{\percent}$.
