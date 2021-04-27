@@ -8,6 +8,9 @@ Potentialdifferenz zwischen zwei Punkten.
 %figure abb1
 Diese Differenz der Spannung $U_Bs$ wir im allgemeinen Brückenspannung genannt und zwischen den Punkten $A$ und $B$ gemessen.
 
+
+
+
 \subsection{Kirchhoff'schen Gesetze}
 Zentrale Grundlage der Berechnung sind die sogenannten Kirchhoff'schen Gesetze. Diese sind zweigeteilt und 
 geben Auskumpft über den fließenden Strom in einem geschlossenen Kreis.
@@ -53,7 +56,56 @@ dem imaginären Blindwiederstand $Y$ zusammen.
 Hier liegen also pro Widerstand zwei Paramter vor. Nach der Bedingung \eqref{eqn:bedingung} müssen also
 nun der reelee und der imaginäre Teil übereinstimmen. 
 
-\subsection{Wheatstonesche Brücke}
+\subsection{Wheatstonesche Brückenschaltung}
+%innlcude fig
+Bei der Wheatstoneschen Brückenschaltung gibt es ausschließlich reelle Wiederstände, also  keine Kondensatoren
+oder Induktivitäten. Daraus folgt, dass die angelegte Spannung keine Rolle spielt. Es kann also frei zwischen
+Gleich - und Wechselstrom gewählt werden. Aus der Abgleichbedingung \eqref{eqn:bedingung} folgt.
+\begin{equation}
+    R_x = R_2 \frac{R_3}{R_4}
+\end{equation}
+
+\subsection{Kapazitätsmessbrücke}
+Bei realen Kodensatoren kann nicht gewährleistet werden den Strom ohne Verluste ,zum Beispiel Wärme, 
+zu konservieren. Es eignet sich also dem Schaltplan einen Wiederstand hinzuzufügen der für die Verluste aufkommt.
+Mit einführung des Kondensators $C_x$ erweitert sich der Widerstand um einen komplexen Anteil der bei der Messung durch 
+einen zweiten, veränderlichen Widerstand kompensiert wird. 
+Es folgt aus \eqref{eqn:bedingung}.
+\begin{align}
+    R_x &= R_2\frac{R_3}{R_4} \\
+    C_x &= C_2\frac{R_4}{R_3}
+\end{align}
+
+\subsection{Induktivitäts - und Maxwellbrücke }
+%include fig abb8
+Analog zum Kondensator gelingt es auch bei realer Induktivität nicht den Strom verlustfrei weiterzuleiten.
+Als Beiprodukt entsteht durch magnetische Feldenergie Wärme, was als fiktiver Widerstand in den Schaltplan einzeichnet wird.
+Um die Induktivität $L_x$selbst zu bestimmen wird eine Spule mit bekannten Werten der Schaltung hinzugefügt. 
+Ähnlich zur Kondensatorbrücke lässt sich der gesuchte Wiederstand und die Induktivität wie folgt finden.
+\begin{align}
+    R_x &= R_2\frac{R_3}{R_4} \\
+    L_x &= L_2\frac{R_4}{R_3}
+\end{align}
+
+Um den Verlusten der Induktivität von $L_2$ entgegen zuwirken bietet es sich an diese durch eine Kondensator $C_4$ mit bekannten Werten
+zu wechseln. Die Konfiguartion der Brückenschaltung nennt sich Maxwellbrücke.
+%include abb9
+Dadurch rezuziert sich der Wikrungswiederstand und die Bestimmung von $L_x$ wird präziser.
+\begin{align}
+    R_x &= R_2\frac{R_3}{R_4} \\
+    L_x &= R_2R_3C_4
+\end{align}
+
+\subsection{Wien-Robinsonbrücke}
+%abb 10
+Bei der Wien - Robinsonbrücke wird auf Abgleichelemente verzichtet und stattdessen mit einer variablen Frequenz gemessen.
+Als Ergebnis folgt eine Brückenspannung die folglich abhängig von der Frequenz $\omega$ ist.
+Werden die Widerstandsoperatoren der jeweiligen Elemente 
+in die Bedingung für einen abgeglichen Zustand \eqref{eqn:bedingung} eingesetzt wird folgende Glecihung gefunden.
+\begin{equation} % muss noch größere klammern abs()
+    {\mid \frac{U_br}{U_s} \mid }^2 = \frac{(\omega ^2 R^2 C^2 -1)^2}{9\Bigl[(1-\omega ^2 R^2 C^2)^2 + 9 \omega ^2 R^2 C^2 \Bigr]}
+\end{equation}
+
 
 
 
