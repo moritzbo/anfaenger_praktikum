@@ -22,7 +22,7 @@ Die Fehlerfortpflanzung sieht folgendermaßen aus.
 
 
 \subsection{Kapazitätsmessbrücke}
-Aus der Messreihe in Tabelle \ref{tab:nocap} kann zusammen mit den Fehlern wie in Abschnitt \ref{sec:nocapyo} beschrieben eine Kapazität $C_{9}$ berechnet werden. Da diese allerdings dielektrische Verluste 
+Aus der Messreihe in Tabelle \ref{tab:nocap} kann zusammen mit den Fehlern wie in Abschnitt \ref{sec:nocapyo} beschrieben, eine Kapazität $C_{9}$ berechnet werden. Da diese allerdings dielektrische Verluste 
 aufweist muss ebenfalls der Widerstand $R_{9}$ bestimmt werden. Gemäß den Formeln \eqref{eqn:wombocombo}, lassen sich diese bestimmen zu.
 \begin{align*}
 C_{9} &= \SI{437.5(24)}{\nano\farad} \\
@@ -60,11 +60,13 @@ Ebenfalls lässt sich eine Theoriekurve nach Gleichung \eqref{eqn:ya} berechnen.
     \caption{Messwerte und Theoriekurve der frequenzabhängigen Brückenspannung.} 
     \label{fig:plot1}
 \end{figure}
+\begin{flushleft}
 Zusätzlich kann hier noch der Klirrfaktor berechnet werden. Dazu ist es allerdings notwendig die Berechnungen des Klirrfaktors $k$ nach Gleichung \eqref{eqn:GlasGoesklirr} anzunähern. 
 Die Summe über alle Oberwellen wird hier durch die zweite Oberwelle nach unten abgeschätzt und es folgt
-\begin{equation}
+\end{flushleft}
+\begin{equation*}
 k = \frac{U_{2}}{U_{1}}
-\end{equation}
+\end{equation*}
 wobei $U_{1}$ die Amplitude der Grundwelle ist. Für die zweite Oberwelle $U_{2}$ mit $\Omega = 2$ gilt nach Formel \eqref{eqn:ya}.
 \begin{equation*}
 U_{2} = \frac{U_{B\text{,}{f_{0}}  }}{\sqrt{\frac{(\Omega^2 - 1)^{2}}{9(1- \Omega^2)^{2} + 9 \Omega^2}}} 
