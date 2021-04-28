@@ -3,7 +3,7 @@ Die Anwendung von Brückenschaltungen liegt in der Messtechnik,  vor allem von W
 Hier sollen sie durch eine Nullmethode die Auflösung der Messung erhöhen um so präzisere Ergebnisse
 auslesen zu können. Dadurch lassen sich nicht nur reelle wie komplexe Widerstände, sondern auch eben 
 solche Daten messen die den Widerstand beeinflussen, wie zum Beispiel Temperatur oder Längenänderung. %ist das der grund?
-Die Funktionsart eine Brückenschaltung beschränkt sich im wesentlichen auf die Abtastung einer 
+Die Funktionsart einer Brückenschaltung beschränkt sich im Wesentlichen auf die Abtastung einer 
 Potentialdifferenz zwischen zwei Punkten. 
 \begin{figure}
     \centering
@@ -11,7 +11,7 @@ Potentialdifferenz zwischen zwei Punkten.
     \caption{Allgemeines Schema einer Brückenschaltung. \cite{skript}} 
     \label{fig:abb1}
 \end{figure}
-Diese Differenz der Spannung $U_Bs$ wird im allgemeinen Brückenspannung genannt und zwischen den Punkten $A$ und $B$ gemessen.
+Diese Differenz der Spannung $U_{B}$ wird im Allgemeinen Brückenspannung genannt und zwischen den Punkten $A$ und $B$ gemessen.
 \\
 \newline
 
@@ -22,9 +22,9 @@ Zentrale Grundlage der Berechnung sind die sogenannten Kirchhoff'schen Gesetze. 
 geben Auskunft über den fließenden Strom in einem geschlossenen Kreis.
 Das erste Gesetz besagt, dass in einem Knoten, also in einem Ort in dem der Strom zusammen - oder auseinander fließt, 
 die Summe von elektrischen Strömen gleich Null ist.
-\begin{equation}
+\begin{equation*}
     \sum_k \text{I}_k = 0
-\end{equation}
+\end{equation*}
 Das zweite Gesetzt erläutert den Erhalt des fließenden Stroms, so dass in jedem abgeschlossenen Stromkreis, also einer Masche,
 die Summe aller Teilspannungen gleich Null ist.
 \begin{equation}
@@ -38,15 +38,15 @@ die Summe aller Teilspannungen gleich Null ist.
     \label{fig:abb3}
 \end{figure}
 Die Spannung U aus der Gleichung ist ein Produkt aus dem Strom und den von diesem erfahrenen Widerstand.
-\begin{equation}
+\begin{equation*}
     \text{U} = \text{R}\cdot \text{I}
-\end{equation}
+\end{equation*}
 Unter Anwendung dieser Gesetze auf den Schaltplan %ref auf fig abb1
 lässt sich der folgende Zusammenhang finden. Hier bezeichnet $U_s$ die vom Generator erzeugte Spannung, also die Speisespannung. 
-\begin{equation}
+\begin{equation*}
      U= \frac{R_2R_3 - R_1R_4}{(R_3+R_4)(R_1+R_2)}\cdot U_s
-\end{equation}
-Sollte die Brückenspannung verschwinden liegt eine sogenannte abgeglichene Brücke da. 
+\end{equation*}
+Sollte die Brückenspannung verschwinden liegt eine sogenannte abgeglichene Brücke vor. 
 Hieraus lassen sich also die Werte für unbekannten Widerständen in diesem Stromkreis finden.
 Die Bedingung dafür ist.
 \begin{equation}
@@ -55,7 +55,7 @@ Die Bedingung dafür ist.
 \end{equation}
 \\
 \newline
-\subsection{komplexe Widerstände}
+\subsection{Komplexe Widerstände}
 Wenn ein Widerstand von einem Kondensator oder durch Induktivität erzeugt wird, ist dieser nicht mehr reines 
 Element der reellen Zahlen. 
 Die jetzt zum Teil komplexe Darstellung setzt sich aus dem reellen Teil des Wirkwiderstandes $X$ mit 
@@ -76,9 +76,11 @@ nun der reelle und der imaginäre Teil übereinstimmen.
     \caption{Schaltplan der Wheatstoneschen Brückenschaltung. \cite{skript}} 
     \label{fig:abb4}
 \end{figure}
+\begin{flushleft}
 Bei der Wheatstoneschen Brückenschaltung gibt es ausschließlich reelle Widerstände, also  keine Kondensatoren
 oder Induktivitäten. Daraus folgt, dass die angelegte Spannung keine Rolle spielt. Es kann also frei zwischen
 Gleich - und Wechselstrom gewählt werden. Aus der Abgleichbedingung \eqref{eqn:bedingung} folgt.
+\end{flushleft}
 \begin{equation}
     \label{eqn:what}
     R_x = R_2 \frac{R_3}{R_4}
@@ -92,7 +94,7 @@ Gleich - und Wechselstrom gewählt werden. Aus der Abgleichbedingung \eqref{eqn:
     \caption{Schaltplan einer Kapazitätsmessbrücke mit dielektrischen Verlusten. \cite{skript}} 
     \label{fig:abb6}
 \end{figure}
-Bei realen Kondensatoren kann nicht gewährleistet werden den Strom ohne Verluste ,zum Beispiel Wärme, 
+Bei realen Kondensatoren kann nicht gewährleistet werden den Strom ohne Verluste, zum Beispiel Wärme, 
 zu konservieren. Es eignet sich also dem Schaltplan einen Widerstand hinzuzufügen der für die Verluste aufkommt.
 Mit Einführung des Kondensators $C_x$ erweitert sich der Widerstand um einen komplexen Anteil der bei der Messung durch 
 einen zweiten, veränderlichen Widerstand kompensiert wird. 
@@ -104,7 +106,7 @@ Es folgt aus \eqref{eqn:bedingung}.
 \end{align}
 \\
 \newline
-\subsection{Induktivitäts - und Maxwell-brücke }
+\subsection{Induktivitäts - und Maxwell-Brücke }
 
 \begin{figure}
 \begin{minipage}[c]{0.5\textwidth}
@@ -119,24 +121,25 @@ Es folgt aus \eqref{eqn:bedingung}.
         %{0.5\textwidth}
         \label{fig:abb9}
 \end{minipage}
-\caption{Schaltplan einer Induktivitäts - und Maxwell-brücke. \cite{skript}}
+\caption{Schaltplan einer Induktivitäts - und Maxwell-Brücke. \cite{skript}}
 \label{??}
 \end{figure}
-
-
+\begin{flushleft}
 Analog zum Kondensator gelingt es auch bei realer Induktivität nicht den Strom verlustfrei weiterzuleiten.
 Als Beiprodukt entsteht durch magnetische Feldenergie Wärme, was als fiktiver Widerstand in den Schaltplan einzeichnet wird.
-Um die Induktivität $L_x$selbst zu bestimmen wird eine Spule mit bekannten Werten der Schaltung hinzugefügt. 
+Um die Induktivität $L_x$ selbst zu bestimmen wird eine Spule mit bekannten Werten der Schaltung hinzugefügt. 
 Ähnlich zur Kondensatorbrücke lässt sich der gesuchte Widerstand und die Induktivität wie folgt finden.
+\end{flushleft}
 \begin{align}
     \label{eqn:induk}
     R_x &= R_2\frac{R_3}{R_4} \\
     L_x &= L_2\frac{R_3}{R_4}
 \end{align}
-
+\begin{flushleft}
 Um den Verlusten der Induktivität von $L_2$ entgegen zu wirken bietet es sich an diese durch eine Kondensator $C_4$ mit bekannten Werten
-zu wechseln. Die Konfiguration der Brückenschaltung nennt sich Maxwell-brücke.
-Dadurch reduziert sich der Wikrungswiderstand und die Bestimmung von $L_x$ wird präziser.
+zu wechseln. Die Konfiguration der Brückenschaltung nennt sich Maxwell-Brücke.
+Dadurch reduziert sich der Wirkungswiderstand und die Bestimmung von $L_x$ wird präziser.
+\end{flushleft}
 \begin{align}
     \label{eqn:stuff}
     R_x &= R_2\frac{R_3}{R_4} \\
@@ -144,28 +147,30 @@ Dadurch reduziert sich der Wikrungswiderstand und die Bestimmung von $L_x$ wird 
 \end{align}
 \\
 \newline
-\subsection{Wien-Robinson-brücke}
+\subsection{Wien-Robinson-Brücke}
 \begin{figure}
     \centering
     \includegraphics[width=0.3\textwidth]{bilder/abb10.png}
-    \caption{Schaltplan einer Wien-Robinson-brücke. \cite{skript}} 
+    \caption{Schaltplan einer Wien-Robinson-Brücke. \cite{skript}} 
     \label{fig:abb10}
 \end{figure}
-Bei der Wien - Robinsonbrücke wird auf Abgleichelemente verzichtet und stattdessen mit einer variablen Frequenz gemessen.
+\begin{flushleft}
+Bei der Wien-Robinson-Brücke wird auf Abgleichelemente verzichtet und stattdessen mit einer variablen Frequenz gemessen.
 Als Ergebnis folgt eine Brückenspannung die folglich abhängig von der Frequenz $\omega$ ist.
 Werden die Widerstandsoperatoren der jeweiligen Elemente 
-in die Bedingung für einen abgeglichen Zustand \eqref{eqn:bedingung} eingesetzt wird folgende Gleichung gefunden.
+in die Bedingung \eqref{eqn:bedingung} für einen abgeglichen Zustand eingesetzt wird folgende Gleichung gefunden.
+\end{flushleft}
 \begin{equation} % muss noch größere klammern abs()
     \label{eqn:bigBoi}
     {\biggl| \frac{U_{br}}{U_s} \biggr| }^2 = \frac{(\omega ^2 R^2 C^2 -1)^2}{9\Bigl[(1-\omega ^2 R^2 C^2)^2 + 9 \omega ^2 R^2 C^2 \Bigr]}
 \end{equation}
-Wenn nun also die Spannung $\frac{U_{br}}{U_s}$ verschwinden soll muss der Zähle eben Null werden. Das Bedeutet, dass für 
+Wenn nun also die Spannung $\frac{U_{br}}{U_s}$ verschwinden soll muss der Zähler eben Null werden. Das bedeutet, dass für 
 $\omega_0$ folgendes gelten muss.
 \begin{equation}
     \label{eqn:ma}
     \omega_0 = \frac{1}{RC}
 \end{equation}
-Die Wien-Robinson-brücke filtert also bestimmte Frequenz die sich Nahe bei $\omega_0$ befinden. Das Verhältnis wird definiert als.
+Die Wien-Robinson-Brücke filtert also bestimmte Frequenz die sich Nahe bei $\omega_0$ befinden. Das Verhältnis wird definiert als.
 \begin{equation}
     \label{eqn:OMEGALULW}
     \Omega = \frac{\omega}{\omega_0}
@@ -184,17 +189,19 @@ Angewandt auf \eqref{eqn:bigBoi} wird folgende Gleichung gefunden.
     \caption{Schaltplan einer TT - Brücke. \cite{skript}} 
     \label{fig:abb11}
 \end{figure}
-Wie auch schon die Wien-Robinson-brücke funktioniert die TT - Brücke als Filter mit dem Unterschied, dass sowohl Eingangsspannung
-$U_s$ als auch die Brückenspannung $U_{br}$ gegen Massen angeschlossen sind.
+\begin{flushleft}
+Wie auch schon die Wien-Robinson-Brücke funktioniert die TT - Brücke als Filter mit dem Unterschied, dass sowohl Eingangsspannung
+$U_s$ als auch die Brückenspannung $U_{B}$ gegen Massen angeschlossen sind.
 Mit dem gleichen $\Omega$ wie in \eqref{eqn:OMEGALULW} findet sich das Verhältnis von Brücken - zu Eingangsspannung.
+\end{flushleft}
 \begin{equation}
-    {\biggl| \frac{U_{br}}{U_s} \biggr| }^2 = \frac{1}{9}\frac{(\Omega^2 -1)^2}{(1-\Omega^2)^2+16\Omega^2} 
+    {\biggl| \frac{U_{B}}{U_s} \biggr| }^2 = \frac{1}{9}\frac{(\Omega^2 -1)^2}{(1-\Omega^2)^2+16\Omega^2} 
 \end{equation}
 \\
 \newline
 \subsection{Klirrfaktor}
 Der Klirrfaktor beschreibt das Verhältnis zwischen dem Anteil einer, oft unerwünschten, Oberwelle im Verhältnis zu seiner Grundwelle.
-Dieser Faktor gibt Auskunft über die Qualittät von meist Sinusgeneratoren und kann durch eine Wien - Robinson-brücke ermittelt werden.
+Dieser Faktor gibt Auskunft über die Qualität von meist Sinusgeneratoren und kann durch eine Wien - Robinson-Brücke ermittelt werden.
 Ausgedrückt wird der Faktor durch.
 \begin{equation}
     \label{eqn:GlasGoesklirr}   
