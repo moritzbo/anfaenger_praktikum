@@ -11,7 +11,7 @@ import uncertainties.unumpy as unp
 # Rx = R2 * (R3/R4)
 
 
-#RECHNUNG WHEATSTONE
+##RECHNUNG WHEATSTONE
 #R_21gem = 332
 #R_21fehler = R_21gem * 0.002
 #R_21gesamt = ufloat(R_21gem, R_21fehler)
@@ -44,7 +44,9 @@ import uncertainties.unumpy as unp
 #R_mittelwert_hand = (Rx1 + Rx2)/2
 #
 #print(R_mittelwert_hand)
-
+#Rlit = 239
+#Abweichung = 100 * (Rlit - R_mittelwert_hand)/Rlit
+#print(Abweichung)
 #---------------------------------------------------------------------------------------
 
 #FEHLER AUF ALLE REFERENZTEILE R2,C2,L2 = +- 0.2 %
@@ -70,9 +72,16 @@ import uncertainties.unumpy as unp
 #
 #print(f"{Rx:.1f}")
 #print(f"{Cx:.1f}")
-#Rx = 449.6+/-13.7
-#Cx = 437.5+/-2.4
-
+##Rx = 449.6+/-13.7
+##Cx = 437.5+/-2.4
+#
+#Rlit = 464.9
+#Abweichung = 100 * (Rlit - Rx)/Rlit
+#print(Abweichung)
+#Clit = 433.71*10**(-9)
+#Cx = Cx *10**(-9)
+#AbweichungC = 100 * ( Cx- Clit)/Clit
+#print(AbweichungC)
 #---------------------------------------------------------------------------------------
 
 #FEHLER AUF ALLE REFERENZTEILE R2,C2,L2 = +- 0.2 %
@@ -100,6 +109,14 @@ import uncertainties.unumpy as unp
 #print(f"{Lx:.1f}")
 #Rx = 67.9+/-2.1
 #Lx = 38.1+/-0.2
+
+#Rlit = 93.65
+#Abweichung = 100 * (Rlit - Rx)/Rlit
+#print(Abweichung)
+#Llit = 41.85*10**(-3)
+#Lx = Lx *10**(-3)
+#AbweichungC = 100 * (Llit - Lx)/Llit
+#print(AbweichungC)
 
 #---------------------------------------------------------------------------------------
 
@@ -130,5 +147,24 @@ import uncertainties.unumpy as unp
 #
 #print(f"{Rx:.1f}")
 #print(f"{Lx:.1f}")
-#Rx = 109.7+/-4.7
-#Lx = 35.5+/-1.1 [milli Henry]
+##Rx = 109.7+/-4.7
+##Lx = 35.5+/-1.1 [milli Henry]
+#
+#Rlit = 93.65
+#Abweichung = 100 * (Rx - Rlit)/Rx
+#print(Abweichung)
+#Llit = 41.85*10**(-3)
+#Lx = Lx *10**(-3)
+#AbweichungC = 100 * (Llit - Lx)/Llit
+#print(AbweichungC)
+
+v2l = ufloat(35.5, 1.1)
+v2r = ufloat(109.7, 4.7)
+
+v1r = ufloat(67.9, 2.1)
+v1l =ufloat(38.1, 0.2)
+
+AbweichungR = 100* (v2r - v1r)/v2r
+AbweichungL = 100* (v1l - v2l)/v1l
+print(AbweichungR)
+print(AbweichungL)
