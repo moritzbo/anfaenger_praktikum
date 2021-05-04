@@ -1,0 +1,28 @@
+\section{Zielsetzung}
+In diesem Versuch sollen die Spaltbreiten eines Einfach- und Doppelspalts, anhand des Beugungsverhaltens von Licht, bestimmt werden.
+
+\section{Theoretische Grundlagen}
+Der Verlauf von Licht hinter einem Hindernis oder einem Schirm, mit Abmessungen im Größenbereich der Strahlungsdurchmesser, wird als Beugung bezeichnet. Das Licht kann dort Bereiche ausleuchten welche durch die geometrisch beschriebene Optik, scheinbar dunkel bleiben würden. Durch eine Wellenbetrachtung in Zusammenhang mit dem Huygensschen Prinzip lässt sich die Beugung an einem Spalt folgendermaßen erklären. 
+\\
+Auf den Spalt trifft eine Wellenfront wobei jeder Punkt dieser Welle nun nach dem Huygensschen Prinzip Ausgang einer neuen kugelförmigen Elementarwelle ist. Die Superposition dieser Elementarwellen bildet die neue Wellenfront und es kommt zu Interferenzerscheinungen welche gemessen werden können.
+\\
+Grundsätzlich gibt es zwei Versuchsanordnungen bei denen es zu Beugungen kommt, eine davon bietet sich mathematisch besonders an. Dies ist die Frauenhoferbeugung, bei ihr wird die Strahlungsquelle, sowie die Beobachtungsebene ins scheinbar Unendliche gelegt um eine möglichst parallele Strahlung zu erhalten. Dies kann gut durch einen großen Abstand zwischen Beobachtungsebene und Spalt, sowie einer geeigneten Strahlungsquelle also einem Laser erzeugt werden. Der Vorteil liegt darin, dass bei der Frauenhoferbeugung die Interferenz an einem Punkt $P$ in der Beobachtungsebene nur von Licht mit festem Beugungswinkel abhängt. Bei der sogenannten Fresnelbeugung ist diese Vereinfachung nicht möglich. Eine schematische Abbildung des Strahlengangs bei Frauenhoferbeugung ist in Abbildung ... dargestellt.
+%hier die Abbildung
+Die gemessenen Werte der Intensität bei unterschiedlichen Winkeln lassen sich mit einer theoretischen Intensitätsfunktion $I(\phi)$ überprüfen. Diese Funktion wird im Folgenden erläutert.
+
+\subsection{Berechnung der Intensität}
+Im Folgenden wird nur noch der Fall für die Frauenhoferbeugung behandelt. 
+Eine von einem Laser erzeugte ebene Welle falle nun aus der z-Richtung ein und oszilliert in x-Richtung. Die Feldstärke $A(z,t)$ ist Lösung der Wellengleichung und lässt sich folgendermaßen schreiben.
+\begin{equation}
+    \label{eqn:eq1}
+   A(z,t)  = A_{0} \text{exp}\left(i\left(\omega t - \frac{2\pi z}{\lambda} \right)\right)
+\end{equation}
+ Die Annahme der Frauenhoferbeugung benötigt die Bedingung, dass der Schirmabstand $d >> b$ ist, wobei $b$ die Spaltbreite angibt. Für die Amplitude bei einem bestimmten Beugungswinkel $\phi$ müssen nun alle Strahlbündel mit diesem Winkel aufsummiert werden, dabei muss beachtet werden, dass zwei verschiedene Strahlbündel auch einen Phasenunterschied, aufgrund ihres Gangunterschiedes $s$ haben. Die Phasendifferenz lässt sich folgendermaßen angeben.
+ \begin{equation}
+     \delta = \frac{2\pi s}{\lambda} = \frac{2\pi x \text{sin}(\phi) }{\lambda}
+ \end{equation}
+ Dabei wurde der Gangunterschied $s$ durch geometrische Überlegungen in Abbildung .... für zwei Punkte im Spalt mit Abstand $x$ eingesetzt, da im Folgenden über alle x-Werte im Spalt integriert wird.
+Nun kann die Phasendifferenz in die Gleichung \eqref{eqn:eq1} eingesetzt und integriert werden.
+\begin{equation}
+B(z, t, \phi) =  A_{0} \int_{0}^{b} \text{exp} \left( i(\left( \omega t - \frac{2\pi z}{\lambda} + \delta\right)\right)
+\end{equation}
