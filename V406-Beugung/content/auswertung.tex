@@ -1,8 +1,46 @@
-\section{Aufbau}
+\section{Auswertung}
 
+Im Folgenden werden durch die Beugungsmustermessungen die jeweiligen Spaltbreiten bestimmt und mit ihrem Theoriewert verglichen.
+
+\subsection{Einfachspalt}
+
+Für das Beugungsmuster am Einfachspalt wurden die Messdaten aus Tabelle \ref{tab:einfach} aufgenommen. Dabei wurden die Ablenkung $x$ an der Apparatur zunächst in ihre Phase folgendermaßen umgerechnet.
+\begin{equation}
+\phi \approx \frac{x - x_{0}}{L}
+\end{equation}    
+Die Größe $x_{0}$ ist dabei die Ablenkung bei dem Hauptmaximum und $L$ beschreibt den Abstand zwischen Spalt und Beobachtungsebene.
+Eine Theoriekurve lässt sich gemäß Gleichung \eqref{eqn:eq3} mit einem Curvefit bestimmen, dabei ergibt sich ein optimaler Wert für die Spaltbreite $b$ welcher zu den Messwertepaaren passt.
+Die Messwerte sowie die Theoretische Kurve sind in Abbildung \ref{fig:plot1} dargestellt.
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{build/plot1.pdf}
-    \caption{Schematischer Aufabu des Lasers mit verschiebbaren Spalt und Detekor \cite{skript}.} 
-    \label{fig:abb1}
+    \includegraphics[width=\textwidth]{build/plot1neu.pdf}
+    \caption{Theoriekurve und Messwerte des Beugungsverhaltens am Einfachspalt.} 
+    \label{fig:plot1}
+\end{figure}
+Für die theoretische Spaltbreite ergibt sich.
+\begin{equation}
+b_{\text{einfach}} = \SI{0.074(1)}{\milli\meter}
+\end{equation}
+
+\subsection{Doppelspalt}
+Zunächst kann für den Doppelspalt analog vorgegangen werden. Die Messwerte aus Tabelle \ref{tab:doppel} mit dem Hauptmaximum bei $x_{0}$ sind nun zusammen mit der
+Theoriekurve aus Gleichung \eqref{eqn:eq4} in dem Diagramm \ref{fig:plot2} dargestellt. Hierbei wurde wieder ein Curvefit mit Python verwendet.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot2.pdf}
+    \caption{Theoriekurve und Messwerte des Beugungsverhaltens am Doppelspalt.} 
+    \label{fig:plot2}
+\end{figure}
+Aus der Fitfunktion ergibt sich nun nicht nur die Spaltbreite $b$ sondern auch der Spaltabstand $s$ zwischen den beiden Einfachspalten. 
+\begin{align}
+b_{\text{doppel}} &= \SI{0.134(17)}{\milli\meter}\\
+s &= \SI{0.478(14)}{\milli\meter}
+\end{align}
+Zusätzlich lässt sich graphisch erkennbar machen, dass die Darstellung des Einzelspalts aus Abbildung \ref{fig:plot1} im groben eine Einhüllende des Doppelspalts ist und somit die 
+Einfachspalte die Doppelspalte modulieren. Diese Darstellung ist in Abbildung \ref{fig:plot3} aufgetragen.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot3.pdf}
+    \caption{Zusammenhang von den Beugungsmustern am Einfach- und Doppelspalt mit angepasster Ordinate.} 
+    \label{fig:plot3}
 \end{figure}

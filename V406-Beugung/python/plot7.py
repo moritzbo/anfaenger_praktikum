@@ -6,7 +6,7 @@ from scipy.stats import sem
 import scipy.constants as const
 import uncertainties.unumpy as unp
 
-x2, I2 = np.genfromtxt("../Mr. Data/doppel2.dat", unpack=True)
+x2, I2 = np.genfromtxt("Mr. Data/doppel2.dat", unpack=True)
 
 I = I2/2380
 lam = 633 * 10**(-9)
@@ -28,21 +28,25 @@ p = np.linspace(-0.020,0.02,100000)
 plt.plot(p,
         sigmoid(p, *params),
         "k-",
+        label="Ausgleichsfunktion Doppelspalt",
         linewidth=1.5)
 
 plt.plot(phi,
         I,
         "kx",
+        label="Messwerte Doppelspalt",
         linewidth=1.5)
 
 
-x2, I2 = np.genfromtxt("../Mr. Data/einfach2.dat", unpack=True)
+x2, I2 = np.genfromtxt("Mr. Data/einfach2.dat", unpack=True)
 
 I=I2/340
 x=x2*10**(-3)
 L=1.27
 phi=(x-25.03*10**(-3))/L
 lam = 633 * 10**(-9)
+
+
 
 
 
@@ -62,7 +66,7 @@ xachsep = np.linspace(-0.020,0.02,10000)
 plt.plot(xachsep,
         sigmoid(xachsep, params[0], params[1]),
         "b-",
-        label="Ausgleichsfunktion",
+        label="Ausgleichsfunktion Einfachspalt",
         linewidth=1.5)
 
 # xachsen = np.linspace(,-0.0001)
@@ -74,7 +78,13 @@ plt.plot(xachsep,
 plt.plot(phi,
         I,
         "bx",
-        label="Messwerte",
+        label="Messwerte Einfachspalt",
         linewidth=1)
 
-plt.show()
+
+plt.grid()
+plt.xlabel(r'$\phi$[$\si{\radian}$]')
+plt.legend(loc="upper right", prop={'size': 6})
+
+
+plt.savefig("build/plot3.pdf")

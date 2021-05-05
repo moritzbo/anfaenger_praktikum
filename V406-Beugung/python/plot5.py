@@ -6,7 +6,7 @@ from scipy.stats import sem
 import scipy.constants as const
 import uncertainties.unumpy as unp
 
-x2, I2 = np.genfromtxt("../Mr. Data/doppel2.dat", unpack=True)
+x2, I2 = np.genfromtxt("Mr. Data/doppel2.dat", unpack=True)
 
 I = I2*10**(-9)
 lam = 633 * 10**(-9)
@@ -26,17 +26,26 @@ for name, value, uncertainty in zip('sbA', params, uncertainties):
 
 p = np.linspace(-0.020,0.02,100000)
 plt.plot(p,
-        sigmoid(p, *params),
+        sigmoid(p, *params)*1e6,
         "k-",
+        label="Ausgleichsfunktion",
         linewidth=1.5)
 
 plt.plot(phi,
-        I,
-        "kx",
+        I*1e6,
+        "bx",
+        label="Messwerte",
         linewidth=1.5)
 
+plt.xlabel(r'$\phi$[$\si{\radian}$]')
+plt.ylabel(r'$I-I_{\text{dunkel}}\/$[$\si{\micro\ampere}$]')
+plt.grid()
+plt.legend()
+plt.savefig("build/plot2.pdf")
 
-x2, I2 = np.genfromtxt("../Mr. Data/einfach2.dat", unpack=True)
+plt.clf()
+
+x2, I2 = np.genfromtxt("Mr. Data/einfach2.dat", unpack=True)
 
 I=I2*10**(-9)
 x=x2*10**(-3)
@@ -60,7 +69,7 @@ for name, value, uncertainty in zip('Ab', params, uncertainties):
 
 xachsep = np.linspace(-0.020,0.02,10000)
 plt.plot(xachsep,
-        sigmoid(xachsep, params[0], params[1]),
+        sigmoid(xachsep, params[0], params[1])*1e6,
         "k-",
         label="Ausgleichsfunktion",
         linewidth=1.5)
@@ -72,9 +81,12 @@ plt.plot(xachsep,
 #         linewidth=1.5)
 
 plt.plot(phi,
-        I,
+        I*1e6,
         "bx",
         label="Messwerte",
         linewidth=1)
-
-plt.show()
+plt.xlabel(r'$\phi$[$\si{\radian}$]')
+plt.ylabel(r'$I-I_{\text{dunkel}}\/$[$\si{\micro\ampere}$]')
+plt.grid()
+plt.legend()
+plt.savefig("build/plot1neu.pdf")

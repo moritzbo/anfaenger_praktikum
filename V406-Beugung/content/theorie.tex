@@ -8,7 +8,7 @@ Der Verlauf von Licht hinter einem Hindernis oder einem Schirm, mit Abmessungen 
 Auf den Spalt trifft eine Wellenfront wobei jeder Punkt dieser Welle nun nach dem Huygensschen Prinzip Ausgang einer neuen kugelförmigen Elementarwelle ist. Die Superposition dieser Elementarwellen bildet die neue Wellenfront und es kommt zu Interferenzerscheinungen welche gemessen werden können.
 \\
 \newline
-Grundsätzlich gibt es zwei Versuchsanordnungen bei denen es zu Beugungen kommt, eine davon bietet sich mathematisch besonders an. Dies ist die Frauenhoferbeugung, bei ihr wird die Strahlungsquelle, sowie die Beobachtungsebene ins scheinbar Unendliche gelegt um eine möglichst parallele Strahlung zu erhalten. Dies kann gut durch einen großen Abstand zwischen Beobachtungsebene und Spalt, sowie einer geeigneten Strahlungsquelle also einem Laser erzeugt werden. Der Vorteil liegt darin, dass bei der Frauenhoferbeugung die Interferenz an einem Punkt $P$ in der Beobachtungsebene nur von Licht mit festem Beugungswinkel abhängt. Bei der sogenannten Fresnelbeugung ist diese Vereinfachung nicht möglich. Eine schematische Abbildung des Strahlengangs bei Frauenhoferbeugung ist in Abbildung \ref{fig:fig1} dargestellt.
+Grundsätzlich gibt es zwei Versuchsanordnungen bei denen es zu Beugungen kommt, eine davon bietet sich mathematisch besonders an. Dies ist die Frauenhoferbeugung, bei ihr wird die Strahlungsquelle, sowie die Beobachtungsebene ins scheinbar Unendliche gelegt um eine möglichst parallele Strahlung zu erhalten. Dies kann gut durch einen großen Abstand zwischen Beobachtungsebene und Spalt, sowie einer geeigneten Strahlungsquelle, also beispielsweise einem Laser, erzeugt werden. Der Vorteil liegt darin, dass bei der Frauenhoferbeugung die Interferenz an einem Punkt $P$ in der Beobachtungsebene nur von Licht mit festem Beugungswinkel abhängt. Bei der sogenannten Fresnelbeugung ist diese Vereinfachung nicht möglich. Eine schematische Abbildung des Strahlengangs bei Frauenhoferbeugung ist in Abbildung \ref{fig:fig1} dargestellt.
 \begin{figure}
     \centering
     \includegraphics[width=0.4\textwidth]{bilder/1.png}
@@ -38,8 +38,8 @@ Die Lösung lautet.
     \label{eqn:eq2}
     B(z, t, \phi) =  A_{0} \text{exp}\left(i\left(\omega t - \frac{2\pi z}{\lambda} \right)\right) \cdot \text{exp}\left( \frac{i \pi b \cdot \text{sin}(\phi)}{\lambda}\right) \cdot \frac{\lambda}{\pi \cdot \text{sin}(\phi)} \cdot \text{sin}\left( \frac{\pi b  \cdot \text{sin}(\phi)}{\lambda} \right)
 \end{equation}
-Diese Gleichung beschreibt nun also den Schwingungszustand eines beliebigen Punktes hinter dem Spalt. Von Vorteil ist dabei, dass die beiden Exponentialterme nur Phasenfunktionen sind und 
-beim quadrieren für die Bestimmung der Intensität wegfallen. Die Amplitude lässt sich in diesem Fall nur schwer messen, allerdings kann mit der zeitlich gemittelte Intensität $I(\phi)$ gearbeitet werden, diese ist proportional zu dem Betragsquadrat von der 
+Diese Gleichung beschreibt nun also den Schwingungszustand eines beliebigen Punktes hinter dem Spalt. Von Vorteil ist dabei, dass die beiden Exponentialterme nur Phasenfunktionen sind und sie
+beim quadrieren für die Bestimmung der Intensität keine Auswirkung haben. Die Amplitude lässt sich in diesem Fall nur schwer messen, allerdings kann mit der zeitlich gemittelten Intensität $I(\phi)$ gearbeitet werden, diese ist proportional zu dem Betragsquadrat von der 
 Funktion $  B(z, t, \phi)$.
 \begin{equation}
     \label{eqn:eq3}
@@ -60,9 +60,10 @@ Analog kann eine Intensitätsfunktion für den Doppelspalt bestimmt werden, dabe
 Wichtig ist, dass weiterhin die Bedingungen für die Frauenhoferbeugung gelten müssen. Der Spaltabstand zwischen den beiden Einfachspalten ist im Folgenden als $s$ bezeichnet.
 Die Intensität ergibt sich zu.
 \begin{equation}
+    \label{eqn:eq4}
     I(\phi) \propto B^{2}(\phi) = 4 \cdot \text{cos}^{2}\left( \frac{\pi s \cdot \text{sin}(\phi)}{\lambda}\right) \cdot \left( \frac{\lambda}{\pi b \cdot \text{sin}(\phi)}\right)^{2} \cdot \text{sin}^{2}\left( \frac{\pi b \cdot \text{sin}(\phi)}{\lambda}\right)
 \end{equation}
-Erkennbar ist, dass die vorherige Intensitätsverteilung des Einfachspalts in dem Term enthalten ist mit einem zusätzlichen Term $cos^{2}$. Die Intensität eines Doppelspalts wird also durch die Intensität
+Erkennbar ist, dass die vorherige Intensitätsverteilung des Einfachspalts in dem Term enthalten ist mit einem zusätzlichen Term $\text{cos}^{2}$. Die Intensität eines Doppelspalts wird also durch die Intensität
 der Einzelspalte moduliert.
 Es kommen allerdings weitere Nullstellen durch den Kosinusterm hinzu. Diese liegen bei.
 \begin{equation}
@@ -70,14 +71,14 @@ Es kommen allerdings weitere Nullstellen durch den Kosinusterm hinzu. Diese lieg
 \end{equation}
 
 \subsection{Zusammenhang zur Fouriertransformation}
-Mathematisch kann die Berechnung der Amplitudenverteilung auch anders bestimmt werden. Es gibt einen Zusammenhang zwischen der Funktion $B(\phi)$ und der sogenannten Aperaturfunktion. Die Aperaturfunktion ist hier eine konstante Funktion 
+Mathematisch kann die Berechnung der Amplitudenverteilung auch anders bestimmt werden. Es gibt einen Zusammenhang zwischen der Funktion $B(\phi)$ und der sogenannten Aperturfunktion. Die Aperturfunktion ist hier eine konstante Funktion 
 für $ 0 \leq x \leq b$, welche die Beugungsebene der einfallenden Welle beschreibt.
 Die Fouriertransformierte einer konstanten Funktion über ein kompaktes Intervall ist im Allgemeinen der Sinus cardinalis und damit lässt sich ein Zusammenhang über die Fouriertransformation erwarten.
 Eine allgemeine Fouriertransformation sieht folgendermaßen aus.
 \begin{equation}
 \hat{f}(\zeta) = \int_{-\infty}^{\infty} f(x) \text{exp}(-ix\zeta) \text{d}x
 \end{equation}
-Mit der Anwedungen auf die Aperaturfunktion ergibt sich.
+Mit der Anwedungen auf die Aperturfunktion ergibt sich.
 \begin{equation}
     \hat{f}(\zeta) = \frac{2A_{0}}{\zeta} \text{exp}\left(\frac{i \zeta b}{2}\right) \text{sin}\left(\frac{\zeta b}{2}\right)
 \end{equation}
@@ -85,5 +86,5 @@ Dieses Ergebniss stimmt mit dem nur von $\phi$ abhängigen Teil von $B(z, t, \ph
 \begin{equation}
 \zeta = \frac{2\pi \text{sin}(\phi)}{\lambda}
 \end{equation}
-identifiert wird. Anhand einer Fouriertransformation lässt sich also durch die Eigenschaft der Aperatur direkt eine Beschreibung für die Schwingung an allen Orten finden. Solange die betrachte Funktion absolut integrierbar ist existiert die Fouriertransformation und umgekehrt
-kann auch aus der Amplitudenfunktion die Apperaturfunktion berechnet werden. 
+identifiert wird. Anhand einer Fouriertransformation lässt sich also durch die Eigenschaft der Öffnungsweite direkt eine Beschreibung für die Schwingung an allen Orten finden. Solange die betrachte Funktion absolut integrierbar ist existiert die Fouriertransformation und umgekehrt
+kann auch aus der Amplitudenfunktion die Aperturfunktion berechnet werden. 
