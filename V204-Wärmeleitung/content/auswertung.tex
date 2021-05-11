@@ -19,7 +19,9 @@ Wenn Werte in einer beliebigen Berechnungsformel fehlerbehaftet sind kann der Fe
 Es wird also über alle Variablen summiert welche einen Fehler $\increment x_{i}$ besitzen. Für Formeln mit nur einem fehlerbehafteten Wert vereinfacht sich die Gleichung dementsprechend.
 
 \subsection{Statische Methode}
-
+Zunächst lassen sich die Temperaturen ferner vom Pertier-Element graphisch darstellen. Dazu gehören also $T_{1}$, $T_{4}$, $T_{5}$ und $T_{8}$ also alle Temperaturen am Ende der einzelnen Metallstäbe.
+Gemessen wurde über eine Dauer von $t = \SI{710}{\second}$ und die Temperatur $T_{7}$ erreicht niemals den Wert $\SI{45}{\celsius}$ also kann für diese Betrachtung das ganze Intervall verwendet werden.
+Abbildung \ref{fig:plot1} zeigt die Temperaturen $T_{1}$ und $T_{4}$ also die unterschiedlichen Messingstäbe und Abbildung \ref{fig:plot2} die Temperaturen $T_{5}$ und $T_{8}$ also Aluminium und Edelstahl.
 
 \begin{figure}
     \centering
@@ -34,3 +36,94 @@ Es wird also über alle Variablen summiert welche einen Fehler $\increment x_{i}
     \caption{Temperaturverlauf der Messsonden T5 (Aluminium) und T8(Edelstahl)} 
     \label{fig:plot2}
 \end{figure}
+\newpage
+Erkennbar ist, dass alle Temperaturen einen annähernd logarithmischen Verlauf zeigen. 
+Die beiden Messingstäbe in Abbildung \ref{fig:plot1} sind dabei zu Beginn identisch und unterscheiden sich erst ab einer Temperatur von $T = \SI{30}{\celsius}$, wobei der breitere Messingstab stärker wächst als der dünnere. Dies ist ebenfalls zu erwarten, da die Gleichung
+\ref{eqn:itsHeadacheTimeYeeeay} proportional zum Querschnitt ist. Im groben Verlauf sind die beiden jedoch durch die gleiche Wärmeleitfähigkeit $\kappa_{\text{messing}}$ sehr ähnlich.
+\\
+Für die beiden Temperaturen $T_{5}$ und $T_{8}$ in Abbildung \ref{fig:plot2} sind größere Unterschiede zu erkennen. Die Temperatur im Edelstahl wächst nahezu linear und lässt somit auf eine eher kleine Wärmeleitfähigkeit schließen. Der 
+Temperaturverlauf für Aluminium hingegen ist denen von Messing sehr ähnlich besitz allerdings eine noch größere Maximaltemperatur zum Schluss der Messung. 
+\\
+Die maximalen Temperaturen zum Zeitpunkt $t = \SI{710}{\second}$ sind im folgenden angegeben.
+\begin{align}
+    T_1 &= \SI{45.65}{\celsius} \\
+    T_4 &= \SI{43.21}{\celsius} \\
+    T_5 &= \SI{48.28}{\celsius} \\
+    T_8 &= \SI{34.75}{\celsius}
+\end{align}
+Somit kann festgestellt werden, dass die Wärmeleitfähigkeit vom Aluminium $\kappa_{\text{alu}}$ am besten, also am größten ist.
+\\
+\newline
+Mit den Literaturwerten für die Wärmeleitfähigkeit $\kappa$ kann nun zu verschiedenen Messzeiten der Wärmestrom $\increment Q$/$\increment t$ bestimmt werden. Dazu werden Messzeiten im Abstand von $\increment t = \SI{140}{\second}$
+gewählt. Für die Bestimmung mit Gleichung \ref{eqn:itsHeadacheTimeYeeeay} wird ebenfalls die Querschnittsfläche der Stäbe benötigt. Diese unterscheidet sich nur bei dem einen schmalen Messingstab zu den drei sonst gleich großen Stäben.
+Sie lassen sich mit den Werten aus Tabelle \ref{tab:einfach} berechnen. 
+\begin{align}
+A_{\text{breit}} &= \SI{48e-6}{\meter\squred}\\
+A_{\text{schmal}} &= \SI{28e-6}{\meter\squred}
+\end{align}
+Zusammen mit dem Abstand zwischen den Thermoelementen $\increment x = \SI{0.03}{\meter}$ lassen sich diese Werte nun in Gleichung \ref{eqn:itsHeadacheTimeYeeeay} einsetzen. Die Tabellen ... bis ... zeigen den bestimmten Wärmefluss
+der einzelnen Stäbe.
+\begin{table}
+    \centering
+    \caption{Wärmestrom vom breiten Messingstab.}
+    \label{tab:mesbreit}
+    \begin{tabular}{c c c}
+        \toprule
+        Messzeit $t$ [$\si{\second}$]   & $T_{2} - T_{1}$ [$\si{\kelvin}$] &  $\frac{\increment Q_{2 \to 1}}{\increment t}$ [$\si{watt}$]  \\
+        \midrule
+        140     &   4.08   & -0.74   \\
+        280     &   2.80   &  -0.51  \\
+        420     &   2.42   &  -0.44  \\
+        560     &   2.25   &   -0.41 \\
+        700     &   2.21   &  -0.40  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\begin{table}
+    \centering
+    \caption{Wärmestrom vom schmalen Messingstab.}
+    \label{tab:messchmal}
+    \begin{tabular}{c c c}
+        \toprule
+        Messzeit $t$ [$\si{\second}$]   & $T_{3} - T_{4}$ [$\si{\kelvin}$] &  $\frac{\increment Q_{3 \to 4}}{\increment t}$ [$\si{watt}$]  \\
+        \midrule
+        140     &   4.99   & -0.53   \\
+        280     &   3.86   &  -0.41  \\
+        420     &   3.67   &  -0.39  \\
+        560     &   3.63   &   -0.38 \\
+        700     &   3.63   &  -0.38 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\begin{table}
+    \centering
+    \caption{Wärmestrom vom Aluminiumstab.}
+    \label{tab:alu}
+    \begin{tabular}{c c c}
+        \toprule
+        Messzeit $t$ [$\si{\second}$]   & $T_{6} - T_{5}$ [$\si{\kelvin}$] &  $\frac{\increment Q_{6 \to 5}}{\increment t}$ [$\si{watt}$]  \\
+        \midrule
+        140     &   2.59   & -0.91  \\
+        280     &   1.72   &  -0.61  \\
+        420     &   1.56   &  -0.55  \\
+        560     &   1.51   &   -0.53 \\
+        700     &   1.51   &  -0.53 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\begin{table}
+    \centering
+    \caption{Wärmestrom vom Aluminiumstab.}
+    \label{tab:edel}
+    \begin{tabular}{c c c}
+        \toprule
+        Messzeit $t$ [$\si{\second}$]   & $T_{6} - T_{5}$ [$\si{\kelvin}$] &  $\frac{\increment Q_{6 \to 5}}{\increment t}$ [$\si{watt}$]  \\
+        \midrule
+        140     &   2.59   & -0.91  \\
+        280     &   1.72   &  -0.61  \\
+        420     &   1.56   &  -0.55  \\
+        560     &   1.51   &   -0.53 \\
+        700     &   1.51   &  -0.53 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
