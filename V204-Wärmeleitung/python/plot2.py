@@ -7,8 +7,16 @@ import scipy.constants as const
 import uncertainties.unumpy as unp
 
 
-n, a, b, c, d, e, f, g, h = np.genfromtxt("../data/statisch.dat", unpack =True)
+n, a, b, c, d, e, f, g, h = np.genfromtxt("data/statisch.dat", unpack =True)
 
-plt.plot(n/5, e, 'b.', markersize=1)
-plt.plot(n/5, h, 'k.', markersize=1)
-plt.show()
+plt.plot(n/5, e, 'b-', label="T5 - Aluminium", markersize=1)
+plt.plot(n/5, h, 'k-', label="T8 - Edelstahl", markersize=1)
+
+plt.grid()
+plt.legend()
+
+plt.ylabel(r"$T[\si{\degreeCelsius}]$")
+plt.xlabel(r"$t[\si{\second}]")
+
+
+plt.savefig("build/plot2.pdf")
