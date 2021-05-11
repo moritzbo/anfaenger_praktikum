@@ -9,6 +9,6 @@ import uncertainties.unumpy as unp
 
 n, a, b, c, d, e, f, g, h = np.genfromtxt("../data/statisch.dat", unpack =True)
 
-plt.plot(n/5, a, 'b.', markersize=1)
-plt.plot(n/5, d, 'k.', markersize=1)
+plt.plot(n/5, e, 'b.', markersize=1)
+plt.plot(n/5, h, 'k.', markersize=1)
 plt.show()
