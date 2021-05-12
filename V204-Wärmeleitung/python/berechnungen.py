@@ -11,7 +11,7 @@ n, a, b, c, d, e, f, g, h = np.genfromtxt("../data/statisch.dat", unpack =True)
 
 ntry = n[700]
 
-x = f[3500] - e[3500] 
+x = g[3500] - h[3500] 
 
 
 Kappalit_messing = 113

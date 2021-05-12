@@ -61,7 +61,7 @@ Sie lassen sich mit den Werten aus Tabelle \ref{tab:einfach} berechnen.
 A_{\text{breit}} &= \SI{48e-6}{\meter\squared}\\
 A_{\text{schmal}} &= \SI{28e-6}{\meter\squared}
 \end{align}
-Zusammen mit dem Abstand zwischen den Thermoelementen $\increment x = \SI{0.03}{\meter}$ lassen sich diese Werte nun in Gleichung \ref{eqn:itsHeadacheTimeYeeeay} einsetzen. Die Tabellen ... bis ... zeigen den bestimmten Wärmefluss
+Zusammen mit dem Abstand zwischen den Thermoelementen $\increment x = \SI{0.03}{\meter}$ lassen sich diese Werte nun in Gleichung \ref{eqn:itsHeadacheTimeYeeeay} einsetzen. Die Tabellen \ref{tab:mesbreit} bis \ref{tab:edel} zeigen den bestimmten Wärmefluss
 der einzelnen Stäbe.
 \begin{table}
     \centering
@@ -113,17 +113,31 @@ der einzelnen Stäbe.
 \end{table}
 \begin{table}
     \centering
-    \caption{Wärmestrom vom Aluminiumstab.}
+    \caption{Wärmestrom vom Edelstahlstab.}
     \label{tab:edel}
     \begin{tabular}{c c c}
         \toprule
-        Messzeit $t$ [$\si{\second}$]   & $T_{6} - T_{5}$ [$\si{\kelvin}$] &  $\frac{\increment Q_{6 \to 5}}{\increment t}$ [$\si{\watt}$]  \\
+        Messzeit $t$ [$\si{\second}$]   & $T_{7} - T_{8}$ [$\si{\kelvin}$] &  $\frac{\increment Q_{7 \to 8}}{\increment t}$ [$\si{\watt}$]  \\
         \midrule
-        140     &   2.59   & -0.91  \\
-        280     &   1.72   &  -0.61  \\
-        420     &   1.56   &  -0.55  \\
-        560     &   1.51   &   -0.53 \\
-        700     &   1.51   &  -0.53 \\
+        140     &   9.16   & -0.31  \\
+        280     &   9.55   &  -0.32  \\
+        420     &   9.55   &  -0.32  \\
+        560     &   9.54   &   -0.32 \\
+        700     &   9.52   &  -0.32\\
         \bottomrule
     \end{tabular}
 \end{table}
+
+Zusätzlich lassen sich die Temperaturdifferenzen zwischen den beiden Enden eines Stabes graphisch darstellen. Im Folgenden wird die Differenz der gemessenen Werte $T_{7} - T_{8}$ und $T_{2} - T_{1}$, also des breiten Messing- und
+Edelstahlstabs betrachtet. Dies ist in Abbildung \ref{fig:plot3} gezeigt.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot3.pdf}
+    \caption{Temperaturdifferenzen des Edelstahlstabs ($T_{7}-T_{8}$) und breiten Messingstabes ($T_{2}-T_{1}$).} 
+    \label{fig:plot3}
+\end{figure}
+
+Deutlich zu erkennen ist die unterschiedliche Maximaltemperaturdifferenz der beiden Kurven. Beide verlaufen ab einem Punkt asymptotisch gegen einen Grenzwert. Für die Edelstahlkurve liegt der bei knapp $\SI{9.54}{\celsius}$ und bei der 
+Messingkurve bei $\SI{2.21}{\celsius}$. Dies lässt auf deutlich zu erkennende Größenunterschiede in den Wärmeleitfähigkeiten $\kappa$ schließen, wobei $\kappa_{\text{edel}} < \kappa_{\text{messing}}$. Beide Kurven steigen zu
+Beginn schnell an und mit der Zeit wird die Wärme von einem zum anderen Ende transportiert. Das Temperaturmaximum wird bei dem Edehlstahlstab ebenfalls früher erreicht.
