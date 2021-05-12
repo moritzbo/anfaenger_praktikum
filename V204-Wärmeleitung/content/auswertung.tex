@@ -160,6 +160,29 @@ Gleichung \ref{eqn:sem}.
 \end{align}
 Zusammen mit den Literaturwerten aus Tabelle \ref{tab:lit} lassen sich diese Werte nun in Gleichung \ref{eqn:kappa} einsetzen wobei sich der resultierende Fehler aus einer Gaußschen Fehlerfortpflanzung \ref{eqn:gauss} ergibt.
 \begin{equation}
-
+\kappa_{\text{messing}} = \SI{350(58)}{\watt\per\meter\per\kelvin}
 \end{equation}
 Die explizite Fehlerfortpflanzung sieht folgendermaßen aus.
+....
+.....
+Nun wird die Wärmeleitfähigkeit für den Edelstahlstab berechnet, wobei wieder ein Periodendauer von $T = \SI{200}{\second}$ gewählt wurde. Der Temperaturverlauf an den Thermoelementen 
+$T_{7}$ und $T_{8}$ ist in der Abbildung ... gezeigt. Hier können wieder analog zum vorherigen Fall Amplituden der Temperaturen, sowie Phasendifferenzen gesucht werden. Diese Auslesedaten sind in der Tabelle
+\ref{tab:edelkappa} notiert.
+Die Mittelwerte und Fehler auf die Mittelwerte folgen wieder aus den Gleichungen \ref{eqn:mittel} und \ref{eqn:sem}.
+\begin{align}
+    \bar{A_{7}} &= \SI{21.89(76)}{\celsius}      \\
+    \bar{A_{8}} &=  \SI{4.56(60)}{\celsius}        \\
+    \bar{\increment t} &= \SI{50.57(467)}{\second}
+\end{align}
+Zusammen mit den Literaturwerten aus Tabelle \ref{tab:lit} kann nun wieder in die Gleichung \eqref{eqn:kappa} eingesetzt werden.
+\begin{equation}
+    \kappa_{\text{edel}} = \SI{18.15(229)}{\watt\per\meter\per\kelvin}
+\end{equation}
+Der Fehler ergibt sich hier aus der folgenden Gaußschen Fehlerfortpflanzung nach Gleichung \ref{eqn:gauss}.
+\begin{equation}
+ \increment \text{ln} \left( \frac{\bar{A_{7}}}{\bar{A_{8}}}\right) = \sqrt{\left( \frac{1}{\bar{A_{7}}} \right)^{2}  \cdot (\increment \bar{A_{7}})^2 + \left( \frac{1}{\bar{A_{8}}}\right)^2 \cdot (\increment \bar{A_{8}})^2}
+\end{equation}
+Dieser Fehler pflanzt sich nun weiter fort auf die Berechnungsformel \eqref{eqn:kappa}.
+\begin{equation}
+    \increment \kappa_{\text{edel}} = 
+\end{equation}
