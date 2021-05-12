@@ -20,6 +20,11 @@ Wenn Werte in einer beliebigen Berechnungsformel fehlerbehaftet sind kann der Fe
 \increment f = \sqrt{\sum_{i=1}^{N} \left( \frac{\partial f}{\partial x_{i}}\right)^2 (\increment x_{i})^2}
 \end{equation}
 Es wird also über alle Variablen summiert welche einen Fehler $\increment x_{i}$ besitzen. Für Formeln mit nur einem fehlerbehafteten Wert vereinfacht sich die Gleichung dementsprechend.
+Für die Bestimmung von prozentualen Abweichungen zweier Werte wird folgende Formel verwendet.
+\begin{equation}
+    \label{eqn:lol}
+\zeta_{\si{\percent}} = 100 \cdot \left( \frac{|\zeta_{\text{lit}} - \zeta_{\text{mess}}|}{\zeta_{\text{lit}}} \right)
+\end{equation}
 
 \subsection{Statische Methode}
 Zunächst lassen sich die Temperaturen ferner vom Pertier-Element graphisch darstellen. Dazu gehören also $T_{1}$, $T_{4}$, $T_{5}$ und $T_{8}$ also alle Temperaturen am Ende der einzelnen Metallstäbe.
@@ -170,8 +175,23 @@ Daraus folgt anschließend mit einer weiteren Fortpflanzung.
 \begin{equation}
     \increment \kappa_{\text{messing}} = \frac{\rho c \left ( \increment x \right )^2}{2 \increment t \cdot \left(\text{ln} \left( \frac{\bar{A_{2}}}{\bar{A_{1}}}\right)\right)^2} \cdot \left(\increment \text{ln} \left( \frac{\bar{A_{2}}}{\bar{A_{1}}}\right)\right)
 \end{equation}
+\\
+\newline
+Ganz analog zu dem Messingstab kann diese Rechnung für die Messwerte vom Aluminium durchgeführt werden. Dazu sind die Messwerte $T_{5}$ und $T_{6}$ in der Abbildung \ref{fig:plot6} dargestellt. Es lassen sich wieder die Amplituden,
+ sowie die Phasendifferenzen ablesen. Diese sind in Tabelle \ref{tab:alukappa} angegeben. Es werden zunächst wieder die Mittelwerte und Fehler mit den Gleichungen \ref{eqn:mittel} und \ref{eqn:sem} bestimmt.
+\begin{align}
+    \bar{A_{5}} &= \SI{23.42(97)}{\celsius}      \\
+    \bar{A_{6}} &=  \SI{29.57(86)}{\celsius}        \\
+    \bar{\increment t} &= \SI{4.38(26)}{\second}
+\end{align}
+Die Wärmeleitfähigkeit und die Fehler werden dann mit den selben Gleichungen wie zuvor und den Literaturwerten aus Tabelle \ref{tab:lit} zu.
+\begin{equation}
+    \kappa_{\text{alu}} = \SI{1025.36(23113)}{\watt\per\meter\per\kelvin}
+\end{equation}
+\\
+\newline
 Nun wird die Wärmeleitfähigkeit für den Edelstahlstab berechnet, wobei wieder eine Periodendauer von $T = \SI{200}{\second}$ gewählt wurde. Der Temperaturverlauf an den Thermoelementen 
-$T_{7}$ und $T_{8}$ ist in der Abbildung ... gezeigt. Hier können wieder analog zum vorherigen Fall Amplituden der Temperaturen, sowie Phasendifferenzen gesucht werden. Diese Auslesedaten sind in der Tabelle
+$T_{7}$ und $T_{8}$ ist in der Abbildung \ref{tab:plot5} gezeigt. Hier können wieder analog zum vorherigen Fall Amplituden der Temperaturen, sowie Phasendifferenzen gesucht werden. Diese Auslesedaten sind in der Tabelle
 \ref{tab:edelkappa} notiert.
 Die Mittelwerte und Fehler auf die Mittelwerte folgen wieder aus den Gleichungen \ref{eqn:mittel} und \ref{eqn:sem}.
 \begin{align}
