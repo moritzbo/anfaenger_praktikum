@@ -163,9 +163,14 @@ Zusammen mit den Literaturwerten aus Tabelle \ref{tab:lit} lassen sich diese Wer
 \kappa_{\text{messing}} = \SI{350(58)}{\watt\per\meter\per\kelvin}
 \end{equation}
 Die explizite Fehlerfortpflanzung sieht folgendermaßen aus.
-....
-.....
-Nun wird die Wärmeleitfähigkeit für den Edelstahlstab berechnet, wobei wieder ein Periodendauer von $T = \SI{200}{\second}$ gewählt wurde. Der Temperaturverlauf an den Thermoelementen 
+\begin{equation}
+    \increment \text{ln} \left( \frac{\bar{A_{2}}}{\bar{A_{1}}}\right) = \sqrt{\left( \frac{1}{\bar{A_{2}}} \right)^{2}  \cdot (\increment \bar{A_{2}})^2 + \left( \frac{1}{\bar{A_{1}}}\right)^2 \cdot (\increment \bar{A_{1}})^2}
+\end{equation}
+Daraus folgt anschließend mit einer weiteren Fortpflanzung.
+\begin{equation}
+    \increment \kappa_{\text{messing}} = \frac{\rho c \left ( \increment x \right )^2}{2 \increment t \cdot \left(\text{ln} \left( \frac{\bar{A_{2}}}{\bar{A_{1}}}\right)\right)^2} \cdot \left(\increment \text{ln} \left( \frac{\bar{A_{2}}}{\bar{A_{1}}}\right)\right)
+\end{equation}
+Nun wird die Wärmeleitfähigkeit für den Edelstahlstab berechnet, wobei wieder eine Periodendauer von $T = \SI{200}{\second}$ gewählt wurde. Der Temperaturverlauf an den Thermoelementen 
 $T_{7}$ und $T_{8}$ ist in der Abbildung ... gezeigt. Hier können wieder analog zum vorherigen Fall Amplituden der Temperaturen, sowie Phasendifferenzen gesucht werden. Diese Auslesedaten sind in der Tabelle
 \ref{tab:edelkappa} notiert.
 Die Mittelwerte und Fehler auf die Mittelwerte folgen wieder aus den Gleichungen \ref{eqn:mittel} und \ref{eqn:sem}.
@@ -182,7 +187,30 @@ Der Fehler ergibt sich hier aus der folgenden Gaußschen Fehlerfortpflanzung nac
 \begin{equation}
  \increment \text{ln} \left( \frac{\bar{A_{7}}}{\bar{A_{8}}}\right) = \sqrt{\left( \frac{1}{\bar{A_{7}}} \right)^{2}  \cdot (\increment \bar{A_{7}})^2 + \left( \frac{1}{\bar{A_{8}}}\right)^2 \cdot (\increment \bar{A_{8}})^2}
 \end{equation}
-Dieser Fehler pflanzt sich nun weiter fort auf die Berechnungsformel \eqref{eqn:kappa}.
+Dieser Fehler pflanzt sich nun weiter fort auf den nach der Berechnungsformel \eqref{eqn:kappa} berechneten Wert von $\kappa_{\text{edel}}$.
 \begin{equation}
-    \increment \kappa_{\text{edel}} = 
+    \increment \kappa_{\text{edel}} = \frac{\rho c \left ( \increment x \right )^2}{2 \increment t \cdot \left(\text{ln} \left( \frac{\bar{A_{7}}}{\bar{A_{8}}}\right)\right)^2} \cdot \left(\increment \text{ln} \left( \frac{\bar{A_{7}}}{\bar{A_{8}}}\right)\right)
 \end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot4.pdf}
+    \caption{Temperaturverlauf der Messsonden T1 und T2 auf Messing bei periodischer Erwärmung.} 
+    \label{fig:plot4}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot5.pdf}
+    \caption{Temperaturverlauf der Messsonden T7 und T8 auf Edelstahl bei periodischer Erwärmung.} 
+    \label{fig:plot5}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot6.pdf}
+    \caption{Temperaturverlauf der Messsonden T5 und T6 auf Aluminium bei periodischer Erwärmung.} 
+    \label{fig:plot6}
+\end{figure}
