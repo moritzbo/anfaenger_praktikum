@@ -2,6 +2,7 @@
 Für die Auswertung der Messdaten werden einige Fehlerrechnungen benötigt. Diese sind im Folgenden angegeben.
 Alle Mittelwerte werden durch
 \begin{equation}
+    \label{eqn:mittel}
 \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_{i}
 \end{equation}
 bestimmt, wobei $N$ die Anzahl der betrachten Messwerte angibt. Die Standardabweichung $\sigma$ einer Messreihe lässt sich folgendermaßen berechnen.
@@ -10,10 +11,12 @@ bestimmt, wobei $N$ die Anzahl der betrachten Messwerte angibt. Die Standardabwe
 \end{equation}
 Der sogenannte Standardfehler des Mittelwerts ist durch eine Beziehung zur Standardabweichung definiert.
 \begin{equation}
+    \label{eqn:sem}
 \increment \bar{x} = \frac{\sigma}{\sqrt{N}} = \frac{1}{\sqrt{N}} \sqrt{\frac{1}{N-1}\sum_{i=1}^{N} (x_{i} -\bar{x})^2 }
 \end{equation}
 Wenn Werte in einer beliebigen Berechnungsformel fehlerbehaftet sind kann der Fehler anhand der Gaußschen Fehlerfortpflanzung ermittelt werden. Diese sieht im allgemeinen Fall folgendermaßen aus.
 \begin{equation}
+    \label{eqn:gauss}
 \increment f = \sqrt{\sum_{i=1}^{N} \left( \frac{\partial f}{\partial x_{i}}\right)^2 (\increment x_{i})^2}
 \end{equation}
 Es wird also über alle Variablen summiert welche einen Fehler $\increment x_{i}$ besitzen. Für Formeln mit nur einem fehlerbehafteten Wert vereinfacht sich die Gleichung dementsprechend.
@@ -144,11 +147,19 @@ Beginn schnell an und mit der Zeit wird die Wärme von einem zum anderen Ende tr
 
 \subsection{Dynamische Methode}
 Mit dieser Methode können die Wärmeleitfähigkeiten $\kappa$ der einzelnen Metallstäbe bestimmt werden, dazu wurden die Stäbe periodisch aufgeheizt und abgekühlt mit einer Periodendauer von $T = \SI{200}{\second}$.
-Zunächst wird hier der breite Messingstab betrachtet, dabei sind die Temperaturen $T_{1}$ und $T_{2}$ in der Abbildung ... dargestellt. Aus dieser Graphik lassen sich die charakteristischen Eigenschaften der Temperaturwelle
-ablesen. Dazu gehören die Amplituden der Temperaturen $A_{1}$ und $A_{2}$ sowie die Phasendifferenz $\increment t$. 
+Zunächst wird hier der breite Messingstab betrachtet, dabei sind die Temperaturen $T_{1}$ und $T_{2}$ in der Abbildung \ref{fig:plot4} dargestellt. Aus dieser Graphik lassen sich die charakteristischen Eigenschaften der Temperaturwelle
+ablesen. Dazu gehören die Amplituden der Temperaturen $A_{1}$ und $A_{2}$ sowie die Phasendifferenz $\increment t$.
+Die ausgelesenen Werte sind in Tabelle \ref{tab:messkappa} eingetragen. Mit der Gleichung \ref{eqn:kappa}
+kann nun die Wärmeleitfähigkeit $\kappa_{\text{messing}}$ berechnet werden, dabei ist $A_{1}$ die Amplitude $A_{\text{fern}}$ und  $A_{2}$ ist $A_{\text{nah}}$.
+Allerdings ist es zuerst wichtig, die ausgelesenen Werte zu Mitteln. Die Mittelwerte der Amplituden, sowie der Phasendifferenz werden über die Gleichung \ref{eqn:mittel} bestimmt und der dazugehörige Fehler des Mittelwerts durch
+Gleichung \ref{eqn:sem}.
+\begin{align}
+\bar{A_{1}} &= \SI{15.23(92)}{\celsius}      \\
+\bar{A_{2}} &=  \SI{24.01(86)}{\celsius}        \\
+\bar{\increment t} &= \SI{9.25(56)}{\second}
+\end{align}
+Zusammen mit den Literaturwerten aus Tabelle \ref{tab:lit} lassen sich diese Werte nun in Gleichung \ref{eqn:kappa} einsetzen wobei sich der resultierende Fehler aus einer Gaußschen Fehlerfortpflanzung \ref{eqn:gauss} ergibt.
+\begin{equation}
 
-
-
-
-Die ausgelesenen Werte sind in Tabelle ... eingetragen. Mit der Gleichung ...
-kann nun die Wärmeleitfähigkeit $\kappa_{\text{messing}}$ berechnet werden.
+\end{equation}
+Die explizite Fehlerfortpflanzung sieht folgendermaßen aus.
