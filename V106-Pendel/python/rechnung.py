@@ -109,7 +109,7 @@ print("####################")
 T_Lmean = np.mean(T_L)
 T_Lerr = sem(T_L)
 T_Lgesamt = ufloat(T_Lmean,T_Lerr)
-print("T mittelwert für 71 cm:")
+print("T- mittelwert für 71 cm:")
 print(T_Lgesamt)
 
 #########################################
@@ -119,12 +119,23 @@ print("####################")
 T_Kmean = np.mean(T_K)
 T_Kerr = sem(T_K)
 T_Kgesamt = ufloat(T_Kmean,T_Kerr)
-print("T mittelwert für 32 cm:")
+print("T- mittelwert für 32 cm:")
 print(T_Kgesamt)
 
 #########################################
 print("####################")
 #########################################
+
+test3 = (2* np.pi )/T_Lgesamt
+test4 = (2* np.pi )/T_Kgesamt
+ 
+print(test3)
+print(test4)
+
+#########################################
+print("####################")
+#########################################
+
 
 Tschwebl, Tschwinl, Tschwebk, Tschwink = np.genfromtxt("../data/koppel.txt", unpack=True)
 
@@ -148,6 +159,8 @@ print(Tschwinlges)
 print("####################")
 #########################################
 
+
+
 Tschwebkmean = np.mean(Tschwebk)
 Tschwebkerr = sem(Tschwebk)
 Tschwebkges = ufloat(Tschwebkmean, Tschwebkerr)
@@ -163,3 +176,49 @@ Tschwinkerr = sem(Tschwink)
 Tschwinkges  = ufloat(Tschwinkmean, Tschwinkerr)
 print("T Mittelwert für (koppel)Sschwingung (32 cm):")
 print(Tschwinkges)
+
+
+#########################################
+print("####################")
+#########################################
+
+omegaS71 = (2* np.pi )/Tschweblges
+omegaS32 = (2* np.pi )/Tschwebkges
+omegaSchwin71 = (2* np.pi )/Tschwinlges
+omegaSchwin32 = (2* np.pi )/Tschwinlges
+
+print(omegaS71)
+print(omegaS32)
+print(omegaSchwin71)
+print(omegaSchwin32)
+#########################################
+print("####################")
+#########################################
+
+
+
+Kl = (test3**2 - test1**2)/(test3**2 + test1**2)
+Kk = (test4**2 - test2**2)/(test4**2 + test2**2)
+
+print(Kl)
+print(Kk)
+
+x=const.physical_constants["standard acceleration of gravity"]
+
+omegaminusL = unp.sqrt(x[0]/0.71+(2*Kl)/0.71)
+omegaminusK = unp.sqrt(x[0]/0.32+(2*Kk)/0.32)
+
+print(omegaminusL)
+print(omegaminusK)
+
+
+
+
+
+
+
+# omegasL = test1 - test3
+# omegasK = test2 - test4
+
+# print(omegasL)
+# print(omegasK)
