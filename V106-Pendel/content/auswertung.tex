@@ -6,10 +6,12 @@ Die gesammelten Werte aus den Messreihen liefern Aufschluss auf die Kreisfrequen
 Zunächst werden für beide Messreihen mit den unterschiedlichen Pendellängen von $l = \SI{71}{\centi\meter}$ und $l = \SI{32}{\centi\meter}$ Mittelwerte der Periodendauern $T$ bestimmt.
 Diese berechnen sich hier durch 
 \begin{equation}
+    \label{eqn:mean}
 \bar{T} = \frac{1}{N} \sum_{i=1}^{N} T_{i},
 \end{equation}
 wobei $N$ die Anzahl der Messungen angibt. Der statistische Fehler auf den Mittelwert wird über die Standardabweichung $\sigma$ bestimmt, dafür gilt
 \begin{equation}
+    \label{eqn:sem}
 \increment \bar{T} = \frac{\sigma}{\sqrt{N}} = \sqrt{\frac{1}{N(N-1)} \sum_{i=1}^{N} (T_{i} - \bar{T})^{2}}.
 \end{equation}
 In der Versuchsdurchführung wurden die Pendel einzeln gemessen und somit der ideale Fall ohne Feder betrachtet, dass heißt bei identischen Winkelauslenkungen.
@@ -25,12 +27,50 @@ Die errechneten Mittelwerte ergeben sich somit zu
     \omega_{+\text{,}32} &= \SI{4.849(22)}{\per\second}, 
 \end{align}
 umgerechnet werden. Der übertragene Fehler wird durch die folgende Gaußsche Fehlerfortpflanzung bestimmt.
-\begin{equation*}
+\begin{equation}
+    \label{eqn:gauss}
 \increment \omega = \frac{2 \pi}{T^2} (\increment T)
-\end{equation*}
+\end{equation}
 
-Nun lassen sich des Weiteren noch die Theoriewerte, also die Eigenfrequenzen $\widetilde{\omega_{+}}$ dieses Systems mit Gleichung \eqref{eqn:omegaeasy} ermitteln. Dazu wird lediglich die jeweilige Pendellänge und die Gravitationsbeschleunigung $g$ (\cite{naturkonstanten}) benötigt.
+Nun lassen sich des Weiteren noch die Theoriewerte, also die Eigenfrequenzen $\widetilde{\omega_{+}}$ dieses Systems mit Gleichung \eqref{eqn:omegaeasy} ermitteln. Dazu wird lediglich die jeweilige Pendellänge und die Gravitationsbeschleunigung $g$ \cite{naturkonstanten} benötigt.
 \begin{align}
     \widetilde{\omega_{+\text{,}71}} &= \SI{3.716}{\per\second} \\
     \widetilde{\omega_{+\text{,}32}} &=  \SI{5.536}{\per\second}
 \end{align}
+
+\subsection{Gegenseitige Schwingung}
+Mit den Messreihen \ref{tab:t-_71} und \ref{tab:t-_32} kann nun ganz analog ein Mittelwert für die Periodendauern $T_{-}$ bestimmt werden. Somit folgen wieder aus den Gleichungen \eqref{eqn:mean} und \eqref{eqn:sem} die Werte
+\begin{align*}
+    \overline{T_{-\text{,}71}} &= \SI{1.682(13)}{\second}, \\
+    \overline{T_{-\text{,}32}} &= \SI{1.241(10)}{\second}.
+\end{align*}
+Wieder wird über die Gleichung \eqref{eqn:omega} die Kreisfrequenz $\omega_{-}$ ermittelt.
+\begin{align}
+    \omega_{-\text{,}71} &= \SI{3.735(28)}{\per\second}, \\
+    \omega_{-\text{,}32} &= \SI{5.060(40)}{\per\second}, 
+\end{align}
+Auch hier folgt der Fehler wieder durch die gleiche Fehlerfortpflanzung \eqref{eqn:gauss}.
+\\
+Für die Eigenfrequenz bei der gegensinnigen Schwingung wird die Kopplungskonstante $K$ benötigt. Dafür werden die zuvor bestimmten Kreisfrequenzen $\omega$ verwendet.
+Diese werden in die Gleichung \eqref{eqn:K} eingesetzt und liefern
+\begin{align*}
+K_{71} &= \SI{0.018(8)}{}, \\
+K_{32} &= \SI{0.043(9)}{}.
+\end{align*}
+Die Fehler werden durch folgende Fehlerfortpflanzung bestimmt.
+\begin{equation}
+\increment K = \sqrt{\left(\frac{4{\omega_{+}} {\omega_{-}}^2}{({\omega_{+}}^2 + {\omega_{-}}^2)^2}\right)^2 \cdot (\increment {\omega_{+}})^2 + \left(\frac{4{\omega_{-}} {\omega_{+}}^2}{({\omega_{+}}^2 + {\omega_{-}}^2)^2}\right)^2 \cdot (\increment {\omega_{-}})^2}
+\end{equation}
+Dadurch ergibt sich für die Eigenfrequenzen nach Gleichung \eqref{eqn:yeah}
+\begin{align*}
+    \widetilde{\omega_{-\text{,}71}} &= \SI{3.7235(30)}{\per\second} \\
+    \widetilde{\omega_{-\text{,}32}} &=  \SI{5.5600(50)}{\per\second}
+\end{align*}
+
+\subsection{Gekoppelte Schwingung}
+Zunächst lassen sich die Mittelwerte der gemessenen Schwebungsdauern $T_{S}$ aus den Tabellen \ref{tab:tundts-_71} und \ref{tab:tundts-_32} bestimmen.
+Dafür ergeben sich mit der analogen Berechnung die Werte
+\begin{alignat*}{2}
+    \overline{T_{S\text{,}71}} &= \SI{67.30(26)}{\second} \quad \to \quad \omega_{S\text{,}71} &&= \SI{0.0934(4)}{\per\second}, \\
+    \overline{T_{S\text{,}32}} &= \SI{26.13(31)}{\second}\quad \to \quad \omega_{S\text{,}32} &&= \SI{0.2404(28)}{\per\second}. 
+\end{alignat*}
