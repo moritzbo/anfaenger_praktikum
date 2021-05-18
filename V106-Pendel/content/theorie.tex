@@ -1,0 +1,45 @@
+\section{Zielsetzung}
+
+Ziel ist es die Schwingungs- und Schwebungsdauer von gleichsinniger, gegensinniger und gekoppelter Schwingung zweier Pendel unterschiedlicher Länge zu bestimmen. 
+
+\section{Theoretische Grundlagen}
+Um das Verhalten von Pendelsystemen zu verstehen ist es zunächst vonnöten die einzelnen Pendel beschreiben zu können. In der folgenden mathematischen Beschreibung wird die Reibung vernachlässigt, dadurch muss 
+bei dem Pendel eine möglichst reibungsfreihe Aufhängung garantiert sein. Wird ein Pendel mit Fadenlänge $l$ und Masse $m$ ausgelenkt, wirkt die Gewichtskraft dieser entgegen. Anstatt hier die vektoriellen Kräfte zu betrachten bieten 
+sich hier besonders eine Betrachtung der Drehmomente also der winkelabhängigkeit an. Das durch die Gravition induzierte Drehmoment $M$ kann als 
+\begin{equation}
+M = D_{p} \phi
+\end{equation}
+beschrieben werden, wobei $D_{p}$ die Winkelrichtgröße angibt.
+Außerdem gilt für das Drehmoment eines beliebigen Körpers mit einem Trägheitsmoment $J$ ein Zusammenhang mit der Winkelbeschleunigung $\ddot{\phi}$. Dieser lautet wie folgt
+\begin{equation}
+M = J \ddot{\phi}
+\end{equation}
+Aus dem zweiten Newtonsches Gesetz folgt eine homogene lineare Differentialgleichung zweiter Ordnung
+\begin{equation}
+    \label{eqn:dgl}
+J \ddot{\phi} + D_{p} \phi = 0.
+\end{equation}
+Dabei wird zusätzlich eine Kleinwinkelnäherung verwendet, wobei $\text{sin}(x) \approx x$ angenommen wird. Folglich muss in der Durchführung darauf geachtet werden, dass die Pendel nicht zu 
+weit ausgelenkt werden.
+Die Gleichung \eqref{eqn:dgl} hat die typische Form einer Differentialgleichung des harmonischen Oszillators und sie lässt sich durch eine harmonische Schwingung mit der Schwingungsfrequenz
+\begin{equation}
+\omega = \sqrt{\frac{D_{p}}{J}} = \sqrt{\frac{g}{l}}
+\end{equation}
+lösen. Eine harmonische Schwingung lässt sich im Allgemeinen durch eine Superposition von Sinus- und Cosinuslösungen beschreiben.
+Wichtig ist hier die Unabhängigkeit der Masse von der Winkelfrequent $\omega$ und somit auch von der Periodendauer $T$ für die gilt
+\begin{equation}
+T = \frac{2\pi}{\omega}.
+\end{equation}
+
+Nun lassen sich zwei Pendel welche mit einer Feder gekoppelt sind betrachten. Für zwei identische Pendel wirken jetzt weitere Drehmomente welche abhängig von beiden Winkeln $\phi_{1}$ und $\phi_{2}$ sind. 
+Es ergeben sich die zwei gekoppelten Differentialgleichung
+\begin{align*}
+    J \ddot{{\phi_{1}}} + D_{p} \phi_{1} &=  D_{F} (\phi_{2}-\phi_{1}),
+    J \ddot{{\phi_{2}}} + D_{p} \phi_{2} &= D_{F} (\phi_{1} - \phi_{2}),
+\end{align*}
+wobei $D_{F}$ eine Federkonstante ist. Die Form auf der linken Seite ist identisch zu der Gleichung \eqref{eqn:dgl}, sie beschreibt also die Schwingung der einzelnen Pendel und die rechte Seite beschreibt die Kopplung
+durch die Feder. Grundlegend für die Lösung einer solchen Differentialgleichung sind passende Randbedingungen für die Winkel $\phi$. Einige Randbedingungen können die Differentialgleichung entkoppeln und somit die Lösung
+deutlich vereinfachen. Im Folgenden sind einige verschiedene Schwingungstypen je nach Randbedingungen erläutert.
+
+\subsection{Gleichsinnige Schwingung}
+Bei der gleichsinnigen Schwingung werden die beiden Pendel um den gleichen Winkel in die gleiche Richtung ausgelenkt, somit gilt $\phi_{1} = \phi{2}$. Dadurch werden die 
