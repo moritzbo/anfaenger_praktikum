@@ -12,7 +12,7 @@ M = D_{p} \phi
 beschrieben werden, wobei $D_{p}$ die Winkelrichtgröße angibt.
 Außerdem gilt für das Drehmoment eines beliebigen Körpers mit einem Trägheitsmoment $J$ ein Zusammenhang mit der Winkelbeschleunigung $\ddot{\phi}$. Dieser lautet wie folgt
 \begin{equation}
-M = J \ddot{\phi}
+M = J \ddot{\phi}.
 \end{equation}
 Aus dem zweiten Newtonsches Gesetz folgt eine homogene lineare Differentialgleichung zweiter Ordnung
 \begin{equation}
@@ -28,18 +28,58 @@ Die Gleichung \eqref{eqn:dgl} hat die typische Form einer Differentialgleichung 
 lösen. Eine harmonische Schwingung lässt sich im Allgemeinen durch eine Superposition von Sinus- und Cosinuslösungen beschreiben.
 Wichtig ist hier die Unabhängigkeit der Masse von der Winkelfrequent $\omega$ und somit auch von der Periodendauer $T$ für die gilt
 \begin{equation}
+    \label{eqn:omega}
 T = \frac{2\pi}{\omega}.
 \end{equation}
-
+\\
+\newline
 Nun lassen sich zwei Pendel welche mit einer Feder gekoppelt sind betrachten. Für zwei identische Pendel wirken jetzt weitere Drehmomente welche abhängig von beiden Winkeln $\phi_{1}$ und $\phi_{2}$ sind. 
 Es ergeben sich die zwei gekoppelten Differentialgleichung
-\begin{align*}
-    J \ddot{{\phi_{1}}} + D_{p} \phi_{1} &=  D_{F} (\phi_{2}-\phi_{1}),
+\begin{align}
+    \label{eqn:y1}
+    J \ddot{{\phi_{1}}} + D_{p} \phi_{1} &=  D_{F} (\phi_{2}-\phi_{1}), \\
+    \label{eqn:y2}
     J \ddot{{\phi_{2}}} + D_{p} \phi_{2} &= D_{F} (\phi_{1} - \phi_{2}),
-\end{align*}
+\end{align}
 wobei $D_{F}$ eine Federkonstante ist. Die Form auf der linken Seite ist identisch zu der Gleichung \eqref{eqn:dgl}, sie beschreibt also die Schwingung der einzelnen Pendel und die rechte Seite beschreibt die Kopplung
 durch die Feder. Grundlegend für die Lösung einer solchen Differentialgleichung sind passende Randbedingungen für die Winkel $\phi$. Einige Randbedingungen können die Differentialgleichung entkoppeln und somit die Lösung
 deutlich vereinfachen. Im Folgenden sind einige verschiedene Schwingungstypen je nach Randbedingungen erläutert.
 
 \subsection{Gleichsinnige Schwingung}
-Bei der gleichsinnigen Schwingung werden die beiden Pendel um den gleichen Winkel in die gleiche Richtung ausgelenkt, somit gilt $\phi_{1} = \phi{2}$. Dadurch werden die 
+Bei der gleichsinnigen Schwingung werden die beiden Pendel um den gleichen Winkel in die gleiche Richtung ausgelenkt, somit gilt $\phi_{1} = \phi_{2}$. Dadurch werden die Differentialgleichung entkoppelt.
+Das bedeutet auch sofort, dass bei einer perfekten Auslenkung die Feder keine Auswirkung auf die Schwingung der beiden Pendel hat. Diese Vereinfachung wird ebenfalls in der Durchführung verwendet.
+Die Lösung dieser Gleichung liefert eine Schwingungsfrequenz $\omega_{+}$
+\begin{equation}
+    \omega_{+} = \sqrt{\frac{g}{l}},
+\end{equation}
+wobei das $+$ im Index die gleichsinnige Schwingung andeuten soll. Dies ist wie bereits herausgestellt die Schwingungsfrequenz welche bei einem einzelnen Pendel erwartet wird.
+Die Schwingungsdauer folgt über die Gleichung \eqref{eqn:omega}, dabei ergibt sich
+\begin{equation}
+T_{+} = 2\pi \cdot \sqrt{\frac{l}{g}}.
+\end{equation}
+
+\subsection{Gegensinnige Schwingung}
+Die Gegensinnige Schwingung wird durch die Randbedingungen $\phi_{1} = -\phi_{2}$ charakterisiert. Eingesetzt in die beiden Differentialgleichung \eqref{eqn:y1} und \eqref{eqn:y2} folgt zwar kein entkoppeltes
+System, allerdings ist die durch die Feder ausgeübete Kraft bei beiden Pendeln betragsmäßig gleich. Die Schwingung der Pendel verhalten sich also gleich mit jeweils umgekehrter Schwingrichtung und dadurch ist ebenfalls
+die Frequenz von beiden bei perfekter Auslenkung identisch.
+Diese Schwingungsfrequenz $\omega_{-}$ hängt nun zusätzlich von einer Kopplungskonstante $K$ ab und sieht folgendermaßen aus
+\begin{equation}
+\omega_{-} = \sqrt{\frac{g+2K}{l}}.
+\end{equation}
+Analog folgt wieder die Schwingungsdauer $T_{-}$
+\begin{equation}
+    T_{-} = 2\pi \cdot \sqrt{\frac{l}{g+2K}}.
+\end{equation}
+Die Kopplungskonstante $K$ ist für diese Gruppe an Differentialgleichung folgendermaßen definiert
+\begin{equation}
+    K = \frac{{\omega_{-}}^2 - {\omega_{+}}^2}{{\omega_{-}}^2 + {\omega_{+}}^2} = \frac{{T_{-}}^2 - {T_{+}}^2}{{T_{-}}^2 + {T_{+}}^2}.
+\end{equation}
+
+\subsection{Gekoppelte Schwingung}
+Der Fall einer gekoppelten Schwinung entsteht, wenn zu Beginn ein Pendel um einen Winkel ausgelenkt wird während der andere auf Null gehalten wird. Mit jeder Schwingung des zu Beginn ausgelenkten Pendels
+wird die Energie über die Feder auf das andere Pendel übertragen. Ab einem gewissen Zeitpunkt hat dann das zweite Pendel die gesamte Energie erhalten und das erste Pendel hat einen Winkel von $\phi = 0$. Der Zeitraum
+zwischen zwei Stillständen eines Pendels wird als Schwebungsdauer $T_{S}$ bezeichnet. Die Schwebungsfrequenz $\omega_{S}$ lässt sich als die Differenz der einzelnen Schwingungsfrequenzen angeben. Es gilt 
+\begin{equation}
+\omega_{S} = \omega_{+} - \omega_{-} \quad \to \quad T_{S} = \frac{T_{+} \cdot T_{-}}{T_{+} - T_{-}},
+\end{equation}
+wobei die Folgerung auf $T$ wieder durch Einsetzen von $\omega_{S}$ in Gleichung \ref{eqn:omega} entsteht.
