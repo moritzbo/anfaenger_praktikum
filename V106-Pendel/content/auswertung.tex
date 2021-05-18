@@ -1,0 +1,36 @@
+\section{Auswertung}
+
+Die gesammelten Werte aus den Messreihen liefern Aufschluss auf die Kreisfrequenzen. Im Folgenden sind für die einzelnen Schwingungstypen und Pendellängen die gesuchten Parameter berechnet.
+
+\subsection{Gleichsinnige Schwingung}
+Zunächst werden für beide Messreihen mit den unterschiedlichen Pendellängen von $l = \SI{71}{\centi\meter}$ und $l = \SI{32}{\centi\meter}$ Mittelwerte der Periodendauern $T$ bestimmt.
+Diese berechnen sich hier durch 
+\begin{equation}
+\bar{T} = \frac{1}{N} \sum_{i=1}^{N} T_{i},
+\end{equation}
+wobei $N$ die Anzahl der Messungen angibt. Der statistische Fehler auf den Mittelwert wird über die Standardabweichung $\sigma$ bestimmt, dafür gilt
+\begin{equation}
+\increment \bar{T} = \frac{\sigma}{\sqrt{N}} = \sqrt{\frac{1}{N(N-1)} \sum_{i=1}^{N} (T_{i} - \bar{T})^{2}}.
+\end{equation}
+In der Versuchsdurchführung wurden die Pendel einzeln gemessen und somit der ideale Fall ohne Feder betrachtet, dass heißt bei identischen Winkelauslenkungen.
+Für die weitere Rechnung wird die Frequenz des Gesamtsystems $\omega_{+}$ benötigt, dazu kann man über alle Periodendauern $T$ einer Pendellänge mitteln.
+Die errechneten Mittelwerte ergeben sich somit zu
+\begin{align}
+    \overline{T_{+\text{,}71}} &= \SI{1.714(5)}{\second} \\
+    \overline{T_{+\text{,}32}} &= \SI{1.296(6)}{\second} 
+\end{align}
+Über die Gleichung \eqref{eqn:omega} können die Periodendauern in die gemessenen Kreisfrequenzen $\omega_{+}$ 
+\begin{align}
+    \omega_{+\text{,}71} &= \SI{3.666(11)}{\per\second}, \\
+    \omega_{+\text{,}32} &= \SI{4.849(22)}{\per\second}, 
+\end{align}
+umgerechnet werden. Der übertragene Fehler wird durch die folgende Gaußsche Fehlerfortpflanzung bestimmt.
+\begin{equation*}
+\increment \omega = \frac{2 \pi}{T^2} (\increment T)
+\end{equation*}
+
+Nun lassen sich des Weiteren noch die Theoriewerte, also die Eigenfrequenzen $\widetilde{\omega_{+}}$ dieses Systems mit Gleichung \eqref{eqn:omegaeasy} ermitteln. Dazu wird lediglich die jeweilige Pendellänge und die Gravitationsbeschleunigung $g$ (\cite{naturkonstanten}) benötigt.
+\begin{align}
+    \widetilde{\omega_{+\text{,}71}} &= \SI{3.716}{\per\second} \\
+    \widetilde{\omega_{+\text{,}32}} &=  \SI{5.536}{\per\second}
+\end{align}
