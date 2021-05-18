@@ -175,3 +175,23 @@ print(F"{messingprozent:.3f}")
 print(F"{aluprozent:.3f}")
 print(f"{edelprozent:.3f}")
 
+
+
+
+
+#############################################################
+
+
+Tneu = 200
+omega = 2* np.pi /Tneu
+
+wavelmessing = (kappamessing /(2*dichtemessing*omega * cmessing))**(1/2)
+
+waveledel = (kappaedel /(2*dichteedel *omega * cedel))**(1/2)
+
+wavelalu= (kappaalu /(2*dichtealu*omega * calu))**(1/2)
+
+print("TRENNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN")
+print(wavelmessing)
+print(waveledel)
+print(wavelalu)

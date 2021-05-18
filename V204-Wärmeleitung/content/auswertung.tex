@@ -27,7 +27,7 @@ Für die Bestimmung von prozentualen Abweichungen zweier Werte wird folgende For
 \end{equation}
 
 \subsection{Statische Methode}
-Zunächst lassen sich die Temperaturen ferner vom Pertier-Element graphisch darstellen. Dazu gehören also $T_{1}$, $T_{4}$, $T_{5}$ und $T_{8}$ also alle Temperaturen am Ende der einzelnen Metallstäbe.
+Zunächst lassen sich die Temperaturen ferner vom Peltier-Element graphisch darstellen. Dazu gehören also $T_{1}$, $T_{4}$, $T_{5}$ und $T_{8}$ also alle Temperaturen am Ende der einzelnen Metallstäbe.
 Gemessen wurde über eine Dauer von $t = \SI{710}{\second}$ und die Temperatur $T_{7}$ erreicht niemals den Wert $\SI{45}{\celsius}$ also kann für diese Betrachtung das ganze Intervall verwendet werden.
 Abbildung \ref{fig:plot1} zeigt die Temperaturen $T_{1}$ und $T_{4}$ also die unterschiedlichen Messingstäbe und Abbildung \ref{fig:plot2} die Temperaturen $T_{5}$ und $T_{8}$ also Aluminium und Edelstahl.
 
@@ -46,7 +46,7 @@ Abbildung \ref{fig:plot1} zeigt die Temperaturen $T_{1}$ und $T_{4}$ also die un
 \end{figure}
 \newpage
 Erkennbar ist, dass alle Temperaturen einen annähernd logarithmischen Verlauf zeigen. 
-Die beiden Messingstäbe in Abbildung \ref{fig:plot1} sind dabei zu Beginn identisch und unterscheiden sich erst ab einer Temperatur von $T = \SI{30}{\celsius}$, wobei der breitere Messingstab stärker wächst als der dünnere. Dies ist ebenfalls zu erwarten, da die Gleichung
+Die beiden Messingstäbe in Abbildung \ref{fig:plot1} sind dabei zu Beginn identisch und unterscheiden sich erst ab einer Temperatur von $T = \SI{30}{\celsius}$, wobei die Temperatur am breiten Messingstab stärker wächst als die am Dünnen. Dies ist ebenfalls zu erwarten, da die Gleichung
 \ref{eqn:itsHeadacheTimeYeeeay} proportional zum Querschnitt ist. Im groben Verlauf sind die beiden jedoch durch die gleiche Wärmeleitfähigkeit $\kappa_{\text{messing}}$ sehr ähnlich.
 \\
 Für die beiden Temperaturen $T_{5}$ und $T_{8}$ in Abbildung \ref{fig:plot2} sind größere Unterschiede zu erkennen. Die Temperatur im Edelstahl wächst nahezu linear und lässt somit auf eine eher kleine Wärmeleitfähigkeit schließen. Der 
@@ -64,7 +64,7 @@ Somit kann festgestellt werden, dass die Wärmeleitfähigkeit vom Aluminium $\ka
 \newline
 Mit den Literaturwerten für die Wärmeleitfähigkeit $\kappa$ kann nun zu verschiedenen Messzeiten der Wärmestrom $\increment Q$/$\increment t$ bestimmt werden. Dazu werden Messzeiten im Abstand von $\increment t = \SI{140}{\second}$
 gewählt. Für die Bestimmung mit Gleichung \ref{eqn:itsHeadacheTimeYeeeay} wird ebenfalls die Querschnittsfläche der Stäbe benötigt. Diese unterscheidet sich nur bei dem einen schmalen Messingstab zu den drei sonst gleich großen Stäben.
-Sie lassen sich mit den Werten aus Tabelle \ref{tab:einfach} berechnen. 
+Sie lassen sich mit den Werten aus Tabelle \ref{tab:lit} berechnen. 
 \begin{align}
 A_{\text{breit}} &= \SI{48e-6}{\meter\squared}\\
 A_{\text{schmal}} &= \SI{28e-6}{\meter\squared}
@@ -191,7 +191,7 @@ Die Wärmeleitfähigkeit und die Fehler werden dann mit den selben Gleichungen w
 \\
 \newline
 Nun wird die Wärmeleitfähigkeit für den Edelstahlstab berechnet, wobei wieder eine Periodendauer von $T = \SI{200}{\second}$ gewählt wurde. Der Temperaturverlauf an den Thermoelementen 
-$T_{7}$ und $T_{8}$ ist in der Abbildung \ref{tab:plot5} gezeigt. Hier können wieder analog zum vorherigen Fall Amplituden der Temperaturen, sowie Phasendifferenzen gesucht werden. Diese Auslesedaten sind in der Tabelle
+$T_{7}$ und $T_{8}$ ist in der Abbildung \ref{fig:plot5} gezeigt. Hier können wieder analog zum vorherigen Fall Amplituden der Temperaturen, sowie Phasendifferenzen gesucht werden. Diese Auslesedaten sind in der Tabelle
 \ref{tab:edelkappa} notiert.
 Die Mittelwerte und Fehler auf die Mittelwerte folgen wieder aus den Gleichungen \ref{eqn:mittel} und \ref{eqn:sem}.
 \begin{align}
@@ -211,6 +211,7 @@ Dieser Fehler pflanzt sich nun weiter fort auf den nach der Berechnungsformel \e
 \begin{equation}
     \increment \kappa_{\text{edel}} = \frac{\rho c \left ( \increment x \right )^2}{2 \increment t \cdot \left(\text{ln} \left( \frac{\bar{A_{7}}}{\bar{A_{8}}}\right)\right)^2} \cdot \left(\increment \text{ln} \left( \frac{\bar{A_{7}}}{\bar{A_{8}}}\right)\right)
 \end{equation}
+
 
 \begin{figure}
     \centering
@@ -234,3 +235,37 @@ Dieser Fehler pflanzt sich nun weiter fort auf den nach der Berechnungsformel \e
     \caption{Temperaturverlauf der Messsonden T5 und T6 auf Aluminium bei periodischer Erwärmung.} 
     \label{fig:plot6}
 \end{figure}
+
+\subsection{Bestimmung der Frequenz und Wellenlänge}
+Für die Kreisfrequenz der Temperaturwellen ergibt sich mit der Gleichung
+\begin{equation}
+\omega = \frac{2\pi}{T}
+\end{equation}
+und der eingestellten Periodendauer $T = \SI{200}{\second}$
+\begin{equation*}
+f = \SI{0.00314}{\hertz}.
+\end{equation*}
+Die Wellenlänge folgt aus dem Zusammenhang
+\begin{equation}
+    \label{eqn:wtf}
+\lambda = \frac{v_{\text{phase}}}{2\pi \omega} 
+\end{equation}
+wobei sich die Phasengeschwindigkeit $v_{\text{phase}}$ aus der Gleichung \eqref{eqn:v} bestimmen lässt. Dazu werden die errechneten Wärmeleitfähigkeit $\kappa$ und die jeweiligen Literaturwerte aus Tabelle 
+\ref{tab:lit} eingesetzt. Zuerst können die Gleichungen \eqref{eqn:wtf} und \eqref{eqn:v} ineinander eingesetzt werden und es folgt
+\begin{equation}
+\lambda = \sqrt{\frac{\kappa}{2\rho c \omega}}.
+\end{equation}
+In der folgenden Tabelle \ref{tab:whatever} sind die Ergebnisse der Rechnung für die unterschiedlichen Metallstäbe angegeben.
+
+\begin{table}
+    \centering
+    \caption{Wellenlängen der Temperaturwellen.}
+    \label{tab:whatever}
+    \begin{tabular}{c |c |c}
+        \toprule
+        $\lambda_{\text{messing}}$ [$\si{\meter}$]  & $\lambda_{\text{edel}}$ [$\si{\meter}$] & $\lambda_{\text{alu}}$ [$\si{\meter}$]  \\
+        \midrule
+        $\SI{0.0412(34)}{}$   &  $\SI{0.0095(6)}{}$   & $\SI{0.0840(90)}{}$\\
+        \bottomrule
+    \end{tabular}
+\end{table}
