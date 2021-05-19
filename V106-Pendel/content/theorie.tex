@@ -4,8 +4,8 @@ Ziel ist es die Schwingungs- und Schwebungsdauer von gleichsinniger, gegensinnig
 
 \section{Theoretische Grundlagen}
 Um das Verhalten von Pendelsystemen zu verstehen ist es zunächst vonnöten die einzelnen Pendel beschreiben zu können. In der folgenden mathematischen Beschreibung wird die Reibung vernachlässigt, dadurch muss 
-bei dem Pendel eine möglichst reibungsfreihe Aufhängung garantiert sein. Wird ein Pendel mit Fadenlänge $l$ und Masse $m$ ausgelenkt, wirkt die Gewichtskraft dieser entgegen. Anstatt hier die vektoriellen Kräfte zu betrachten bieten 
-sich hier besonders eine Betrachtung der Drehmomente also der winkelabhängigkeit an. Das durch die Gravition induzierte Drehmoment $M$ kann als 
+bei dem Pendel eine möglichst reibungsfreie Aufhängung garantiert sein. Wird ein Pendel mit Fadenlänge $l$ und Masse $m$ ausgelenkt, wirkt die Gewichtskraft dieser entgegen. Anstatt hier die vektoriellen Kräfte zu betrachten bietet 
+sich hier besonders eine Betrachtung der Drehmomente also der Winkelabhängigkeiten an. Das durch die Gravition induzierte Drehmoment $M$ kann als 
 \begin{equation*}
 M = D_{p} \phi
 \end{equation*}
@@ -33,8 +33,8 @@ T = \frac{2\pi}{\omega}.
 \end{equation}
 \\
 \newline
-Nun lassen sich zwei Pendel welche mit einer Feder gekoppelt sind betrachten. Für zwei identische Pendel wirken jetzt weitere Drehmomente welche abhängig von beiden Winkeln $\phi_{1}$ und $\phi_{2}$ sind. 
-Es ergeben sich die zwei gekoppelten Differentialgleichung
+Nun lassen sich zwei Pendel, welche mit einer Feder gekoppelt sind, betrachten. Für zwei identische Pendel wirken jetzt weitere Drehmomente welche abhängig von beiden Winkeln $\phi_{1}$ und $\phi_{2}$ sind. 
+Es ergeben sich die zwei gekoppelten Differentialgleichungen
 \begin{align}
     \label{eqn:y1}
     J \ddot{{\phi_{1}}} + D_{p} \phi_{1} &=  D_{F} (\phi_{2}-\phi_{1}), \\
@@ -48,7 +48,7 @@ deutlich vereinfachen. Im Folgenden sind einige verschiedene Schwingungstypen je
 \subsection{Gleichsinnige Schwingung}
 Bei der gleichsinnigen Schwingung werden die beiden Pendel um den gleichen Winkel in die gleiche Richtung ausgelenkt, somit gilt $\phi_{1} = \phi_{2}$. Dadurch werden die Differentialgleichung entkoppelt.
 Das bedeutet auch sofort, dass bei einer perfekten Auslenkung die Feder keine Auswirkung auf die Schwingung der beiden Pendel hat. Diese Vereinfachung wird ebenfalls in der Durchführung verwendet.
-Die Lösung dieser Gleichung liefert eine Schwingungsfrequenz $\omega_{+}$
+Die Lösung dieser Gleichung liefert eine Schwingungsfrequenz 
 \begin{equation}
     \label{eqn:omegaeasy}
     \omega_{+} = \sqrt{\frac{g}{l}},
@@ -61,7 +61,7 @@ T_{+} = 2\pi \cdot \sqrt{\frac{l}{g}}.
 Eine schematische Darstellung der gleichsinnigen Schwingung ist in Abbildung \ref{fig:4} gezeigt.
 
 \subsection{Gegensinnige Schwingung}
-Die Gegensinnige Schwingung wird durch die Randbedingungen $\phi_{1} = -\phi_{2}$ charakterisiert. Eingesetzt in die beiden Differentialgleichung \eqref{eqn:y1} und \eqref{eqn:y2} folgt zwar kein entkoppeltes
+Die Gegensinnige Schwingung ist durch die Randbedingungen $\phi_{1} = -\phi_{2}$ charakterisiert. Eingesetzt in die beiden Differentialgleichung \eqref{eqn:y1} und \eqref{eqn:y2} folgt zwar kein entkoppeltes
 System, allerdings ist die durch die Feder ausgeübete Kraft bei beiden Pendeln betragsmäßig gleich. Die Schwingung der Pendel verhalten sich also gleich mit jeweils umgekehrter Schwingrichtung und dadurch ist ebenfalls
 die Frequenz von beiden bei perfekter Auslenkung identisch.
 Diese Schwingungsfrequenz $\omega_{-}$ hängt nun zusätzlich von einer Kopplungskonstante $K$ ab und sieht folgendermaßen aus
@@ -73,7 +73,7 @@ Analog folgt wieder die Schwingungsdauer $T_{-}$
 \begin{equation*}
     T_{-} = 2\pi \cdot \sqrt{\frac{l}{g+2K}}.
 \end{equation*}
-Die Kopplungskonstante $K$ ist für diese Gruppe an Differentialgleichung folgendermaßen definiert
+Die Kopplungskonstante $K$ ist für diese Gruppe an Differentialgleichungen folgendermaßen definiert
 \begin{equation}
     \label{eqn:K}
     K = \frac{{\omega_{-}}^2 - {\omega_{+}}^2}{{\omega_{-}}^2 + {\omega_{+}}^2} = \frac{{T_{-}}^2 - {T_{+}}^2}{{T_{-}}^2 + {T_{+}}^2}.
