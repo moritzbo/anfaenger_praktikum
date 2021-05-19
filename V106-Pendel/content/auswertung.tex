@@ -17,15 +17,15 @@ wobei $N$ die Anzahl der Messungen angibt. Der statistische Fehler auf den Mitte
 In der Versuchsdurchführung wurden die Pendel einzeln gemessen und somit der ideale Fall ohne Feder betrachtet, dass heißt bei identischen Winkelauslenkungen.
 Für die weitere Rechnung wird die Frequenz des Gesamtsystems $\omega_{+}$ benötigt, dazu kann man über alle Periodendauern $T$ einer Pendellänge mitteln.
 Die errechneten Mittelwerte ergeben sich somit zu
-\begin{align}
+\begin{align*}
     \overline{T_{+\text{,}71}} &= \SI{1.714(5)}{\second} \\
     \overline{T_{+\text{,}32}} &= \SI{1.296(6)}{\second} 
-\end{align}
+\end{align*}
 Über die Gleichung \eqref{eqn:omega} können die Periodendauern in die gemessenen Kreisfrequenzen $\omega_{+}$ 
-\begin{align}
+\begin{align*}
     \omega_{+\text{,}71} &= \SI{3.666(11)}{\per\second}, \\
     \omega_{+\text{,}32} &= \SI{4.849(22)}{\per\second}, 
-\end{align}
+\end{align*}
 umgerechnet werden. Der übertragene Fehler wird durch die folgende Gaußsche Fehlerfortpflanzung bestimmt.
 \begin{equation}
     \label{eqn:gauss}
@@ -33,10 +33,10 @@ umgerechnet werden. Der übertragene Fehler wird durch die folgende Gaußsche Fe
 \end{equation}
 
 Nun lassen sich des Weiteren noch die Theoriewerte, also die Eigenfrequenzen $\widetilde{\omega_{+}}$ dieses Systems mit Gleichung \eqref{eqn:omegaeasy} ermitteln. Dazu wird lediglich die jeweilige Pendellänge und die Gravitationsbeschleunigung $g$ \cite{naturkonstanten} benötigt.
-\begin{align}
+\begin{align*}
     \widetilde{\omega_{+\text{,}71}} &= \SI{3.716}{\per\second} \\
     \widetilde{\omega_{+\text{,}32}} &=  \SI{5.536}{\per\second}
-\end{align}
+\end{align*}
 
 \subsection{Gegenseitige Schwingung}
 Mit den Messreihen \ref{tab:t-_71} und \ref{tab:t-_32} kann nun ganz analog ein Mittelwert für die Periodendauern $T_{-}$ bestimmt werden. Somit folgen wieder aus den Gleichungen \eqref{eqn:mean} und \eqref{eqn:sem} die Werte
@@ -45,10 +45,10 @@ Mit den Messreihen \ref{tab:t-_71} und \ref{tab:t-_32} kann nun ganz analog ein 
     \overline{T_{-\text{,}32}} &= \SI{1.241(10)}{\second}.
 \end{align*}
 Wieder wird über die Gleichung \eqref{eqn:omega} die Kreisfrequenz $\omega_{-}$ ermittelt.
-\begin{align}
+\begin{align*}
     \omega_{-\text{,}71} &= \SI{3.735(28)}{\per\second}, \\
     \omega_{-\text{,}32} &= \SI{5.060(40)}{\per\second}, 
-\end{align}
+\end{align*}
 Auch hier folgt der Fehler wieder durch die gleiche Fehlerfortpflanzung \eqref{eqn:gauss}.
 \\
 Für die Eigenfrequenz bei der gegensinnigen Schwingung wird die Kopplungskonstante $K$ benötigt. Dafür werden die zuvor bestimmten Kreisfrequenzen $\omega$ verwendet.
@@ -58,9 +58,9 @@ K_{71} &= \SI{0.018(8)}{}, \\
 K_{32} &= \SI{0.043(9)}{}.
 \end{align*}
 Die Fehler werden durch folgende Fehlerfortpflanzung bestimmt.
-\begin{equation}
+\begin{equation*}
 \increment K = \sqrt{\left(\frac{4{\omega_{+}} {\omega_{-}}^2}{({\omega_{+}}^2 + {\omega_{-}}^2)^2}\right)^2 \cdot (\increment {\omega_{+}})^2 + \left(\frac{4{\omega_{-}} {\omega_{+}}^2}{({\omega_{+}}^2 + {\omega_{-}}^2)^2}\right)^2 \cdot (\increment {\omega_{-}})^2}
-\end{equation}
+\end{equation*}
 Dadurch ergibt sich für die Eigenfrequenzen nach Gleichung \eqref{eqn:yeah}
 \begin{align*}
     \widetilde{\omega_{-\text{,}71}} &= \SI{3.7235(30)}{\per\second} \\
@@ -89,6 +89,32 @@ Ganz Allgemein gilt
         \label{eqn:lol}
     \omega_{\si{\percent}} = 100 \cdot \left( \frac{|\omega_{\text{eigen}} - \omega_{\text{mess}}|}{\omega_{\text{eigen}}} \right).
 \end{equation}
-Für die einzelnen Schwingungstypen sind die prozentualen Abweichungen von ihren Eigenfrequenz $\tilde{\omega}$ in den Tabellen ... und ..., abhängig von der verwendeten Pendellänge angegeben.
+Für die einzelnen Schwingungstypen sind die prozentualen Abweichungen von ihren Eigenfrequenz $\tilde{\omega}$ in den Tabellen \ref{tab:proz71} und \ref{tab:proz32}, abhängig von der verwendeten Pendellänge angegeben.
+
+\begin{table}
+    \centering
+    \caption{Prozentuale Abweichungen der gemessenen Kreisfrequenzen $\protect \omega$ zu den Eigenfrequenzen bei der Pendellänge $\protect l = \SI{71}{\centi\meter}$.}
+    \label{tab:proz71}
+    \begin{tabular}{c |c |c}
+        \toprule
+        $\omega_{+{,}\si{\percent}}$ / $\si{\percent}$  & $\omega_{-{,}\si{\percent}}$ / $\si{\percent}$ & $\omega_{S{,}\si{\percent}}$ / $\si{\percent}$\\
+        \midrule
+        $\SI{1.34(30)}{}$   &  $\SI{0.30(70)}{}$   & $\SI{36.43(5974)}{}$\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}
+    \centering
+    \caption{Prozentuale Abweichungen der gemessenen Kreisfrequenzen $\protect \omega$ zu den Eigenfrequenzen bei der Pendellänge $\protect l = \SI{32}{\centi\meter}$.}
+    \label{tab:proz32}
+    \begin{tabular}{c |c |c}
+        \toprule
+        $\omega_{+{,}\si{\percent}}$ / $\si{\percent}$  & $\omega_{-{,}\si{\percent}}$ / $\si{\percent}$ & $\omega_{S{,}\si{\percent}}$ / $\si{\percent}$\\
+        \midrule
+        $\SI{12.40(40)}{\percent}$   &  $\SI{9.00(60)}{\percent}$  & $\SI{12.87(2433)}{\percent}$\\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 

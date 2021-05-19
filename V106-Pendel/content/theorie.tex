@@ -6,14 +6,14 @@ Ziel ist es die Schwingungs- und Schwebungsdauer von gleichsinniger, gegensinnig
 Um das Verhalten von Pendelsystemen zu verstehen ist es zunächst vonnöten die einzelnen Pendel beschreiben zu können. In der folgenden mathematischen Beschreibung wird die Reibung vernachlässigt, dadurch muss 
 bei dem Pendel eine möglichst reibungsfreihe Aufhängung garantiert sein. Wird ein Pendel mit Fadenlänge $l$ und Masse $m$ ausgelenkt, wirkt die Gewichtskraft dieser entgegen. Anstatt hier die vektoriellen Kräfte zu betrachten bieten 
 sich hier besonders eine Betrachtung der Drehmomente also der winkelabhängigkeit an. Das durch die Gravition induzierte Drehmoment $M$ kann als 
-\begin{equation}
+\begin{equation*}
 M = D_{p} \phi
-\end{equation}
+\end{equation*}
 beschrieben werden, wobei $D_{p}$ die Winkelrichtgröße angibt.
 Außerdem gilt für das Drehmoment eines beliebigen Körpers mit einem Trägheitsmoment $J$ ein Zusammenhang mit der Winkelbeschleunigung $\ddot{\phi}$. Dieser lautet wie folgt
-\begin{equation}
+\begin{equation*}
 M = J \ddot{\phi}.
-\end{equation}
+\end{equation*}
 Aus dem zweiten Newtonsches Gesetz folgt eine homogene lineare Differentialgleichung zweiter Ordnung
 \begin{equation}
     \label{eqn:dgl}
@@ -22,9 +22,9 @@ J \ddot{\phi} + D_{p} \phi = 0.
 Dabei wird zusätzlich eine Kleinwinkelnäherung verwendet, wobei $\text{sin}(x) \approx x$ angenommen wird. Folglich muss in der Durchführung darauf geachtet werden, dass die Pendel nicht zu 
 weit ausgelenkt werden.
 Die Gleichung \eqref{eqn:dgl} hat die typische Form einer Differentialgleichung des harmonischen Oszillators und sie lässt sich durch eine harmonische Schwingung mit der Schwingungsfrequenz
-\begin{equation}
+\begin{equation*}
 \omega = \sqrt{\frac{D_{p}}{J}} = \sqrt{\frac{g}{l}}
-\end{equation}
+\end{equation*}
 lösen. Eine harmonische Schwingung lässt sich im Allgemeinen durch eine Superposition von Sinus- und Cosinuslösungen beschreiben.
 Wichtig ist hier die Unabhängigkeit der Masse von der Winkelfrequent $\omega$ und somit auch von der Periodendauer $T$ für die gilt
 \begin{equation}
@@ -55,9 +55,9 @@ Die Lösung dieser Gleichung liefert eine Schwingungsfrequenz $\omega_{+}$
 \end{equation}
 wobei das $+$ im Index die gleichsinnige Schwingung andeuten soll. Dies ist wie bereits herausgestellt die Schwingungsfrequenz welche bei einem einzelnen Pendel erwartet wird.
 Die Schwingungsdauer folgt über die Gleichung \eqref{eqn:omega}, dabei ergibt sich
-\begin{equation}
+\begin{equation*}
 T_{+} = 2\pi \cdot \sqrt{\frac{l}{g}}.
-\end{equation}
+\end{equation*}
 Eine schematische Darstellung der gleichsinnigen Schwingung ist in Abbildung \ref{fig:4} gezeigt.
 
 \subsection{Gegensinnige Schwingung}
@@ -70,9 +70,9 @@ Diese Schwingungsfrequenz $\omega_{-}$ hängt nun zusätzlich von einer Kopplung
 \omega_{-} = \sqrt{\frac{g+2K}{l}}.
 \end{equation}
 Analog folgt wieder die Schwingungsdauer $T_{-}$
-\begin{equation}
+\begin{equation*}
     T_{-} = 2\pi \cdot \sqrt{\frac{l}{g+2K}}.
-\end{equation}
+\end{equation*}
 Die Kopplungskonstante $K$ ist für diese Gruppe an Differentialgleichung folgendermaßen definiert
 \begin{equation}
     \label{eqn:K}
