@@ -217,8 +217,69 @@ print(omegaminusK)
 
 
 
-# omegasL = test1 - test3
+omegasL = test1 - test3
 # omegasK = test2 - test4
 
-# print(omegasL)
+print(omegasL)
 # print(omegasK)
+
+TschwebungRechnung71 =  (T_Lgesamt*meanTLufloat)/(T_Lgesamt-meanTLufloat)
+print("Schwebung Ts für 71cm (errechnet)")
+print(f"{TschwebungRechnung71:.5}")
+
+print("#############")
+
+
+omegasK = test2 - test4
+print(omegasK)
+print("Schwebung Ts für 32cm (errechnet)")
+TschwebungRechnung32 = (T_Kgesamt*meanTKufloat)/(T_Kgesamt-meanTKufloat)
+print(f"{TschwebungRechnung32:.5}")
+
+
+wplus71 = test1
+wplus32 = test2
+wpluseigen71 = 3.716
+wpluseigen32 = 5.536
+
+wminus71 = test3
+wminus32 = test4
+wminuseigen71 = omegaminusL
+wminuseigen32 = omegaminusK
+
+wschwebung71 = np.abs(omegaS71)
+wschwebung32 = np.abs(omegaS32)
+wschwebungeigen71 = np.abs(omegasL)
+wschwebungeigen32 = np.abs(omegasK)
+
+prozentwplus71 = 100*(wpluseigen71-wplus71)/wpluseigen71
+print("prozentwplus71:")
+print(prozentwplus71)
+
+prozentwplus32 = 100*(wpluseigen32-wplus32)/wpluseigen32
+print("prozentwplus32:")
+print(prozentwplus32)
+
+prozentwminus71 = 100*(wminuseigen71-wminus71)/wminuseigen71
+# print(wminuseigen71)
+# print(wminus71)
+print("prozentwminus71:")
+print(prozentwminus71)
+
+prozentwminus32 = 100*(wminuseigen32-wminus32)/wminuseigen32
+# print(wminuseigen32)
+# print(wminus32)
+print("prozentwminus32:")
+print(prozentwminus32)
+
+prozentwschwebung71 = 100*(wschwebungeigen71-wschwebung71)/wschwebungeigen71
+# print(wschwebungeigen71)
+# print(wschwebung71)
+print("prozentwschwebung71:")
+print(f"{prozentwschwebung71:.6}")
+
+prozentwschwebung32 = 100*(wschwebungeigen32-wschwebung32)/wschwebungeigen32
+# print(wschwebungeigen32)
+# print(wschwebung32)
+print("prozentwschwebung32:")
+print(f"{prozentwschwebung32:.6}")
