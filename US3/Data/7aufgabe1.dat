@@ -1,7 +1,7 @@
-7mm Durchmesser  \Delta v
-#theta 45       theta 15        theta 30 (*-1)       die Spalten(pumpstärke) haben den Aufbau (6000,6500,7000,7500,8000)^T
-549                244             366
-635                293             415
-842                348             500
-1001               366             623
-1367               439             708
+#7mm Durchmesser  \Delta v
+#rpm     theta 45       theta 15        theta 30 (*-1)       die Spalten(pumpstärke) haben den Aufbau (6000,6500,7000,7500,8000)^T
+6000     549                244             366
+6500     635                293             415
+7000     842                348             500
+7500     1001               366             623
+8000     1367               439             708
