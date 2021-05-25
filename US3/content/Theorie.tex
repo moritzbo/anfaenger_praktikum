@@ -1,0 +1,47 @@
+\section{Theorie}
+Eine wichtige Grundlage zum Verständnis vom Ultraschall ist das allgemeine Verhalten von Schall als mechanische Welle 
+und ihre Wechselwirkung untereinander. \\ 
+Schall wird generell durch seine Frequenz beschrieben, welche von dem Menschen in einem Bereich von $16 \si{\hertz}$ bis $20 \si{\kilo\hertz}$
+wahrnehmbar ist. Entsprechend werden durch das untere Ende des Spektrums an höhrbaren Frequenzen tiefe Töne erzeugt,
+für hohe Frequenzen folglich hohe Töne. \\
+Der Bereich jenseits des Hörbaren (für den Menschen) führt das Spektrum des sogenannten Ultraschall ein. Dieser endet bei 
+$1 \si{\giga\hertz} $ und geht von da an in den Hyperschall über. Unterhalb der tiefsten, wahrnehmbaren Töne, also bei $16 \si{\hertz}$
+wird von Infraschall gesprochen, charakterisiert durch eben sehr niedriege Frequenzen.
+
+\subsection{Doppler-Effekt}
+Treffen nun zwei Schallwellen aufeinander lassen sich verschiedene Effekte feststellen, die insbesondere von zeitlich veränderlichen
+Abständen zwischen Quelle und Empfänger abhängen. Unter dieser Bedingung verschiebt sich die gemessene Frequenz für den Empfänger 
+propotional zur Änderung der Entfernung. 
+Es lassen sich folglich vier verschiedene Fälle finden mit jeweils zwei für eine bewegte Quelle oder eben den Empfänger.
+\begin{description}
+    \item bewegte Quelle: \\
+    Die Quelle ist in diesem Fall in der Lage sich dem Empfänger zu nähren oder sich zu entfernen, was folglich, durch Verschiebung der Grundfrequenz $f_0$,
+    die Wahrnehmung des Empfängers ändert. Bewegt sich also die Quelle mit einer Geschwindigkeit $f$ weg, wird die messbare Frequenz höher $f_{kl}$. Analog wird die Frequenzen
+    niedriger $f_{gr}$wenn sich die Quelle auf den Beobachter zubewegt. In der folgenden Formel, mit $c$ als Schallgeschwindigkeit
+    \cite{...}, ist der Zusammenhang mathematisch aufgeführt.
+\end{description}
+\begin{equation}
+    \label{eqn:bewegteQuelle}
+    f_{kl/gr} = \frac{f_0}{1 \mp \frac{f}{c}}
+\end{equation}
+\begin{description}
+    \item bewegter Empfänger: \\
+    Nach dem Grundsatz, dass wenn die Entfernung der zwei Systeme größer wird auch die vom Empfänger gemessene Frequenz steigt und andersherum,
+    folgt für den bewegten Empfänger das gleiche wie für die bewegte Quelle. In diesem Fall sei bei Entfernung von der Quelle weg die gemessene 
+    Frequenz als $f_n$ und bei Näherund als $f_h$ bezeichnet. Es folgt die Formel.
+\end{description}
+\begin{equation}
+    \label{eqn:bewegterEmpfaenger}
+    f_{h/n} = f_0 \left ( 1 \pm \frac{v}{c} \right )
+\end{equation}
+Sollten nun beide Frequenzen, die gesendete und die gemessene bekannt sein, liefern die Formeln \eqref{eqn:bewegteQuelle} und \eqref{eqn:bewegterEmpfaenger}
+Aufschluss auf die Geschwindigkeit des Bewegten Systems relativ zum Starren. Eine große Anwendung davon findet sich in der 
+Geschwindigkeitsmessung von Blutströmen wieder. Hierbei erfährt der Ultraschall eine Frequenzänderung $\Delta f$ im Vergleich zur Grundfrequenz $f_0$,
+durch Kontakt mit zum Beispiel schnellen Blutkörpern. 
+\begin{equation}
+    \label{eqn:deltaf}
+    \Delta f = f_0 \frac{v}{c} \left ( \text{cos}\alpha + \text{cos}\beta \right )
+\end{equation}
+Die hier auftretenden Variablen $\alpha$ und $\beta$ beschreiben den Winkel zwischen dem Geschwindigkeitsvektor des bewegten Objekts
+und der Wellennormalen des Schalls. Bei dem hier vorliegenden Impuls-Echo-Verfahren liegen Empfänger und Quelle direkt beieinander, folglich sind 
+die Wellennormalen der einfallenden und ausgesendeten Schallwelle parllell, bis auf ein minus Zwichen unterscheiden sie sich also nicht.  
