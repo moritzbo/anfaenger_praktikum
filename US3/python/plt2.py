@@ -16,13 +16,13 @@ c = 1800
 plt.plot(tiefe45,
         I45,
         "bx",
-        label="",
+        label="Pumpleistung 45%",
         linewidth=1.5)
 
 plt.plot(tiefe70,
         I70,
         "kx",
-        label="",
+        label="Pumpleistung 70%",
         linewidth=1.5)
 plt.ylabel(r'I[$\si{\volt\squared\per\second}$]')
 plt.xlabel(r'Messtiefe [$\si{\micro\second}$]')
@@ -39,13 +39,13 @@ gesch70 = delta70*c/(fnull * 2 * np.cos(alphaS))
 plt.plot(tiefe45,
         gesch45,
         "bx",
-        label="",
+        label="Pumpleistung 45%",
         linewidth=1.5)
 
 plt.plot(tiefe70,
         gesch70,
         "kx",
-        label="",
+        label="Pumpleistung 70%",
         linewidth=1.5)
 
 plt.ylabel(r'v[$\si{\meter\per\second}$]')
