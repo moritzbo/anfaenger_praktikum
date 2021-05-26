@@ -100,7 +100,7 @@ plt.plot(geschm16,
         label="Rohrdurchmesser 16 mm",
         linewidth=1.5)
 
-plt.ylabel(r'$\frac{\Delta f}{\alpha_{15}}$[$\si{\hertz\per\radian}$]')
+plt.ylabel(r'$\frac{\Delta f}{\alpha_{30}}$[$\si{\hertz\per\radian}$]')
 plt.xlabel(r'$v $[$\si{\meter\per\second}$]')
 
 plt.grid()
@@ -130,8 +130,8 @@ plt.plot(geschl16,
         "gx",
         label="Rohrdurchmesser 16 mm",
         linewidth=1.5)
-        
-plt.ylabel(r'$\frac{\Delta f}{\alpha_{15}}$[$\si{\hertz\per\radian}$]')
+
+plt.ylabel(r'$\frac{\Delta f}{\alpha_{45}}$[$\si{\hertz\per\radian}$]')
 plt.xlabel(r'$v $[$\si{\meter\per\second}$]')
 
 plt.grid()
