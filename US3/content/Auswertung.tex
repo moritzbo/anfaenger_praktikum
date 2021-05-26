@@ -121,43 +121,50 @@ Der statistische Fehler auf den Mittelwert wird über die Standardabweichung $\s
 \begin{equation}
     \label{eqn:sem}
 \increment \bar{v} = \frac{\sigma}{\sqrt{N}} = \sqrt{\frac{1}{N(N-1)} \sum_{i=1}^{N} (v_{i} - \bar{v})^{2}}.
-\end{equation}            
-                           
+\end{equation}                                       
 In Tabelle \ref{tab:7} sind die gemittelten Geschwindigkeiten pro Zentrifugendrehzahl und Rohrdurchmesser aufgetragen.
 
- \begin{table}
-     \centering
-     \caption{Mittelwerte der errechneten Geschwindigkeiten.}
-     \label{tab:7}
-     \begin{tabular}{c || c | c | c}
-         \multicolumn{1}{c}{~} & \multicolumn{1}{c}{$d = \SI{7}{\milli\meter}$} & \multicolumn{1}{c}{$d = \SI{10}{\milli\meter}$} & \multicolumn{1}{c}{$d = \SI{16}{\milli\meter}$}\\
-         \toprule
-         $v_{\text{gesch}}$ [$\si{{\text{r}}\per\minute}$]  & $\overline{v_{\text{ber}}}$ [$\si{\meter\per\second}$] &  $\overline{v_{\text{ber}}}$ [$\si{\meter\per\second}$] & $\overline{v_{\text{ber}}}$ [$\si{\meter\per\second}$] \\
-         \midrule
-         6000    &  $\SI{0.157(53)}{}$    & $\SI{0.130(31)}{}$   & $\SI{0.043(16)}{}$   \\ 
-         6500    &  $\SI{0.182(61)}{}$    & $\SI{0.120(50)}{}$   & $\SI{0.054(21)}{}$   \\ 
-         7000    &  $\SI{0.230(86)}{}$    & $\SI{0.140(57)}{}$   & $\SI{0.061(22)}{}$   \\ 
-         7500    &  $\SI{0.272(104)}{}$   & $\SI{0.205(113)}{}$  & $\SI{0.070(25)}{}$  \\ 
-         8000    &  $\SI{0.348(152)}{}$   & $\SI{0.181(79)}{}$   & $\SI{0.083(32)}{}$   \\  
-         \bottomrule
-     \end{tabular}
- \end{table}
+\begin{table}
+    \centering
+    \caption{Mittelwerte der errechneten Geschwindigkeiten.}
+    \label{tab:7}
+    \begin{tabular}{c || c | c | c}
+        \multicolumn{1}{c}{~} & \multicolumn{1}{c}{$d = \SI{7}{\milli\meter}$} & \multicolumn{1}{c}{$d = \SI{10}{\milli\meter}$} & \multicolumn{1}{c}{$d = \SI{16}{\milli\meter}$}\\
+        \toprule
+        $v_{\text{gesch}}$ [$\si{{\text{r}}\per\minute}$]  & $\overline{v_{\text{ber}}}$ [$\si{\meter\per\second}$] &  $\overline{v_{\text{ber}}}$ [$\si{\meter\per\second}$] & $\overline{v_{\text{ber}}}$ [$\si{\meter\per\second}$] \\
+        \midrule
+        6000    &  $\SI{0.157(53)}{}$    & $\SI{0.130(31)}{}$   & $\SI{0.043(16)}{}$   \\ 
+        6500    &  $\SI{0.182(61)}{}$    & $\SI{0.120(50)}{}$   & $\SI{0.054(21)}{}$   \\ 
+        7000    &  $\SI{0.230(86)}{}$    & $\SI{0.140(57)}{}$   & $\SI{0.061(22)}{}$   \\ 
+        7500    &  $\SI{0.272(104)}{}$   & $\SI{0.205(113)}{}$  & $\SI{0.070(25)}{}$  \\ 
+        8000    &  $\SI{0.348(152)}{}$   & $\SI{0.181(79)}{}$   & $\SI{0.083(32)}{}$   \\  
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Es lassen sich ebenfalls für feste Prismenwinkel $\alpha$ die Abhängigkeiten der Geschwindigkeit $v$ von dem Verhältnis $\increment f$/$\text{cos}(\alpha)$ graphisch darstellen. 
+In den Diagrammen \ref{fig:plot1} bis \ref{fig:plot3} ist dies gezeigt.
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{build/plot1.pdf}
-    \caption{Doppler-Prisma als schematischer Querschnitt mit möglichen Winkelkonfigurationen. \cite{skript}} 
-    \label{fig:figskizze1}
+    \caption{Geschwindigkeiten der Strömung in Abhängigkeit der Frequenzverschiebung bei Winkel $\protect \alpha_{15}$.} 
+    \label{fig:plot1}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{build/plot2.pdf}
-    \caption{Doppler-Prisma als schematischer Querschnitt mit möglichen Winkelkonfigurationen. \cite{skript}} 
-    \label{fig:figskizze1}
+    \caption{Geschwindigkeiten der Strömung in Abhängigkeit der Frequenzverschiebung bei Winkel $\protect \alpha_{30}$.} 
+    \label{fig:plot2}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{build/plot3.pdf}
-    \caption{Doppler-Prisma als schematischer Querschnitt mit möglichen Winkelkonfigurationen. \cite{skript}} 
-    \label{fig:figskizze1}
+    \caption{Geschwindigkeiten der Strömung in Abhängigkeit der Frequenzverschiebung bei Winkel $\protect \alpha_{45}$.} 
+    \label{fig:plot3}
 \end{figure}
+
+\subsection{Bestimmung des Strömungsprofils}
+In diesem Teil des Versuches wurde das Rohr mit $d = \SI{10}{\milli\meter}$ genauer untersucht. Hierbei wurde für den festen Prismenwinkel $\theta = \SI{15}{\degree}$ die Messtiefe variiert und wieder die 
+Frequenzverschiebung $\increment f$, sowie die Streuintensität gemessen. Aus dem Zusammenhang \eqref{eqn:deltaf} lässt sich wieder die Geschwindigkeit bestimmen. Das Strömungsprofil lässt sich am besten in einem Diagramm darstellen,
+dabei wird jeweils entweder die Geschwindigkeit oder die Streuintensität auf der y-Achse in Abhängigkeit von der Messtiefe aufgetragen. In Diagramm ... ist die Geschwindigkeit und in Diagramm ... ist die Streuintensität aufgetragen.
