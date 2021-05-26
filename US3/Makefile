@@ -8,11 +8,17 @@ build/plot2.pdf: python/plt.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python python/plt.py
 build/plot3.pdf: python/plt.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python python/plt.py
+build/plot4.pdf: python/plt2.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python python/plt2.py
+build/plot5.pdf: python/plt2.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python python/plt2.py
 
 hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/US3.pdf: build/plot1.pdf \
-				build/plot2.pdf
-				build/plot3.pdf
+				build/plot2.pdf \
+				build/plot3.pdf  \
+				build/plot4.pdf  \
+				build/plot5.pdf  \
 
 build/US3.pdf: FORCE | build
 	  TEXINPUTS=build: \
