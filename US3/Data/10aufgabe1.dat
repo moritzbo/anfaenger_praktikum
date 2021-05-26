@@ -1,5 +1,5 @@
-10mm Durchmesser  \Delta v
-#theta 45       theta 15        theta 30 (*-1)       die Spalten(pumpstärke) haben den Aufbau (6000,6500,7000,7500,8000)^T
+#10mm Durchmesser  \Delta v
+#theta 45       theta 15        theta 30 (*-1)      
 378             434                195    
 464             159                244
 525             171                317
