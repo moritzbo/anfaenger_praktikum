@@ -29,7 +29,7 @@ Wichtig für das Verständnis der Brechung ist das Verhalten des Lichts bei Änd
 Dieses Phänomen lässt sich durch das Snelliussche Brechungsgesetz erklären, dabei gilt \cite{skript}
 \begin{equation}
     \label{eqn:snell}
-    \frac{\text{sin}\alpha}{\text{sin} \beta} = \frac{v_1}{v_2} = \frac{n_2}{n_1}.
+    \frac{\text{sin}(\alpha)}{\text{sin} (\beta)} = \frac{v_1}{v_2} = \frac{n_2}{n_1}.
 \end{equation}
 Der Winkel $\alpha$ gibt den Einfallenden und $\beta$ den ausfallenden Winkel an. Alle Größen mit Index $1$ beschreiben das erste Medium vor der Grenzfläche und der Index $2$ für alle Werte dahinter. Der Brechungsindex $n$ ist die
 entscheidende Größe welche angibt wie stark das Licht bei einem Übergang gebrochen wird. Wenn eines der beiden Medien Luft ist vereinfacht sich diese Gesetzmäßigkeit, da der Brechungsindex in Luft $n_{\text{luft}} \approx 1$ ist. Der übrige
@@ -46,6 +46,40 @@ n_1 \text{sin}(\alpha) = n_2 \text{sin}(\beta).
     dichteres Medium und die Lichtgeschwindigkeit nimmt hinter Grenzfläche ab.\cite{skript}}
     \label{fig:brechung}
 \end{figure}
+
+\subsubsection{Planparallele Platte}
+Wenn ein Lichtstrahl auf eine Platte mit parallelen Grenzflächen trifft wird er zum Teil reflektiert oder gebrochen. Der Teil des Lichts welcher sowohl an der ersten, als auch an der zweiten Grenzfläche gebrochen wird, besitzt
+nachher wieder den gleichen Winkel. Durch die erste Brechung ergibt sich allerdings ein Strahlversatz $s$ welcher sich durch das Brechungsgesetz \eqref{eqn:snell} und der Geometrie ergibt. Es gilt (\cite{skript})
+\begin{equation}
+s = d \cdot \frac{\text{sin}(\alpha - \beta)}{\text{cos}(\beta)},
+\end{equation}
+wobei $d$ die Dicke zwischen den Platten angibt.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{bilder/4.png}
+    \caption{Strahlenverlauf der doppelten Brechung von Licht an einer Planparallelen Platte mit optisch dichterem Medium.  \cite{skript}}
+    \label{fig:planparallel}
+\end{figure}
+\subsubsection{Prisma}
+Ein optisches Prisma beschreibt ein durch nicht parallele Flächen eingeschlossenes Medium, wodurch sich andere Brechungsbeziehungen ergeben. Die Gesamtablenkung der einfallenden Strahlung wird als $\delta$ bezeichnet und 
+lässt sich durch vier verschiedene Winkel bestimmen (\cite{skript})
+\begin{equation}
+\delta = (\alpha_1 + \alpha_2) - (\beta_1 + \beta_2).
+\end{equation}
+Die Bedeutung der Winkel lassen sich an der Abbildung ... erkennen. Der größte Unterschied zur vorherigen Betrachtung der Platte ist, dass der Winkel $\beta$ immer zum Lot, also zur Senkrechten der Fläche gerichtet ist. Dadurch ist $\beta_1$ nicht zwangsläufig $\beta_2$.
+Charakteristisch für ein Prisma ist jedoch die Summe der beiden $\beta$ Winkel welche als $\gamma$ bezeichnet wird.
+\begin{equation*}
+\gamma = \beta_1 + \beta_2
+\end{equation*}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{bilder/5.png}
+    \caption{Schematische Darstellung des Brechungsverlaufes von Lichts an einem optischen Prisma mit den charakteristischen Winkeln. Die schwarzgestrichelten Linien zeigen das Lot der jeweiligen Fläche und erklären die unterschiedlichen $\beta$ Winkel. \cite{skript}}
+    \label{fig:prisma}
+\end{figure}
+
+\newpage
 
 \subsection{Reflexion und Transmission}
 Im allgemeinen wird Strahlung an einer Grenzfläche nicht nur reflektiert sondern auch transmittiert. Da die Intensität allerdings im Optimalfall bei der alleinigen Betrachtung von Transmission und Reflexion nicht verloren geht, gilt das Erhaltungsgesetz
@@ -65,4 +99,12 @@ Beugung beschreibt das Verhalten von Licht hinter einem Hinderniss, meist einer 
 Um das Beugungsverhalten von Licht zu verstehen genügt die Strahlenoptik nun nicht mehr. Die Wellenoptik zusammen mit dem Huygenschen Prinzip liefern eine Erklärung. Das Huygensche Prinzip besagt, dass jeder Punkt einer Wellenfront
 Ausgangspunkt einer neuen Elementarwelle mit gleicher Frequenz darstellt. Die Einhüllende dieser Elementarwellen stellt nun die neue Wellenfront dar. Dies erklärt warum auch hinter dem Hinderniss Licht erkennbar ist, obwohl es 
 nach der Strahlenoptik im Schattenraum liegt. Desweiteren können die Elementarwellen untereinander interferieren da die Maxwellgleichungen die Superposition einzelner Lösungen zulassen. Es kommt zu konstruktiven und destruktiven
-Interferenzen hinter einer Blende, abhängig von dem Gangunterschied.
+Interferenzen hinter einer Blende, abhängig von dem Gangunterschied. Für eine Interferenzerscheinung wird eine möglichst monochromatisch kohärente Lichtquelle benötigt, also Licht mit gleicher Wellenlänge und festen Phasenbeziehungen.
+\\
+Konstruktive Interferenzen entstehen bei Gangunterschieden $\increment s$ die ein beliebiges Vielfaches der Wellenlänge entsprechen. Destruktive Interferenz entsteht, wenn der Gangunterschied der Wellen ein Vielfaches von $\lambda$/$2$ beträgt.
+Im Folgenden wird die Beugung an einem Interferenzgitter betrachtet, dabei ergibt sich durch geometrische Überlegungen und die Bedingungen an die konstruktive Interferenz
+\begin{equation}
+    \label{eqn:whatev}
+d \cdot \text{sin}(\alpha) = k \cdot \lambda.
+\end{equation}
+Diese Gleichung \eqref{eqn:whatev} gibt den Zusammenhang des Beugungswinkels $\alpha$ und Intensitätsordung $k$ zur Gitterkonstante $d$ und Wellenlänge $\lambda$ an. Die Gitterkonstante beschreibt dabei die Länge der einzelnen Einfachspalte.
