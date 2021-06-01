@@ -5,19 +5,31 @@ Konfiguartion zu messen. \\
 Die Laser selbst sind aufeinander monitiert, mit folglich horizontal versetzten aber parallelen Strahlen. Für verschiedene
 Winkel bleibt es nun frei den Laser selbst oder das Medium mitsamt Messsskaler zu verschieben. Im uns dagegebenen Versuch 
 ist eben der Laseraufbau variabel auf einem Kreisbogen mit einer Ausrichtung die immerzu auf das Medium zeigt. Der Laserstrahl 
-bewegt sich also in Richtung des Normalenvektors des Kreisbogen bei entsprechender Position. \\
-Im laufe der Durchführung wird sowohl Reflexion als auch Beugung beobachtet, es gilt also Werte jeweil hinter oder vor dem Medium 
+bewegt sich also in Richtung des Normalenvektors des Kreisbogen bei entsprechender Position. 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{bilder/afbau.png}
+    \caption{Bildaufnahme der verschieden Elemente die im Verlaufe des Versuchs V400 zu benutzten sind. \cite{skript}} 
+    \label{fig:teile}
+\end{figure}
+\FloatBarrier
+\flushleft Im laufe der Durchführung wird sowohl Reflexion als auch Beugung beobachtet, es gilt also Werte jeweil hinter oder vor dem Medium 
 aufzunehmen. Im Falle von Reflexion ist ein sogenannter Reflektionsschirm auf die Platte fixiert. Dieser bietet Halt für eventuelle
 Transmissionsschirme oder allgemeinen Schutz vor dem Laserlicht.
+
+Da Laser im allgemeinen eine enorm hohe Kohärenzlänge (Aufgabe 5) \ref{...} aufweisen, spielt der Abstand zum Medium keine weitere Rolle. 
+Die Laserdiodenmodule erzeugen eine Wellenlänge von $\SI{635}{\nano\meter}$ für das rote und $\SI{532}{\nano\meter}$ für das
+grüne Licht.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{bilder/teile.png}
     \caption{Bildaufnahme der verschieden Elemente die im Verlaufe des Versuchs V400 zu benutzten sind. \cite{skript}} 
-    \label{fig:figskizze1}
+    \label{fig:teile}
 \end{figure}
+\FloatBarrier
 
-Das optische Material, welches im Mittelpunbkt des Kreisbogen zu platieren ist, bedient sich verschiedener Elemente um 
+Das optische Material, welches im Mittelpunbkt des Kreisbogen zu platzieren ist, bedient sich verschiedener Elemente um 
 die jeweils gesuchten Messwerte zu bestimmen. Bei manchen dieser Medien empfiehlt es sich eine enstprechende Haltung zu benutzen.
 \begin{description}
     \item Planparallele Platte: \\
@@ -25,19 +37,60 @@ die jeweils gesuchten Messwerte zu bestimmen. Bei manchen dieser Medien empfiehl
     eine Winkelskala auf.
     \item Prisma \\
     Das Prisma besteht aus Kronglas und ist charakterisiert durch einen brechenden Winkel $\gamma = 60 \si{\degree}$.
-    \item Reflektionsplatte \\
+    \item Reflektionsplatte \label{lol}\\ 
     Um das Reflexionsgesetz zu verifizieren muss das Laserlicht nahezu perfekt refelektiert und anschließend der Winkel
     gemessen werden. Dazu wird die sogenannte Reflektionsplatte benutzt die das Licht mit einem Reflektionskoeffizienten $R= 1$
     reflektiert.
 \end{description}
 
-
-
 \section{Durchführung}
+Vier verschiedene Konfigurationen werden für die Durchführung benötigt um die Gesetzte der Optik zu verifizieren.
 
+\subsection{Reflexionsgesetz}
+Zu Beginn wird mit Hilfe der Reflektionsplatte \ref{fig:teile} der Winkel von den Ein - und Ausfallenden Laserstrahlen des grünen Laser gemessen. 
+Eine passende Messskaler unter der Platte lässt den Winkel bei sieben verschiedenen Einfallswinkeln ablesene.
 
+\subsection{Brechungsgesetz}
+Die Reflektionsplatte wird mit der Platte \ref{fig:teile} getauscht. Aus der Natur der Brechung folgt, dass es jetzt Werte 
+vor dem Medium zu Messen gilt, da hier das Laserlicht größtenteils Transmission erfährt.
+Der verschiebbare Laseraufbau wird auch hier sieben mal auf seinem Kreisbogen verstellt, sodass der grüne Laser 
+nach der Brechung auf der Winkelskala der Platte abzulesen ist. 
 
+\subsection{Prisma}
+\begin{figure}
+    \begin{minipage}{0.5\textwidth}
+Sowohl der rote als auch der grüne Laser leuchten hier auf das im Zentrum plazierte Prisma.
+Eine Kreisförmige Winkelskala wird in dem Bereich aufgebaut, in dem anschließend das gebrochene Licht strahlt. Diese gibt Aufschluss
+über die zu messene Ableknung $\delta$ die das Licht durch das Prisma, bei fünf verschiedenen Einfallswinkeln $\alpha$ im Bereich von 
+$\SI{10}{\degree} \leq \alpha_1 \leq \SI{60}{\degree}$ erfährt.
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{bilder/prisma.jpg}
+        \caption{fbkjdhsaklfhdsbaifbdusiabfi}
+    \end{minipage}
+\end{figure}
 
+\subsection{Beugung am Gitter}
+\begin{figure}
+\begin{minipage}{0.5\textwidth}
+Beide Laser strahlen bei dieser Messreihe auf ein in der Mitte platziertes Gitter. Dieses wird durch die Gitterdichte, also wie viele
+Linien pro $\si{\milli\meter}$ auftretenm, beschrieben. Zur verfügung stehen drei verschiede Dichten. 
+\begin{align*}
+    \SI{100}{Lines \per \milli\meter} \\
+    \SI{300}{Lines \per \milli\meter} \\
+    \SI{600}{Lines \per \milli\meter} 
+\end{align*}
+Die gesuchten Winkel der Interferenzmaxima lassen sich durch eine Winkelskala ablesen.
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{bilder/gitter.png}
+        \caption{fbkjdhsaklfhdsbaifbdusiabfi}
+    \end{minipage}
+\end{figure}
 
 
 
