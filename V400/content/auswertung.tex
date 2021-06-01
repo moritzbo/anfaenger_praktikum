@@ -15,7 +15,7 @@ $\Delta = \SI{0.5}{\degree}$ bei welcher durch das ungenaue Ablesen kommt. Aus d
 der Brechungsindex für die Platte. Es bietet sich also an die gemessen Winkel für jeden der sieben Messungen in die Formel einzusetzten 
 und anschließend die gefundenen Werte zu mitteln. Der Mittelwert des Brechungsindex ergibt sich zu
 \begin{equation}
-    \bar{n} = \SI{1.457(0866)}{}.
+    \bar{n} = \SI{1.451(0020)}{}.
 \end{equation}
 Der Fehler resultiert nur aus der Ableseungenauigkeit. Der statistische Fehler des Mittelwerts ist deutlich geringer mit
 \begin{equation*}
@@ -25,7 +25,7 @@ und somit breits im obrigen Fehler enthalten. Mit der Gleichung \eqref{...} läs
 und $v_1 = c$ \cite{...} die Lichtgeschwindigkeit bestimmen. Hieraus folgt
 \begin{align*}
     v &= \frac{c}{n} \\
-    v &= \SI{205.71(12221)e6}{\meter\per\second}
+    v &= \SI{206.60(00284)e6}{\meter\per\second}
 \end{align*}
 Der Fehler entsteht durch eine Gaußsche Fehlerfortpflanzung die wie folgt lautet
 \begin{equation}
@@ -37,7 +37,7 @@ Der Fehler entsteht durch eine Gaußsche Fehlerfortpflanzung die wie folgt laute
 Mit fünf Messwerten aus Tabelle \ref{..} lässt sich nun der Strahlversatz errechnen. Hierzu wird die Gleichung \eqref{...}
 benutzt und die Winkel mit entsprechendem Fehler eingesetzt. Die Dicke der Platte ist dem Aufbau zu entnehmen \ref{idkwhatthisissss}.
 \begin{equation*}
-    s = \SI{0.0109(00188)}{\meter}
+    s = \SI{0.0109(00003)}{\meter}
 \end{equation*}
 Die Rechnung beinhaltet wieder fehlerbehaftete Paramter was analog zur Aufgabe 2 \ref{brechung} auf eine Gaußsche Fehlerfortpflanzung 
 fürhrt. Die Abweichung lässt sich also wie folgt errechnen....
@@ -52,9 +52,9 @@ einzusetzen. Der Winkel $\beta$ entspricht also
 Die Formel zur alternativen Berechnung des Strahlversatz lautet also mit eingesetztem $\beta$ und Brechungsindex $n$
 \begin{align*}
     s &= d  \cdot \frac{\text{sin} \left (  \alpha- \text{arcsin} \left( \frac{\text{sin}(\alpha)}{n}\right) \right)} {\text{cos}\left(\text{arcsin} \left( \frac{\text{sin}(\alpha)}{n}\right)\right)}\\
-    s &= \SI{0.0109(00200)}{\meter}
+    s &= \SI{0.0109(00003)}{\meter}
 \end{align*}
-Auf dem ersten Blick wirken die Beiden Methode in ihrem Ergbenis bis auf ihren Fehler sehr ähnlich. Die Ähnlichkeit Resultiert aus 
+Auf dem ersten Blick wirken die Beiden Methode in ihrem Ergbenis sehr ähnlich. Die Ähnlichkeit Resultiert aus 
 aus der Abhängigkeit vom Winkel $\beta$. Das soll heißen das in \ref{brechung} bereits der Brechungsindex $n(\alpha, \beta)$
 berechnet wurde und aus diesem schließlich wieder $\beta$ selbst. 
 
@@ -65,13 +65,19 @@ Da $\alpha_1$ und $\alpha_2$  aus den Messreihen entnommen werden, können darau
     \text{sin}\alpha &= n \cdot \text{sin}\beta \\
     \beta_1 + \beta_2 &= \gamma
 \end{align*}
-Wird also der gemittelte Winkel $\bar{alpha_1}$ und der in \ref{brechung} gefundene Brechungsindex $n$ dort eingesetzt, findet
+Wird also der gemittelte Winkel $\bar{\alpha_1}$ und der in \ref{brechung} gefundene Brechungsindex $n$ dort eingesetzt, findet
 sich der theoretische Wert für den Winkel $\beta_1$. Dieser ist selbst fehlerbehaftet und lautet für den grünen Laser
 \begin{equation}
-   \beta_{1\text{grün}} = \SI{0.3501(02456)}{\radian}.
+   \beta_{1\text{grün}} = \SI{0.3501(00043)}{\radian}.
 \end{equation}
 Mit den Angaben für den Winkel $\gamma = \SI{60}{\degree}$ \cite{skript} und der Winkelbeziehung
 lässt sich nun $\beta_{2\text{grün}}$ berechnen
 \begin{equation}
-    \beta_{2\text{grün}} = \SI{0.6971(02456)}{\radian}.
+    \beta_{2\text{grün}} = \SI{0.6971(00043)}{\radian}.
 \end{equation}
+Die finale Berechnung von $\delta$ verlangt zuletzt die vier Winkel in die Formel einzusetzen was eine fehlerbehaftete 
+Auslenkung von 
+\begin{equation}
+    \delta = \SI{0.1745(00055)}{\radian}
+\end{equation}
+gibt. Analog liefern die gleichen Rechnungen mit Messwerten 

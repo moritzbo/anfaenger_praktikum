@@ -15,9 +15,9 @@ c =  const.physical_constants["speed of light in vacuum"]
 aERR = np.array([])
 bERR = np.array([])
 for i in range(len(a)):
-    aERR = np.append(aERR,ufloat(a[i],0.5))
+    aERR = np.append(aERR,ufloat(a[i],0.00872665))
 for i in range(len(b)):
-    bERR = np.append(bERR,ufloat(b[i],0.5))
+    bERR = np.append(bERR,ufloat(b[i],0.00872665))
 n = unp.sin(a)/unp.sin(b)   
 nerr = unp.sin(aERR)/unp.sin(bERR)
 print(f"Brechungsindex:{n}")
@@ -40,7 +40,9 @@ print(np.mean(bERR))
 print(f"betamean =  {betamean:.4f}")
 strahlneu = d * unp.sin(aERR-beta)/unp.cos(beta)
 strahlneumean = np.mean(strahlneu)
-print(f"{strahlneumean:.4f}")
+print(f"strahlneu = {strahlneumean:.4f}")
 
 beta2mean = np.deg2rad(60) - betamean
 print(f"{beta2mean:.4f}")
+delta = (np.mean(aERR)+np.mean(bERR))-(betamean+ beta2mean)
+print(f"deltaauslenkung = {delta:.4f}")
