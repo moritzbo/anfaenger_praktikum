@@ -1,4 +1,6 @@
-\section{Reflexionsgesetz}
+\section{Auswertung}
+
+\subsection{Reflexionsgesetz}
 Die gemessen Reflexionswinkel $\alpha_2$ lassen sich der Tabelle \ref{....} entnehmen. Sie bestätigen ausnahmslos
 das Reflexionsgesetz, also %oder ref einfach lol
 \begin{equation*}
@@ -6,7 +8,65 @@ das Reflexionsgesetz, also %oder ref einfach lol
 \end{equation*}
 
 
-\section{Brechungsgesetze}
-Die Winkel der zweiten Messreihe wurden in der Tabelle \ref{....} gesammelt. Diiesen liegt jeweils ein Messfehler von
+\subsection{Brechungsgesetze}
+\label{brechung}
+Die Winkel der zweiten Messreihe wurden in der Tabelle \ref{....} gesammelt. Diesen liegt jeweils ein Messfehler von
 $\Delta = \SI{0.5}{\degree}$ bei welcher durch das ungenaue Ablesen kommt. Aus der Formel \eqref{....} ergibt sich dann 
-der Brechungsindex für die Platte. Es bietet sich also an die gemessen Winkel zu mitteln ... (??)
+der Brechungsindex für die Platte. Es bietet sich also an die gemessen Winkel für jeden der sieben Messungen in die Formel einzusetzten 
+und anschließend die gefundenen Werte zu mitteln. Der Mittelwert des Brechungsindex ergibt sich zu
+\begin{equation}
+    \bar{n} = \SI{1.457(0866)}{}.
+\end{equation}
+Der Fehler resultiert nur aus der Ableseungenauigkeit. Der statistische Fehler des Mittelwerts ist deutlich geringer mit
+\begin{equation*}
+    \Delta n = \SI{0.009}{}
+\end{equation*}
+und somit breits im obrigen Fehler enthalten. Mit der Gleichung \eqref{...} lässt sich zusammen mit der Näherung $n_1 \approx 1$
+und $v_1 = c$ \cite{...} die Lichtgeschwindigkeit bestimmen. Hieraus folgt
+\begin{align*}
+    v &= \frac{c}{n} \\
+    v &= \SI{205.71(12221)e6}{\meter\per\second}
+\end{align*}
+Der Fehler entsteht durch eine Gaußsche Fehlerfortpflanzung die wie folgt lautet
+\begin{equation}
+    \increment v = \frac{c \increment n}{n^2}
+\end{equation}
+
+
+\subsection{Planparallele Platten}
+Mit fünf Messwerten aus Tabelle \ref{..} lässt sich nun der Strahlversatz errechnen. Hierzu wird die Gleichung \eqref{...}
+benutzt und die Winkel mit entsprechendem Fehler eingesetzt. Die Dicke der Platte ist dem Aufbau zu entnehmen \ref{idkwhatthisissss}.
+\begin{equation*}
+    s = \SI{0.0109(00188)}{\meter}
+\end{equation*}
+Die Rechnung beinhaltet wieder fehlerbehaftete Paramter was analog zur Aufgabe 2 \ref{brechung} auf eine Gaußsche Fehlerfortpflanzung 
+fürhrt. Die Abweichung lässt sich also wie folgt errechnen....
+\\
+
+Eine alternative Berechnung des Strahlversatz kann durch den theoretischen Wert des Brechungswinkel $\beta$ geschehen. 
+Dieser wird nach umformen der Formel \eqref{...} gefunden, wobei es noch gilt den in Aufgabe 2 \ref{brechung} errechneten Brechungsindex
+einzusetzen. Der Winkel $\beta$ entspricht also
+\begin{equation*}
+    \beta  = \text{arcsin} \left( \frac{\text{sin}(\alpha)}{n}\right).
+\end{equation*}
+Die Formel zur alternativen Berechnung des Strahlversatz lautet also mit eingesetztem $\beta$ und Brechungsindex $n$
+\begin{align*}
+    s &= d  \cdot \frac{\text{sin} \left (  \alpha- \text{arcsin} \left( \frac{\text{sin}(\alpha)}{n}\right) \right)} {\text{cos}\left(\text{arcsin} \left( \frac{\text{sin}(\alpha)}{n}\right)\right)}\\
+    s &= \SI{0.0109(00200)}{\meter}
+\end{align*}
+Auf dem ersten Blick wirken die Beiden Methode in ihrem Ergbenis bis auf ihren Fehler sehr ähnlich. Die Ähnlichkeit Resultiert aus 
+aus der Abhängigkeit vom Winkel $\beta$. Das soll heißen das in \ref{brechung} bereits der Brechungsindex $n(\alpha, \beta)$
+berechnet wurde und aus diesem schließlich wieder $\beta$ selbst. 
+
+\subsection{Prisma}
+Für die Ablenkung $\delta$ am Prisma werden nach der Formel \eqref{...} vier verschiedene Winkel benötigt. 
+Da $\alpha_1$ und $\alpha_2$  aus den Messreihen entnommen werden, können daraus dann die Winkel $\beta_1$ und $\beta_2$ aus dem Brechungsgesetz und den Winkelbeziehungen hergeleitet werden.
+\begin{align*}
+    \text{sin}\alpha &= n \cdot \text{sin}\beta \\
+    \beta_1 + \beta_2 &= \gamma
+\end{align*}
+Wird also der gemittelte Winkel $\bar{alpha_1}$ und der in \ref{brechung} gefundene Brechungsindex $n$ dort eingesetzt, findet
+sich der theoretische Wert für den Winkel $\beta_1$. Dieser ist selbst fehlerbehaftet und lautet für den grünen Laser
+\begin{equation}
+   \beta_{1\text{grün}} = \SI{0.3501(02456)}{}.
+\end{equation}
