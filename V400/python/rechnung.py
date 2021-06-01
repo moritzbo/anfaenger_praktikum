@@ -43,4 +43,4 @@ strahlneumean = np.mean(strahlneu)
 print(f"{strahlneumean:.4f}")
 
 beta2mean = np.deg2rad(60) - betamean
-print(beta2mean)
+print(f"{beta2mean:.4f}")
