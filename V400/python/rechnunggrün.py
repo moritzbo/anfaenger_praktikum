@@ -25,4 +25,6 @@ beta = unp.arcsin(unp.sin(aERR)/n)
 beta2 = np.deg2rad(60) - beta
 delta = (aERR+bERR)-(beta + beta2)
 deltamean = np.mean(delta)
+
 print(f"delta grün = {deltamean:.6}")
+print(beta*180/np.pi)
