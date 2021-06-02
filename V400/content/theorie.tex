@@ -31,26 +31,27 @@ Dieses Phänomen lässt sich durch das Snelliussche Brechungsgesetz erklären, d
     \label{eqn:snell}
     \frac{\text{sin}(\alpha)}{\text{sin} (\beta)} = \frac{v_1}{v_2} = \frac{n_2}{n_1}.
 \end{equation}
-Der Winkel $\alpha$ gibt den Einfallenden und $\beta$ den ausfallenden Winkel an. Alle Größen mit Index $1$ beschreiben das erste Medium vor der Grenzfläche und der Index $2$ für alle Werte dahinter. Der Brechungsindex $n$ ist die
-entscheidende Größe welche angibt wie stark das Licht bei einem Übergang gebrochen wird. Wenn eines der beiden Medien Luft ist vereinfacht sich diese Gesetzmäßigkeit, da der Brechungsindex in Luft $n_{\text{luft}} \approx 1$ ist. Der übrige
-Brechungsindex wird dann absolute Brechungsindex genannt.
-Wenn $n_2 > n_1$ ist, dann gilt $n_2$ als optisch dichter und die Ausbreitungsgeschwindigkeit ist dort reduziert, anderherum ist $n_2$ optisch dünner, so ist $n_2 < n_1$.
+Der Winkel $\alpha$ gibt den einfallenden und $\beta$ den ausfallenden Winkel an. Alle Größen mit Index $1$ beschreiben das erste Medium vor der Grenzfläche und der Index $2$ gilt für alle Werte dahinter. Der Brechungsindex $n$ ist die
+entscheidende Größe welche angibt wie stark das Licht bei einem Übergang gebrochen wird. Wenn eines der beiden Medien Luft ist, vereinfacht sich diese Gesetzmäßigkeit da der Brechungsindex in Luft $n_{\text{luft}} \approx 1$ ist. Der übrige
+Brechungsindex wird dann absoluter Brechungsindex genannt.
+Wenn $n_2 > n_1$ ist, dann gilt $n_2$ als optisch dichter und die Ausbreitungsgeschwindigkeit ist dort reduziert, andersherum ist $n_2$ optisch dünner, so ist $n_2 < n_1$.
 Eine Umformung von Gleichung \eqref{eqn:snell} gibt die bekannte Formulierung des Snelliusschen Brechungsgesetz \cite{skript}
-\begin{equation}
+\begin{equation*}
 n_1 \text{sin}(\alpha) = n_2 \text{sin}(\beta).
-\end{equation}
+\end{equation*}
 \begin{figure}
     \centering
     \includegraphics[width=0.4\textwidth]{bilder/2.png}
     \caption{Schematische Abbildung des Brechungsgesetz von Licht zwischen zwei Medien, getrennt durch eine ebene Grenzfläche. Hierbei gilt das Snelliusche Brechungsgesetz \eqref{eqn:snell} und der dargestellte Strahlengang zeigt einen Übergang in ein optisch
-    dichteres Medium und die Lichtgeschwindigkeit nimmt hinter Grenzfläche ab.\cite{skript}}
+    dichteres Medium und die Lichtgeschwindigkeit nimmt hinter der Grenzfläche ab.\cite{skript}}
     \label{fig:brechung}
 \end{figure}
 
 \subsubsection{Planparallele Platte}
 Wenn ein Lichtstrahl auf eine Platte mit parallelen Grenzflächen trifft wird er zum Teil reflektiert oder gebrochen. Der Teil des Lichts welcher sowohl an der ersten, als auch an der zweiten Grenzfläche gebrochen wird, besitzt
-nachher wieder den gleichen Winkel. Durch die erste Brechung ergibt sich allerdings ein Strahlversatz $s$ welcher sich durch das Brechungsgesetz \eqref{eqn:snell} und der Geometrie ergibt. Es gilt (\cite{skript})
+nachher wieder den gleichen Winkel. Durch die erste Brechung ergibt sich allerdings ein Strahlversatz $s$ welcher sich durch das Brechungsgesetz \eqref{eqn:snell} und der Geometrie ergibt. Es gilt \cite{skript}
 \begin{equation}
+    \label{eqn:versatz}
 s = d \cdot \frac{\text{sin}(\alpha - \beta)}{\text{cos}(\beta)},
 \end{equation}
 wobei $d$ die Dicke zwischen den Platten angibt.
@@ -62,12 +63,12 @@ wobei $d$ die Dicke zwischen den Platten angibt.
 \end{figure}
 \subsubsection{Prisma}
 Ein optisches Prisma beschreibt ein durch nicht parallele Flächen eingeschlossenes Medium, wodurch sich andere Brechungsbeziehungen ergeben. Die Gesamtablenkung der einfallenden Strahlung wird als $\delta$ bezeichnet und 
-lässt sich durch vier verschiedene Winkel bestimmen (\cite{skript})
+lässt sich durch vier verschiedene Winkel bestimmen \cite{skript}
 \begin{equation}
     \label{eqn:deltaw}
 \delta = (\alpha_1 + \alpha_2) - (\beta_1 + \beta_2).
 \end{equation}
-Die Bedeutung der Winkel lassen sich an der Abbildung ... erkennen. Der größte Unterschied zur vorherigen Betrachtung der Platte ist, dass der Winkel $\beta$ immer zum Lot, also zur Senkrechten der Fläche gerichtet ist. Dadurch ist $\beta_1$ nicht zwangsläufig $\beta_2$.
+Die Bedeutung der Winkel lassen sich an der Abbildung \ref{fig:prisma} erkennen. Der größte Unterschied zur vorherigen Betrachtung der Platte ist, dass der Winkel $\beta$ immer zum Lot, also zur Senkrechten der Fläche gerichtet ist. Dadurch ist $\beta_1$ nicht zwangsläufig $\beta_2$.
 Charakteristisch für ein Prisma ist jedoch die Summe der beiden $\beta$ Winkel welche als $\gamma$ bezeichnet wird.
 \begin{equation*}
 \gamma = \beta_1 + \beta_2
@@ -83,7 +84,7 @@ Charakteristisch für ein Prisma ist jedoch die Summe der beiden $\beta$ Winkel 
 \newpage
 
 \subsection{Reflexion und Transmission}
-Im allgemeinen wird Strahlung an einer Grenzfläche nicht nur reflektiert sondern auch transmittiert. Da die Intensität allerdings im Optimalfall bei der alleinigen Betrachtung von Transmission und Reflexion nicht verloren geht, gilt das Erhaltungsgesetz
+Im Allgemeinen wird Strahlung an einer Grenzfläche nicht nur reflektiert sondern auch transmittiert. Da die Intensität allerdings im Optimalfall bei der alleinigen Betrachtung von Transmission und Reflexion nicht verloren geht, gilt das Erhaltungsgesetz
 \begin{equation*}
 R \cdot T = 1.
 \end{equation*}
@@ -108,4 +109,4 @@ Im Folgenden wird die Beugung an einem Interferenzgitter betrachtet, dabei ergib
     \label{eqn:whatev}
 d \cdot \text{sin}(\alpha) = k \cdot \lambda.
 \end{equation}
-Diese Gleichung \eqref{eqn:whatev} gibt den Zusammenhang des Beugungswinkels $\alpha$ und Intensitätsordung $k$ zur Gitterkonstante $d$ und Wellenlänge $\lambda$ an. Die Gitterkonstante beschreibt dabei die Länge der einzelnen Einfachspalte.
+Diese Gleichung \eqref{eqn:whatev} gibt den Zusammenhang des Beugungswinkels $\alpha$ und Beugungsordung $k$ zur Gitterkonstante $d$ und Wellenlänge $\lambda$ an. Die Gitterkonstante beschreibt dabei die Länge der einzelnen Einfachspalte.
