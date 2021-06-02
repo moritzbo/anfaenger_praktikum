@@ -35,7 +35,7 @@ print(f"lamda_grün/600 ={lambda600g}")
 
 lamdaGrünGesamt = np.append(lambda100g, np.append(lambda300g, lambda600g))
 lamdaGRÜNmean = np.mean(lamdaGrünGesamt)
-print(f"lamdaGESAMTmeanGRÜN ={lamdaGRÜNmean}")
+print(f"lamdaGESAMTmeanGRÜN ={lamdaGRÜNmean:.6}")
 
 ##### ROTES LAMBDA
 
@@ -62,4 +62,4 @@ print(f"lamda_rot/600 ={lambda600r}")
 
 lamdarotGesamt = np.append(lambda100r, np.append(lambda300r, lambda600r))
 lamdaROTmean = np.mean(lamdarotGesamt)
-print(f"lamdaGESAMTmeanROT ={lamdaROTmean}")
+print(f"lamdaGESAMTmeanROT ={lamdaROTmean:.6}")
