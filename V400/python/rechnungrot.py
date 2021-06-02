@@ -23,7 +23,11 @@ for i in range(len(b)):
 #bestimme beta 1 
 beta = unp.arcsin(unp.sin(aERR)/n)
 beta2 = np.deg2rad(60) - beta
-delta = (aERR+bERR)-(beta + beta2)
-deltamean = np.mean(delta)
-print(f"delta rot = {deltamean:.6}")
+
+
 print(beta*180/np.pi)
+print(beta2*180/np.pi)
+
+delta = (aERR+ bERR) - (beta +beta2)
+deltamean = np.mean(delta)
+print(f"Abweichung delta= {(deltamean*180/np.pi):.4f}")
