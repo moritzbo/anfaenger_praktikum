@@ -15,6 +15,7 @@ $\Delta = \SI{0.5}{\degree}$ bei welcher durch das ungenaue Ablesen kommt. Aus d
 der Brechungsindex für die Platte. Es bietet sich also an die gemessen Winkel für jeden der sieben Messungen in die Formel einzusetzten 
 und anschließend die gefundenen Werte zu mitteln. Der Mittelwert des Brechungsindex ergibt sich zu
 \begin{equation}
+    \label{eqn:n}
     \bar{n} = \SI{1.451(0020)}{}.
 \end{equation}
 Der Fehler resultiert nur aus der Ableseungenauigkeit. Der statistische Fehler des Mittelwerts ist deutlich geringer mit
@@ -65,21 +66,137 @@ Da $\alpha_1$ und $\alpha_2$  aus den Messreihen entnommen werden, können darau
     \text{sin}\alpha &= n \cdot \text{sin}\beta \\
     \beta_1 + \beta_2 &= \gamma
 \end{align*}
-Wird also der gemittelte Winkel $\bar{\alpha_1}$ und der in \ref{brechung} gefundene Brechungsindex $n$ dort eingesetzt, findet
-sich der theoretische Wert für den Winkel $\beta_1$. Dieser ist selbst fehlerbehaftet und lautet für den grünen Laser
+Aus dem Einfallswinkel $\alpha_1$ lässt sich direkt über das Snelliussche Brechungsgesetz mit dem zuvor bestimmten Brechungsindex $n$ aus Gleichung \eqref{eqn:n}, $\beta_1$ bestimmen.
+Der oben genannte Zusammenhang zu $\gamma$ gibt dann sofort den Winkel $\beta_2$. Diese Winkel sind in der Tabelle \ref{tab:prismagreenber} dargestellt.
+
+\begin{table}
+    \centering
+    \caption{Berechnete Winkel $\beta_1$ und $\beta_2$ aus den gemessenen Einfalls- und Ausfallswinkeln am Prisma für den grünen Laser mit Wellenlänge $\protect \lambda = \SI{532}{\nano\meter}$.}
+    \label{tab:prismagreenber}
+    \begin{tabular}{c c}
+        \toprule
+        $\beta_1$ [$\si{\degree}$] & $\beta_2$ [$\si{\degree}$] \\
+        \midrule
+        $\SI{20.16(43)}{}$ & $\SI{39.84(43)}{}$\\
+        $\SI{23.28(46)}{}$ & $\SI{36.71(46)}{}$\\  
+        $\SI{26.29(49)}{}$ & $\SI{33.71(49)}{}$\\
+        $\SI{29.16(52)}{}$ & $\SI{30.84(52)}{}$\\
+        $\SI{31.86(55)}{}$ & $\SI{28.14(55)}{}$\\
+        \bottomrule    
+    \end{tabular}
+\end{table}
+
+Zusammen mit den Messdaten aus Tabelle \ref{tab:prismagreen} lässt sich nun mit Gleichung \ref{eqn:deltaw} $\delta$ bestimmen und mitteln. Es ergibt sich
 \begin{equation}
-   \beta_{1\text{grün}} = \SI{0.3501(00043)}{\radian}.
+    \overline{\delta_{\text{grün}}} = \SI{41.20(32)}{\degree}.
 \end{equation}
-Mit den Angaben für den Winkel $\gamma = \SI{60}{\degree}$ \cite{skript} und der Winkelbeziehung
-lässt sich nun $\beta_{2\text{grün}}$ berechnen
+Ganz analog kann das für die Messwerte des roten Lasers mit Wellenlänge $\lambda = \SI{635}{\nano\meter}$ ausgerechnet werden.
+Die berechneten Winkel $\beta_1$ und $\beta_2$ sind in der Tabelle \label{tab:prismaredber} angegeben.
+
+\begin{table}
+    \centering
+    \caption{Berechnete Winkel $\beta_1$ und $\beta_2$ aus den gemessenen Einfalls- und Ausfallswinkeln am Prisma für den roten Laser mit Wellenlänge $\protect \lambda = \SI{635}{\nano\meter}$.}
+    \label{tab:prismaredber}
+    \begin{tabular}{c c}
+        \toprule
+        $\beta_1$ [$\si{\degree}$] & $\beta_2$ [$\si{\degree}$] \\
+        \midrule
+        $\SI{20.16(43)}{}$ & $\SI{39.84(43)}{}$\\
+        $\SI{23.28(46)}{}$ & $\SI{36.71(46)}{}$\\  
+        $\SI{26.29(49)}{}$ & $\SI{33.71(49)}{}$\\
+        $\SI{29.16(52)}{}$ & $\SI{30.84(52)}{}$\\
+        $\SI{31.86(55)}{}$ & $\SI{28.14(55)}{}$\\
+        \bottomrule    
+    \end{tabular}
+\end{table}
+Es ergibt sich ein gemittelter Wert für $\delta$ von
 \begin{equation}
-    \beta_{2\text{grün}} = \SI{0.6971(00043)}{\radian}.
+\overline{\delta_{\text{rot}}} = \SI{40.10(32)}{\degree}.
 \end{equation}
-Die finale Berechnung von $\delta$ verlangt zuletzt die vier Winkel in die Formel einzusetzen was eine fehlerbehaftete 
-Auslenkung von 
+
+\subsection{Beugung am Gitter}
+Für diesen Versuchsteil wurden wieder der grüne und der rote Laser verwendet und das Beugungsverhalten an drei unterschiedlichen Gittern untersucht. Die Gitter besitzen
+eine bestimmte Anzahl an Linien pro Millimeter. Die Gitterkonstante $d$, also der Abstand zwischen zwei nebeneinanderliegenden Linien lässt sich durch den Kehrwert bestimmen. 
+Daraus folgen die Gitterkonstanten der verwendeten Gitter zu
+\begin{align*}
+\SI{600}{{\text{Linien}}\per\milli\meter} \quad &\to \quad d_{600} = {600^{-1}}\si{\milli\meter\per{\text{Linie}}} \\
+\SI{300}{{\text{Linien}}\per\milli\meter} \quad &\to \quad d_{300} = {300^{-1}}\si{\milli\meter\per{\text{Linie}}} \\
+\SI{100}{{\text{Linien}}\per\milli\meter} \quad &\to \quad d_{100} = {100^{-1}}\si{\milli\meter\per{\text{Linie}}} \\
+\end{align*}
+Aus den Messwerten der verschiedenen Gitter für den Beugungswinkel $\alpha$ lassen sich mit Gleichung \ref{eqn:whatev} die Wellenlänge der verwendeten Laser bestimmen.
+Dabei wird zunächst zwischen den einzelnen Gittern unterschieden und am Ende über alle Wellenlängen $\lambda$ des jeweiligen Lasers gemittelt.
+In den folgenden Tabellen \ref{tab:wave600} bis \ref{tab:wave100} sind die einzelnen Berechnungen für $\lambda$ aus den Messwerten aufgezeigt.
+
+\begin{table}
+    \centering
+    \caption{Berechnete Wellenlängen bei einem Beugungsverhalten an einem Gitter mit Gitterkonstante $\protect d = {600^{-1}}\si{\milli\meter\per{\text{Linie}}}$.}
+    \label{tab:wave600}
+    \begin{tabular}{c c}
+        \toprule
+        $\lambda_{\text{grün}}$ [$\si{\nano\meter}$] & $\lambda_{\text{rot}}$ [$\si{\nano\meter}$] \\
+        \midrule
+        $\SI{5.42}{}$ & ~ \\
+        \bottomrule    
+    \end{tabular}
+\end{table}
+
+\begin{table}
+    \centering
+    \caption{Berechnete Wellenlängen bei einem Beugungsverhalten an einem Gitter mit Gitterkonstante $\protect d = {300^{-1}}\si{\milli\meter\per{\text{Linie}}}$.}
+    \label{tab:wave300}
+    \begin{tabular}{c c}
+        \toprule
+        $\lambda_{\text{grün}}$ [$\si{\nano\meter}$] & $\lambda_{\text{rot}}$ [$\si{\nano\meter}$] \\
+        \midrule
+        ~ & ~ \\
+        \bottomrule    
+    \end{tabular}
+\end{table}
+\begin{table}
+    \centering
+    \caption{Berechnete Wellenlängen bei einem Beugungsverhalten an einem Gitter mit Gitterkonstante $\protect d = {100^{-1}}\si{\milli\meter\per{\text{Linie}}}$.}
+    \label{tab:wave100}
+    \begin{tabular}{c c}
+        \toprule
+        $\lambda_{\text{grün}}$ [$\si{\nano\meter}$] & $\lambda_{\text{rot}}$ [$\si{\nano\meter}$] \\
+        \midrule
+        ~ & ~ \\
+        \bottomrule    
+    \end{tabular}
+\end{table}
+Dabei entsteht der Fehler 
 \begin{equation}
-    \delta = \SI{0.1745(00055)}{\radian}
+\increment \lambda = d \cdot \frac{\text{cos}(\alpha)}{k} \cdot \increment \alpha
 \end{equation}
-gibt. Analog liefern die gleichen Rechnungen mit Messwerten des roten Lasers folgene totale Ablenkung beim Prisma.
+durch eine Fehlerfortpflanzung des Winkels $\alpha$ auf die Wellenlänge.
+Die Mittelung über alle Wellenlängen des gleichen Lasers liefern
+\begin{align*}
+\overline{\lambda_{\text{grün}}} &= \SI{}{\nano\meter}\\
+\overline{\lambda_{\text{rot}}} &= \SI{}{\nano\meter}\\
+\end{align*}
+Dabei ist der Fehler durch die Ableseungenauigkeiten der Winkel wieder deutlich größerer Ordnung als der des Standardfehlers des Mittelwerts. Eine Fehlerfortpflanzung auf eine Mittelwertberechnung
+sieht in diesem Fall folgendermaßen aus
+\begin{equation}
+\increment \lambda = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\increment \lambda_{i})^2}.
+\end{equation}
+Dabei ist $N$ die Anzahl aller berechneten Wellenlängen eines Lasers.
+
+%
+%Wird also der gemittelte Winkel $\bar{\alpha_1}$ und der in \ref{brechung} gefundene Brechungsindex $n$ dort eingesetzt, findet
+%sich der theoretische Wert für den Winkel $\beta_1$. Dieser ist selbst fehlerbehaftet und lautet für den grünen Laser
+%\begin{equation}
+%   \beta_{1\text{grün}} = \SI{0.3501(00043)}{\radian}.
+%\end{equation}
+%Mit den Angaben für den Winkel $\gamma = \SI{60}{\degree}$ \cite{skript} und der Winkelbeziehung
+%lässt sich nun $\beta_{2\text{grün}}$ berechnen
+%\begin{equation}
+%    \beta_{2\text{grün}} = \SI{0.6971(00043)}{\radian}.
+%\end{equation}
+%Die finale Berechnung von $\delta$ verlangt zuletzt die vier Winkel in die Formel einzusetzen was eine fehlerbehaftete 
+%Auslenkung von 
+%\begin{equation}
+%    \delta = \SI{0.1745(00055)}{\radian}
+%\end{equation}
+%gibt. Analog liefern die gleichen Rechnungen mit Messwerten des roten Lasers folgene totale Ablenkung beim Prisma.
 
     
