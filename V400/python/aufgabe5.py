@@ -63,3 +63,11 @@ print(f"lamda_rot/600 ={lambda600r}")
 lamdarotGesamt = np.append(lambda100r, np.append(lambda300r, lambda600r))
 lamdaROTmean = np.mean(lamdarotGesamt)
 print(f"lamdaGESAMTmeanROT ={lamdaROTmean:.6}")
+
+litG = 532*10**(-9)
+litR = 635*10**(-9)
+abweichungGRÜN = 100*(lamdaGRÜNmean-litG)/litG
+abweichungROT = 100*(lamdaROTmean-litR)/litR
+
+print(f"Abweichung % GRÜN = {abweichungGRÜN:.4f}")
+print(f"Abweichung % ROT = {abweichungROT:.4f}")

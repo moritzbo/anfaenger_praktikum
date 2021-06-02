@@ -46,3 +46,7 @@ beta2mean = np.deg2rad(60) - betamean
 print(f"{beta2mean:.4f}")
 delta = (np.mean(aERR)+np.mean(bERR))-(betamean+ beta2mean)
 print(f"deltaauslenkung = {delta:.4f}")
+
+nLIT =  1.49
+nprozent = 100*(nmean-nLIT)/nLIT
+print(f"Abweichung brechungsindex in % = {nprozent:.4f}")
