@@ -20,10 +20,10 @@ for i in range(len(b)):
     bERR = np.append(bERR,ufloat(b[i],0.00872665))
 n = unp.sin(a)/unp.sin(b)   
 nerr = unp.sin(aERR)/unp.sin(bERR)
-print(f"Brechungsindex:{n}")
+print(f"Brechungsindex array:{n}")
 
 nmean = np.mean(nerr)
-print(f"{nmean:.6}")
+print(f"Brechungsindex mean:{nmean:.6}")
 nsem = sem(n)
 print(f"{nsem:.6}")
 
