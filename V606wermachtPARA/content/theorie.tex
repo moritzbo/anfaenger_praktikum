@@ -40,5 +40,34 @@ Zusätzlich wird $\vec{\mu_S}$ noch durch eine weiteren Faktor $g_s$, dem gyroma
     \vec{\mu}_L &= - \frac{\vec{\mu}_B}{\hbar}\vec{L} \\
     \vec{\mu}_S &= -g_S \frac{\vec{\mu}_B}{\hbar}\vec{S} 
 \end{align}
+\begin{figure}
+\begin{minipage}[b]{0.5\textwidth}
 Mit Hilfe der Beträge dieser Zusammenhänge lässt sich nun der gesamte magnetische Moment in Verbindung mit trigonometrischen Funktionen angeben.
-Diese folgen 
+Diese folgen aus der quantenmechanischen Eigenschaft, dass eben alle Impulse die nicht parallel oder antiparallel zum Gesamtbahndrehimpuls $\vec{J}$
+unmessbar sind. Mit den in der Abbildung \ref{fig:winkel} gezeigten Winkeln findet sich die Formel
+\begin{equation*}
+    |\vec{\mu}_J| =  |\vec{\mu}_S|\text{cos}\alpha + |\vec{\mu}_L| \text{cos}\beta.
+\end{equation*}
+Durch Anwendung des Cosinussatzes und Benutzung vorheriger Zusammenhänge kann anschließend ein Term, bestehend aus den Quantenzahlen
+der verschiedenen Impulse gefunden werden. Der darin auftretende Bruch wird definiert als $g_J$, welcher auch Landé-Faktor genannt wird.
+Mit dieser Vereinbarung reduziert sich der Betrag des gesamten magnetischen Momentes auf
+\begin{equation}
+    \label{eqn:idkobdasüberhaubtsstimmtlol}
+    |\vec{\mu}_J| \approx |\mu_B| \sqrt{J(J+1)}.
+\end{equation}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{bilder/winkel.png}
+    \caption{lol}
+    \label{fig:winkel}
+\end{minipage}
+\end{figure}
+Im Gegensatz zur klassischen Mechanik sind hier die möglichen Winkel stark limitiert. Die Richtungsquantelung erlaubt also nur solche Winkel, 
+bei denen die Ausrichtung des Vektors $\vec{\mu}_{J_z} \text{von}  \vec{\mu}_J$ ein Vielfaches $n \in \mathbb{N} $ von $\mu_B g_J$ ist. 
+Die Wurzel aus \eqref{eqn:idkobdasüberhaubtsstimmtlol} muss also nach der quantelung für die $z$-Komponente des Gesamtbahndrehimpuls
+eine Natürliche Zahl sein und wird im folgenden $m$, Orientierungsquantenzahl genannt.
+Limitierender Faktor für die Möglichkeiten von $m$ ist der Betrag von $\vec{J}$ selbst. Der Definition nach muss der 
+Betrag eines Vektors stehts kleiner, oder zumindest gleich einer seiner Komponenten sein. Dadurch findet sich die Menge an 
+möglichen Zahlen für $m$ als $\{-J,-J+1,...,J-1,J\}$. Jedes Element liefert eine mögliche Konfiguration des Impulses, in Summer 
+bestehen also $2J+1$ Möglichkeiten und wird Zeemann-Effekt genannt. 
