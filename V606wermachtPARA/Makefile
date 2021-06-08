@@ -1,11 +1,15 @@
 all: build/V606.pdf
 
 # # hier Python-Skripte:
-# build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-# 	TEXINPUTS=$$(pwd): python plot.py
+build/kurve1.pdf: python/plotkurve.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python python/plotkurve.py
+
+build/kurve2.pdf: python/plotkurve.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python python/plotkurve.py
 
 # # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-# build/main.pdf: build/plot.pdf
+build/V606.pdf: build/kurve1.pdf \
+				build/kurve2.pdf \
 
 build/V606.pdf: FORCE | build
 	  TEXINPUTS=build: \
@@ -16,7 +20,7 @@ build/V606.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	V400.tex
+	V606.tex
 
 build:
 	mkdir -p build
