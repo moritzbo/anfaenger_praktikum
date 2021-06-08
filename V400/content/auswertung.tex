@@ -1,8 +1,10 @@
 \section{Auswertung}
 
+Für die Auswertung wurden einige Bibliotheken in Python, wie \enquote{NumPy} \cite{numpy}, \enquote{SciPy} \cite{scipy} und \enquote{uncertainties} \cite{uncertainties} verwendet.
+
 \subsection{Reflexionsgesetz}
-Die gemessen Reflexionswinkel $\alpha_2$ lassen sich der Tabelle \ref{tab:reflexion} entnehmen. Sie bestätigen ausnahmslos
-das Reflexionsgesetz, also %oder ref einfach lol
+Die gemessen Reflexionswinkel $\alpha_2$ lassen sich der Tabelle \ref{tab:reflexion} entnehmen. Sie zeigen ausnahmslos
+das Verhalten
 \begin{equation*}
     \alpha_1=\alpha_2.
 \end{equation*}
@@ -18,11 +20,16 @@ und anschließend die gefundenen Werte zu mitteln. Der Mittelwert des Brechungsi
     \label{eqn:n}
     \bar{n} = \SI{1.451(0020)}{}.
 \end{equation}
-Der Fehler resultiert nur aus der Ableseungenauigkeit. Der statistische Fehler des Mittelwerts ist deutlich geringer mit
+Der Fehler resultiert nur aus der Ableseungenauigkeit und lässt sich durch eine Gaußsche Fehlerfortpflanzung der Mittelwertsberechnung bestimmen
 \begin{equation*}
-    \Delta n = \SI{0.009}{}
+\increment \bar{n} = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\increment n_{i})^2}.
 \end{equation*}
-und somit bereits im obrigen Fehler enthalten. Mit der Gleichung \eqref{eqn:snell} lässt sich zusammen mit der Näherung $n_1 \approx 1$
+Dabei gibt $N$ die Anzahl der bestimmten Brechungsindizes an über die gemittelt wird.
+Der statistische Fehler des Mittelwerts ist deutlich geringer und lässt sich folgendermaßen bestimmen
+\begin{equation}
+\increment \overline{n_{\text{statistisch}}} = \frac{1}{\sqrt{N}} \sqrt{\frac{1}{N-1}\sum_{i=1}^{N} (n_{i} -\bar{n})^2 } = \SI{0.009}{}. 
+\end{equation}
+Somit ist dieser bereits im obrigen Fehler enthalten. Mit der Gleichung \eqref{eqn:snell} lässt sich zusammen mit der Näherung $n_1 \approx 1$
 und $v_1 = c$ \cite{scipy} die Lichtgeschwindigkeit bestimmen. Hieraus folgt
 \begin{align*}
     v &= \frac{c}{n} \\
@@ -32,18 +39,31 @@ Der Fehler entsteht durch eine Gaußsche Fehlerfortpflanzung die wie folgt laute
 \begin{equation}
     \increment v = \frac{c \increment n}{n^2}.
 \end{equation}
-Die prozentuale Abweichung des ermittelten Brechungsindex $n$ zu dem Theoriewert aus Tabelle \ref{tab:litindex} beträgt
-\begin{equation}
-    \label{eqn:prozn}
-\increment n = \SI{2.61(134)}{\percent}.
-\end{equation}
 
 \subsection{Planparallele Platten}
 Mit fünf Messwerten aus Tabelle \ref{tab:brechung} lässt sich nun der Strahlversatz errechnen. Hierzu wird die Gleichung \eqref{eqn:versatz}
 benutzt und die Winkel mit entsprechendem Fehler eingesetzt. Die Dicke der Platte ist dem Aufbau zu entnehmen \ref{idkwhatthisissss}.
-\begin{equation*}
-    s = \SI{0.0109(00003)}{\meter}
-\end{equation*}
+Die errechneten Strahlversätze $s$ sind in der folgenden Tabelle \ref{tab:wrtfffffffffff} angegeben.
+\begin{table}
+    \centering
+    \caption{Angegeben ist der Strahlversatz $s$ berechnet mit Gleichung \eqref{eqn:versatz} aus den gemessenen Winkeln $\alpha$ und $\beta$ aus Tabelle \ref{tab:brechung}.}
+    \label{tab:wrtfffffffffff}
+    \begin{tabular}{c | c c}
+        \toprule
+        Strahlversatz $s$ [$\si{\milli\meter}$] & Einfallswinkel $\alpha$ [$\si{\degree}$] & Brechungswinkel $\beta$ [$\si{\degree}$] \\
+        \midrule
+        $\SI{6.30(73)}{}$ 20.00 & 14.00 \\
+        $\SI{8.51(73)}{}$ 25.00 & 17.00 \\
+        $\SI{10.81(73)}{}$ 30.00 & 20.00 \\
+        $\SI{13.21(73)}{}$ 35.00 & 23.00 \\
+        $\SI{15.74(73)}{}$ 40.00 & 26.00 \\
+        \bottomrule    
+    \end{tabular}
+\end{table}
+
+%\begin{equation*}
+%    s = \SI{0.0109(00003)}{\meter}
+%\end{equation*}
 Die Rechnung beinhaltet wieder fehlerbehaftete Paramter was analog zur vorherigen Brechung auf eine Gaußsche Fehlerfortpflanzung 
 führt. Die Abweichung lässt sich also wie folgt errechnen
 \begin{equation}
@@ -52,31 +72,52 @@ führt. Die Abweichung lässt sich also wie folgt errechnen
 Eine alternative Berechnung des Strahlversatz kann durch den theoretischen Wert des Brechungswinkel $\beta$ geschehen. 
 Dieser wird nach Umformen der Formel \eqref{eqn:snell} gefunden, wobei es noch gilt den errechneten Brechungsindex
 einzusetzen. Der Winkel $\beta$ entspricht also
-\begin{equation*}
+\begin{equation}
+    \label{eqn:yowhatever}
     \beta  = \text{arcsin} \left( \frac{\text{sin}(\alpha)}{n}\right).
-\end{equation*}
+\end{equation}
+Dabei ergibt sich der Fehler durch eine Fehlerfortpflanzung der beiden fehlerbehafteten Terme $\alpha$ und $n$.
+\begin{equation}
+\increment \beta = \sqrt{\frac{\text{cos}^2(\alpha)}{n^2 - \text{sin}^2(\alpha)} (\increment \alpha)^2 + \frac{\text{sin}^2(\alpha)}{n^4 - n^2 \cdot \text{sin}^2(\alpha)} (\increment n)^2  }
+\end{equation}
 Die Formel zur alternativen Berechnung des Strahlversatz lautet also mit eingesetztem $\beta$ und Brechungsindex $n$
-\begin{align*}
-    s &= d  \cdot \frac{\text{sin} \left (  \alpha- \text{arcsin} \left( \frac{\text{sin}(\alpha)}{n}\right) \right)} {\text{cos}\left(\text{arcsin} \left( \frac{\text{sin}(\alpha)}{n}\right)\right)}\\
-    s &= \SI{0.0109(00003)}{\meter}
-\end{align*}
-Auf den ersten Blick wirken die Beiden Methoden in ihrem Ergbenis sehr ähnlich. Die Ähnlichkeit resultiert aus 
-der Abhängigkeit vom Winkel $\beta$. Das soll heißen, dass bei der Brechung bereits der Brechungsindex $n(\alpha, \beta)$
-berechnet wurde und aus diesem schließlich wieder $\beta$ selbst. 
-
+\begin{equation*}
+    s = d  \cdot \frac{\text{sin} \left (  \alpha- \text{arcsin} \left( \frac{\text{sin}(\alpha)}{n}\right) \right)} {\text{cos}\left(\text{arcsin} \left( \frac{\text{sin}(\alpha)}{n}\right)\right)}.
+\end{equation*}
+Nun sind die mit der alternativen Methode berechneten Werte in Tabelle \ref{tab:wrtfffffffffffffffffffffffffffffff} angegeben.
+\begin{table}
+    \centering
+    \caption{Angegeben ist der Strahlversatz $s$ berechnet mit Gleichung \eqref{eqn:versatz} aus dem gemessenen Winkeln $\protect \alpha$ aus Tabelle \ref{tab:brechung} und dem errechneten Winkel $\protect \beta_{\text{ber}}$ mit Gleichung \ref{eqn:yowhatever}.}
+    \label{tab:wrtfffffffffffffffffffffffffffffff}
+    \begin{tabular}{c | c c }
+        \toprule
+        Strahlversatz $s$ [$\si{\milli\meter}$]  & Einfallswinkel $\alpha$ [$\si{\degree}$] & Brechungswinkel $\beta_{\text{ber}}$ [$\si{\degree}$] \\
+        \midrule
+        $\SI{6.68(30)}{}$  & 20.00 & $\SI{13.63(32)}{}$\\
+        $\SI{8.58(35)}{}$  & 25.00 & $\SI{16.93(35)}{}$\\
+        $\SI{10.65(39)}{}$ & 30.00 & $\SI{20.16(38)}{}$\\
+        $\SI{12.93(44)}{}$ & 35.00 & $\SI{23.28(41)}{}$\\
+        $\SI{15.46(49)}{}$ & 40.00 & $\SI{26.29(45)}{}$\\
+        \bottomrule    
+    \end{tabular}
+\end{table}
+% s &= \SI{0.0109(00003)}{\meter}
 \subsection{Prisma}
 Für die Ablenkung $\delta$ am Prisma werden nach der Formel \eqref{eqn:deltaw} vier verschiedene Winkel benötigt. 
 Da $\alpha_1$ und $\alpha_2$  aus den Messreihen entnommen werden, können daraus dann die Winkel $\beta_1$ und $\beta_2$ aus dem Brechungsgesetz und den Winkelbeziehungen hergeleitet werden.
-\begin{align*}
+\begin{align}
+    \label{eqn:11}
     \text{sin}\alpha &= n \cdot \text{sin}\beta \\
+    \label{eqn:12}
     \beta_1 + \beta_2 &= \gamma
-\end{align*}
+\end{align}
 Aus dem Einfallswinkel $\alpha_1$ lässt sich direkt über das Snelliussche Brechungsgesetz mit dem zuvor bestimmten Brechungsindex $n$ aus Gleichung \eqref{eqn:n}, $\beta_1$ bestimmen.
 Der oben genannte Zusammenhang zu $\gamma$ gibt dann sofort den Winkel $\beta_2$. Diese Winkel sind in der Tabelle \ref{tab:prismagreenber} dargestellt.
 
 \begin{table}
     \centering
-    \caption{Berechnete Winkel $\beta_1$ und $\beta_2$ aus den gemessenen Einfalls- und Ausfallswinkeln am Prisma für den grünen Laser mit Wellenlänge $\protect \lambda = \SI{532}{\nano\meter}$.}
+    \caption{Berechnete Winkel $\beta_1$ und $\beta_2$ aus den gemessenen Einfalls- und Ausfallswinkeln am Prisma \ref{tab:prismagreen} also aus den Gleichungen \eqref{eqn:11} und \eqref{eqn:12} für den grünen Laser mit Wellenlänge $\protect \lambda = \SI{532}{\nano\meter}$. Der Fehler entsteht wieder durch
+    den Ablesefehler der gemessenen Winkel $\alpha_1$ und $\alpha_2$.}
     \label{tab:prismagreenber}
     \begin{tabular}{c c}
         \toprule
@@ -91,16 +132,33 @@ Der oben genannte Zusammenhang zu $\gamma$ gibt dann sofort den Winkel $\beta_2$
     \end{tabular}
 \end{table}
 
-Zusammen mit den Messdaten aus Tabelle \ref{tab:prismagreen} lässt sich nun mit Gleichung \ref{eqn:deltaw} die Ablenkung $\delta$ bestimmen und mitteln. Es ergibt sich
-\begin{equation}
-    \overline{\delta_{\text{grün}}} = \SI{41.20(32)}{\degree}.
-\end{equation}
+Zusammen mit den Messdaten aus Tabelle \ref{tab:prismagreen} lässt sich nun mit Gleichung \eqref{eqn:deltaw} die Ablenkung $\delta$ bestimmen. Es ergeben sich die folgenden Werte in Tabelle \ref{tab:keinb}.
+\begin{table}
+    \centering
+    \caption{Angegeben ist die Ablenkung $\delta$ bei Verwendung des grünen Lasers an einem optischen Prisma mit Wellenlänge $\protect \lambda = \SI{532}{\nano\meter}$. Berechnet wurde $\delta$ mit Gleichung \eqref{eqn:deltaw} aus dem gemessenen Einfallswinkel $\protect \alpha_1$ und Brechungswinkel $\protect \alpha_2$ aus Tabelle \ref{tab:prismagreen}. }
+    \label{tab:keinb}
+    \begin{tabular}{c | c c}
+        \toprule
+        Ablenkung $\delta_{\text{grün}}$ [$\si{\degree}$] & Einfallswinkel $\alpha_1$ [$\si{\degree}$] & Brechungswinkel $\alpha_2$ [$\si{\degree}$] \\
+        \midrule
+        $\SI{47.00(71)}{}$ & 30.00 & 77.00 \\
+        $\SI{43.00(71)}{}$ & 35.00 & 68.00 \\
+        $\SI{40.00(71)}{}$ & 40.00 & 60.00 \\ 
+        $\SI{38.00(71)}{}$ & 45.00 & 53.00 \\
+        $\SI{38.00(71)}{}$ & 50.00 & 48.00 \\
+        \bottomrule    
+    \end{tabular}
+\end{table}
+%\begin{equation}
+%    \overline{\delta_{\text{grün}}} = \SI{41.20(32)}{\degree}.
+%\end{equation}
 Ganz analog kann das für die Messwerte des roten Lasers mit Wellenlänge $\lambda = \SI{635}{\nano\meter}$ ausgerechnet werden.
 Die berechneten Winkel $\beta_1$ und $\beta_2$ sind in der Tabelle \label{tab:prismaredber} angegeben.
 
 \begin{table}
     \centering
-    \caption{Berechnete Winkel $\beta_1$ und $\beta_2$ aus den gemessenen Einfalls- und Ausfallswinkeln am Prisma für den roten Laser mit Wellenlänge $\protect \lambda = \SI{635}{\nano\meter}$.}
+    \caption{Berechnete Winkel $\beta_1$ und $\beta_2$ aus den gemessenen Einfalls- und Ausfallswinkeln \ref{tab:prismared} also aus den Gleichungen \eqref{eqn:11} und \eqref{eqn:12} am Prisma für den roten Laser mit Wellenlänge $\protect \lambda = \SI{635}{\nano\meter}$. Der Fehler entsteht wieder durch
+    den Ablesefehler der gemessenen Winkel $\alpha_1$ und $\alpha_2$.}
     \label{tab:prismaredber}
     \begin{tabular}{c c}
         \toprule
@@ -114,10 +172,26 @@ Die berechneten Winkel $\beta_1$ und $\beta_2$ sind in der Tabelle \label{tab:pr
         \bottomrule    
     \end{tabular}
 \end{table}
-Es ergibt sich ein gemittelter Wert für $\delta$ von
-\begin{equation}
-\overline{\delta_{\text{rot}}} = \SI{40.10(32)}{\degree}.
-\end{equation}
+Es ergeben sich die folgenden Werte für $\delta$ in Tabelle \ref{tab:keinm}.
+\begin{table}
+    \centering
+    \caption{Angegeben ist die Ablenkung $\delta$ bei Verwendung des roten Lasers an einem optischen Prisma mit Wellenlänge $\protect \lambda = \SI{635}{\nano\meter}$. Berechnet wurde $\delta$ mit Gleichung \eqref{eqn:deltaw} aus dem gemessenen Einfallswinkel $\protect \alpha_1$ und Brechungswinkel $\protect \alpha_2$ aus Tabelle \ref{tab:prismared}. }
+    \label{tab:keinm}
+    \begin{tabular}{c | c c}
+        \toprule
+        Ablenkung $\delta_{\text{rot}}$ [$\si{\degree}$] & Einfallswinkel $\alpha_1$ [$\si{\degree}$] & Brechungswinkel $\alpha_2$ [$\si{\degree}$] \\
+        \midrule
+        $\SI{45.50(71)}{}$ & 30.0 & 75.5\\
+        $\SI{42.00(71)}{}$ & 35.0 & 67.0\\  
+        $\SI{39.00(71)}{}$ &  40.0 & 59.0\\
+        $\SI{37.00(71)}{}$ & 45.0 & 52.0\\
+        $\SI{37.00(71)}{}$ & 50.0 & 47.0\\
+        \bottomrule    
+    \end{tabular}
+\end{table}
+%\begin{equation}
+%\overline{\delta_{\text{rot}}} = \SI{40.10(32)}{\degree}.
+%\end{equation}
 
 \subsection{Beugung am Gitter}
 Für diesen Versuchsteil wurden wieder der grüne und der rote Laser verwendet und das Beugungsverhalten an drei unterschiedlichen Gittern untersucht. Die Gitter besitzen
@@ -134,7 +208,8 @@ In den folgenden Tabellen \ref{tab:wave600} bis \ref{tab:wave100} sind die einze
 
 \begin{table}
     \centering
-    \caption{Berechnete Wellenlängen bei einem Beugungsverhalten an einem Gitter mit Gitterkonstante $\protect d = {600^{-1}}\si{\milli\meter\per{\text{Linie}}}$.}
+    \caption{Berechnete Wellenlängen bei einem Beugungsverhalten an einem Gitter mit Gitterkonstante $\protect d = {600^{-1}}\si{\milli\meter\per{\text{Linie}}}$. Die verwendeten Messwerte stammen dabei aus der Tabelle \ref{tab:600linien} und wurden mit Gleichung 
+    \ref{eqn:whatev} ausgewertet.}
     \label{tab:wave600}
     \begin{tabular}{c c}
         \toprule
@@ -148,7 +223,8 @@ In den folgenden Tabellen \ref{tab:wave600} bis \ref{tab:wave100} sind die einze
 
 \begin{table}
     \centering
-    \caption{Berechnete Wellenlängen bei einem Beugungsverhalten an einem Gitter mit Gitterkonstante $\protect d = {300^{-1}}\si{\milli\meter\per{\text{Linie}}}$.}
+    \caption{Berechnete Wellenlängen bei einem Beugungsverhalten an einem Gitter mit Gitterkonstante $\protect d = {300^{-1}}\si{\milli\meter\per{\text{Linie}}}$. Die verwendeten Messwerte stammen dabei aus der Tabelle \ref{tab:300linien} und wurden mit Gleichung 
+    \ref{eqn:whatev} ausgewertet.}
     \label{tab:wave300}
     \begin{tabular}{c c}
         \toprule
@@ -162,7 +238,8 @@ In den folgenden Tabellen \ref{tab:wave600} bis \ref{tab:wave100} sind die einze
 \end{table}
 \begin{table}
     \centering
-    \caption{Berechnete Wellenlängen bei einem Beugungsverhalten an einem Gitter mit Gitterkonstante $\protect d = {100^{-1}}\si{\milli\meter\per{\text{Linie}}}$.}
+    \caption{Berechnete Wellenlängen bei einem Beugungsverhalten an einem Gitter mit Gitterkonstante $\protect d = {100^{-1}}\si{\milli\meter\per{\text{Linie}}}$. Die verwendeten Messwerte stammen dabei aus der Tabelle \ref{tab:100linien} und wurden mit Gleichung 
+    \ref{eqn:whatev} ausgewertet.}
     \label{tab:wave100}
     \begin{tabular}{c c}
         \toprule
@@ -196,17 +273,7 @@ sieht in diesem Fall folgendermaßen aus
 \increment \lambda = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\increment \lambda_{i})^2}.
 \end{equation}
 Dabei ist $N$ die Anzahl aller berechneten Wellenlängen eines Lasers.
-\\
-Zu den gegebenen Literaturwerten der verwendeten Laser 
-\begin{align*}
-    \lambda_{\text{grün,lit}} &= \SI{532}{\nano\meter}, \\
-    \lambda_{\text{rot,lit}} &= \SI{635}{\nano\meter}, \\
-\end{align*}
-entsteht eine prozentuale Abweichung von 
-\begin{align*}
-    \increment \lambda_{\text{grün}} &= \SI{2.76(165)}{\percent}, \\
-    \increment \lambda_{\text{rot}} &= \SI{3.05(138)}{\percent}.\\
-\end{align*}
+
 
 %
 %Wird also der gemittelte Winkel $\bar{\alpha_1}$ und der in \ref{brechung} gefundene Brechungsindex $n$ dort eingesetzt, findet

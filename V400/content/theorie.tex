@@ -26,24 +26,25 @@ dabei ist $\alpha_{1}$ der Einfallswinkel auf die Grenzfläche und $\alpha_{2}$ 
 
 \subsection{Brechung}
 Wichtig für das Verständnis der Brechung ist das Verhalten des Lichts bei Änderung des Trägermediums. Bei einem Übergang zwischen zwei Medien ändert sich sowohl die Geschwindigkeit des Lichts, als auch der Winkel zur Grenzfläche.
-Dieses Phänomen lässt sich durch das Snelliussche Brechungsgesetz erklären, dabei gilt \cite{skript}
+Dieses Phänomen lässt sich durch das Snelliussche Brechungsgesetz erklären, dabei gilt 
 \begin{equation}
     \label{eqn:snell}
-    \frac{\text{sin}(\alpha)}{\text{sin} (\beta)} = \frac{v_1}{v_2} = \frac{n_2}{n_1}.
+    \frac{\text{sin}(\alpha)}{\text{sin} (\beta)} = \frac{v_1}{v_2} = \frac{n_2}{n_1} \quad \text{\cite{skript}}.
 \end{equation}
-Der Winkel $\alpha$ gibt den einfallenden und $\beta$ den ausfallenden Winkel an. Alle Größen mit Index $1$ beschreiben das erste Medium vor der Grenzfläche und der Index $2$ gilt für alle Werte dahinter. Der Brechungsindex $n$ ist die
+Der Winkel $\alpha$ gibt den einfallenden und $\beta$ den ausfallenden Winkel an. Die Geschwindigkeiten sind als $v_{i}$ definiert, mit dem Index des Mediums. Alle Größen mit Index $1$ beschreiben das erste Medium vor der Grenzfläche und der Index $2$ gilt für alle Werte dahinter. Der Brechungsindex $n$ ist die
 entscheidende Größe welche angibt wie stark das Licht bei einem Übergang gebrochen wird. Wenn eines der beiden Medien Luft ist, vereinfacht sich diese Gesetzmäßigkeit da der Brechungsindex in Luft $n_{\text{luft}} \approx 1$ ist. Der übrige
 Brechungsindex wird dann absoluter Brechungsindex genannt.
 Wenn $n_2 > n_1$ ist, dann gilt $n_2$ als optisch dichter und die Ausbreitungsgeschwindigkeit ist dort reduziert, andersherum ist $n_2$ optisch dünner, so ist $n_2 < n_1$.
-Eine Umformung von Gleichung \eqref{eqn:snell} gibt die bekannte Formulierung des Snelliusschen Brechungsgesetz \cite{skript}
+Eine Umformung von Gleichung \eqref{eqn:snell} gibt die bekannte Formulierung des Snelliusschen Brechungsgesetz 
 \begin{equation*}
-n_1 \text{sin}(\alpha) = n_2 \text{sin}(\beta).
+n_1 \text{sin}(\alpha) = n_2 \text{sin}(\beta) \quad \text{\cite{skript}}.
 \end{equation*}
+\cite{skript}.
 \begin{figure}
     \centering
     \includegraphics[width=0.4\textwidth]{bilder/2.png}
     \caption{Schematische Abbildung des Brechungsgesetz von Licht zwischen zwei Medien, getrennt durch eine ebene Grenzfläche. Hierbei gilt das Snelliusche Brechungsgesetz \eqref{eqn:snell} und der dargestellte Strahlengang zeigt einen Übergang in ein optisch
-    dichteres Medium und die Lichtgeschwindigkeit nimmt hinter der Grenzfläche ab.\cite{skript}}
+    dichteres Medium und die Lichtgeschwindigkeit nimmt hinter der Grenzfläche ab. Dabei ist $\alpha$ der einfallende und $\beta$ der gebrochene Strahl. \cite{skript}}
     \label{fig:brechung}
 \end{figure}
 
@@ -58,7 +59,8 @@ wobei $d$ die Dicke zwischen den Platten angibt.
 \begin{figure}
     \centering
     \includegraphics[width=0.4\textwidth]{bilder/4.png}
-    \caption{Strahlenverlauf der doppelten Brechung von Licht an einer Planparallelen Platte mit optisch dichterem Medium.  \cite{skript}}
+    \caption{Gezeigt ist ein Strahlenverlauf der doppelten Brechung von Licht an einer Planparallelen Platte mit optisch dichterem Medium. Dabei ist $\alpha$ wieder der einfallende und $\beta$ der gebrochene Strahl an der ersten Grenzfläche, diese tauschen an der zweiten Fläche die Rollen. Der dadurch entstehende 
+    Strahlversatz ist als $s$ angegeben. \cite{skript}}
     \label{fig:planparallel}
 \end{figure}
 \subsubsection{Prisma}
@@ -77,7 +79,8 @@ Charakteristisch für ein Prisma ist jedoch die Summe der beiden $\beta$ Winkel 
 \begin{figure}
     \centering
     \includegraphics[width=0.4\textwidth]{bilder/5.png}
-    \caption{Schematische Darstellung des Brechungsverlaufes von Lichts an einem optischen Prisma mit den charakteristischen Winkeln. Die schwarzgestrichelten Linien zeigen das Lot der jeweiligen Fläche und erklären die unterschiedlichen $\beta$ Winkel. \cite{skript}}
+    \caption{Schematische Darstellung des Brechungsverlaufes von Lichts an einem optischen Prisma mit den charakteristischen Winkeln. Die schwarzgestrichelten Linien zeigen das Lot der jeweiligen Fläche und erklären die unterschiedlichen $\beta$ Winkel. Der Winkel $\alpha_1$
+    gibt den einfallenden Winkel in das Prisma an, dabei wird dieser an der ersten Grenzfläche um den Winkel $\beta_1$ gebrochen. Der $\beta_1$-Winkel wird nun zum einfallenden Winkel an der zweiten Oberfläche und gebrochen wird dieser Strahl dann durch den Winkel $\alpha_2$. \cite{skript}}
     \label{fig:prisma}
 \end{figure}
 
@@ -92,7 +95,7 @@ Die beiden vorherigen Fälle werden miteinader kombiniert.
 \begin{figure}
     \centering
     \includegraphics[width=0.4\textwidth]{bilder/3.png}
-    \caption{Kombination der Reflexion und Brechung an einer zum Teil durchlässigen Grenzfläche. Es gelten die Gesetzmäßigkeiten wie zuvor. \cite{skript}}
+    \caption{Dargestellt ist eine Kombination der Reflexion und Brechung an einer zum Teil durchlässigen Grenzfläche. Der Winkel $\alpha_1$ beschreibt den einfallenden Winkel, dieser Strahl teilt sich nun in den gebrochenen mit Winkel $\beta$ und refklektierten Teil mit Winkel $\alpha_2$ auf. \cite{skript}}
     \label{fig:combo}
 \end{figure}
 
@@ -107,6 +110,6 @@ Konstruktive Interferenzen entstehen bei Gangunterschieden $\increment s$ die ei
 Im Folgenden wird die Beugung an einem Interferenzgitter betrachtet, dabei ergibt sich durch geometrische Überlegungen und die Bedingungen an die konstruktive Interferenz
 \begin{equation}
     \label{eqn:whatev}
-d \cdot \text{sin}(\alpha) = k \cdot \lambda.
+d \cdot \text{sin}(\alpha) = k \cdot \lambda \quad \text{\cite{skript}}.
 \end{equation}
 Diese Gleichung \eqref{eqn:whatev} gibt den Zusammenhang des Beugungswinkels $\alpha$ und Beugungsordung $k$ zur Gitterkonstante $d$ und Wellenlänge $\lambda$ an. Die Gitterkonstante beschreibt dabei die Länge der einzelnen Einfachspalte.
