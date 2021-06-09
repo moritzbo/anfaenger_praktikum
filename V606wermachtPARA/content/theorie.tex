@@ -4,6 +4,7 @@ lassen sich in vier Themen unterteilen. Von besonderem Interesse ist das eigentl
 auf welches im folgenden eingegangen wird.
 
 \subsection{Berechnung der Suszeptibilität paramagnetischer Subsatzenen}
+\label{sadge1}
 Ein magnetisches Feld im Vakuum kann beschrieben werden durch eine Induktionskonstante $\mu_0$ und der eigentlichen magnetischen Feldstärke
 $\vec{H}$. Das Feld ist invariant, ändert sich aber wenn Matiere in das Feld reicht um den Summanden $\vec{M}$. 
 \begin{equation}
@@ -85,6 +86,7 @@ welches sich bei besonders hohen Temperatur redzuieren lässt auf die Proportina
 auch als das Curiesches Gesetz des Paramagnetismus bekannt ist.
 
 \subsection{Berechnung der Suszeptibilität Seltener-Erd-Verbindungen}
+\label{sadge2}
 Der Bestimmung der paramagnetischen Suszeptibilität folgt nun eine Methode der Angewandten Berechnung der Suszeptibilität von 
 seltenen Erden. Mit dem Hintegrund, dass diese \enquote{Erden} einen besonders hohen Paramagnetismus zeigen, bieten diese sich besonders
 gut für die kommenden Messreihen an. 
@@ -104,5 +106,45 @@ auf diser Schale finden.
 \end{description}
 
 
-
-
+\subsection{Beschreibung einer Apparatur zur Messung von Suszeptibilitäten}
+Mit den Grundlagen aus \ref{sadge1} und \ref{sadge2} lässt sich nun eine Apparatur für das eigentliche Problem, der Bestimung 
+der paramagnetischen Suszeptibilität, finden. 
+Zentrales Element des Aufabus ist eine Spule mit der entsprechenden Induktivität, beschrieben durch die Anzahl ihrer Windungen $n$, Länge $l$
+und dem Querschnitt $F$. 
+\begin{equation}
+    \label{eq:LOLLOOOOL}
+    L = \mu_0 \frac{n^2}{l}F
+\end{equation}
+Wenn nun Materie ins innere der Spule geschoben wird, bekommt die Formel \eqref{eq:LOLLOOOOL} zusätzlich eine Proportionalität 
+$ \sim \mu$. Dieser Faktor ist abhängig von der Suszeptibilität selbst, folgich lässt sich diese dadurch mit genauen Messmitteln aus der Differenz $\Delta L$ und unter ABhängigkeit der Materialquerschnitts $Q$
+bestimmen.
+\begin{equation}
+    \label{eqn:werdasliestistdummXD}
+    \Delta L = \mu_0 \chi Q \frac{n^2}{l}
+\end{equation}
+\begin{figure}
+\begin{minipage}{0.5\textwidth}
+Um den Aufbau zu realisieren bietet es sich an, zwei Spulen mit mehreren, unter anderem variablen Widerständen zu nutzen.
+Mit dem in Abbildung \ref{fig:scheißplan} gezeigten Schaltplan kann durch zwei Methoden die Suszeptibilität der eingefügten Materie gemessen werden.
+Die erste Möglichkeiten ist es die auftretende Brückspannung $U_{BR}$, nach abgleichung, zu messen. Eine Alternative dazu 
+ist es nach Abgleich mit erhaltener Materie die Differenz der Variablen Widerstände (vor und nach dem Abgleichen) zu messen.
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+    \includegraphics[width=\textwidth]{bilder/Scheiß.png}
+    \caption{lol}
+    \label{fig:scheißplan}
+\end{minipage}
+\end{figure}
+Unter Verweundung der ersten Methode, die der Messung von der Brückenspannung findet man den Zusammenhang
+\\FORMATION RUTSCHT IRGEDNWIE RUMM
+\begin{equation}
+    \label{eqn:werdasliestistOMEGAdummXD}
+    \chi(U_{BR})= \frac{U_{BR}}{U_{SP}} \frac{4l}{\omega \mu_0 n^2 Q} \sqrt{R^2+\omega^2 \left( \mu_0 \frac{n^2}{l}F \right)^2}
+\end{equation}
+Die eben genannte Alternative gibt Aufschluss auf die Suszeptibilität unter der Abhängigkeit der Differenz des variablen Widerstands %ist zwecklos LOL
+$\Delta R$. Dieser Zusammenhang beinhaltet den Widerstand $R_3$ der bekannt sein muss.
+\begin{equation}
+    \label{eqn:werdasliestistOMEGAundGIGAdummXD}
+    \chi(\Delta R) = 2 \frac{\Delta R}{R_3}\frac{F}{Q}
+\end{equation}
