@@ -21,10 +21,27 @@ identifiziert werden. In der Regeln wird die Filterkurve noch normiert angegeben
 unterscheiden sich diese Graphen bis auf die verschwindende Einheit auf der Ordinate nicht. 
 Der Vollständigkeit halber ist diese Darstellung ebenfalls noch einmal in Diagramm \ref{fig:kurve2} angegeben.
 Desweiteren wird nun für die Bestimmung der realen Güte des Selektivverstärkers eine Halbwertsbreite ausgerechnet. Hierbei gilt die Gleichung .......
-und in der Abbildung ist bereits die Linie $U = 1$/$\sqrt{2} U_{\text{A}}$ eingetragen. Die Form der Filterkurve ist eine Gaußsche Glockenkurve und daher wird hier für eine
+und in der Abbildung ist bereits die Gerade $U = (1$/$\sqrt{2}) U_{\text{A}}$ eingetragen. Die Form der Filterkurve ist eine Gaußsche Glockenkurve und daher wird hier für eine
 genauere Bestimmung der Halbwertszeiten eine Fitfunktion in der Form \cite{gauss}
 \begin{equation}
-G_{\sigma, \beta} =  \frac{\beta}{\sqrt{\pi \sigma^2}} \cdot \text{exp}\left( -\frac{(x- \alpha)^2}{\sigma^2}\right).
+G_{\sigma, \beta} =  \frac{\beta}{\sqrt{\pi \sigma^2}} \cdot \text{exp}\left( -\frac{(x- \alpha)^2}{\sigma^2}\right)
+\end{equation}
+angesetzt.
+Ein \enquote{Curvefit} der Bibliothek \enquote{Scipy} \cite{scipy} in Python liefert die folgenden Parameter
+\begin{align*}
+\alpha &= \SI{21.787(28)}{\hertz},\\ 
+\sigma &= \SI{0.435(33)}{\hertz},\\
+\beta  &= \SI{1.089(64)}{\hertz}.\\
+\end{align*}
+Das zusätzliche $\beta$ beschreibt dabei einen Korrekturterm und die Funktion mit diesen Parametern ist ebenfalls in Abbildung \ref{fig:kurve2} eingetragen. Die Schnittpunkte dieser Glockenkurve und der Geraden $U = (1$/$\sqrt{2}) U_{\text{A}}$ haben die folgenden Frequenzwerte
+\begin{align*}
+f_{-} &= \SI{21.42(5)}{\hertz},\\
+f_{+} &= \SI{22.15(5)}{\hertz}.\\
+\end{align*}
+Wobei die Fehler $\increment f = \SI{0.05}{\hertz}$ Abschätzungen der Genauigkeit der Fitfunktion darstellen.
+Daraus lässt sich nun zusammen mit dem Frequenzmaximum der Messwerte aus Tabelle \ref{tab:filterkurvewerte}, $f_{0} = \SI{21.6}{\hertz}$ die Güte $Q$ nach Gleichung ... berechnen.
+\begin{equation}
+Q = \SI{29.80(291)}{}
 \end{equation}
 
 \begin{figure}
@@ -33,5 +50,10 @@ G_{\sigma, \beta} =  \frac{\beta}{\sqrt{\pi \sigma^2}} \cdot \text{exp}\left( -\
     \caption{Normierte Darstellung der frequenzabhängigen Ausgangsspannung der Filterkurve.} 
     \label{fig:kurve2}
 \end{figure}
+
+\subsection{Berechnung der Suszeptibilitäten}
+ 
+Zunächst lassen sich für die Bestimmung der Suszeptibilitäten einige Vorbereitungen treffen. Im Folgenden werden drei unterschiedliche Methoden der Bestimmung verwendet welche andere Parameter benötigen.
+Eine wichtige Größe wird der Querschnitt der untersuchten Proben darstellen, dazu müssen folgende Annahmen getroffen werden.
 
 
