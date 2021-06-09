@@ -31,7 +31,7 @@ Ein \enquote{Curvefit} der Bibliothek \enquote{Scipy} \cite{scipy} in Python lie
 \begin{align*}
 \alpha &= \SI{21.787(28)}{\hertz},\\ 
 \sigma &= \SI{0.435(33)}{\hertz},\\
-\beta  &= \SI{1.089(64)}{\hertz}.\\
+\beta  &= \SI{1.089(64)}{\hertz}.
 \end{align*}
 Das zusätzliche $\beta$ beschreibt dabei einen Korrekturterm und die Funktion mit diesen Parametern ist ebenfalls in Abbildung \ref{fig:kurve2} eingetragen. Die Schnittpunkte dieser Glockenkurve und der Geraden $U = (1$/$\sqrt{2}) U_{\text{A}}$ haben die folgenden Frequenzwerte
 \begin{align*}
@@ -58,19 +58,20 @@ Zunächst lassen sich für die Bestimmung der Suszeptibilitäten einige Vorberei
 Eine wichtige Größe wird der Querschnitt der untersuchten Proben darstellen, dazu wird ein Querschnitt $Q_{\text{real}}$ berechnet, den die Probe haben müsste, wenn sie aus einem Einkristall bestünde. Dabei ergibt
 sich \cite{skript}
 \begin{equation}
+    \label{eqn:qreal}
 Q_{\text{real}} = \frac{m_{\text{probe}}}{L \rho_{\text{w}}},
 \end{equation}
 wobei $m_{\text{probe}}$ die Masse, $L$ die Länge und $\rho_{\text{w}}$ die Dichte des Materials beschreibt.
 \\
 In der theoretischen Berechnung der Suszeptibilität nach Gleichung .. wird eine Beschreibung der Zahl der Momente $N$ benötigt.
 Diese lässt sich durch 
-\begin{equation}
+\begin{equation*}
 N = 2\frac{N_{A} \rho_{p}}{M_{\text{mol}}}
-\end{equation}
+\end{equation*}
 bestimmen, wobei $N_{A}$ die Avogadrokonstante \cite{lit} und $M_{\text{mol}}$ die molare Masse der Probe angibt. Die molare Masse bestimmt sich dabei aus \cite{molar}
-\begin{equation}
+\begin{equation*}
     M_{\text{mol}} = m_{\text{M}} \cdot N_{A}
-\end{equation}
+\end{equation*}
 mit der Molekülmasse $m_{\text{M}}$. Diese lassen sich aus dem Periodensystem für die jeweiligen Moleküle zusammenrechnen. 
 In der folgenden Tabelle sind die ermittelten molaren Massen angegeben, wobei die Literaturwerte aus \cite{lit2} genommen wurden. Das $u$ steht dabei für die atomare Masseneinheit.
 \begin{table}
@@ -102,36 +103,81 @@ Für die Berechnung der Drehimpulsbeiträge muss nur die Anzahl der Elektronen a
 Als Beispiel für eine Berechnung ist hier $\ce{Nd3+}$ erläutert.
 Aus der ersten Hundschen Regel folgt, dass immer die größten Spinquantenzahlen bei der Befüllung bervorzugt werden, da die 4f Schale $(2l+1) = 6$ Plätze für positive Spinquantenzahlen der Elektronen
 von $m_s = 1$/$2$ frei haben folgt daraus
-\begin{equation}
+\begin{equation*}
 S = \frac{1}{2} + \frac{1}{2} + \frac{1}{2} =  \frac{3}{2}.
-\end{equation}
+\end{equation*}
 Die zweite Hundsche Regel besagt, dass auch die Drehimpulsquantenzahl maximiert wird, solange sie mit dem maximalen Spin und Pauli-Prinzip verträglich bleibt. 
 \\
 Da allerdings $l > \text{\enquote{Anzahl der Elektronen}}$
 werden hier die drei größten Drehimpulsquantenzahlen aufgefüllt
-\begin{equation}
+\begin{equation*}
     L = 3 + 2 + 1 =  6.
-\end{equation}
+\end{equation*}
 Zuletzt gilt wegen der dritten Hundschen Regel bei weniger als halbgefüllten Schalen
-\begin{equation}
+\begin{equation*}
     J = |L - S| = 4.5.
-\end{equation}
-Aus der Berechnungsformel .... für den Landé-Faktor ergibt sich somit
-\begin{equation}
+\end{equation*}
+Aus der Berechnungsformel \eqref{eqn:landeeq} für den Landé-Faktor ergibt sich somit
+\begin{equation*}
 g_{j,\text{Nd}} = \frac{8}{11}.
+\end{equation*}
+Die zu untersuchenden Stoffe bestehen ebenfalls aus $\ce{O2-}$ dieser trägt allerdings nicht zum Gesamtdrehimpuls bei und hat somit Landé-Faktor Null.
+Ganz analog wird dies für die anderen beiden seltenen Erden durchgeführt es ergeben sich die in der Tabelle \ref{tab:lande} angegebenen Faktoren.
+\begin{table}
+    \caption{Landé-Faktoren der zu untersuchenden Stoffe.}
+    \centering
+    \label{tab:lande}
+    \begin{tabular}{c | c c}
+        \toprule
+        Molekül & Landé-Faktor $g_J$ & $J(J+1)$ \\
+        \midrule
+        $\ce{Nd2O3}$ & $\SI{0.727}{}$     & $\SI{24.75}{}$\\
+        $\ce{Dy2O3}$ & $\SI{1.333}{}$    & $\SI{63.75}{}$\\
+        $\ce{Gd2O3}$ & $\SI{2.000}{}$    & $\SI{15.75}{}$\\
+        \bottomrule    
+    \end{tabular}
+\end{table}
+Alle zuvor gesammelten Werte lassen sich nun in die Formel \eqref{eqn:CHIIII} einsetzen und es ergeben sich die folgenden magnetischen Suszeptibilitäten
+\begin{align}
+\chi_{\ce{Nd2O3}} &= \SI{0.0030}{},\\
+\chi_{\ce{Dy2O3}} &= \SI{0.0254}{},\\
+\chi_{\ce{Gd2O3}} &= \SI{0.0138}{}.
+\end{align}
+
+\subsubsection{Berechnung aus der Brückenspannung}
+
+Zunächst soll hier die experimentelle Berechnung durch die Brückenspannung $U_{\text{Br}}$ durchgeführt werden. Dazu wird die Näherung
+$\omega^2 L^2 >> R^2$ verwendet, da eine Frequenz $f$ von einigen $\si{\kilo\hertz}$ verwendet wird und somit deutlich größer ist, als die geringfügigen Innenwiderstände der Spule.
+Verwendet wird hier die Gleichung \eqref{eqn:XD} dabei wird zunächst der reale Querschnitt benötigt. Dieser ergibt sich aus der Vorbereitung in Gleichung \eqref{eqn:qreal}, dabei werden die passenden Literaturwerte aus der Tabelle
+\ref{tab:proben} eingesetzt und es ergibt sich
+\begin{align}
+    \label{eqn:11}
+    Q_{\text{real,}\ce{Nd2O3}} &= \SI{0.11}{\centi\meter\squared},\\
+    \label{eqn:12}
+    Q_{\text{real,}\ce{Dy2O3}} &= \SI{0.11}{\centi\meter\squared},\\
+    \label{eqn:13}
+    Q_{\text{real,}\ce{Gd2O3}} &= \SI{0.06}{\centi\meter\squared}.
+\end{align}
+Des Weiteren wird der konstante Spulenquerschnitt $F$ aus der Tabelle \ref{tab:messspule} entnommen und die Brückenspannung sind die $\Delta U$-Werte aus den Tabellen \ref{tab:1} bis \ref{tab:3}. Nun können die Eingangsspannung $U_E = \SI{0.72}{\volt}$ und die vorherigen Werte in die Gleichung \eqref{eqn:XD} eingesetzt werden.
+Da pro Material drei Messungen vorgenommen wurden lassen sich die einzelnen $\chi$-Werte mitteln und es ergibt sich
+\begin{align}
+    \overline{\chi_{\ce{Nd2O3}}} &= \SI{0.0188(39)}{},\\
+    \overline{\chi_{\ce{Dy2O3}}} &= \SI{0.6103(119)}{},\\
+    \overline{\chi_{\ce{Gd2O3}}} &= \SI{0.5093(62)}{}.
+\end{align}
+Der Fehler auf diese Werte ergibt sich aus dem Standardfehler des Mitterlwerts gemäß
+\begin{equation}
+    \increment \bar{\chi} = \frac{1}{\sqrt{6}} \sqrt{\sum_{i=1}^{3} (\chi_{i} -\bar{\chi})^2 }.
 \end{equation}
-Ganz analog wird dies für die anderen beiden seltenen Erden durchgeführt es ergeben sich die in der Tabelle ... angegebenen Faktoren.
-%\begin{table}
-%    \caption{Landé-Faktoren der zu untersuchenden Stoffe.}
-%    \centering
-%    \label{tab:lande}
-%    \begin{tabular}{c | c c}
-%        \toprule
-%        Molekül & Molare Masse $M_{\text{mol}}$ / $\si{\g\per\mol}$ & Molekülmasse $m_{\text{M}}$ / $u$ \\
-%        \midrule
-%        $\ce{Nd2O3}$ & $\SI{336.48}{}$      & $\SI{336.48}{}$\\
-%        $\ce{Dy2O3}$ & $\SI{373.00}{}$    & $\SI{373.00}{}$\\
-%        $\ce{Gd2O3}$ & $\SI{362.50}{}$    & $\SI{362.50}{}$\\
-%        \bottomrule    
-%    \end{tabular}
-%\end{table}
+
+\subsubsection{Berechnung aus der Abgleichbedingung}
+
+Als zweite Methode der Bestimmung der magnetischen Suszeptibilität wird die Abgleichbedingung verwendet. Dazu sind die Widerstandsunterschiede des Potentiometers von Interesse.
+Es gelten wie zuvor die gleichen Werte für $Q_{\text{real}}$ aus den Gleichungen \eqref{eqn:11} bis \eqref{eqn:13}, sowie die gleiche Spulenquerschnittsfläche $F$. Der Innenwiderstand $R_{3}$ beträgt $\SI{1000}{\ohm}$.
+Zuletzt werden die Widerstandsunterschiede aus den Tabellen \ref{tab:1} bis \ref{tab:3} der jeweiligen Stoffe abgelesen und in Gleichung \eqref{eqn:werdasliestistOMEGAundGIGAdummXD} eingesetzt.
+Analog werden hier auch direkt die Mitterlwerte der Suszeptibilitäten angegeben.
+\begin{align}
+    \overline{\chi_{\ce{Nd2O3}}} &= \SI{0.0013(1)}{},\\
+    \overline{\chi_{\ce{Dy2O3}}} &= \SI{0.0237(1)}{},\\
+    \overline{\chi_{\ce{Gd2O3}}} &= \SI{0.0200(2)}{}.
+\end{align}
