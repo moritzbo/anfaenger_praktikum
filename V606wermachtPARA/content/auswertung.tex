@@ -4,7 +4,7 @@
 
 Zur Untersuchung der Filterkurve des Selektivverstärkers werden zunächst die gemessenen Ausgangsspannungen $U_{\text{A}}$ abhängig von der Spannungsfrequenz $f$ in einem Diagramm dargestellt.  Die Originalen Messdaten sind in ihrer noch verstärkten Form in der Tabelle \ref{tab:filterkurvewerte} notiert.
 Anschließend werden die Spannungen aufgrund der Verstärkung des Selektivverstärkers noch durch zehn geteilt werden.
-Das Diagramm dieser Werte ist in Abbildung ... gezeigt.
+Das Diagramm dieser Werte ist in Abbildung \ref{fig:kurve1} gezeigt.
 
 \begin{figure}
     \centering
@@ -13,12 +13,19 @@ Das Diagramm dieser Werte ist in Abbildung ... gezeigt.
     \label{fig:kurve1}
 \end{figure}
 
-Erkennbar ist ein Spannungsmaximum von $U= $ bei $f = $. Das Maximum der gemessenen Ausgangsspannung entspricht der verwendeten Eingangsspannung. Da diese vorher nicht bekannt war kann diese hier als 
+Erkennbar ist ein Spannungsmaximum von $U = \SI{1}{\volt}$ bei $f = \SI{21.6}{\hertz}$. Das Maximum der gemessenen Ausgangsspannung entspricht der verwendeten Eingangsspannung. Da diese vorher nicht bekannt war kann diese hier als 
 \begin{equation*}
 U_{\text{E}} = \SI{1}{\volt}
 \end{equation*}
 identifiziert werden. In der Regeln wird die Filterkurve noch normiert angegeben, dazu wird auf der Ordinate $U_{\text{A}}$/$U_{\text{E}}$ aufgetragen. Da die vorliegende Eingangsspannung allerdings $U_{\text{E}} = \SI{1}{\volt}$ beträgt 
-unterscheiden sich diese Graphen bis auf die verschwindende Einheit auf der Ordinate nicht. Der Vollständigkeit halber ist diese Darstellung ebenfalls noch einmal in Diagramm ... angegeben.
+unterscheiden sich diese Graphen bis auf die verschwindende Einheit auf der Ordinate nicht. 
+Der Vollständigkeit halber ist diese Darstellung ebenfalls noch einmal in Diagramm \ref{fig:kurve2} angegeben.
+Desweiteren wird nun für die Bestimmung der realen Güte des Selektivverstärkers eine Halbwertsbreite ausgerechnet. Hierbei gilt die Gleichung .......
+und in der Abbildung ist bereits die Linie $U = 1$/$\sqrt{2} U_{\text{A}}$ eingetragen. Die Form der Filterkurve ist eine Gaußsche Glockenkurve und daher wird hier für eine
+genauere Bestimmung der Halbwertszeiten eine Fitfunktion in der Form \cite{gauss}
+\begin{equation}
+G_{\sigma, \beta} =  \frac{\beta}{\sqrt{\pi \sigma^2}} \cdot \text{exp}\left( -\frac{(x- \alpha)^2}{\sigma^2}\right).
+\end{equation}
 
 \begin{figure}
     \centering
