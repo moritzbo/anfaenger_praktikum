@@ -148,3 +148,19 @@ $\Delta R$. Dieser Zusammenhang beinhaltet den Widerstand $R_3$ der bekannt sein
     \label{eqn:werdasliestistOMEGAundGIGAdummXD}
     \chi(\Delta R) = 2 \frac{\Delta R}{R_3}\frac{F}{Q}
 \end{equation}
+Dieser Aufbau gewährleistet keine problemlose Messung sondern wird verfälscht durch sogenannte Störspannungen der Brückenspannung.
+Ein Selektivverstärker ist ein Bauelement in Schaltungen, welches genau die Spannungen filtern soll, die eben durch mechanische Ungenauigkeiten 
+oder sonstige Störfaktoren hervorgerufen wird. Die Filterkurve ist in Abbildung \ref{fig:glocke} angegeben und hat die Gestalt einer Glockenfunktion.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{bilder/glocke.png}
+    \caption{lol}
+    \label{fig:glocke}
+\end{figure}
+Die Güte $Q$ versteht sich als die Breite der Filterkurve und lässt sich wie folgt bestimmmen.
+\begin{equation}
+    \label{eq:achduliebeGüte}    
+    Q= \frac{f_0}{f_+ - f_-}
+\end{equation}
+Hierbei sind $f_{\pm}$ die Abstände auf der Frequnzbeschreibenen Achse, wenn die Amplitude der Kurve, also das normierte Verhältnis $U_A/U_E$,
+auf $1/\sqrt{2}$ abgefallen ist.
