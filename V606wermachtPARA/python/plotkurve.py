@@ -48,7 +48,7 @@ uncertainties = np.sqrt(np.diag(covariance_matrix))
 for name, value, uncertainty in zip('σαβ', params, uncertainties): 
     print(f'{name} = {value:8.3f} ± {uncertainty:.3f}')
 
-plt.plot(x, gauss(x, *params), "-")
+plt.plot(x, gauss(x, *params), "-", label="Gaußfitfunktion" )
 
 
 plt.grid()
@@ -64,3 +64,13 @@ idx = np.argwhere(np.diff(np.sign(gauss(x, *params) - y))).flatten()
 
 print(x[idx])
 
+arr1 = x[idx]
+
+numinus = ufloat(arr1[0], 0.05)
+nuplus = ufloat(arr1[1], 0.05)
+
+nunull = 21.6
+
+Q = nunull/(nuplus - numinus)
+
+print(f"{Q:.4}")
