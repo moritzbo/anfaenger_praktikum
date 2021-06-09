@@ -51,9 +51,87 @@ Q = \SI{29.80(291)}{}
     \label{fig:kurve2}
 \end{figure}
 
+\newpage
 \subsection{Berechnung der Suszeptibilitäten}
  
 Zunächst lassen sich für die Bestimmung der Suszeptibilitäten einige Vorbereitungen treffen. Im Folgenden werden drei unterschiedliche Methoden der Bestimmung verwendet welche andere Parameter benötigen.
-Eine wichtige Größe wird der Querschnitt der untersuchten Proben darstellen, dazu müssen folgende Annahmen getroffen werden.
+Eine wichtige Größe wird der Querschnitt der untersuchten Proben darstellen, dazu wird ein Querschnitt $Q_{\text{real}}$ berechnet, den die Probe haben müsste, wenn sie aus einem Einkristall bestünde. Dabei ergibt
+sich \cite{skript}
+\begin{equation}
+Q_{\text{real}} = \frac{m_{\text{probe}}}{L \rho_{\text{w}}},
+\end{equation}
+wobei $m_{\text{probe}}$ die Masse, $L$ die Länge und $\rho_{\text{w}}$ die Dichte des Materials beschreibt.
+\\
+In der theoretischen Berechnung der Suszeptibilität nach Gleichung .. wird eine Beschreibung der Zahl der Momente $N$ benötigt.
+Diese lässt sich durch 
+\begin{equation}
+N = 2\frac{N_{A} \rho_{p}}{M_{\text{mol}}}
+\end{equation}
+bestimmen, wobei $N_{A}$ die Avogadrokonstante \cite{lit} und $M_{\text{mol}}$ die molare Masse der Probe angibt. Die molare Masse bestimmt sich dabei aus \cite{molar}
+\begin{equation}
+    M_{\text{mol}} = m_{\text{M}} \cdot N_{A}
+\end{equation}
+mit der Molekülmasse $m_{\text{M}}$. Diese lassen sich aus dem Periodensystem für die jeweiligen Moleküle zusammenrechnen. 
+In der folgenden Tabelle sind die ermittelten molaren Massen angegeben, wobei die Literaturwerte aus \cite{lit2} genommen wurden. Das $u$ steht dabei für die atomare Masseneinheit.
+\begin{table}
+    \caption{Molare Massen der untersuchten Materialen.}
+    \centering
+    \label{tab:molmass}
+    \begin{tabular}{c | c c}
+        \toprule
+        Molekül & Molare Masse $M_{\text{mol}}$ / $\si{\g\per\mol}$ & Molekülmasse $m_{\text{M}}$ / $u$ \\
+        \midrule
+        $\ce{Nd2O3}$ & $\SI{336.48}{}$      & $\SI{336.48}{}$\\
+        $\ce{Dy2O3}$ & $\SI{373.00}{}$    & $\SI{373.00}{}$\\
+        $\ce{Gd2O3}$ & $\SI{362.50}{}$    & $\SI{362.50}{}$\\
+        \bottomrule    
+    \end{tabular}
+\end{table}
+Die Werte unterscheiden sich dabei grob nur in der Größenordnung da $u \cdot N_{A} \approx 10$.
 
+\subsubsection{Theoretische Bestimmung der Suszeptibilität}
 
+Die magnetische Suszeptibilität lässt sich in der Theorie mit Gleichung \eqref{eqn:CHIIII} bestimmen. Die Konstanten $\mu_0$, $\mu_B$ und $k$ werden dazu der Literatur \cite{lit2} entnommen.
+Bei der Temperatur wird eine Raumtemperatur $T = \SI{293.15}{\kelvin}$ angenommen.
+Anschließend werden noch die jeweiligen Landé-Faktoren benötigt, dazu gilt es die verschiedenen Drehimpulse der seltenen Erden zu bestimmen. Alle untersuchten Stoffe haben die Eigenschaft
+den Drehimpuls alleine aus der 4f Schale zu erhalten. Dies folgt ebenfalls aus den Hundschen Regeln. Das \enquote{f} in der Notation legt dabei die Drehimpulsquantenzahl $l = 3$ fest und es ergeben sich
+durch die magnetischen Quantenzahlen $m_l$, $m_s$ dann $2(2l+1) = 14$ Besetzungsmöglichkeiten. 
+\\
+Für die Berechnung der Drehimpulsbeiträge muss nur die Anzahl der Elektronen auf dieser Schale bekannt sein. Das $\ce{Nd3+}$ besitzt drei, $\ce{Gd3+}$ und $\ce{Dy3+}$ neun 4f Elektronen.
+\\
+Als Beispiel für eine Berechnung ist hier $\ce{Nd3+}$ erläutert.
+Aus der ersten Hundschen Regel folgt, dass immer die größten Spinquantenzahlen bei der Befüllung bervorzugt werden, da die 4f Schale $(2l+1) = 6$ Plätze für positive Spinquantenzahlen der Elektronen
+von $m_s = 1$/$2$ frei haben folgt daraus
+\begin{equation}
+S = \frac{1}{2} + \frac{1}{2} + \frac{1}{2} =  \frac{3}{2}.
+\end{equation}
+Die zweite Hundsche Regel besagt, dass auch die Drehimpulsquantenzahl maximiert wird, solange sie mit dem maximalen Spin und Pauli-Prinzip verträglich bleibt. 
+\\
+Da allerdings $l > \text{\enquote{Anzahl der Elektronen}}$
+werden hier die drei größten Drehimpulsquantenzahlen aufgefüllt
+\begin{equation}
+    L = 3 + 2 + 1 =  6.
+\end{equation}
+Zuletzt gilt wegen der dritten Hundschen Regel bei weniger als halbgefüllten Schalen
+\begin{equation}
+    J = |L - S| = 4.5.
+\end{equation}
+Aus der Berechnungsformel .... für den Landé-Faktor ergibt sich somit
+\begin{equation}
+g_{j,\text{Nd}} = \frac{8}{11}.
+\end{equation}
+Ganz analog wird dies für die anderen beiden seltenen Erden durchgeführt es ergeben sich die in der Tabelle ... angegebenen Faktoren.
+%\begin{table}
+%    \caption{Landé-Faktoren der zu untersuchenden Stoffe.}
+%    \centering
+%    \label{tab:lande}
+%    \begin{tabular}{c | c c}
+%        \toprule
+%        Molekül & Molare Masse $M_{\text{mol}}$ / $\si{\g\per\mol}$ & Molekülmasse $m_{\text{M}}$ / $u$ \\
+%        \midrule
+%        $\ce{Nd2O3}$ & $\SI{336.48}{}$      & $\SI{336.48}{}$\\
+%        $\ce{Dy2O3}$ & $\SI{373.00}{}$    & $\SI{373.00}{}$\\
+%        $\ce{Gd2O3}$ & $\SI{362.50}{}$    & $\SI{362.50}{}$\\
+%        \bottomrule    
+%    \end{tabular}
+%\end{table}
