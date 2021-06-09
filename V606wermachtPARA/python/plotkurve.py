@@ -74,3 +74,7 @@ nunull = 21.6
 Q = nunull/(nuplus - numinus)
 
 print(f"{Q:.4}")
+
+
+qabweichung = 100*(Q-20)/20
+print(f"abweichung in % von Güte Q: {qabweichung:.4f}")

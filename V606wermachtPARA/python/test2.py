@@ -165,3 +165,19 @@ CHIgd3full = ufloat(CHIgd3mean, CHIgd3sem)
 print(f"𝜒Ndmean: {CHInd3full:.8}")
 print(f"𝜒Dymean: {CHIdy3full:.8}")
 print(f"𝜒Gdmean: {CHIgd3full:.8}")
+
+CHIspannungABWEICHUNGnd = 100*(CHInd2full-CHInd)/CHInd
+CHIspannungABWEICHUNGdy = 100*(CHIdy2full-CHIdy)/CHIdy
+CHIspannungABWEICHUNGgd = 100*(CHIgd2full-CHIgd)/CHIgd
+
+print(f"Abweichung % Spannungsmethode von Nd= {CHIspannungABWEICHUNGnd:.5f}")
+print(f"Abweichung % Spannungsmethode von Dy= {CHIspannungABWEICHUNGdy:.5f}")
+print(f"Abweichung % Spannungsmethode von Gd= {CHIspannungABWEICHUNGgd:.5f}")
+
+CHIwiderstandABWEICHUNGnd = 100*(CHInd3full-CHInd)/CHInd
+CHIwiderstandABWEICHUNGdy = 100*(CHIdy3full-CHIdy)/CHIdy
+CHIwiderstandABWEICHUNGgd = 100*(CHIgd3full-CHIgd)/CHIgd
+
+print(f"Abweichung % Widerstandsmethode von Nd= {CHIwiderstandABWEICHUNGnd:.5f}")
+print(f"Abweichung % Widerstandsmethode von Dy= {CHIwiderstandABWEICHUNGdy:.5f}")
+print(f"Abweichung % Widerstandsmethode von Gd= {CHIwiderstandABWEICHUNGgd:.5f}")
