@@ -20,9 +20,9 @@ U_{\text{E}} = \SI{1}{\volt}
 identifiziert werden. In der Regeln wird die Filterkurve noch normiert angegeben, dazu wird auf der Ordinate $U_{\text{A}}$/$U_{\text{E}}$ aufgetragen. Da die vorliegende Eingangsspannung allerdings $U_{\text{E}} = \SI{1}{\volt}$ beträgt 
 unterscheiden sich diese Graphen bis auf die verschwindende Einheit auf der Ordinate nicht. 
 Der Vollständigkeit halber ist diese Darstellung ebenfalls noch einmal in Diagramm \ref{fig:kurve2} angegeben.
-Desweiteren wird nun für die Bestimmung der realen Güte des Selektivverstärkers eine Halbwertsbreite ausgerechnet. Hierbei gilt die Gleichung .......
+Desweiteren wird nun für die Bestimmung der realen Güte des Selektivverstärkers eine Halbwertsbreite ausgerechnet. Hierbei gilt die Gleichung \eqref{eq:achduliebeGüte}
 und in der Abbildung ist bereits die Gerade $U = (1$/$\sqrt{2}) U_{\text{A}}$ eingetragen. Die Form der Filterkurve ist eine Gaußsche Glockenkurve und daher wird hier für eine
-genauere Bestimmung der Halbwertszeiten eine Fitfunktion in der Form \cite{gauss}
+genauere Bestimmung der Halbwertsfrequenzen eine Fitfunktion in der Form \cite{gauss}
 \begin{equation}
 G_{\sigma, \beta} =  \frac{\beta}{\sqrt{\pi \sigma^2}} \cdot \text{exp}\left( -\frac{(x- \alpha)^2}{\sigma^2}\right)
 \end{equation}
@@ -39,7 +39,7 @@ f_{-} &= \SI{21.42(5)}{\hertz},\\
 f_{+} &= \SI{22.15(5)}{\hertz}.\\
 \end{align*}
 Wobei die Fehler $\increment f = \SI{0.05}{\hertz}$ Abschätzungen der Genauigkeit der Fitfunktion darstellen.
-Daraus lässt sich nun zusammen mit dem Frequenzmaximum der Messwerte aus Tabelle \ref{tab:filterkurvewerte}, $f_{0} = \SI{21.6}{\hertz}$ die Güte $Q$ nach Gleichung ... berechnen.
+Daraus lässt sich nun zusammen mit dem Frequenzmaximum der Messwerte aus Tabelle \ref{tab:filterkurvewerte}, $f_{0} = \SI{21.6}{\hertz}$ die Güte $Q$ nach Gleichung \eqref{eq:achduliebeGüte} berechnen.
 \begin{equation}
 Q = \SI{29.80(291)}{}
 \end{equation}
@@ -47,7 +47,7 @@ Q = \SI{29.80(291)}{}
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{build/kurve2.pdf}
-    \caption{Normierte Darstellung der frequenzabhängigen Ausgangsspannung der Filterkurve.} 
+    \caption{Normierte Darstellung der frequenzabhängigen Ausgangsspannung der Filterkurve, sowie eingezeichnete Ausgleichsfunktion.} 
     \label{fig:kurve2}
 \end{figure}
 
@@ -63,12 +63,12 @@ Q_{\text{real}} = \frac{m_{\text{probe}}}{L \rho_{\text{w}}},
 \end{equation}
 wobei $m_{\text{probe}}$ die Masse, $L$ die Länge und $\rho_{\text{w}}$ die Dichte des Materials beschreibt.
 \\
-In der theoretischen Berechnung der Suszeptibilität nach Gleichung .. wird eine Beschreibung der Zahl der Momente $N$ benötigt.
+In der theoretischen Berechnung der Suszeptibilität nach Gleichung \eqref{eqn:CHIIII} wird eine Beschreibung der Zahl der Momente $N$ benötigt.
 Diese lässt sich durch 
 \begin{equation*}
 N = 2\frac{N_{A} \rho_{p}}{M_{\text{mol}}}
 \end{equation*}
-bestimmen, wobei $N_{A}$ die Avogadrokonstante \cite{lit} und $M_{\text{mol}}$ die molare Masse der Probe angibt. Die molare Masse bestimmt sich dabei aus \cite{molar}
+bestimmen, wobei $N_{A}$ die Avogadrokonstante \cite{lit2} und $M_{\text{mol}}$ die molare Masse der Probe angibt. Die molare Masse bestimmt sich dabei aus \cite{molar}
 \begin{equation*}
     M_{\text{mol}} = m_{\text{M}} \cdot N_{A}
 \end{equation*}
@@ -80,7 +80,7 @@ In der folgenden Tabelle sind die ermittelten molaren Massen angegeben, wobei di
     \label{tab:molmass}
     \begin{tabular}{c | c c}
         \toprule
-        Molekül & Molare Masse $M_{\text{mol}}$ / $\si{\g\per\mol}$ & Molekülmasse $m_{\text{M}}$ / $u$ \\
+        Molekül & Molare Masse $M_{\text{mol}}$ [$\si{\g\per\mol}$] & Molekülmasse $m_{\text{M}}$ [$u$] \\
         \midrule
         $\ce{Nd2O3}$ & $\SI{336.48}{}$      & $\SI{336.48}{}$\\
         $\ce{Dy2O3}$ & $\SI{373.00}{}$    & $\SI{373.00}{}$\\
@@ -90,7 +90,7 @@ In der folgenden Tabelle sind die ermittelten molaren Massen angegeben, wobei di
 \end{table}
 Die Werte unterscheiden sich dabei grob nur in der Größenordnung da $u \cdot N_{A} \approx 10$.
 
-\subsubsection{Theoretische Bestimmung der Suszeptibilität}
+\subsubsection{Bestimmung der theoretischen Suszeptibilität}
 
 Die magnetische Suszeptibilität lässt sich in der Theorie mit Gleichung \eqref{eqn:CHIIII} bestimmen. Die Konstanten $\mu_0$, $\mu_B$ und $k$ werden dazu der Literatur \cite{lit2} entnommen.
 Bei der Temperatur wird eine Raumtemperatur $T = \SI{293.15}{\kelvin}$ angenommen.
@@ -102,7 +102,7 @@ Für die Berechnung der Drehimpulsbeiträge muss nur die Anzahl der Elektronen a
 \\
 Als Beispiel für eine Berechnung ist hier $\ce{Nd3+}$ erläutert.
 Aus der ersten Hundschen Regel folgt, dass immer die größten Spinquantenzahlen bei der Befüllung bervorzugt werden, da die 4f Schale $(2l+1) = 6$ Plätze für positive Spinquantenzahlen der Elektronen
-von $m_s = 1$/$2$ frei haben folgt daraus
+von $m_s = 1$/$2$ frei hat folgt daraus
 \begin{equation*}
 S = \frac{1}{2} + \frac{1}{2} + \frac{1}{2} =  \frac{3}{2}.
 \end{equation*}
@@ -138,17 +138,17 @@ Ganz analog wird dies für die anderen beiden seltenen Erden durchgeführt es er
     \end{tabular}
 \end{table}
 Alle zuvor gesammelten Werte lassen sich nun in die Formel \eqref{eqn:CHIIII} einsetzen und es ergeben sich die folgenden magnetischen Suszeptibilitäten
-\begin{align}
+\begin{align*}
 \chi_{\ce{Nd2O3}} &= \SI{0.0030}{},\\
 \chi_{\ce{Dy2O3}} &= \SI{0.0254}{},\\
 \chi_{\ce{Gd2O3}} &= \SI{0.0138}{}.
-\end{align}
+\end{align*}
 
 \subsubsection{Berechnung aus der Brückenspannung}
 
 Zunächst soll hier die experimentelle Berechnung durch die Brückenspannung $U_{\text{Br}}$ durchgeführt werden. Dazu wird die Näherung
 $\omega^2 L^2 >> R^2$ verwendet, da eine Frequenz $f$ von einigen $\si{\kilo\hertz}$ verwendet wird und somit deutlich größer ist, als die geringfügigen Innenwiderstände der Spule.
-Verwendet wird hier die Gleichung \eqref{eqn:XD} dabei wird zunächst der reale Querschnitt benötigt. Dieser ergibt sich aus der Vorbereitung in Gleichung \eqref{eqn:qreal}, dabei werden die passenden Literaturwerte aus der Tabelle
+Verwendet wird hier die Gleichung \eqref{eq:XD} dabei wird zunächst der reale Querschnitt benötigt. Dieser ergibt sich aus der Vorbereitung in Gleichung \eqref{eqn:qreal}, dabei werden die passenden Literaturwerte aus der Tabelle
 \ref{tab:proben} eingesetzt und es ergibt sich
 \begin{align}
     \label{eqn:11}
@@ -158,17 +158,17 @@ Verwendet wird hier die Gleichung \eqref{eqn:XD} dabei wird zunächst der reale 
     \label{eqn:13}
     Q_{\text{real,}\ce{Gd2O3}} &= \SI{0.06}{\centi\meter\squared}.
 \end{align}
-Des Weiteren wird der konstante Spulenquerschnitt $F$ aus der Tabelle \ref{tab:messspule} entnommen und die Brückenspannung sind die $\Delta U$-Werte aus den Tabellen \ref{tab:1} bis \ref{tab:3}. Nun können die Eingangsspannung $U_E = \SI{0.72}{\volt}$ und die vorherigen Werte in die Gleichung \eqref{eqn:XD} eingesetzt werden.
+Des Weiteren wird der konstante Spulenquerschnitt $F$ aus der Tabelle \ref{tab:messspule} entnommen und die Brückenspannung sind die $\Delta U$-Werte aus den Tabellen \ref{tab:1} bis \ref{tab:3}. Nun können die Eingangsspannung $U_E = \SI{0.72}{\volt}$ und die vorherigen Werte in die Gleichung \eqref{eq:XD} eingesetzt werden.
 Da pro Material drei Messungen vorgenommen wurden lassen sich die einzelnen $\chi$-Werte mitteln und es ergibt sich
-\begin{align}
+\begin{align*}
     \overline{\chi_{\ce{Nd2O3}}} &= \SI{0.0188(39)}{},\\
     \overline{\chi_{\ce{Dy2O3}}} &= \SI{0.6103(119)}{},\\
     \overline{\chi_{\ce{Gd2O3}}} &= \SI{0.5093(62)}{}.
-\end{align}
+\end{align*}
 Der Fehler auf diese Werte ergibt sich aus dem Standardfehler des Mitterlwerts gemäß
-\begin{equation}
+\begin{equation*}
     \increment \bar{\chi} = \frac{1}{\sqrt{6}} \sqrt{\sum_{i=1}^{3} (\chi_{i} -\bar{\chi})^2 }.
-\end{equation}
+\end{equation*}
 
 \subsubsection{Berechnung aus der Abgleichbedingung}
 
@@ -176,8 +176,8 @@ Als zweite Methode der Bestimmung der magnetischen Suszeptibilität wird die Abg
 Es gelten wie zuvor die gleichen Werte für $Q_{\text{real}}$ aus den Gleichungen \eqref{eqn:11} bis \eqref{eqn:13}, sowie die gleiche Spulenquerschnittsfläche $F$. Der Innenwiderstand $R_{3}$ beträgt $\SI{1000}{\ohm}$.
 Zuletzt werden die Widerstandsunterschiede aus den Tabellen \ref{tab:1} bis \ref{tab:3} der jeweiligen Stoffe abgelesen und in Gleichung \eqref{eqn:werdasliestistOMEGAundGIGAdummXD} eingesetzt.
 Analog werden hier auch direkt die Mitterlwerte der Suszeptibilitäten angegeben.
-\begin{align}
+\begin{align*}
     \overline{\chi_{\ce{Nd2O3}}} &= \SI{0.0013(1)}{},\\
     \overline{\chi_{\ce{Dy2O3}}} &= \SI{0.0237(1)}{},\\
     \overline{\chi_{\ce{Gd2O3}}} &= \SI{0.0200(2)}{}.
-\end{align}
+\end{align*}

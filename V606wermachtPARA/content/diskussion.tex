@@ -1,9 +1,37 @@
 \section{Diskussion}
 
 Der Aufbau liefert mit dem Selektivverstärker eine Einstellung der 10-fachen Verstärkung die hier in der Auswertung als
-exakt angenommen wurde. Diese könnte allerdings davon abweichen, was in einer seperaten Messung getestet hätte werden können. Die Güte des Selektivverstärker wurde auf $Q = 20$ eingestellt und es stellt sich
+exakt angenommen wurde. Diese könnte allerdings davon abweichen, was in einer seperaten Messung getestet hätte werden können. Die Güte des Selektivverstärkers wurde auf $Q = 20$ eingestellt und es stellt sich
 bei der Untersuchung der Filterkurve heraus, dass der experimentelle Wert deutlich darüber liegt. Die prozentuale Abweichung der Angabe des Geräts zum experimentellen Wert beträgt
-%\begin{equation}
-%
-%\end{equation}
-Um die Halbwertsfrequenzen zu bestimmen wurde als Ausgleichsfunktion eine Gaußsche Glockenkurve verwendet 
+\begin{equation*}
+\increment Q  = \SI{48.99(1453)}{\percent}.
+\end{equation*}
+Um die Halbwertsfrequenzen zu bestimmen wurde als Ausgleichsfunktion eine Gaußsche Glockenkurve verwendet, die den Verlauf um das Spannungsmaximum sehr gut beschreibt. Eine genauere Ausgleichsfunktion für das
+gesamte Messintervall können eventuell andere Funktionsansätze liefern. Dennoch lassen sich die Halbwertsfrequenzen vorallem durch die zusätzliche Fehlerabschätzung als genau annehmen. 
+\\
+\newline
+Die theoretischen Werte der magnetischen Suszeptibilität $\chi$ sind unter den Annahmen für die Anzahl der Momente pro Volumen $N$ als exakt anzusehen.
+\\
+\newline
+Bei der Berechnung durch die Brückenspannung treten einige Fehlerquellen auf. Zunächst gibt es leichte Abweichungen durch die Umstellung der Skala am Millivoltmeter, dieses ist sehr empfindlich und bei dem Umstellen der Skala
+schwanken die Werte leicht. Außerdem lässt sich durch eine eingestellte Güte von $Q = 20$ annehmen, dass einige Störspannungen hindurchkommen und somit einen verfälschten Beitrag liefern. 
+Die prozentualen Abweichungen zur Theorie liefern die folgenden Werte
+\begin{align*}
+   \increment \chi_{\ce{Nd2O3}} &=\SI{523.98(12898)}{}, \\  
+   \increment \chi_{\ce{Dy2O3}} &=\SI{2303.28(4699)}{},\\ 
+   \increment \chi_{\ce{Gd2O3}} &=\SI{3593.69(4513)}{}. 
+\end{align*}
+Es lassen sich also experimentell sehr große Abweichungen feststellen. Die verwendete Gleichung \eqref{eq:XD} besitzt allerdings nur zwei mögliche Terme die einen Fehler enthalten können. Zum einen der
+reale Querschnitt $Q_{\text{real}}$ und die Brückenspannung $U_{\text{Br}}$. Der Querschnitt berechnet sich allerdings aus vorgegeben und gut messbaren Größen und somit liegt es nahe, dass der Fehler vor
+allem an den zuvor genannten Messungenauigkeiten der Spannung liegt. 
+\\
+\newline
+Die zweite Methode liefert hingegen schon bessere Werte mit prozentualen Abweichungen von
+\begin{align*}
+    \increment \chi_{\ce{Nd2O3}} &=\SI{56.47(174)}{}, \\  
+    \increment \chi_{\ce{Dy2O3}} &=\SI{6.49(21)}{},\\ 
+    \increment \chi_{\ce{Gd2O3}} &=\SI{44.87(171)}{}. 
+ \end{align*}
+Obwohl Temperaturabweichung zur in der Theorie angenommenen Raumtemperatur vorliegen und bei beiden Messreihen einen Effekt haben könnten, zeigt sich durch
+die unterschiedlichen Größenordnungen der Abweichungen zwischen den Methoden, dass die Temperatur hier nicht ausschlaggebend ist. Beide Methoden sollten gleichermaßen von den Temperaturabweichungen betroffen sein.
+Grundsätzlich sind die vorliegenden Ableseungenauigkeiten eines Potentiometers deutlich geringer als die eines sehr empfindlichen Millivoltmeters.

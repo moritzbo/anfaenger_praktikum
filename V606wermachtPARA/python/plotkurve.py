@@ -20,7 +20,7 @@ plt.plot(f,
         label="Spannungsmesswerte",
         linewidth=1.5)
 
-plt.xlabel(r"$f$ / $\si{\hertz}$")
+plt.xlabel(r"$f$ / $\si{\kilo\hertz}$")
 plt.ylabel(r"$U_{\text{A}}$ / $\si{\volt}$")
 
 plt.grid()
@@ -38,7 +38,7 @@ plt.plot(f,
         linewidth=1.5)
 plt.axhline(y=1/2**(1/2), color='k', label=r"$U = (1$/$\sqrt{2}) U_{\text{A}}$", linestyle='--')
 
-plt.xlabel(r"$f$ / $\si{\hertz}$")
+plt.xlabel(r"$f$ / $\si{\kilo\hertz}$")
 plt.ylabel(r"$U_{\text{A}}$/$U_{\text{E}}$")
 
 params, covariance_matrix = curve_fit(gauss, f, U,  p0=(1, 21.6, 1))
