@@ -35,18 +35,29 @@ beta = unp.arcsin(unp.sin(aERR)/nmean)
 betamean = np.mean(beta)
 strahl = d * unp.sin(aERR-bERR)/unp.cos(bERR)
 strahlmean =  np.mean(strahl)
+print("#### STRAHL STANDART (gemessenes beta)####")
+print(strahl)
 print(f"{strahlmean:.4f}")
 print(np.mean(bERR))
 print(f"betamean =  {betamean:.4f}")
 strahlneu = d * unp.sin(aERR-beta)/unp.cos(beta)
 strahlneumean = np.mean(strahlneu)
+# print(f"strahl für jden einzeln: {strahlneu:.4f}")
+print("#### STRAHL alternativ)####")
+print(strahlneu)
 print(f"strahlneu = {strahlneumean:.4f}")
 
 beta2mean = np.deg2rad(60) - betamean
 print(f"{beta2mean:.4f}")
-delta = (np.mean(aERR)+np.mean(bERR))-(betamean+ beta2mean)
-print(f"deltaauslenkung = {delta:.4f}")
+deltamean = (np.mean(aERR)+np.mean(bERR))-(betamean+ beta2mean)
+delta = (aERR+bERR)-(betamean+ beta2mean)
+print(delta)
+print(f"deltaauslenkung = {deltamean:.4f}")
 
 nLIT =  1.49
 nprozent = 100*(nmean-nLIT)/nLIT
 print(f"Abweichung brechungsindex in % = {nprozent:.4f}")
+
+
+print("########## beta errechnet:")
+print(beta*180/np.pi)

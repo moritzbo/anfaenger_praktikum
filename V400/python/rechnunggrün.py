@@ -30,4 +30,6 @@ print(beta2*180/np.pi)
 
 delta = (aERR+ bERR) - (beta +beta2)
 deltamean = np.mean(delta)
+print("###### delta grün:")
+print(delta*180/np.pi)
 print(f"Abweichung delta= {(deltamean*180/np.pi):.4f}")
