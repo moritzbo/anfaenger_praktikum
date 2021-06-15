@@ -7,7 +7,7 @@ all: build/V500.pdf
 # # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 # build/main.pdf: build/plot.pdf
 
-build/main.pdf: FORCE | build
+build/V500.pdf: FORCE | build
 	  TEXINPUTS=build: \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
