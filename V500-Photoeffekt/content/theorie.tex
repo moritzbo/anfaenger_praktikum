@@ -1,0 +1,66 @@
+\section{Theoretische Grundlagen}
+
+Der Photelektrische Effekt beschreibt das Herauslösen von Elektronen aus verschiedenen Körpern durch Bestrahlung mit Licht. Dieses Phänomen lässt sich 
+wie im Folgenden erläutert nicht durch die Wellentheorie erklären und benötigt somit die Einführung einer korpuskularen Theorie des Lichts.
+
+\subsection{Natur des Lichts}
+
+Fundamentale Versuche wie die Untersuchung von Beugung oder der Interferenz lassen sich problemlos durch die Wellentheorie beschreiben, diese führt allerdings bei einigen anderen Experimenten auf
+völlig andere Vorhersagen als beobachtet werden. Dazu gehört unteranderem der Photoeffekt. Beide Theorien lassen sich allerdings als Grenzfall der Quantenelektrodynamik ableiten und sind somit für unterschiedliche 
+Untersuchungen zutrefflich. Bei der korpuskularen Theorie wird Licht durch Photonen beschrieben welche punktförmig und massefrei sind und ihre Energie $E_{\text{ph}} = h\nu$ auf einzelne Elektronen übertragen können.
+\\
+Allgemein lässt sich sagen, dass das Wellenbild meist sinnvoll ist wenn über viele Photonen gemittelt werden kann und die Betrachtung einzelner Photonen wird häufig dann benötigt wenn es zu Wechselwirkung von Licht mit Atomen oder Teilchen kommt.
+
+\subsection{Theorie zum Photoeffekt}
+
+Um die theoretischen Aspekte des Photelektrischen Effekts darzulegen ist es zunächst notwendig über die Beobachtungen des Versuchs zu sprechen.
+Festgestellt wird, dass die Zahl der ausgelösten Elektronen aus dem betrachteten Körper, durch Lichtbestrahlung, proportional zur Lichtintensität ist, diese aber keinen Einfluss auf die Energie der heraustretenden Elektronen hat. Dies 
+führt auf einen Widerspruch zur Wellentheorie, denn nach dieser sollten die Elektronen durch hohe Amplituden des elektrischen Feldes zu Schwingungen angeregt werden, welche, wenn sie hinreichend groß sind, die Elektronen aus der Oberfläche stoßen.
+Dies tritt allerdings selbst bei beliebig großen Intensitäten des Lichts nicht auf. Es stellt sich heraus, dass die Energie der Elektronen proportional zur Frequenz $\nu$ sind und dass unterhalb einer materiealspezifischen Grenzfrequenz keine Elektronen gelöst werden.
+\\
+Grundsätzlich gilt bei der Betrachtung der Wechselwirkung zwischen Photonen und Elektronen die Energieerhaltung. Da die Bindungsenergie der Elektronen abhängig von dem Atom sind an welches sie gebunden sind gilt 
+\begin{equation}
+    \label{eq:crucial}
+h \nu = E_{\text{kin}} + W_{\text{A}}.
+\end{equation}
+In dieser Relation \eqref{eq:crucial} beschreibt $h$ das Plancksche Wirkungsquantum, $E_{\text{kin}}$ die kinetische Energie des herausgelösten Elektrons und $W_{\text{A}}$ eine materialabhänige Austrittsarbeit.
+Diese aufgestellte Relation basiert nun auf der Korpuskulartheorie wobei jedes einzelne Photon einer monochromatischen Lichtquelle die Energie $E_{\text{ph}} = h\nu$ besitzt. Es folgt sofort, dass bei zu kleinen Photonenergien, also bei
+$h \nu < W_{\text{A}}$, keine Elektronen aus dem Material gelöst werden können. Die Intensitäten spielen hier nur noch eine Rolle für die Anzahl der Photen.
+\\
+In der Praxis stellt sich eine direkte Messung der kinetischen Energie einzelner Elektronen als schwierig heraus, somit wird eine Gegenfeldmethode verwendet. Der Aufbau des
+Photoeffekt ist in der Abbildung ... dargelegt. Durch das Herauslösen der Elektronen aus der einen Oberfläche entsteht eine Potentialdifferenz zwischen den Platten und es wandert zur anderen Oberfläche. Wird nun noch eine äußere Spannung angelegt, kann durch 
+die Variation dieser die maximale kinetische Energie der Elektronen festgestellt werden. Sobald keine Elektronen mehr an der gegenüberliegenden Anode ankommen wird auch kein Strom mehr gemessen und es gilt
+\begin{equation}
+    h \nu = e_{0} U_{g} + W_{\text{A}}.
+\end{equation}
+Hierbei gibt $e_{0}$ die Elementarladung an und $U_{g}$ die Grenzspannung bei welcher der Strom $I = 0$ wird. Die maximale kinetische Energie des Elektrons lässt sich also bei nichtrelativistischer Betrachtung angeben als
+\begin{equation*}
+    E_{\text{kin,max}} = e_{0} U_{g} = \frac{1}{2} m_{0} v_{\text{max}}^2,
+\end{equation*}
+mit der Ruhemasse des Elektrons $m_{0}$, sowie der maximalen Geschwindigkeit $v_{\text{max}}$.
+Die Grenzspannung $U_{g}$ ist eine unbekannte Größe die von der Energie des Lichts, sowie vom Material abhängig ist und in der Theorie komplexe Abhängigkeiten besitzt. Praktisch lässt sich feststellen, dass der gemessene Strom nicht schlagartig bei der 
+Grenzspannung auf Null geht, sondern bereits davor abnimmt. Daraus lässt sich schließen, dass die einzelnen Elektronen im Material unterschiedliche Energien besitzen müssen. Diese Tatsache wird durch die Fermi-Dirac-Statistik beschrieben welche besagt,
+dass die Energie der Valenzelektronen in einem makroskopischen System zwischen $0$ und der Fermi-Energie $\zeta$ liegen. Die einzelnen Elektronen erhalten also unterschiedliche kinetische Energien, abhängig davon wie viel sie bereits im Festkörper hatten. Es kommt zu einem Stromabfall 
+durch die Elektronen mit der zusätzlichen Energie im Festkörper $E_{f} < \zeta$ welche die Anode bereits vor der Grenzspannung nicht mehr erreichen.
+Ein typischer Verlauf des Spannungsabhängigen Photostroms $I$ ist in Abbildung \ref{fig:fermishit} gezeigt.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{Bilder/insanemüde.png}
+    \caption{Spannungsabhängiger Photostrom unter Verwendung von monochromatischem Licht. \cite{skript}} 
+    \label{fig:fermishit}
+\end{figure}
+Die Energie der Elektronen in einem makroskopischen Systems ist ebenfalls abhängig von der Temperatur, was ebenfalls durch die Fermi-Dirac-Statistik beschrieben wird. Durch Differentiation der Kurve in Abbildung \ref{fig:fermishit} lässt sich eine 
+Energieverteilung der Elektronen im Material bestimmen, dabei muss allerdings gewährleistet sein, dass wirklich alle herausgelösten Elektronen auf die Anode treffen, da die Kurve sonst durch fehlende Elektronen verfälscht wird.
+Vereinfachte Annahmen liefern 
+\begin{equation}
+I_{\text{ph}} \propto U^2,
+\end{equation}
+also einen parabolischen Zusammenhang zwischen Strom und Bremsspannung $U$. 
+\\
+Ein weiterer Faktor spielt die Austrittsarbeit der Anode $A_{A}$, denn sobald Kathode und Anode elektrisch leitend miteinander verbunden sind, stellen sich die Fermi-Energien auf das gleiche Niveau ein. Wenn die Energie der Photonen $h\nu < A_{A}$ müssen die Elektronen
+gegen ein Gegenfeld laufen und es wird eine Beschleunigungsspannung $U_{b}$ gebraucht damit Elektronen die Anode erreichen.
+Die Bedingung 
+\begin{equation*}
+h\nu + e_{0} U_{b} \geq A_{A}
+\end{equation*}
+muss also für einen Photostrom $I_{\text{ph}} > 0$ erfüllt sein. 
