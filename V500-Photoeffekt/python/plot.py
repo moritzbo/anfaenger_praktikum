@@ -24,19 +24,19 @@ sqrtI = np.sqrt(lolI)
 print(sqrtI.size)
 
 
-plt.plot(lolU, 
-        sqrtI,
+plt.plot(U, 
+        np.sqrt(I),
         'bx',
         label='Messwerte',
-        linewidth=1.5)
+        linewidth=0.5)
 
-plt.ylabel("I ")
+plt.ylabel("I")
 plt.xlabel("U [Volt]")
 
 # plt.xlabel(r'$$')
 # plt.ylabel(r'$$')
 
-plt.xlim(-1,0.6)
+plt.xlim(-2,0.6)
 plt.ylim(-0.1,1)
 
 def sigmoid(x, a, b):
@@ -51,7 +51,7 @@ for name, value, uncertainty in zip('ab', params, uncertainties):
     print(f'{name} = {value:.4f} ± {uncertainty:.4f}')
 
 
-x = np.linspace(-20,20)
+x = np.linspace(-1,0.8)
 plt.plot(x, 
         params[0]*x + params[1],
         'k--',
