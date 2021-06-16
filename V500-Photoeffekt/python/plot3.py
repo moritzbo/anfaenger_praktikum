@@ -11,12 +11,12 @@ I, U = np.genfromtxt("data/violett.dat", unpack=True)
 
 lolI   = []
 lolU   = []
-for i in range(18):
-   print(I[i+5])
-   lolI = np.append(lolI, I[i+5]) 
-for i in range(18):
-   print(U[i+5])
-   lolU = np.append(lolU, U[i+5]) 
+for i in range(9):
+#    print(I[i+16])
+   lolI = np.append(lolI, I[i+15]) 
+for i in range(9):
+#    print(U[i+16])
+   lolU = np.append(lolU, U[i+15]) 
 sqrtI = np.sqrt(lolI)
 # # print(I)
 # # print(lolI)
@@ -25,11 +25,11 @@ sqrtI = np.sqrt(lolI)
 # print(sqrtI.size)
 
 
-plt.plot(lolU, 
-        sqrtI,
+plt.plot(U, 
+        np.sqrt(I),
         'bx',
         label='Messwerte',
-        linewidth=1.5)
+        linewidth=0.5)
 
 plt.ylabel("I ")
 plt.xlabel("U [Volt]")
@@ -38,8 +38,8 @@ plt.xlabel("U [Volt]")
 # plt.xlabel(r'$$')
 # plt.ylabel(r'$$')
 
-plt.xlim(-1.1,1.5)
-plt.ylim(-0.1,2)
+# plt.xlim(-1,1.25)
+
 
 def sigmoid(x, a, b):
     return a*x+b
@@ -53,7 +53,7 @@ for name, value, uncertainty in zip('ab', params, uncertainties):
     print(f'{name} = {value:.4f} ± {uncertainty:.4f}')
 
 
-x = np.linspace(-2,5)
+x = np.linspace(0.0,1.0)
 plt.plot(x, 
         params[0]*x + params[1],
         'k--',
