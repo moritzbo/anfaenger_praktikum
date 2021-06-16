@@ -31,9 +31,8 @@ plt.plot(U,
         label='Messwerte',
         linewidth=0.5)
 
-plt.ylabel("I ")
-plt.xlabel("U [Volt]")
-
+plt.ylabel(r'$\left( I [\si{\nano\ampere}] \right)^{1/2}$')
+plt.xlabel(r'$U[\si{\volt}]$')
 
 # plt.xlabel(r'$$')
 # plt.ylabel(r'$$')
