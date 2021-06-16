@@ -17,8 +17,31 @@ Die allgemeine Form der linearen Ausgleichsgeraden sieht folgendermaßen aus
 y = ax + b.
 \end{equation}
 Die Parameter $a$ und $b$ sind in den Untertiteln der einzelnen Abbildungen \ref{fig:gelb} bis \ref{fig:GIGAviolet} angegeben.
-
-\newpage
+\\
+Aus den Schnittpunkten der Ausgleichsgeraden mit der Abszisse ergeben sich die in der Tabelle \ref{tab:ugrenz} angegebenen Grenzspannungen.
+Diese ergeben sich durch umstellen nach $x$ der Gleichung \eqref{eqn:okay} bei $y = 0$ zu 
+\begin{equation*}
+U_g = -\frac{b}{a}.
+\end{equation*}
+Da $a$ und $b$ fehlerbehaftet sind ergeben sich Fehler auf die Grenzspannung $U_g$ durch die Gaußsche Fehlerfortpflanzung
+\begin{equation*}
+\increment U_g = \frac{1}{|a|} \sqrt{(\increment b)^2 + \left( \frac{b \cdot \increment a}{a}\right)^2}.
+\end{equation*}
+\begin{table}
+    \caption{Ermittelte Grenzspannungen $\protect U_{g}$ der einzelnen Messreihen.}
+    \centering
+    \label{tab:ugrenz}
+    \begin{tabular}{c c}
+        \toprule
+        Wellenlänge $\lambda$ [$\si{\nano\meter}$] & Grenzspannung $U_{g}$ [$\si{\volt}$] \\
+        \midrule
+        578 & $\SI{0.4000(461)}{}$\\
+        546 & $\SI{0.7644(498)}{}$\\
+        435 & $\SI{1.1699(366)}{}$\\
+        408 & $\SI{0.3466(385)}{}$\\
+        \bottomrule    
+    \end{tabular}
+\end{table}
 
 \begin{figure}
     \centering
@@ -47,24 +70,6 @@ Die Parameter $a$ und $b$ sind in den Untertiteln der einzelnen Abbildungen \ref
     \caption{Graphische Darstellung der annähernd linearen Werte aus der Messrehe der Wellenlänge $\lambda = \SI{408}{\nano\meter}$ mit eingeszeichneter linearen Ausgleichsgerade. Dabei sind die Parameter $\protect a = \SI{-0.5892(331)}{}$ und $b = \SI{0.2042(196)}{}$.} 
     \label{fig:GIGAviolet}
 \end{figure}
-
-Aus den Schnittpunkten der Ausgleichsgeraden mit der Abszisse ergeben sich die in der Tabelle \ref{tab:ugrenz} angegebenen Grenzspannungen.
-
-\begin{table}
-    \caption{Ermittelte Grenzspannungen $\protect U_{g}$ der einzelnen Messreihen.}
-    \centering
-    \label{tab:ugrenz}
-    \begin{tabular}{c c}
-        \toprule
-        Wellenlänge $\lambda$ [$\si{\nano\meter}$] & Grenzspannung $U_{g}$ [$\si{\volt}$] \\
-        \midrule
-        578 & ~\\
-        546 & ~\\
-        435 & ~\\
-        408 & ~\\
-        \bottomrule    
-    \end{tabular}
-\end{table}
 
 \subsection{Bestimmung des Verhältnis von $\protect h$/$\protect e_{0}$}
 
