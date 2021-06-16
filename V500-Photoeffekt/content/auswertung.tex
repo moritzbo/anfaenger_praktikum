@@ -3,32 +3,52 @@
 Im folgenden lassen sich die aufgenommen Messdaten aus den Tabellen ... bis .. auswerten. Dabei wird zunächst die Grenzspannung $U_{g}$ bei den verwendeten Frequenzen des Lichts mittels linearer Regression ermittelt und es ergeben sich
 die Größen $h$/$e_{0}$ sowie die materialabhängige Austrittsarbeit.
 
-%\begin{figure}
-%    \centering
-%    \includegraphics[width=0.5\textwidth]{build/plot1.pdf}
-%    \caption{.} 
-%    \label{fig:müdes}
-%\end{figure}
-
 \subsection{Bestimmung der Grenzspannung}
 
 Zunächst lassen sich für alle aufgenommenen Strom- und Spannungwerte der einzelnen Frequenzen in Abhängigkeit voneinander abbilden. Dabei gilt die Annahme \eqref{eq:whatisthis}, deshalb werden im Folgenden $\sqrt{I}$-$U$ Diagramme dargestellt.
 Die Grenzspannungen ergeben sich dabei aus den Spannungwerten bei denen $\sqrt{I} = 0$ gilt.
 Für eine genauere Bestimmung der Grenzspannung wird eine lineare Ausgleichsrechnung in der Nähe der Grenzspannung durchgeführt.  Dabei wurden je nach Messreihe unterschiedliche große
 Intervalle linearisiert, um genauere Grenzspannungen zu erhalten. 
-Die Ausgleichsgeraden wurden hier durch einen \enquote{Polyfit} in Python \cite{python} ermittelt und sind in den jeweiligen Abbildungen ... bis ... mit abgebildet.
+Die Ausgleichsgeraden wurden hier durch einen \enquote{Polyfit} in Python \cite{python} ermittelt und sind in den jeweiligen Abbildungen \ref{fig:gelb} bis \ref{fig:GIGAviolet} mit abgebildet.
 \\
 Die allgemeine Form der linearen Ausgleichsgeraden sieht folgendermaßen aus
 \begin{equation}
     \label{eqn:okay}
 y = ax + b.
 \end{equation}
-Die Parameter $a$ und $b$ sind in den Untertiteln der einzelnen Abbildungen ... bis ... angegeben.
+Die Parameter $a$ und $b$ sind in den Untertiteln der einzelnen Abbildungen \ref{fig:gelb} bis \ref{fig:GIGAviolet} angegeben.
 
-%ABBILDUNGEN
+\newpage
 
-Aus den Schnittpunkten der Ausgleichsgeraden mit der Abszisse ergeben sich die in der Tabelle ... angegebenen Grenzspannungen.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{build/plot1.pdf}
+    \caption{Graphische Darstellung der annähernd linearen Werte aus der Messrehe der Wellenlänge $\lambda = \SI{578}{\nano\meter}$ mit eingeszeichneter linearen Ausgleichsgerade. Dabei sind die Parameter $\protect a = \SI{-0.6043(390)}{}$ und $b = \SI{0.2417(231)}{}$.} 
+    \label{fig:gelb}
+\end{figure}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{build/plot2.pdf}
+    \caption{Graphische Darstellung der annähernd linearen Werte aus der Messrehe der Wellenlänge $\lambda = \SI{546}{\nano\meter}$ mit eingeszeichneter linearen Ausgleichsgerade. Dabei sind die Parameter $\protect a = \SI{-0.8503(457)}{}$ und $b = \SI{0.6500(240)}{}$.} 
+    \label{fig:grün}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{build/plot3.pdf}
+    \caption{Graphische Darstellung der annähernd linearen Werte aus der Messrehe der Wellenlänge $\lambda = \SI{435}{\nano\meter}$ mit eingeszeichneter linearen Ausgleichsgerade. Dabei sind die Parameter $\protect a = \SI{-0.6267(178)}{}$ und $b = \SI{0.7332(96)}{}$.} 
+    \label{fig:violet}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{build/plot4.pdf}
+    \caption{Graphische Darstellung der annähernd linearen Werte aus der Messrehe der Wellenlänge $\lambda = \SI{408}{\nano\meter}$ mit eingeszeichneter linearen Ausgleichsgerade. Dabei sind die Parameter $\protect a = \SI{-0.5892(331)}{}$ und $b = \SI{0.2042(196)}{}$.} 
+    \label{fig:GIGAviolet}
+\end{figure}
+
+Aus den Schnittpunkten der Ausgleichsgeraden mit der Abszisse ergeben sich die in der Tabelle \ref{tab:ugrenz} angegebenen Grenzspannungen.
 
 \begin{table}
     \caption{Ermittelte Grenzspannungen $\protect U_{g}$ der einzelnen Messreihen.}
