@@ -6,22 +6,23 @@ from scipy.stats import sem
 import scipy.constants as const
 import uncertainties.unumpy as unp
 
-I, U = np.genfromtxt("data/gelb.dat", unpack=True)
+I, U = np.genfromtxt("data/violett.dat", unpack=True)
+
 
 lolI   = []
 lolU   = []
-for i in range(11):
-   print(I[i+18])
-   lolI = np.append(lolI, I[i+18]) 
-for i in range(11):
-   print(U[i+18])
-   lolU = np.append(lolU, U[i+18]) 
-
-print(I)
-print(lolI)
+for i in range(18):
+   print(I[i+5])
+   lolI = np.append(lolI, I[i+5]) 
+for i in range(18):
+   print(U[i+5])
+   lolU = np.append(lolU, U[i+5]) 
 sqrtI = np.sqrt(lolI)
-# print(sqrtI)
-print(sqrtI.size)
+# # print(I)
+# # print(lolI)
+# sqrtI = np.sqrt(lolI)
+# # print(sqrtI)
+# print(sqrtI.size)
 
 
 plt.plot(lolU, 
@@ -33,11 +34,12 @@ plt.plot(lolU,
 plt.ylabel("I ")
 plt.xlabel("U [Volt]")
 
+
 # plt.xlabel(r'$$')
 # plt.ylabel(r'$$')
 
-plt.xlim(-1,0.6)
-plt.ylim(-0.1,1)
+plt.xlim(-1.1,1.5)
+plt.ylim(-0.1,2)
 
 def sigmoid(x, a, b):
     return a*x+b
@@ -51,7 +53,7 @@ for name, value, uncertainty in zip('ab', params, uncertainties):
     print(f'{name} = {value:.4f} ± {uncertainty:.4f}')
 
 
-x = np.linspace(-20,20)
+x = np.linspace(-2,5)
 plt.plot(x, 
         params[0]*x + params[1],
         'k--',
@@ -62,6 +64,6 @@ plt.axhline(y=0, color='g', linestyle='--', linewidth=1.5, label="Nullgerade")
 
 plt.grid()
 plt.legend()
+# plt.show()
 
-
-plt.savefig("build/plot1.pdf")
+plt.savefig("build/plot3.pdf")
