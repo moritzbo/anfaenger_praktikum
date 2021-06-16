@@ -35,7 +35,7 @@ params, covariance_matrix = curve_fit(sigmoid, vreal, Ugreal)
 uncertainties = np.sqrt(np.diag(covariance_matrix))
 
 for name, value, uncertainty in zip('ab', params, uncertainties): 
-    print(f'{name} = {value:.4f} ± {uncertainty:.4f}')
+    print(f'{name} = {value:.7f} ± {uncertainty:.7f}')
 
 x = np.linspace(0,800)
 plt.plot(x, 
