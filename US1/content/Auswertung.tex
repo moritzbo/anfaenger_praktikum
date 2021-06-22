@@ -1,0 +1,182 @@
+\section{Auswertung}
+
+Da im Folgenden für alle Rechnungen und Diagramme die Dopplerwinkel gebraucht werden, können zunächst die drei verwendeten Prismenwinkel $\theta = \SI{15}{\degree}$, $\SI{30}{\degree}$ und $\SI{45}{\degree} $ mit Gleichung
+\eqref{eqn:alphafinal} umgerechnet werden. Dazu werden die Literaturwerte \cite{skript} aus der Tabelle \ref{tab:lit} entnommen und eingesetzt. Es ergeben sich die Werte
+\begin{align*}
+    \alpha_{15} &= \SI{80.06}{\degree} \\
+    \alpha_{30} &= \SI{70.53}{\degree} \\
+    \alpha_{45} &= \SI{54.74}{\degree}.
+  \end{align*}
+
+\subsection{Bestimmung der Strömungsgeschwindigkeit}
+Die Strömungsgeschwindigkeiten sind je nach Rohrdurchmesser anders, somit lassen sich für alle einzelnen Rohre die Geschwindigkeiten in Abhängigkeit von den drei Dopplerwinkeln bestimmen.
+Dazu wird Gleichung \eqref{eqn:deltaf} nach $v$ umgeformt. Es ergibt sich
+\begin{equation}
+v = \frac{c \increment f}{2 f_{0} \text{cos}(\alpha)}.
+\end{equation}
+Mit den gemessenen Frequenzverschiebungen $\increment f$, der Grundfrequenz $f_{0} = \SI{2}{\mega\hertz}$ und den unterschiedlichen Winkeln lässt sich nun jede Geschwindigkeit ausrechnen. 
+In den folgenden Tabellen \ref{tab:4} bis \ref{tab:6} sind die errechneten Strömungsgeschwindigkeit $v_{ber}$ mit ihren Abhängigkeiten für alle Rohrdurchmesser angegeben.
+
+\begin{table}
+    \centering
+    \caption{Frequenzverschiebungen und Strömungsgeschwindigkeiten in Abhängigkeit vom Prismenwinkel und der geschalteten Strömungsgeschwindigkeit bei Rohrdurchmesser $\protect d = \SI{7}{\milli\meter}$.}
+    \label{tab:4}
+    \begin{tabular}{c c c c}
+        \toprule
+        $v_{\text{gesch}}$ [$\si{{\text{r}}\per\minute}$]  & $\alpha$ [$\si{\degree}$]  & $\increment f$ [$\si{\hertz}$]  &$v_{ber}$ [$\si{\meter\per\second}$] \\
+        \midrule
+        6000    &   80.06    & 244   & 0.079 \\ 
+        6000    &   70.53    & 366   & 0.134 \\ 
+        6000    &   54.74    & 549   & 0.259 \\ 
+        \midrule
+        6500    &   80.06   & 293    & 0.090 \\ 
+        6500    &   70.53   & 415    & 0.152 \\ 
+        6500    &   54.74   & 635    & 0.300 \\ 
+        \midrule
+        7000    &   80.06   & 348    & 0.112 \\ 
+        7000    &   70.53   & 500    & 0.183 \\ 
+        7000    &   54.74   & 842    & 0.397 \\ 
+        \midrule
+        7500    &   80.06   & 366    & 0.118 \\ 
+        7500    &   70.53   & 623    & 0.223 \\ 
+        7500    &   54.74   & 1001   & 0.472 \\ 
+        \midrule
+        8000    &   80.06   & 439    & 0.141 \\ 
+        8000    &   70.53   & 708    & 0.259 \\ 
+        8000    &   54.74   & 1367   & 0.644 \\ 
+        \bottomrule
+    \end{tabular}
+\end{table}
+        
+\begin{table}
+    \centering
+    \caption{Frequenzverschiebungen und Strömungsgeschwindigkeiten in Abhängigkeit vom Prismenwinkel und der geschalteten Strömungsgeschwindigkeit bei Rohrdurchmesser $\protect d = \SI{10}{\milli\meter}$.}
+    \label{tab:5}
+    \begin{tabular}{c c c c}
+        \toprule
+        $v_{\text{gesch}}$ [$\si{{\text{r}}\per\minute}$]  & $\alpha$ [$\si{\degree}$]  & $\increment f$ [$\si{\hertz}$] &  $v_{ber}$ [$\si{\meter\per\second}$]\\
+        \midrule
+        6000    &   80.06    & 434   & 0.140 \\ 
+        6000    &   70.53    & 195   & 0.071 \\ 
+        6000    &   54.74    & 378   & 0.178 \\ 
+        \midrule
+        6500    &   80.06   & 159    & 0.051 \\ 
+        6500    &   70.53   & 244    & 0.089 \\ 
+        6500    &   54.74   & 464    & 0.219 \\ 
+        \midrule
+        7000    &   80.06   & 171    & 0.055 \\ 
+        7000    &   70.53   & 317    & 0.116 \\ 
+        7000    &   54.74   & 525    & 0.247 \\ 
+        \midrule
+        7500    &   80.06   & 195    & 0.063 \\ 
+        7500    &   70.53   & 342    & 0.125 \\ 
+        7500    &   54.74   & 910    & 0.429 \\ 
+        \midrule
+        8000    &   80.06   & 220    & 0.070 \\ 
+        8000    &   70.53   & 378    & 0.138 \\ 
+        8000    &   54.74   & 708    & 0.333 \\ 
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}
+    \centering
+    \caption{Frequenzverschiebungen und Strömungsgeschwindigkeiten in Abhängigkeit vom Prismenwinkel und der geschalteten Strömungsgeschwindigkeit bei Rohrdurchmesser $\protect d = \SI{16}{\milli\meter}$.}
+    \label{tab:6}
+    \begin{tabular}{c c c c}
+        \toprule
+        $v_{\text{gesch}}$ [$\si{{\text{r}}\per\minute}$]  & $\alpha$ [$\si{\degree}$]  & $\increment f$ [$\si{\hertz}$] & $v_{ber}$ [$\si{\meter\per\second}$]\\
+        \midrule
+        6000    &   80.06    & 61   & 0.020 \\ 
+        6000    &   70.53    & 98   & 0.036 \\ 
+        6000    &   54.74    & 159  & 0.075 \\ 
+        \midrule
+        6500    &   80.06   & 85    & 0.027 \\ 
+        6500    &   70.53   & 110   & 0.040 \\ 
+        6500    &   54.74   & 201   & 0.095 \\ 
+        \midrule
+        7000    &   80.06   & 98    & 0.032 \\ 
+        7000    &   70.53   & 134   & 0.049 \\ 
+        7000    &   54.74   & 220   & 0.104 \\ 
+        \midrule
+        7500    &   80.06   & 110   & 0.035 \\ 
+        7500    &   70.53   & 159   & 0.058 \\ 
+        7500    &   54.74   & 250   & 0.118 \\ 
+        \midrule
+        8000    &   80.06   & 110   & 0.035 \\ 
+        8000    &   70.53   & 195   & 0.071 \\ 
+        8000    &   54.74   & 305   & 0.144 \\ 
+        \bottomrule
+    \end{tabular}
+\end{table}   
+\newpage                           
+Aufgrund der drei Winkel folgen insgesamt drei Geschwindigkeitswerte bei gleichbleibender Zentrifugendrehzahl. Über die Werte lassen sich nun Mittelwerte und ihre Fehler bestimmen.
+Der Mittelwert lässt sich durch folgenden Zusammenhang berechnen
+\begin{equation}
+    \label{eqn:mittel}
+\bar{v} = \frac{1}{N} \sum_{i=1}^{N} v_{i}.
+\end{equation}
+Dabei ist $N$ die Anzahl der Messwerte und $v_{i}$ sind die einzelnen berechneten Geschwindigkeiten.
+Der statistische Fehler auf den Mittelwert wird über die Standardabweichung $\sigma$ bestimmt, dafür gilt
+\begin{equation}
+    \label{eqn:sem}
+\increment \bar{v} = \frac{\sigma}{\sqrt{N}} = \sqrt{\frac{1}{N(N-1)} \sum_{i=1}^{N} (v_{i} - \bar{v})^{2}}.
+\end{equation}                                       
+In Tabelle \ref{tab:7} sind die gemittelten Geschwindigkeiten pro Zentrifugendrehzahl und Rohrdurchmesser aufgetragen.
+
+\begin{table}
+    \centering
+    \caption{Mittelwerte der errechneten Geschwindigkeiten.}
+    \label{tab:7}
+    \begin{tabular}{c || c | c | c}
+        \multicolumn{1}{c}{~} & \multicolumn{1}{c}{$d = \SI{7}{\milli\meter}$} & \multicolumn{1}{c}{$d = \SI{10}{\milli\meter}$} & \multicolumn{1}{c}{$d = \SI{16}{\milli\meter}$}\\
+        \toprule
+        $v_{\text{gesch}}$ [$\si{{\text{r}}\per\minute}$]  & $\overline{v_{\text{ber}}}$ [$\si{\meter\per\second}$] &  $\overline{v_{\text{ber}}}$ [$\si{\meter\per\second}$] & $\overline{v_{\text{ber}}}$ [$\si{\meter\per\second}$] \\
+        \midrule
+        6000    &  $\SI{0.157(53)}{}$    & $\SI{0.130(31)}{}$   & $\SI{0.043(16)}{}$   \\ 
+        6500    &  $\SI{0.182(61)}{}$    & $\SI{0.120(50)}{}$   & $\SI{0.054(21)}{}$   \\ 
+        7000    &  $\SI{0.230(86)}{}$    & $\SI{0.140(57)}{}$   & $\SI{0.061(22)}{}$   \\ 
+        7500    &  $\SI{0.272(104)}{}$   & $\SI{0.205(113)}{}$  & $\SI{0.070(25)}{}$  \\ 
+        8000    &  $\SI{0.348(152)}{}$   & $\SI{0.181(79)}{}$   & $\SI{0.083(32)}{}$   \\  
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Es lassen sich ebenfalls für feste Prismenwinkel $\alpha$ die Abhängigkeiten der Geschwindigkeit $v$ von dem Verhältnis $\increment f$/$\text{cos}(\alpha)$ graphisch darstellen. 
+In den Diagrammen \ref{fig:plot1} bis \ref{fig:plot3} ist dies gezeigt.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot1.pdf}
+    \caption{Geschwindigkeiten der Strömung in Abhängigkeit der Frequenzverschiebung bei Winkel $\protect \alpha_{15}$.} 
+    \label{fig:plot1}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot2.pdf}
+    \caption{Geschwindigkeiten der Strömung in Abhängigkeit der Frequenzverschiebung bei Winkel $\protect \alpha_{30}$.} 
+    \label{fig:plot2}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot3.pdf}
+    \caption{Geschwindigkeiten der Strömung in Abhängigkeit der Frequenzverschiebung bei Winkel $\protect \alpha_{45}$.} 
+    \label{fig:plot3}
+\end{figure}
+
+\subsection{Bestimmung des Strömungsprofils}
+In diesem Teil des Versuches wurde das Rohr mit $d = \SI{10}{\milli\meter}$ genauer untersucht. Hierbei wurde für den festen Prismenwinkel $\theta = \SI{15}{\degree}$ die Messtiefe variiert und wieder die 
+Frequenzverschiebung $\increment f$, sowie die Streuintensität gemessen. Aus dem Zusammenhang \eqref{eqn:deltaf} lässt sich wieder die Geschwindigkeit bestimmen. Das Strömungsprofil lässt sich am besten in einem Diagramm darstellen,
+dabei wird jeweils entweder die Geschwindigkeit oder die Streuintensität auf der y-Achse in Abhängigkeit von der Messtiefe aufgetragen. In Diagramm \ref{fig:plot4} ist die Geschwindigkeit und in Diagramm \ref{fig:plot5} ist die Streuintensität dargestellt.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot5.pdf}
+    \caption{Geschwindigkeiten des Strömungsprofils.} 
+    \label{fig:plot4}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/plot4.pdf}
+    \caption{Streuintensitäten des Strömungsprofils.} 
+    \label{fig:plot5}
+\end{figure}
