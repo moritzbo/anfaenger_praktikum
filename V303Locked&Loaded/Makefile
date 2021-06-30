@@ -5,9 +5,12 @@ build/plot1.pdf: python/plot.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python python/plot.py
 build/plot2.pdf: python/plot2.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python python/plot2.py
+build/plot3.pdf: python/plot3.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python python/plot3.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/V303.pdf: build/plot1.pdf \
+				build/plot2.pdf \
 				build/plot2.pdf \
 
 
