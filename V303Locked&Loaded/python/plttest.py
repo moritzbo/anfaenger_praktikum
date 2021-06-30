@@ -8,7 +8,7 @@ import uncertainties.unumpy as unp
 
 # phi, U = np.genfromtxt("data/phaseOHNEE.dat", unpack=True)
 
-phiM, UM = np.genfromtxt("data/phaseMIT.dat", unpack=True)
+phiM, UM = np.genfromtxt("../data/phaseMIT.dat", unpack=True)
 
 # plt.plot(phi,
 #         U,
@@ -46,4 +46,4 @@ plt.plot(x,
 
  
 plt.legend()
-plt.savefig("build/plot2.pdf")
+plt.show()
