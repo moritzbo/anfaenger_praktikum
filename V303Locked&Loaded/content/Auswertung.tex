@@ -4,29 +4,29 @@ Untersucht wurden die Ausgangsspannungen am Lock-In-Verstäker in Abhängigkeit 
 für eine Signalspannung mit und ohne Rauschen unterteilt.
 
 \subsection{Ausgangsspannung ohne Rauschen}
-In diesem Versuchsteil wurden die Ausgangsspannungen am Lock-In-Verstäker einer mit einer Rechteckspannung modifizierten sinusförmigen Signalspannung gemessen. In der Tabelle ..
-sind die Ausgangsspannung $U_{\text{out}}$ in Abhängigkeit von der Phase notiert. An einem Oszilloskop ließen sich Momentanaufnahmen von unverstärkten Signalspannung (in Gelb), sowie den Ausgangsspannungen in Türkis anfertigen.
+In diesem Versuchsteil wurden die Ausgangsspannungen am Lock-In-Verstäker einer mit einer Rechteckspannung modifizierten sinusförmigen Signalspannung gemessen. In der Tabelle \ref{tab:1}
+sind die Ausgangsspannung $U_{\text{out}}$ in Abhängigkeit von der Phase notiert. An einem Oszilloskop ließen sich Momentanaufnahmen von unverstärkten Signalspannung (in Gelb), sowie den Ausgangsspannungen (in Türkis) anfertigen.
 Die Abbildungen \ref{fig:11} bis \ref{fig:18} zeigen die Spannungen in Abhängigkeit von der Phase $\phi$ welche von $\SI{0}{\degree}$ bis $\SI{360}{\degree}$ verändert werden.
 \\
 \newline 
-Die Beziehung \eqref{eqn:yesss} lässt sich anhand dieser Messwerte mit einer Fitfunktion dieser Art 
+Die Beziehung \eqref{eqn:yesss} lässt sich anhand dieser Messwerte mit einer Fitfunktion der Art 
 \begin{equation}
     \label{eqn:fit}
 U_{\text{out}} = a \cdot \text{cos}(b \cdot \frac{180}{\pi} \phi + c) + d,
 \end{equation}
-überprüfen. Dazu wird ein \enquote{Curvefit} mit \cite{scipy} verwendet.
+überprüfen. Dazu wird ein \enquote{Curvefit} mit Scipy \cite{scipy} verwendet.
 Es ergeben sich die folgenden Parameter
-\begin{align}
+\begin{align*}
     a &= \SI{94.671(14105)}{\volt},\\
     b &= \SI{0.807(81)}{},\\
     c &= \SI{-13.358(307)}{\radian},\\
     d &= \SI{-4.382(10165)}{\volt}.\\
-\end{align}
+\end{align*}
 %a = 94.6713 ± 14.1051
 %b = 0.8065 ± 0.0808
 %c = -16.4998 ± 0.3073
 %d = -4.3822 ± 10.1645
-Die Fitfunktion mit diesen Parametern, sowie die einzelnen Messwerte aus Tabelle ... sind in der Abbildung \ref{fig:licht} dargestellt.
+Die Fitfunktion mit diesen Parametern, sowie die einzelnen Messwerte aus Tabelle \ref{tab:1} sind in der Abbildung \ref{fig:licht} dargestellt.
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{build/plot1.pdf}
@@ -96,27 +96,27 @@ Die Fitfunktion mit diesen Parametern, sowie die einzelnen Messwerte aus Tabelle
 \end{figure}
 
 \subsection{Ausgangsspannung mit Rauschen}
-Die Abbildungen \ref{fig:21} bis \ref{fig:27} zeigen die Ausgangsspannungen in Abhängigkeit von der Phase $\phi$, im Fall der verrauschten Signalspannung. Die Spannungen in der Tabelle ...
+Die Abbildungen \ref{fig:21} bis \ref{fig:27} zeigen die Ausgangsspannungen in Abhängigkeit von der Phase $\phi$, im Fall der verrauschten Signalspannung. Die Spannungen in der Tabelle \ref{tab:2}
 wurden dabei über die einzelnen Peaks gemittelt und bereits gemittelt in die Tabelle eingetragen.
 \\
 \newline 
-Für diese Auswertung wird das gleiche Verfahren wie ohne Rauschen mit der Messreihe aus Tabelle .. wiederholt. Mit der Beziehung \eqref{eqn:fit} ergeben sich nun die folgenden
+Für diese Auswertung wird das gleiche Verfahren wie ohne Rauschen mit der Messreihe aus Tabelle \ref{tab:2} wiederholt. Mit der Beziehung \eqref{eqn:fit} ergeben sich nun die folgenden
 Parameter
-\begin{align}
+\begin{align*}
     a &= \SI{ 108.811(20210)}{\volt},\\
     b &= \SI{0.792(100)}{},\\
     c &= \SI{-45.052(349)}{\radian},\\
     d &= \SI{9.608(14443)}{\volt}.\\
-\end{align}
+\end{align*}
 %a = 108.8108 ± 20.2103
 %b = 0.7918 ± 0.1001
 %c = -45.0519 ± 0.3486
 %d = 9.6080 ± 14.4434
-In der Abbildung \ref{tab:licht2} sind nun die Messwerte dieser Messreihe, sowie die Fitfunktion dargestellt.
+In der Abbildung \ref{fig:licht2} sind nun die Messwerte dieser Messreihe, sowie die Fitfunktion dargestellt.
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{build/plot2.pdf}
-    \caption{Schematischer Aufbau des Lock-In-Verstäker mit installiertem Photodetektor. \cite{skript}} 
+    \includegraphics[width=0.9\textwidth]{build/plot2.pdf}
+    \caption{Phasenabhängige Ausgangsspannungen mit Rauschen und passende Fitfunktion.} 
     \label{fig:licht2}
 \end{figure}
 \begin{figure}
@@ -175,8 +175,16 @@ In der Abbildung \ref{tab:licht2} sind nun die Messwerte dieser Messreihe, sowie
 \subsection{Messung mit Photodetektor}
 In dem letzten Versuchteil wurde eine LED mit einer Signalspannung betrieben und durch einen Photodetektor in unterschiedlichen Abständen eine Ausgangsspannung gemessen.
 Hierbei lässt sich der vermutete Intensitätsabfall von $1$/$d^2$ überprüfen. Da die Intensität $I \propto U^2$ ist, ist somit ein Spannungsabfall von $U \propto 1$/$d$ zu erwarten.
-Die gemessenen abstandsabhängigen 
-
+Die gemessenen abstandsabhängigen Spannungen sind in der Tabelle \ref{tab:3} angegeben und lassen sich nun mit einer Fitfunktion vom Typ
+\begin{equation}
+U_{\text{out}} = a \cdot \frac{1}{d} + b
+\end{equation}
+fitten. Die Parameter ergeben sich dabei zu
+\begin{align*}
+    a &= \SI{ 0.086(6)}{\volt\meter},\\
+    b &= \SI{1.579(216)}{\volt}.\\
+\end{align*}
+Die Messwerte, sowie die Fitfunktion sind in der Abbildung \ref{fig:licht123} dargestellt.
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{build/plot3.pdf}

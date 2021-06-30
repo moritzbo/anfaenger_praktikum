@@ -16,17 +16,17 @@ plt.plot(d,
 
 
 def sigmoid(d, a, b):
-   return a* 1/(d**2) + b 
+   return a* 1/(d) + b 
  
  
-params, covariance_matrix = curve_fit(sigmoid, d, U, p0=(1, 1))
+params, covariance_matrix = curve_fit(sigmoid, d, U, p0=(1, -1))
 
 uncertainties = np.sqrt(np.diag(covariance_matrix))
 
 for name, value, uncertainty in zip('ab', params, uncertainties): 
     print(f'{name} = {value:.4f} ± {uncertainty:.4f}')
 
-x = np.linspace(0.05,0.52)
+x = np.linspace(0.01,0.52)
 plt.plot(x, 
         params[0]*1/(x)+params[1],
         'b-',

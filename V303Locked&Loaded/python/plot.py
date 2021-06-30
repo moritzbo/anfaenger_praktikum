@@ -40,11 +40,11 @@ x = np.linspace(0,350)
 plt.plot(x, 
         (params[0]*np.cos((np.deg2rad(x)*params[1]+params[2])) + params[3]),
         'b-',
-        label='Lineare Ausgleichsgerade',
+        label='Ausgleichsfunktion',
         linewidth=1.5)
 
 plt.ylabel(r'$U [\si{\volt}]$')
-plt.xlabel(r'$\phi [\si{\radian}]$')
+plt.xlabel(r'$\phi [\si{\degree}]$')
 
 plt.legend()
 plt.savefig("build/plot1.pdf")
