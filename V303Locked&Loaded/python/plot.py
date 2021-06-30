@@ -24,7 +24,7 @@ plt.plot(phi,
 
 
 def sigmoid(phi, a, b, c, d):
-   return a*np.cos(((np.deg2rad(phi)*b+c))+d
+   return a*np.cos((np.deg2rad(phi)*b+c))+d
  
  
 params, covariance_matrix = curve_fit(sigmoid, phi, U)
