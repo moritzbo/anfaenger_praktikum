@@ -6,7 +6,7 @@ from scipy.stats import sem
 import scipy.constants as const
 import uncertainties.unumpy as unp
 
-d, U = np.genfromtxt("data/licht.dat", unpack=True)
+d, U = np.genfromtxt("../data/licht.dat", unpack=True)
 d=d*10**(-3) 
 plt.plot(d,
         U,
@@ -16,10 +16,10 @@ plt.plot(d,
 
 
 def sigmoid(d, a, b):
-   return a* 1/(d) + b 
+   return a* 1/(d**2) + b 
  
  
-params, covariance_matrix = curve_fit(sigmoid, d, U, p0=(1,))
+params, covariance_matrix = curve_fit(sigmoid, d, U)
 
 uncertainties = np.sqrt(np.diag(covariance_matrix))
 
@@ -28,14 +28,11 @@ for name, value, uncertainty in zip('ab', params, uncertainties):
 
 x = np.linspace(0,0.52)
 plt.plot(x, 
-        params[0]*1/(x)+params[1],
+        params[0]*1/(x**2)+params[1],
         'b-',
         label='Ausgleichsfunktion',
         linewidth=1.5)
 
-plt.ylabel(r'$U [\si{\volt}]$')
-plt.xlabel(r'$d [\si{\meter}]$')
-
 plt.legend()       
-# plt.show() 
-plt.savefig("build/plot3.pdf")
+plt.show() 
+# plt.savefig("build/plot3.pdf")

@@ -43,6 +43,9 @@ plt.plot(x,
         label='Lineare Ausgleichsgerade',
         linewidth=1.5)
 
+plt.ylabel(r'$U [\si{\volt}]$')
+plt.xlabel(r'$\phi [\si{\radian}]$')
+
 plt.legend()
 plt.savefig("build/plot1.pdf")
 
