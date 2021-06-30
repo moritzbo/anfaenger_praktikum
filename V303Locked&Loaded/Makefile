@@ -11,7 +11,7 @@ build/plot3.pdf: python/plot3.py matplotlibrc header-matplotlib.tex | build
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/V303.pdf: build/plot1.pdf \
 				build/plot2.pdf \
-				build/plot2.pdf \
+				build/plot3.pdf \
 
 
 build/V303.pdf: FORCE | build
