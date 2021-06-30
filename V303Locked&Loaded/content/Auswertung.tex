@@ -17,12 +17,12 @@ U_{\text{out}} = a \cdot \text{cos}(b \cdot \frac{180}{\pi} \phi + c) + d,
 überprüfen. Dazu wird ein \enquote{Curvefit} mit \cite{scipy} verwendet.
 Es ergeben sich die folgenden Parameter
 \begin{align}
-    a &= \SI{-94.671(14101)}{\volt},\\
+    a &= \SI{94.671(14105)}{\volt},\\
     b &= \SI{0.807(81)}{},\\
-    c &= \SI{-16.500(307)}{\radian},\\
+    c &= \SI{-13.358(307)}{\radian},\\
     d &= \SI{-4.382(10165)}{\volt}.\\
 \end{align}
-%a = -94.6713 ± 14.1051
+%a = 94.6713 ± 14.1051
 %b = 0.8065 ± 0.0808
 %c = -16.4998 ± 0.3073
 %d = -4.3822 ± 10.1645
@@ -96,16 +96,17 @@ Die Fitfunktion mit diesen Parametern, sowie die einzelnen Messwerte aus Tabelle
 \end{figure}
 
 \subsection{Ausgangsspannung mit Rauschen}
-Die Abbildungen \ref{fig:21} bis \ref{fig:27} zeigen die Ausgangsspannungen in Abhängigkeit von der Phase $\phi$, im Fall der verrauschten Signalspannung.
+Die Abbildungen \ref{fig:21} bis \ref{fig:27} zeigen die Ausgangsspannungen in Abhängigkeit von der Phase $\phi$, im Fall der verrauschten Signalspannung. Die Spannungen in der Tabelle ...
+wurden dabei über die einzelnen Peaks gemittelt und bereits gemittelt in die Tabelle eingetragen.
 \\
 \newline 
 Für diese Auswertung wird das gleiche Verfahren wie ohne Rauschen mit der Messreihe aus Tabelle .. wiederholt. Mit der Beziehung \eqref{eqn:fit} ergeben sich nun die folgenden
 Parameter
 \begin{align}
-    a &= \SI{1}{\volt},\\
-    b &= \SI{1}{},\\
-    c &= \SI{1}{\radian},\\
-    d &= \SI{1}{\volt}.\\
+    a &= \SI{ 108.811(20210)}{\volt},\\
+    b &= \SI{0.792(100)}{},\\
+    c &= \SI{-45.052(349)}{\radian},\\
+    d &= \SI{9.608(14443)}{\volt}.\\
 \end{align}
 %a = 108.8108 ± 20.2103
 %b = 0.7918 ± 0.1001
@@ -171,3 +172,14 @@ In der Abbildung \ref{tab:licht2} sind nun die Messwerte dieser Messreihe, sowie
     \caption{Momentaufnahmen der phasenabhängigen Ausgangspannungen an einem Lock-In-Verstärker mit Rauschen.}
 \end{figure}
 
+\subsection{Messung mit Photodetektor}
+In dem letzten Versuchteil wurde eine LED mit einer Signalspannung betrieben und durch einen Photodetektor in unterschiedlichen Abständen eine Ausgangsspannung gemessen.
+Hierbei lässt sich der vermutete Intensitätsabfall von $1$/$d$ überprüfen.
+Die gemessenen abstandsabhängigen 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{build/plot3.pdf}
+    \caption{Phasenabhängige Ausgangsspannungen ohne Rauschen mit Fitfunktion.} 
+    \label{fig:licht}
+\end{figure}
